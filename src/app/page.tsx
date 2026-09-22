@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Un Seul Souffle",
     title: "Accompagnement de dirigeants de PME et ETI à Toulouse",
     description:
-      "Cinq expertises de direction mobilisées ensemble autour de votre entreprise. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.",
+      "Un conseiller référent dédié à votre sujet, quatre autres expertises en appui si besoin. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.",
     images: [{ url: "/og-equipe.webp", width: 1200, height: 630, alt: "L'équipe Un Seul Souffle" }],
   },
 };

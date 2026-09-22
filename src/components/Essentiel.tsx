@@ -32,10 +32,11 @@ const AFFIRMATIONS = [
     accent: ACCENTS.organisation.texte,
     texte: (
       <>
-        Au lieu d&apos;intervenir sur une seule expertise, le cabinet mobilise{" "}
-        <em className="italic text-teal">simultanément</em> cinq compétences de direction — finance,
-        organisation et coopération, stratégie commerciale, production, qualité de vie au travail —
-        autour du même dirigeant et de la même entreprise.
+        Un <strong className="font-normal text-ink">conseiller référent</strong> prend en charge
+        votre sujet et reste votre interlocuteur. Derrière lui, quatre autres compétences de
+        direction — finance, organisation et coopération, stratégie commerciale, production, qualité
+        de vie au travail — qu&apos;il mobilise{" "}
+        <em className="italic text-teal">seulement si votre situation l&apos;exige</em>.
       </>
     ),
   },
@@ -45,7 +46,7 @@ const AFFIRMATIONS = [
     texte: (
       <>
         L&apos;accompagnement ne s&apos;arrête pas à un diagnostic : les consultants restent engagés
-        jusqu&apos;à la mise en œuvre, sur un parcours de 3 à 18 mois structuré en cinq étapes —
+        jusqu&apos;à la mise en œuvre, sur un parcours de 3 à 12 mois structuré en cinq étapes —
         aligner, coopérer, cartographier, structurer, renforcer.
       </>
     ),
@@ -106,7 +107,7 @@ export function Essentiel() {
 
           <dl className="px-6">
             {reperes.map((repere) => (
-              <div key={repere.label} className="border-b border-white/12 py-4 last:border-b-0">
+              <div key={repere.label} className="border-b border-white/10 py-4 last:border-b-0">
                 <dt className="font-mono text-[9.5px] uppercase tracking-[0.13em] text-white/55">
                   {repere.label}
                 </dt>

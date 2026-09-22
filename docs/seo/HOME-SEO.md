@@ -15,7 +15,7 @@
 | `meta description` | `Équipe de direction externalisée pour dirigeants de PME et ETI à Toulouse : finance, organisation, stratégie, production, QVT. Diagnostic gratuit.` | 146 / 150 ✅ |
 | `canonical` | `https://www.unseulsouffle.fr/` | auto-référent ✅ |
 | `og:title` | `Une équipe de direction externalisée pour accompagner les dirigeants de PME et ETI` | |
-| `og:description` | `Cinq expertises de direction mobilisées ensemble autour de votre entreprise. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.` | |
+| `og:description` | `Un conseiller référent dédié à votre sujet, quatre autres expertises en appui si besoin. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.` | |
 | `og:image` | Photo réelle de l'équipe, 1200×630, WebP | à produire |
 | `robots` | `index, follow, max-image-preview:large` | |
 
@@ -35,7 +35,7 @@
 > *Structurer aujourd'hui, renforcer demain.*
 
 **Paragraphe d'accroche** *(le mot-clé principal apparaît dans les 40 premiers mots — règle de densité)*
-> Vous ne manquez pas d'experts autour de vous. Vous manquez d'une lecture d'ensemble. Un Seul Souffle accompagne les dirigeants de PME et d'ETI à Toulouse et en Occitanie en mobilisant cinq expertises de direction — finance, organisation, stratégie commerciale, production, qualité de vie au travail — autour de la même table, sur la même entreprise, jusqu'à la mise en œuvre sur le terrain.
+> Vous ne manquez pas d'experts autour de vous. Vous manquez d'une lecture d'ensemble. Un Seul Souffle accompagne les dirigeants de PME et d'ETI à Toulouse et en Occitanie : un conseiller référent prend en charge votre sujet, et s'appuie sur quatre autres expertises de direction quand votre situation l'exige — jusqu'à la mise en œuvre sur le terrain.
 
 **CTA principal** → `Diagnostiquer mon entreprise en 5 min` → `/diagnostic/`
 **CTA secondaire** → `Voir la méthode en 5 étapes` → ancre `#methode`
@@ -65,9 +65,9 @@
 
 > Un Seul Souffle est un cabinet de conseil basé à Toulouse qui accompagne les dirigeants de PME et d'ETI de 10 à 250 salariés, dans l'industrie, l'agroalimentaire, les services et la distribution.
 >
-> Sa particularité : au lieu d'intervenir sur une seule expertise, le cabinet mobilise simultanément cinq compétences de direction — finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail — autour du même dirigeant et de la même entreprise.
+> Sa particularité : un conseiller référent prend en charge le sujet du dirigeant et reste son interlocuteur. Derrière lui, quatre autres compétences de direction — finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail — qu'il mobilise seulement si la situation l'exige.
 >
-> L'accompagnement ne s'arrête pas à un diagnostic : les consultants restent engagés jusqu'à la mise en œuvre, sur un parcours de 3 à 18 mois structuré en cinq étapes — aligner, coopérer, cartographier, structurer, renforcer.
+> L'accompagnement ne s'arrête pas à un diagnostic : les consultants restent engagés jusqu'à la mise en œuvre, sur un parcours de 3 à 12 mois structuré en cinq étapes — aligner, coopérer, cartographier, structurer, renforcer.
 
 *Mise à jour : septembre 2026* ← afficher la date, critère de fraîcheur GEO.
 
@@ -114,7 +114,7 @@
 | | Cabinet de conseil classique | Un Seul Souffle |
 |---|---|---|
 | **Livrable** | Un rapport et des recommandations | Une transformation mise en œuvre |
-| **Expertise** | Un pilier à la fois | Cinq expertises mobilisées ensemble |
+| **Expertise** | Un seul angle, le reste renvoyé ailleurs | Un référent dédié, quatre expertises en appui si le sujet l'exige |
 | **Présence** | Ponctuelle, en réunion | Sur le terrain, aux côtés des équipes |
 | **Point de sortie** | La remise du rapport | L'autonomie de l'entreprise |
 | **Diagnostic** | Sur le périmètre commandé | Systémique — on cherche la cause, pas le symptôme |
@@ -156,9 +156,9 @@
 
 **Étape 04 — Structurer : accélérer la performance globale**
 > *Le symptôme* : croissance freinée, tensions multiples, défaut de coordination entre stratégie, finance, organisation et humain.
-> *Ce que nous faisons* : activation coordonnée des cinq expertises sur les chantiers prioritaires.
+> *Ce que nous faisons* : votre référent conduit les chantiers prioritaires et appelle une autre expertise quand le sujet le demande.
 > *Le résultat* : une entreprise qui se structure durablement et réduit sa dépendance au dirigeant.
-> *Format* : accompagnement global multi-expertises, 6 à 12 mois.
+> *Format* : accompagnement sur les chantiers retenus avec vous, 6 à 12 mois.
 
 **Étape 05 — Renforcer : pérenniser la performance**
 > *Le symptôme* : le dirigeant reste le centre de tout. L'organisation doit gagner en autonomie et créer ses propres relais.
@@ -314,7 +314,7 @@ contact@unseulsouffle.fr
       "logo": "https://www.unseulsouffle.fr/logo.webp",
       "email": "contact@unseulsouffle.fr",
       "slogan": "Structurer aujourd'hui, renforcer demain",
-      "description": "Équipe de direction externalisée qui accompagne les dirigeants de PME et d'ETI en mobilisant simultanément cinq expertises : finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail.",
+      "description": "Équipe de direction externalisée qui accompagne les dirigeants de PME et d'ETI. Un conseiller référent prend en charge chaque situation et s'appuie, quand le sujet l'exige, sur quatre autres expertises de direction : finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "[À COMPLÉTER]",
@@ -375,7 +375,7 @@ contact@unseulsouffle.fr
           "name": "En quoi Un Seul Souffle est-il différent d'un cabinet de conseil classique ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Un cabinet classique analyse et recommande. Un Seul Souffle agit. Nous fonctionnons comme une équipe de direction externalisée : nous ne remettons pas un rapport, nous nous impliquons dans la transformation aux côtés de vos équipes, jusqu'à la mise en œuvre concrète sur le terrain. Notre approche mobilise plusieurs regards croisés — finance, coopération, qualité de vie au travail, stratégie, production — pour éviter les angles morts que le conseil à pilier unique ne peut pas voir."
+            "text": "Un cabinet classique analyse et recommande. Un Seul Souffle agit. Nous fonctionnons comme une équipe de direction externalisée : nous ne remettons pas un rapport, nous nous impliquons dans la transformation aux côtés de vos équipes, jusqu'à la mise en œuvre concrète sur le terrain. Vous avez un conseiller référent, dédié à votre sujet et interlocuteur unique. La différence est qu'il ne travaille pas seul : quand un angle mort sort de son périmètre, le collègue compétent le reprend en interne, sur ce point précis, au lieu de vous renvoyer vers un autre prestataire."
           }
         },
         {

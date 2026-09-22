@@ -60,14 +60,29 @@ export function Section({
   );
 }
 
-/** Sur-titre monospace — sert d'ancrage de rubrique, jamais de décoration. */
-export function Label({ children, className }: { children: React.ReactNode; className?: string }) {
+/**
+ * Sur-titre monospace — sert d'ancrage de rubrique, jamais de décoration.
+ *
+ * `style` n'est là que pour la teinte des piliers, qui vit dans `ACCENTS` et non
+ * dans la config Tailwind : les cinq couleurs sont des données de contenu, pas
+ * des tokens de thème. Tout autre usage passe par `className`.
+ */
+export function Label({
+  children,
+  className,
+  style,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
   return (
     <span
       className={clsx(
         "block font-mono text-[11px] uppercase tracking-label text-teal",
         className,
       )}
+      style={style}
     >
       {children}
     </span>

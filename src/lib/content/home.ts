@@ -94,7 +94,7 @@ export const reperes: { label: string; valeur: string }[] = [
   { label: "Entreprises accompagnées", valeur: "PME et ETI, 10 à 250 salariés" },
   { label: "Secteurs", valeur: "Industrie, agroalimentaire, services, distribution" },
   { label: "Zone", valeur: "Toulouse, Haute-Garonne, Occitanie" },
-  { label: "Durée d'un parcours", valeur: "3 à 18 mois selon la profondeur" },
+  { label: "Durée d'un parcours", valeur: "3 à 12 mois selon la profondeur" },
   { label: "Premier échange", valeur: "Gratuit et confidentiel" },
 ];
 
@@ -159,7 +159,11 @@ export const blocages: Blocage[] = [
 
 export const comparatif: { critere: string; classique: string; uss: string }[] = [
   { critere: "Livrable", classique: "Un rapport et des recommandations", uss: "Une transformation mise en œuvre" },
-  { critere: "Expertise", classique: "Un pilier à la fois", uss: "Cinq expertises mobilisées ensemble" },
+  {
+    critere: "Expertise",
+    classique: "Un seul angle, le reste renvoyé ailleurs",
+    uss: "Un référent dédié, quatre expertises en appui si le sujet l'exige",
+  },
   { critere: "Présence", classique: "Ponctuelle, en réunion", uss: "Sur le terrain, aux côtés des équipes" },
   { critere: "Point de sortie", classique: "La remise du rapport", uss: "L'autonomie de l'entreprise" },
   { critere: "Diagnostic", classique: "Sur le périmètre commandé", uss: "Systémique — la cause, pas le symptôme" },
@@ -232,9 +236,10 @@ export const etapes: Etape[] = [
     promesse: "accélérer la performance globale",
     symptome:
       "Croissance freinée, tensions multiples, défaut de coordination entre stratégie, finance, organisation et humain.",
-    action: "Activation coordonnée des cinq expertises sur les chantiers prioritaires.",
+    action:
+      "Votre référent conduit les chantiers prioritaires et appelle une autre expertise quand le sujet le demande.",
     resultat: "Une entreprise qui se structure durablement et réduit sa dépendance au dirigeant.",
-    format: "Accompagnement global multi-expertises, 6 à 12 mois.",
+    format: "Accompagnement sur les chantiers retenus avec vous, 6 à 12 mois.",
   },
   {
     n: "05",
@@ -307,7 +312,7 @@ export const parcours: Parcours[] = [
       "L'entreprise dépend encore entièrement de vous",
     ],
     travail: "Le fonctionnement réel du système, sa structure, puis son autonomie.",
-    duree: "6 à 18 mois",
+    duree: "6 à 12 mois",
     depart: "Diagnostic 360° et immersion terrain",
     href: "/transformation-entreprise/",
     ancre: "Découvrir la transformation de l'entreprise",
@@ -439,7 +444,7 @@ export const faq: QuestionFAQ[] = [
     q: "En quoi Un Seul Souffle est-il différent d'un cabinet de conseil classique ?",
     r: [
       "Un cabinet classique analyse et recommande. Un Seul Souffle agit. Nous fonctionnons comme une équipe de direction externalisée : nous ne remettons pas un rapport, nous nous impliquons directement dans la transformation de votre entreprise, aux côtés de vos équipes, jusqu'à la mise en œuvre concrète sur le terrain.",
-      "Notre approche mobilise plusieurs regards croisés — finance, coopération, QVT, stratégie, production — pour éviter les angles morts que le conseil à pilier unique ne peut pas voir.",
+      "Vous avez un conseiller référent, dédié à votre sujet et interlocuteur unique. La différence est qu'il ne travaille pas seul : quand un angle mort sort de son périmètre, le collègue compétent le reprend en interne, sur ce point précis, au lieu de vous renvoyer vers un autre prestataire.",
     ],
   },
   {
@@ -485,7 +490,7 @@ export const faq: QuestionFAQ[] = [
     q: "Comment abordez-vous la stratégie et l'organisation ensemble ?",
     r: [
       "Nous refusons de traiter la stratégie sans regarder l'organisation, et inversement. Une stratégie brillante échoue si l'organisation n'est pas en mesure de l'exécuter. À l'inverse, une organisation bien huilée sans cap clair tourne dans le vide.",
-      "Chez Un Seul Souffle, stratégie commerciale et structuration organisationnelle sont toujours traitées comme deux faces d'un même défi, avec les experts des deux piliers autour de la même table.",
+      "Chez Un Seul Souffle, stratégie commerciale et structuration organisationnelle sont traitées comme deux faces d'un même défi. Votre référent porte le sujet et fait intervenir le second pilier sur le point qui le concerne — sans que le périmètre convenu avec vous s'élargisse pour autant.",
     ],
   },
   {
@@ -513,7 +518,7 @@ export type HeroImage = { src: string; alt: string };
 export const heroImages: HeroImage[] = [
   {
     src: "/hero/hero-1.webp",
-    alt: "Réunion de direction dans une PME, plusieurs expertises réunies autour de la même table",
+    alt: "Réunion de direction dans une PME, autour de la table de travail",
   },
   {
     src: "/hero/hero-2.webp",

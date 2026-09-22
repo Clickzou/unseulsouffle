@@ -45,9 +45,9 @@ export function Hero() {
           <p style={{ animationDelay: "270ms" }} className="anim-montee mt-6 max-w-[58ch] text-lg leading-relaxed text-[#d3d8e0]">
             Vous ne manquez pas d&apos;experts autour de vous. Vous manquez d&apos;une lecture
             d&apos;ensemble. Un Seul Souffle accompagne les dirigeants de PME et d&apos;ETI à
-            Toulouse et en Occitanie en mobilisant cinq expertises de direction — finance,
-            organisation, stratégie commerciale, production, qualité de vie au travail — autour de
-            la même table, sur la même entreprise, jusqu&apos;à la mise en œuvre sur le terrain.
+            Toulouse et en Occitanie : un conseiller référent prend en charge votre sujet, et
+            s&apos;appuie sur quatre autres expertises de direction quand votre situation
+            l&apos;exige — jusqu&apos;à la mise en œuvre sur le terrain.
           </p>
 
           <div style={{ animationDelay: "360ms" }} className="anim-montee mt-8 flex flex-wrap gap-3">

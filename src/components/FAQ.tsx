@@ -1,25 +1,33 @@
 import { Section, SectionHead } from "@/components/ui/Section";
-import { faq } from "@/lib/content/home";
+import { faq as faqHome, type QuestionFAQ } from "@/lib/content/home";
 
 /**
  * Accordéon natif <details> — indexé par Google, accessible au clavier sans JS.
  * La première question est ouverte au repos : la page ne doit jamais se présenter
  * entièrement replliée.
  *
- * Le JSON-LD FAQPage est construit depuis le MÊME tableau `faq`
+ * Le JSON-LD FAQPage est construit depuis le MÊME tableau que l'affichage
  * (src/lib/seo/schema.ts) : balisage et contenu affiché ne peuvent pas diverger.
+ *
+ * Sans props, le composant sert la FAQ de la home. Les pages piliers passent la
+ * leur : chacune répond aux questions de son intention, et deux FAQ identiques
+ * sur deux URL se cannibaliseraient.
  */
-export function FAQ() {
+export function FAQ({
+  items = faqHome,
+  titre = "Les questions que les dirigeants nous posent",
+  ton = "ground",
+}: {
+  items?: QuestionFAQ[];
+  titre?: string;
+  ton?: "ground" | "surface";
+}) {
   return (
-    <Section>
-      <SectionHead
-        label="Questions fréquentes"
-        titre="Les questions que les dirigeants nous posent"
-        centre
-      />
+    <Section ton={ton}>
+      <SectionHead label="Questions fréquentes" titre={titre} centre />
 
       <div className="border-t border-rule">
-        {faq.map((item, index) => (
+        {items.map((item, index) => (
           <details key={item.q} open={index === 0} className="group border-b border-rule-2">
             <summary
               className="relative cursor-pointer py-6 pr-12 font-serif text-[20px] font-normal

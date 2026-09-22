@@ -6,10 +6,16 @@
 > et la carte d'intention sont refondus pour une activité de conseil B2B haut de gamme
 > à faible volume et forte intention — modèle opposé au programmatique Clickzou.
 
-**Version** : 1.0
-**Date** : 2026-09-03
+**Version** : 1.1
+**Date** : 2026-09-22
 **Base** : audit unseulsouffle.fr du 2026-08-31 (22 constats) + SEO MASTER CLICKZOU v2.6
 **Maintenu par** : Clickzou + Claude
+
+**Journal**
+- v1.1 (2026-09-22) — Ajout de la **règle de dosage** (§ 1) : le site promet un conseiller
+  référent dédié au problème, jamais cinq expertises mobilisées d'un coup. Ligne directrice
+  arrêtée par JC. Répercutée en § 6 (ton), § 7 (friction) et § 10 (anti-patterns).
+- v1.0 (2026-09-03) — Version initiale.
 
 ---
 
@@ -35,7 +41,7 @@
 
 - **URL** : https://www.unseulsouffle.fr (www + HTTPS, canonique)
 - **Activité** : cabinet de conseil et d'accompagnement de dirigeants de PME et ETI —
-  intervention opérationnelle multi-expertises, pas de remise de rapport
+  intervention opérationnelle menée jusqu'au terrain, pas de remise de rapport
 - **Siège** : `[À CONFIRMER — Toulouse / Haute-Garonne]` — **bloquant** : l'adresse manque
   aux mentions légales, à la page contact, au footer et au JSON-LD. Sans NAP, aucun SEO
   local possible et aucune fiche Google exploitable.
@@ -45,6 +51,37 @@
 - **Langue** : français uniquement
 - **Signature** : « équipe de direction externalisée » / « cellule stratégique externalisée »
   — c'est l'actif sémantique unique de la marque, quasi vierge de concurrence. À marteler.
+
+### REGLE DE DOSAGE — un conseiller dédié, pas cinq experts d'un coup
+
+> Ligne directrice arrêtée par JC le 22/09/2026. Elle prime sur toute formulation
+> antérieure de ce document et s'applique à **toutes** les pages du site.
+
+Le site promet **un conseiller référent, dédié au problème du client et interlocuteur
+unique du début à la fin**. Les quatre autres expertises restent en réserve et ne sont
+appelées que si la demande l'exige, sur ce sujet et le temps de ce sujet.
+
+**Pourquoi** : « cinq expertises mobilisées ensemble » ne se lit pas comme une force par
+un dirigeant qui hésite. Il comprend « ils vont tout revoir chez moi », évalue le coût et
+le désordre, et ne prend pas rendez-vous. La profondeur d'équipe doit **rassurer** — rien
+ne sera renvoyé à un prestataire extérieur, aucun angle mort ne sera laissé de côté — et
+non annoncer un chantier total.
+
+Ce n'est pas un changement de positionnement : la signature « équipe de direction
+externalisée » reste l'actif sémantique de la marque. C'est le **dosage commercial** qui
+change. L'équipe est la réserve, le référent est la promesse.
+
+| À bannir | À écrire |
+|---|---|
+| « mobilise simultanément cinq compétences » | « un conseiller référent prend en charge votre sujet » |
+| « cinq expertises mobilisées ensemble » | « quatre autres expertises en appui si le sujet l'exige » |
+| « activation coordonnée des cinq expertises » | « votre référent appelle une expertise quand un chantier le demande » |
+| « accompagnement global multi-expertises » | « accompagnement sur les chantiers retenus avec vous » |
+| Laisser entendre que tout sera réorganisé | « on ne touche pas à ce qui fonctionne » |
+
+**Corollaire — le périmètre est une promesse.** Toute page décrivant une intervention dit
+explicitement que le périmètre est arrêté avec le client, écrit dans la proposition, et
+qu'il ne s'élargit pas sans son accord.
 
 ### Différence structurelle avec le modèle Clickzou
 
@@ -321,6 +358,10 @@ actionnable.
   employés seuls.
 - **Nommer la douleur avant la solution** : la home actuelle le fait bien avec les défis,
   c'est le meilleur acquis rédactionnel du site
+- **Un référent, pas une équipe entière** (§ 1, règle de dosage) : la promesse s'écrit au
+  singulier — un conseiller, un interlocuteur, un périmètre. Le renfort des autres
+  expertises se mentionne toujours sous condition (« si le sujet l'exige »), jamais comme
+  le mode d'intervention par défaut
 - **Data-driven quand la donnée existe** — jamais « amélioration significative ».
   Et jamais de chiffre inventé pour combler.
 - **Pas d'emojis** dans le contenu
@@ -372,6 +413,20 @@ manquant avant tous les autres. À produire dans cet ordre :
 - Montrer le coût de l'inaction, chiffré quand c'est possible
 - Créer l'urgence sans manipulation
 - Lever l'objection prix par la transparence sur le format, pas par le silence
+
+### Objections à lever explicitement
+
+La friction attire ; les objections non traitées font partir. Sur ce marché, trois
+objections précèdent le prix et doivent être levées **sur la page**, pas en rendez-vous.
+
+| Objection du dirigeant | Où la lever | Réponse du site |
+|---|---|---|
+| « Ils vont tout vouloir réorganiser » | Page pilier, encadré dédié + FAQ | Le périmètre est arrêté avec vous, écrit dans la proposition, et ne s'élargit pas sans votre accord. On ne touche pas à ce qui fonctionne. |
+| « Je vais avoir cinq consultants sur le dos » | Bloc « L'essentiel » + FAQ | Un conseiller référent, interlocuteur unique du début à la fin (§ 1, règle de dosage) |
+| « Ça va mobiliser mes équipes » | Section déroulé | Dire la charge réelle plutôt que la taire : c'est la contrepartie d'un accompagnement mené jusqu'au terrain |
+
+**Règle** : toute page décrivant une intervention comporte au moins une entrée de FAQ qui
+lève une de ces objections, et le bloc « L'essentiel » nomme le référent unique.
 
 ### Offres de conversion
 
@@ -458,6 +513,8 @@ Chaque épisode de podcast est la matière première d'un cycle complet :
 | Vocabulaire de consultant | La cible est le dirigeant, pas le pair |
 | Promesses vagues sans preuve | Sur un panier à cinq chiffres, la preuve précède l'argument |
 | Pages orphelines | 2 pages d'offres sans lien entrant, invisibles de Google comme des visiteurs |
+| **Annoncer cinq expertises mobilisées d'un coup** | Le dirigeant comprend « ils vont tout revoir chez moi » et ne prend pas rendez-vous. Voir § 1, règle de dosage |
+| **Décrire une intervention sans en borner le périmètre** | Un périmètre ouvert se lit comme une facture ouverte |
 
 ---
 

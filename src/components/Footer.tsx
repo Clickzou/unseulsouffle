@@ -45,10 +45,12 @@ export function Footer() {
               className="mb-5 h-auto w-[110px]"
             />
             <address className="text-sm not-italic leading-loose">
-              <span className="font-mono text-xs text-amber">[Adresse complète]</span>
+              2 rue du Fort
               <br />
-              <span className="font-mono text-xs text-amber">[Code postal]</span> Toulouse
+              31450 Ayguesvives
               <br />
+              {/* Dernier champ NAP manquant : sans lui, pas de clic-to-call sur mobile
+                  ni de numéro sur la fiche Google Business. */}
               <span className="font-mono text-xs text-amber">[Téléphone]</span>
               <br />
               <a href="mailto:contact@unseulsouffle.fr" className="hover:text-teal">
