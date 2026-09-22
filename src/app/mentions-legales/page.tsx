@@ -4,6 +4,7 @@ import Link from "next/link";
 import { EnTetePage } from "@/components/ui/EnTetePage";
 import { Section } from "@/components/ui/Section";
 import { Footer } from "@/components/Footer";
+import { NON_INDEXABLE } from "@/lib/seo/indexation";
 
 /**
  * Mentions légales — obligation LCEN (loi du 21 juin 2004, art. 6-III).
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   title: "Mentions légales",
   description: "Mentions légales du site unseulsouffle.fr.",
   alternates: { canonical: "/mentions-legales/" },
-  robots: { index: false, follow: true },
+  robots: NON_INDEXABLE,
 };
 
 /** Champ non fourni — rendu visible, jamais inventé. */

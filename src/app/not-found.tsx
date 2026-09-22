@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Shell, Label } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { ACCENTS } from "@/lib/content/home";
+import { NON_INDEXABLE } from "@/lib/seo/indexation";
 
 /**
  * Page 404 du site.
@@ -21,7 +22,7 @@ import { ACCENTS } from "@/lib/content/home";
  */
 export const metadata: Metadata = {
   title: "Page introuvable",
-  robots: { index: false, follow: true },
+  robots: NON_INDEXABLE,
 };
 
 const EN_LIGNE = [

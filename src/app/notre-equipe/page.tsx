@@ -10,6 +10,7 @@ import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTAFinal } from "@/components/CTAFinal";
 import { ACCENTS, equipe, piliers, SITE_URL } from "@/lib/content/home";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Page équipe — pilier E-E-A-T du site (master § 2 et § 8, point 5).
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Marjorie Anglade, Muriel Saffroy et leurs partenaires : finance, organisation, commercial, production et QVT au service des dirigeants de PME.",
   alternates: { canonical: "/notre-equipe/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
+  robots: ROBOTS,
 };
 
 /** Le pilier porté par un membre, retrouvé depuis `piliers.referents`. */

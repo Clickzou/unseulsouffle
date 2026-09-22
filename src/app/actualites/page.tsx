@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/ui/Reveal";
 import { SITE_URL } from "@/lib/content/home";
+import { NON_INDEXABLE } from "@/lib/seo/indexation";
 
 /**
  * Actualités — rubrique en attente de sa première publication.
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Articles de fond, épisodes de podcast et publications d'Un Seul Souffle pour les dirigeants de PME et d'ETI.",
   alternates: { canonical: "/actualites/" },
-  robots: { index: false, follow: true },
+  robots: NON_INDEXABLE,
 };
 
 const PROGRAMME = [

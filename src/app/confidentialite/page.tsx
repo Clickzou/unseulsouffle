@@ -4,6 +4,7 @@ import Link from "next/link";
 import { EnTetePage } from "@/components/ui/EnTetePage";
 import { Section } from "@/components/ui/Section";
 import { Footer } from "@/components/Footer";
+import { NON_INDEXABLE } from "@/lib/seo/indexation";
 
 /**
  * Politique de confidentialité — RGPD.
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description: "Traitement des données personnelles sur le site unseulsouffle.fr.",
   alternates: { canonical: "/confidentialite/" },
-  robots: { index: false, follow: true },
+  robots: NON_INDEXABLE,
 };
 
 function AFournir({ children }: { children: React.ReactNode }) {

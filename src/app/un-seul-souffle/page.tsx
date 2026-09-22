@@ -9,6 +9,7 @@ import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTAFinal } from "@/components/CTAFinal";
 import { ACCENTS, etapes, valeurs, cordee, SITE_URL, type CleAccent } from "@/lib/content/cabinet";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Page « Le cabinet » — l'identité et la méthode.
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Cabinet de conseil pour dirigeants de PME et ETI en Occitanie : notre méthode en cinq étapes, nos valeurs et notre façon d'intervenir.",
   alternates: { canonical: "/un-seul-souffle/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
+  robots: ROBOTS,
 };
 
 function schema() {

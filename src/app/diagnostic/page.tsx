@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { ACCENTS, piliers, SITE_URL } from "@/lib/content/home";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Page de conversion nº 1 — le CTA principal de tout le site.
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Évaluez votre entreprise sur les cinq piliers en 5 minutes : finance, organisation, commercial, production, QVT. Résultat immédiat, sans engagement.",
   alternates: { canonical: "/diagnostic/" },
-  robots: { index: true, follow: true },
+  robots: ROBOTS,
 };
 
 const ETAPES = [

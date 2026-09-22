@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/content/home";
+import { INDEXABLE } from "@/lib/seo/indexation";
 
 /**
  * Trailing slash sur toutes les URL, cohérent avec `trailingSlash: true`.
@@ -23,6 +24,10 @@ const PAGES: { path: string; priority: number }[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Refonte en cours : sitemap vide plutôt que supprimé, pour que l'URL continue
+  // de répondre 200 et que la bascule d'indexation le remplisse d'un coup.
+  if (!INDEXABLE) return [];
+
   const lastModified = new Date();
 
   return PAGES.map(({ path, priority }) => ({

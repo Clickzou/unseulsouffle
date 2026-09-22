@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/ui/Reveal";
 import { SITE_URL } from "@/lib/content/home";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Page de conversion nº 2 — l'entretien découverte.
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   description:
     "Parlez à Marjorie Anglade et Muriel Saffroy. Premier échange de 30 minutes, gratuit et confidentiel, pour qualifier votre situation. Occitanie.",
   alternates: { canonical: "/contact/" },
-  robots: { index: true, follow: true },
+  robots: ROBOTS,
 };
 
 const DEROULE = [

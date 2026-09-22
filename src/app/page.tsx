@@ -15,6 +15,7 @@ import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { buildHomeSchema } from "@/lib/seo/schema";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Page d'accueil — intention propriétaire : « équipe de direction externalisée,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   description:
     "Équipe de direction externalisée pour dirigeants de PME et ETI à Toulouse : finance, organisation, stratégie, production, QVT. Diagnostic gratuit.",
   alternates: { canonical: "/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
+  robots: ROBOTS,
   openGraph: {
     type: "website",
     locale: "fr_FR",

@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { CTAFinal } from "@/components/CTAFinal";
 import { ACCENTS, SITE_URL } from "@/lib/content/home";
 import type { PageMembre } from "@/lib/content/membres";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Gabarit des pages d'associées.
@@ -25,7 +26,7 @@ export function metadataMembre(membre: PageMembre): Metadata {
     title: membre.metaTitle,
     description: membre.metaDescription,
     alternates: { canonical: `/${membre.slug}/` },
-    robots: { index: true, follow: true, "max-image-preview": "large" },
+    robots: ROBOTS,
     openGraph: {
       type: "profile",
       locale: "fr_FR",

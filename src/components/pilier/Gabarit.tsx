@@ -11,6 +11,7 @@ import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { buildPilierSchema } from "@/lib/seo/schema";
 import type { PagePilier } from "@/lib/content/pilier";
+import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
  * Gabarit unique des pages piliers : même ordre de lecture sur tous les silos.
@@ -28,7 +29,7 @@ export function metadataPilier(page: PagePilier): Metadata {
     title: page.metaTitle,
     description: page.metaDescription,
     alternates: { canonical: page.href },
-    robots: { index: true, follow: true, "max-image-preview": "large" },
+    robots: ROBOTS,
     openGraph: {
       type: "article",
       locale: "fr_FR",
