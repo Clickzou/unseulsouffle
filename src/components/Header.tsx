@@ -41,7 +41,9 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
             doit être le premier enfant direct de `details`, sinon le navigateur
             en fabrique un (« Détails ») et replie tout le reste de la barre. */}
         <nav
-          className={`flex items-center gap-3 py-5 sm:gap-8 ${
+          // Grand écran : grille 1fr / auto / 1fr, les liens sont au centre exact de
+          // la barre quelle que soit la largeur du logo et du bouton.
+          className={`flex items-center gap-3 py-5 sm:gap-8 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
             surPhoto ? "border-b border-white/15" : "border-b border-rule-2"
           }`}
         >
@@ -50,7 +52,7 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
                 tient sur les deux fonds ; le nom est repris dans la typo du site.
                 `min-w-0` autorise le bloc à se réduire au lieu de pousser la nav
                 au-delà de la largeur de l'écran. */}
-            <Link href="/" className="flex min-w-0 shrink items-center gap-2.5">
+            <Link href="/" className="flex min-w-0 shrink items-center gap-2.5 lg:justify-self-start">
               <Image
                 src="/logo/symbole.webp"
                 alt=""
@@ -68,7 +70,7 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
               </span>
             </Link>
 
-            <ul className="ml-auto hidden gap-6 text-sm lg:flex">
+            <ul className="hidden gap-7 text-sm lg:flex">
               {LIENS.map((lien) => (
                 <li key={lien.href}>
                   <Link
@@ -88,7 +90,7 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
                 tient pas à côté du logo sur un téléphone. */}
             <Button
               href="/diagnostic/"
-              className="ml-auto shrink-0 !px-3 !py-2 !text-[13px] sm:!px-4 sm:!py-2.5 sm:!text-[13.5px] lg:ml-0"
+              className="ml-auto shrink-0 !px-3 !py-2 !text-[13px] sm:!px-4 sm:!py-2.5 sm:!text-[13.5px] lg:ml-0 lg:justify-self-end"
             >
               <span className="sm:hidden">Diagnostic</span>
               <span className="hidden sm:inline">Diagnostic gratuit</span>
