@@ -527,6 +527,10 @@ export type HeroImage = { src: string; alt: string };
 
 export const heroImages: HeroImage[] = [
   {
+    src: "/hero/hero-5.webp",
+    alt: "Site industriel d'une PME familiale en Occitanie en fin de journée",
+  },
+  {
     src: "/hero/hero-1.webp",
     alt: "Réunion de direction dans une PME, autour de la table de travail",
   },
@@ -541,9 +545,5 @@ export const heroImages: HeroImage[] = [
   {
     src: "/hero/hero-4.webp",
     alt: "Cartographie des rôles et des flux de décision d'une entreprise sur un tableau",
-  },
-  {
-    src: "/hero/hero-5.webp",
-    alt: "Site industriel d'une PME familiale en Occitanie en fin de journée",
   },
 ];
