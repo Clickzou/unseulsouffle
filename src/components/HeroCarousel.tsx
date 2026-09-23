@@ -23,7 +23,8 @@ export function HeroCarousel() {
   // Seule l'image affichée et la suivante entrent dans le DOM. Monter les cinq
   // d'emblée ferait télécharger ~1 Mo avant le premier rendu utile — exactement
   // le travers relevé à l'audit (3,3 Mo par page).
-  const [montees, setMontees] = useState<number[]>([0]);
+  // L'image 2 est montée d'emblée : c'est elle qui apparaît au premier fondu.
+  const [montees, setMontees] = useState<number[]>([0, 1]);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -39,10 +40,11 @@ export function HeroCarousel() {
     const id = setInterval(() => {
       setActif((courant) => {
         const suivant = (courant + 1) % heroImages.length;
-        // Précharge le cran d'après, pour que le fondu ait toujours une image prête.
+        // Garantit l'image affichée ET précharge la suivante, pour que le fondu
+        // ait toujours une image prête (sinon le premier fondu montrait un fond vide).
         setMontees((deja) => {
           const aVenir = (suivant + 1) % heroImages.length;
-          return deja.includes(aVenir) ? deja : [...deja, aVenir];
+          return Array.from(new Set([...deja, suivant, aVenir]));
         });
         return suivant;
       });

@@ -52,53 +52,49 @@ const REALISM =
   "sticky note visible must be blank, or so out of focus that no character can be made out. " +
   "Surfaces are empty and clean rather than covered in writing.";
 
+// Retour client (2026-09-23) : pas de feuilles, tableaux ou écrans vierges —
+// ils font faux en grand format. Les scènes ne montrent aucun support écrit.
+const SANS_SUPPORT =
+  "IMPORTANT: no paper, no documents, no notebooks, no whiteboard, no flipchart, no screens, " +
+  "no laptop, no sticky notes anywhere in the scene.";
+
 const IMAGES = [
   {
     file: "hero-1",
-    alt: "Réunion de direction dans une PME, plusieurs expertises autour de la même table",
+    alt: "Dirigeant et deux responsables en discussion debout dans l'atelier d'une PME",
     prompt:
-      "Camera placed BEHIND the near end of a long oak table, looking down its length: " +
-      "a management meeting inside a mid-sized French company, shot entirely from the back. " +
-      "In the foreground, two people seen from behind fill the lower corners, shoulders and " +
-      "backs of heads only. Further away, more attendees are turned away from the camera or " +
-      "reduced to blurred shapes. Nobody faces the lens. Late afternoon light rakes in from " +
-      "tall industrial windows on the left, deep shadows on the right. Exposed brick, warm wood, " +
-      "green plants, restrained contemporary office. Bare table apart from plain cups and a " +
-      "closed laptop. Shallow depth of field.",
+      "Three people standing in conversation on the floor of a bright mid-sized French manufacturing workshop, " +
+      "seen from behind and in three-quarter back view, one of them gesturing with an open hand towards the machines. " +
+      "Work jackets and a navy blazer, safety floor markings, warm late-afternoon light through high windows, " +
+      "machines softly out of focus. Natural, candid, working atmosphere. " + SANS_SUPPORT,
   },
   {
     file: "hero-2",
-    alt: "Dirigeant et responsable de production sur une ligne de fabrication",
+    alt: "Dirigeant et responsable de production devant une ligne de fabrication",
     prompt:
       "Over-the-shoulder shot on the floor of a small French manufacturing plant. " +
       "Two figures seen from behind — one in a well-cut jacket, one in a work coat — " +
       "standing in front of a production line, one arm raised pointing at a machine down the line. " +
       "Machinery slightly out of focus in the background, cool daylight from high windows " +
       "cutting through the space, teal-painted steel structures, honest industrial atmosphere. " +
-      "Not a glossy showroom: a real working plant, slightly worn.",
+      "Not a glossy showroom: a real working plant, slightly worn. " + SANS_SUPPORT,
   },
   {
     file: "hero-3",
-    alt: "Dirigeante seule dans son bureau, moment de recul stratégique",
+    alt: "Dirigeante face à la fenêtre de son bureau, moment de recul stratégique",
     prompt:
       "Quiet side view of a single executive standing at a large window in a first-floor office, " +
-      "seen entirely from behind as a dark silhouette against soft morning light, " +
-      "one hand holding a folded document. Southern French city rooftops in warm terracotta " +
-      "and a distant skyline visible outside, slightly out of focus. " +
-      "Empty desk with a closed laptop and a cold coffee in the foreground. " +
-      "Contemplative, spacious, deliberately understated.",
+      "seen entirely from behind as a dark silhouette against soft morning light, hands in pockets. " +
+      "Southern French city rooftops in warm terracotta and a distant skyline visible outside, slightly out of focus. " +
+      "Minimal room, a plant and an empty armchair in the foreground. Contemplative, spacious, understated. " + SANS_SUPPORT,
   },
   {
     file: "hero-4",
-    alt: "Session de travail sur les priorités d'une entreprise, vue de dessus",
+    alt: "Deux personnes marchant côte à côte dans un espace de bureaux lumineux",
     prompt:
-      "Top-down overhead shot of a wide walnut worktable during a working session. " +
-      "Only forearms and hands enter the frame from three sides: one hand rests flat on a large " +
-      "blank sheet of paper, another holds a pencil, a third reaches for a cup of coffee. " +
-      "No heads, no faces, no shoulders in frame. On the table: unmarked paper, a folded tape " +
-      "measure, reading glasses, a small stack of blank index cards, a plain notebook closed. " +
-      "Everything paper is blank and slightly out of focus. Warm side light from a window, " +
-      "long soft shadows across the wood grain, quiet concentrated atmosphere.",
+      "Two professionals walking side by side down a bright open-plan office corridor with light oak and large windows, " +
+      "photographed strictly from behind at a distance, backs of heads only, no face visible at all, " +
+      "one gesturing with an open hand as they talk. Green plants, warm natural light, calm purposeful mood. " + SANS_SUPPORT,
   },
   {
     file: "hero-5",

@@ -532,7 +532,7 @@ export const heroImages: HeroImage[] = [
   },
   {
     src: "/hero/hero-1.webp",
-    alt: "Réunion de direction dans une PME, autour de la table de travail",
+    alt: "Dirigeant et deux responsables en discussion debout dans l'atelier d'une PME",
   },
   {
     src: "/hero/hero-2.webp",
@@ -540,10 +540,10 @@ export const heroImages: HeroImage[] = [
   },
   {
     src: "/hero/hero-3.webp",
-    alt: "Dirigeante face à la fenêtre de son bureau, moment de recul stratégique",
+    alt: "Dirigeant face à la fenêtre de son bureau, moment de recul stratégique",
   },
   {
     src: "/hero/hero-4.webp",
-    alt: "Cartographie des rôles et des flux de décision d'une entreprise sur un tableau",
+    alt: "Deux personnes marchant côte à côte dans un espace de bureaux lumineux",
   },
 ];
