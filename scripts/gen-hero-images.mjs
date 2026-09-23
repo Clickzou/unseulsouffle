@@ -5,6 +5,9 @@
  *   node scripts/gen-hero-images.mjs --force    # régénère tout
  *   node scripts/gen-hero-images.mjs 2 4        # régénère les slots 2 et 4
  *
+ * ⚠ Cache d'un an sur les images : après régénération, renommer le fichier
+ * (et `heroImages` dans home.ts), sinon l'ancienne version reste affichée.
+ *
  * FAL_KEY est lue depuis l'environnement, sinon depuis le .env.local de clickzou-v2
  * (jamais affichée). Sortie : public/hero/hero-N.webp, 16:9.
  *
@@ -60,7 +63,7 @@ const SANS_SUPPORT =
 
 const IMAGES = [
   {
-    file: "hero-1",
+    file: "atelier-equipe",
     alt: "Dirigeant et deux responsables en discussion debout dans l'atelier d'une PME",
     prompt:
       "Three people standing in conversation on the floor of a bright mid-sized French manufacturing workshop, " +
@@ -69,7 +72,7 @@ const IMAGES = [
       "machines softly out of focus. Natural, candid, working atmosphere. " + SANS_SUPPORT,
   },
   {
-    file: "hero-2",
+    file: "ligne-production",
     alt: "Dirigeant et responsable de production devant une ligne de fabrication",
     prompt:
       "Over-the-shoulder shot on the floor of a small French manufacturing plant. " +
@@ -80,7 +83,7 @@ const IMAGES = [
       "Not a glossy showroom: a real working plant, slightly worn. " + SANS_SUPPORT,
   },
   {
-    file: "hero-3",
+    file: "recul-fenetre",
     alt: "Dirigeante face à la fenêtre de son bureau, moment de recul stratégique",
     prompt:
       "Quiet side view of a single executive standing at a large window in a first-floor office, " +
@@ -89,7 +92,7 @@ const IMAGES = [
       "Minimal room, a plant and an empty armchair in the foreground. Contemplative, spacious, understated. " + SANS_SUPPORT,
   },
   {
-    file: "hero-4",
+    file: "couloir-bureaux",
     alt: "Deux personnes marchant côte à côte dans un espace de bureaux lumineux",
     prompt:
       "Two professionals walking side by side down a bright open-plan office corridor with light oak and large windows, " +
@@ -97,7 +100,7 @@ const IMAGES = [
       "one gesturing with an open hand as they talk. Green plants, warm natural light, calm purposeful mood. " + SANS_SUPPORT,
   },
   {
-    file: "hero-5",
+    file: "site-industriel",
     alt: "Site industriel d'une PME en Occitanie en fin de journée",
     prompt:
       "Exterior wide shot of a modest industrial building of a family-owned company " +

@@ -519,6 +519,8 @@ export const faq: QuestionFAQ[] = [
 
 /* ─────────── Visuels du carrousel de hero ───────────
  * Générés par scripts/gen-hero-images.mjs (fal.ai Flux Pro v1.1 Ultra, 16:9).
+ * Les fichiers sont servis avec un cache d'un an (next.config.mjs) : une image
+ * régénérée doit changer de NOM, sinon navigateurs et CDN gardent l'ancienne.
  * `alt` réellement descriptif : ces visuels illustrent l'activité, ils ne sont pas
  * de simples ornements. Ordre = ordre d'affichage ; le premier est le LCP.
  */
@@ -527,23 +529,23 @@ export type HeroImage = { src: string; alt: string };
 
 export const heroImages: HeroImage[] = [
   {
-    src: "/hero/hero-5.webp",
+    src: "/hero/site-industriel.webp",
     alt: "Site industriel d'une PME familiale en Occitanie en fin de journée",
   },
   {
-    src: "/hero/hero-1.webp",
+    src: "/hero/atelier-equipe.webp",
     alt: "Dirigeant et deux responsables en discussion debout dans l'atelier d'une PME",
   },
   {
-    src: "/hero/hero-2.webp",
+    src: "/hero/ligne-production.webp",
     alt: "Dirigeant et responsable de production devant une ligne de fabrication",
   },
   {
-    src: "/hero/hero-3.webp",
+    src: "/hero/recul-fenetre.webp",
     alt: "Dirigeant face à la fenêtre de son bureau, moment de recul stratégique",
   },
   {
-    src: "/hero/hero-4.webp",
+    src: "/hero/couloir-bureaux.webp",
     alt: "Deux personnes marchant côte à côte dans un espace de bureaux lumineux",
   },
 ];
