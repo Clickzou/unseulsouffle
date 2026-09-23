@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Header } from "@/components/Header";
 import { ACCENTS } from "@/lib/content/home";
 import type { PagePilier } from "@/lib/content/pilier";
+import { CarteReperes } from "@/components/pilier/EssentielPilier";
 
 /**
  * En-tête des pages piliers.
@@ -22,43 +23,48 @@ export function PilierHero({ page }: { page: PagePilier }) {
     <div className="bg-mist">
       <Header />
 
-      <Shell>
-        <header className="max-w-[54rem] pb-16 pt-12 sm:pb-20 sm:pt-16">
-          <nav aria-label="Fil d'Ariane" className="mb-9 font-mono text-[11.5px] text-muted">
-            <Link href="/" className="transition-colors hover:text-teal">
-              Accueil
-            </Link>
-            <span aria-hidden="true" className="px-2 text-rule">
-              /
-            </span>
-            <span className="text-body">{page.fil}</span>
-          </nav>
+      <Shell large>
+        <div className="grid gap-12 pb-16 pt-12 sm:pb-20 sm:pt-16 lg:grid-cols-2 lg:items-center lg:gap-20">
+          <header className="min-w-0">
+            <nav aria-label="Fil d'Ariane" className="mb-9 font-mono text-[11.5px] text-muted">
+              <Link href="/" className="transition-colors hover:text-teal">
+                Accueil
+              </Link>
+              <span aria-hidden="true" className="px-2 text-rule">
+                /
+              </span>
+              <span className="text-body">{page.fil}</span>
+            </nav>
 
-          <Label style={{ color: accent.texte }}>{page.fil}</Label>
+            <Label style={{ color: accent.texte }}>{page.fil}</Label>
 
-          <h1 className="mt-4 max-w-[20ch] text-[clamp(33px,4.8vw,52px)] leading-[1.08] text-ink">
-            {page.h1}
-          </h1>
+            <h1 className="mt-4 max-w-[20ch] text-[clamp(33px,4.8vw,52px)] leading-[1.08] text-ink">
+              {page.h1}
+            </h1>
 
-          {/* Filet à la teinte du pilier : le lecteur retrouve, d'une page à
-              l'autre, la couleur que la home a associée à ce sujet. */}
-          <div
-            aria-hidden="true"
-            className="mt-7 h-px w-20"
-            style={{ backgroundColor: accent.vif }}
-          />
+            {/* Filet à la teinte du pilier : le lecteur retrouve, d'une page à
+                l'autre, la couleur que la home a associée à ce sujet. */}
+            <div
+              aria-hidden="true"
+              className="mt-7 h-px w-20"
+              style={{ backgroundColor: accent.vif }}
+            />
 
-          <p className="mt-7 max-w-prose text-lg leading-relaxed text-body">{page.lede}</p>
+            <p className="mt-7 max-w-prose text-lg leading-relaxed text-body">{page.lede}</p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/diagnostic/" arrow>
-              Diagnostiquer mon entreprise en 5 min
-            </Button>
-            <Button href="/contact/" variant="line">
-              Parler à Marjorie et Muriel
-            </Button>
-          </div>
-        </header>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href="/diagnostic/" arrow>
+                Diagnostiquer mon entreprise en 5 min
+              </Button>
+              <Button href="/contact/" variant="line">
+                Parler à Marjorie et Muriel
+              </Button>
+            </div>
+          </header>
+
+          {/* Les faits clés à droite du titre : lus avant le texte. */}
+          <CarteReperes page={page} />
+        </div>
       </Shell>
     </div>
   );

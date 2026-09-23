@@ -90,6 +90,6 @@ export const valeurs: { titre: string; texte: string; accent: string }[] = [
     titre: "Pérennité",
     accent: "qvt",
     texte:
-      "Nous ne réglons pas des problèmes ponctuels pour revenir l'année suivante. Le point de sortie d'une mission est une entreprise capable de continuer sans nous.",
+      "Nous ne réglons pas des problèmes ponctuels pour revenir l'année suivante. Le point de sortie d'une mission de conseil en management est une entreprise capable de continuer sans nous.",
   },
 ];

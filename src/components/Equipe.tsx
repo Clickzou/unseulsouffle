@@ -21,7 +21,7 @@ export function Equipe() {
       <SectionHead
         label="Notre équipe"
         titre="Qui vous accompagne"
-        lede="Deux associées fondatrices et quatre consultants partenaires, sélectionnés pour leur complémentarité et non pour remplir une grille de compétences. Chacun intervient sur son pilier, tous travaillent sur le même dossier."
+        lede="Le cabinet-conseil réunit deux associées fondatrices et quatre consultants partenaires, choisis pour leur complémentarité et non pour remplir une grille de compétences. Votre référent porte votre dossier ; les autres n'interviennent sur leur pilier que si le sujet l'exige."
       />
 
       <Groupe titre="Associées fondatrices" membres={associees} colonnes="sm:grid-cols-2" />

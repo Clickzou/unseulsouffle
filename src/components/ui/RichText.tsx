@@ -30,6 +30,20 @@ export function RichText({ children }: { children: string }) {
           {emphase}
         </strong>,
       );
+    } else if (/^https?:\/\//.test(href)) {
+      // Source externe (master § 5, E-E-A-T) : nouvel onglet, sans transmettre
+      // l'autorité de la page par défaut au-delà de ce que le lien mérite.
+      morceaux.push(
+        <a
+          key={debut}
+          href={href}
+          target="_blank"
+          rel="noopener"
+          className="border-b border-teal/35 text-teal transition-colors hover:border-teal"
+        >
+          {libelle}
+        </a>,
+      );
     } else {
       morceaux.push(
         <Link

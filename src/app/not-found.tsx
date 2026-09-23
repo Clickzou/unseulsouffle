@@ -37,7 +37,7 @@ const A_VENIR = [
   "Diagnostic",
   "Contact",
   "Pilotage financier externalisé",
-  "Actualités",
+  "Infos utiles",
 ];
 
 export default function NotFound() {

@@ -43,7 +43,7 @@ export function Methode() {
     <Section id="methode" ton="mist" large>
       <SectionHead
         label="Le parcours"
-        titre="Notre méthode en cinq étapes"
+        titre="Notre méthode de conseil aux entreprises, en cinq étapes"
         lede="Chaque étape prépare la suivante : plus de clarté pour le dirigeant, plus d'engagement pour les équipes, plus d'autonomie pour l'organisation. Nous ne vendons pas du temps, nous vendons une progression de maturité."
         centre
       />

@@ -19,8 +19,8 @@ export function PourQui() {
     <Section ton="surface">
       <SectionHead
         label="Périmètre"
-        titre="Pour quelles entreprises nous intervenons"
-        lede="Nous accompagnons des PME et ETI de 10 à 250 salariés, principalement en Haute-Garonne et en Occitanie, dans l'industrie, l'agroalimentaire, les services et la distribution."
+        titre="Les entreprises que notre cabinet de conseil accompagne en Occitanie"
+        lede="Depuis Toulouse, nous accompagnons des PME et ETI de 10 à 250 salariés, principalement en Haute-Garonne et en Occitanie, dans l'industrie, l'agroalimentaire, les services et la distribution."
         centre
       />
 
@@ -55,7 +55,7 @@ export function PourQui() {
           Et quand ce n&apos;est pas nous
         </p>
         <p className="text-[15px] leading-relaxed">
-          Notre approche est moins adaptée à une mission d&apos;expertise ponctuelle sur un seul
+          Un cabinet-conseil comme le nôtre est moins adapté à une mission d&apos;expertise ponctuelle sur un seul
           sujet. Dans ce cas, un spécialiste unique vous coûtera moins cher et ira plus vite —{" "}
           <strong className="font-medium text-ink">nous le disons quand c&apos;est le cas.</strong>
         </p>

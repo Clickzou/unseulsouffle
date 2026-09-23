@@ -22,12 +22,17 @@ export function Reveal({
   children,
   delay = 0,
   className,
+  as: Balise = "div",
+  style,
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  /** `li` pour animer les éléments d'une liste sans l'envelopper d'un div. */
+  as?: "div" | "li";
+  style?: React.CSSProperties;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const [etat, setEtat] = useState<"initial" | "cache" | "visible">("initial");
 
   useEffect(() => {
@@ -65,9 +70,9 @@ export function Reveal({
   }, []);
 
   return (
-    <div
-      ref={ref}
-      style={etat === "cache" ? undefined : { transitionDelay: `${delay}ms` }}
+    <Balise
+      ref={ref as React.Ref<never>}
+      style={etat === "cache" ? style : { ...style, transitionDelay: `${delay}ms` }}
       className={clsx(
         "transition-[opacity,transform] duration-[850ms] ease-[cubic-bezier(.16,1,.3,1)]",
         "motion-reduce:transition-none",
@@ -76,6 +81,6 @@ export function Reveal({
       )}
     >
       {children}
-    </div>
+    </Balise>
   );
 }

@@ -28,13 +28,13 @@ export function Hero() {
               ferait doublon à deux lignes d'écart. */}
           <Label className="anim-montee !text-[#7fd3ca]">PME · ETI de 10 à 250 salariés</Label>
 
-          {/* Le H1 porte le mot-clé principal en toutes lettres — accompagnement,
-              dirigeants, PME, ETI, Toulouse. La signature de marque (« équipe de
-              direction externalisée »), qui est l'actif GEO, passe juste en
-              dessous : elle reste au-dessus de la ligne de flottaison et garde son
-              poids sémantique sans disputer au H1 son rôle de signal. */}
+          {/* Le H1 porte la requête de la home en toutes lettres : « cabinet de
+              conseil » + Toulouse. « Accompagnement dirigeant » appartient à
+              /transformation-dirigeant/ (ETUDE_MOTS_CLES.md) : la home ne le
+              reprend plus en H1. La signature de marque (« équipe de direction
+              externalisée »), actif GEO, passe juste en dessous. */}
           <h1 style={{ animationDelay: "90ms" }} className="anim-montee mt-6 max-w-[16ch] text-[clamp(38px,5.6vw,64px)] leading-[1.06] !text-[#f6f4ee]">
-            Accompagnement de dirigeants de PME et ETI à{" "}
+            Cabinet de conseil pour dirigeants de PME et ETI à{" "}
             <em className="italic text-[#7fd3ca]">Toulouse</em>
           </h1>
 
@@ -44,8 +44,9 @@ export function Hero() {
 
           <p style={{ animationDelay: "270ms" }} className="anim-montee mt-6 max-w-[58ch] text-lg leading-relaxed text-[#d3d8e0]">
             Vous ne manquez pas d&apos;experts autour de vous. Vous manquez d&apos;une lecture
-            d&apos;ensemble. Un Seul Souffle accompagne les dirigeants de PME et d&apos;ETI à
-            Toulouse et en Occitanie : un conseiller référent prend en charge votre sujet, et
+            d&apos;ensemble. Un Seul Souffle est un cabinet de conseil qui accompagne les
+            dirigeants de PME et d&apos;ETI à Toulouse et en Occitanie : un conseiller référent
+            prend en charge votre sujet, et
             s&apos;appuie sur quatre autres expertises de direction quand votre situation
             l&apos;exige — jusqu&apos;à la mise en œuvre sur le terrain.
           </p>

@@ -26,7 +26,8 @@ const LIENS = [
   { href: "/transformation-dirigeant/", label: "Dirigeant" },
   { href: "/transformation-entreprise/", label: "Entreprise" },
   { href: "/notre-equipe/", label: "Équipe" },
-  { href: "/actualites/", label: "Actualités" },
+  { href: "/tarifs/", label: "Tarifs" },
+  { href: "/infos-utiles/", label: "Infos utiles" },
   { href: "/contact/", label: "Contact" },
 ];
 

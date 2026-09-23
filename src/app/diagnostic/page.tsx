@@ -20,11 +20,12 @@ import { ROBOTS } from "@/lib/seo/indexation";
  * temps, ce que j'obtiens, ce que ça m'engage.
  */
 export const metadata: Metadata = {
-  // 52 / 60
-  title: "Diagnostic gratuit pour dirigeant de PME",
-  // 143 / 150
+  // Requête : « diagnostic d'entreprise » (90/mois) + « diagnostic entreprise » (140/mois).
+  // 58 / 60
+  title: "Diagnostic d'entreprise gratuit pour PME",
+  // 139 / 150
   description:
-    "Évaluez votre entreprise sur les cinq piliers en 5 minutes : finance, organisation, commercial, production, QVT. Résultat immédiat, sans engagement.",
+    "Diagnostic d'entreprise gratuit en 5 minutes : finance, organisation, commercial, production, QVT. Résultat immédiat, sans engagement.",
   alternates: { canonical: "/diagnostic/" },
   robots: ROBOTS,
 };
@@ -40,7 +41,7 @@ const ETAPES = [
     n: "02",
     titre: "Vous recevez votre résultat immédiatement",
     texte:
-      "Un score par pilier, qui montre où votre entreprise est solide et où elle est exposée. Vous le gardez, que vous nous recontactiez ou non.",
+      "Un score par pilier, qui montre où votre entreprise est solide et où elle est exposée. Ce diagnostic entreprise vous appartient : vous le gardez, que vous nous recontactiez ou non.",
   },
   {
     n: "03",
@@ -59,7 +60,7 @@ function schema() {
         "@type": "WebPage",
         "@id": `${SITE_URL}/diagnostic/#page`,
         url: `${SITE_URL}/diagnostic/`,
-        name: "Diagnostic gratuit pour dirigeant de PME",
+        name: "Diagnostic d'entreprise gratuit pour PME",
         description:
           "Auto-évaluation en 5 minutes sur les cinq piliers de l'entreprise : finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail.",
         isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -77,6 +78,56 @@ function schema() {
   };
 }
 
+/** Aperçu illustratif du résultat : une barre par pilier, clairement marqué « Exemple ». */
+const APERCU = [72, 45, 60, 38, 55];
+
+function ApercuResultat() {
+  return (
+    <div className="relative">
+      <div
+        aria-hidden="true"
+        className="absolute -inset-4 rounded-[28px] opacity-60 blur-2xl"
+        style={{ background: `linear-gradient(135deg, ${ACCENTS.finance.vif}33, ${ACCENTS.organisation.vif}22, ${ACCENTS.qvt.vif}33)` }}
+      />
+      <figure className="relative overflow-hidden rounded-[20px] border border-rule bg-surface p-7 shadow-[0_30px_70px_-40px_rgba(20,32,54,0.55)] sm:p-8">
+        <div className="flex items-center justify-between">
+          <p className="font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">Votre résultat</p>
+          <span className="rounded-full bg-amber-wash px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-amber">
+            Exemple
+          </span>
+        </div>
+        <ul className="mt-6 grid gap-5">
+          {piliers.map((pilier, i) => {
+            const teinte = ACCENTS[pilier.accent];
+            return (
+              <li key={pilier.n}>
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="text-[14.5px] text-ink">{pilier.nom}</span>
+                </div>
+                <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-rule-2">
+                  <div
+                    className="anim-montee h-full rounded-full"
+                    style={{ width: `${APERCU[i]}%`, backgroundColor: teinte.vif, animationDelay: `${400 + i * 90}ms` }}
+                  />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        <figcaption className="mt-6 border-t border-rule-2 pt-4 text-[13px] leading-relaxed text-muted">
+          Un score par pilier : où votre entreprise est solide, et où elle est exposée.
+        </figcaption>
+      </figure>
+    </div>
+  );
+}
+
+const ENGAGEMENTS = [
+  { titre: "Le résultat est à vous", texte: "Vous le gardez, que vous nous recontactiez ou non." },
+  { titre: "Aucun rappel sans votre accord", texte: "Si vous souhaitez en parler, c'est vous qui demandez l'entretien." },
+  { titre: "Vos réponses restent chez vous", texte: "Le calcul se fait dans votre navigateur : rien n'est enregistré ni transmis." },
+];
+
 export default function DiagnosticPage() {
   return (
     <>
@@ -85,100 +136,147 @@ export default function DiagnosticPage() {
           fil="Diagnostic"
           label="Diagnostic gratuit"
           accent="finance"
-          h1="Diagnostiquer mon entreprise en 5 minutes"
-          lede="Cinq minutes pour savoir où votre entreprise est solide et où elle est exposée. Le diagnostic évalue les cinq piliers — finance, organisation, commercial, production, qualité de vie au travail — et vous donne un résultat immédiat. Il ne vous engage à rien."
+          anime
+          h1="Diagnostic d'entreprise gratuit en 5 minutes"
+          lede="Ce diagnostic d'entreprise gratuit vous dit en cinq minutes où votre entreprise est solide et où elle est exposée. Proposé par Un Seul Souffle, cabinet de conseil à Toulouse, il évalue les cinq piliers — finance, organisation, commercial, production, qualité de vie au travail — et vous donne un résultat immédiat. Il ne vous engage à rien."
+          aside={<ApercuResultat />}
+          asideLarge
         >
-          {/* TODO client : remplacer par l'URL réelle du questionnaire ScoreApp.
-              Tant qu'elle manque, le bouton mène au contact plutôt qu'au vide —
-              le CTA cassé est précisément ce que l'audit a relevé. */}
-          <div className="flex flex-wrap items-center gap-3">
-            <Button href="/contact/" arrow>
-              Commencer le diagnostic
-            </Button>
-            <span className="font-mono text-[11.5px] text-amber">
-              [URL ScoreApp à fournir — le bouton pointe vers le contact en attendant]
-            </span>
-          </div>
+          {/* Le questionnaire est intégré au site : /diagnostic/questionnaire/. */}
+          <ul className="mb-7 flex flex-wrap gap-2.5">
+            {["5 minutes", "Gratuit", "Résultat immédiat", "Sans engagement"].map((repere) => (
+              <li
+                key={repere}
+                className="rounded-full border border-rule bg-surface px-4 py-1.5 text-[13.5px] text-ink"
+              >
+                <span aria-hidden="true" className="mr-2 text-teal">✓</span>
+                {repere}
+              </li>
+            ))}
+          </ul>
+          <Button href="/diagnostic/questionnaire/" arrow>
+            Commencer le diagnostic
+          </Button>
         </EnTetePage>
 
-        <Reveal>
-          <Section ton="surface">
-            <SectionHead
-              label="Comment ça marche"
-              titre="Trois étapes, et vous gardez le résultat"
-              centre
+        {/* Comment ça marche — frise de trois étapes. */}
+        <Section ton="surface">
+          <Reveal>
+            <SectionHead label="Comment ça marche" titre="Votre diagnostic d'entreprise en trois étapes" centre />
+          </Reveal>
+          <ol className="relative grid gap-6 md:grid-cols-3">
+            <span
+              aria-hidden="true"
+              className="absolute left-[16.6%] right-[16.6%] top-7 hidden h-px md:block"
+              style={{ background: `linear-gradient(to right, ${ACCENTS.finance.vif}, ${ACCENTS.organisation.vif}, ${ACCENTS.commercial.vif})` }}
             />
+            {ETAPES.map((etape, i) => {
+              const teinte = [ACCENTS.finance, ACCENTS.organisation, ACCENTS.commercial][i];
+              return (
+                <Reveal as="li" key={etape.n} delay={i * 110} className="relative text-center">
+                  <span
+                    className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 bg-surface font-serif text-[22px]"
+                    style={{ borderColor: teinte.vif, color: teinte.texte }}
+                  >
+                    {i + 1}
+                  </span>
+                  <div className="mt-6 h-[calc(100%-5rem)] rounded-[16px] border border-rule bg-ground p-7">
+                    <h3 className="font-serif text-[21px] font-normal leading-snug text-ink">{etape.titre}</h3>
+                    <p className="mt-3 text-[15px] leading-relaxed">{etape.texte}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </ol>
+        </Section>
 
-            <ol className="grid gap-px overflow-hidden rounded-carte border border-rule bg-rule sm:grid-cols-3">
-              {ETAPES.map((etape) => (
-                <li key={etape.n} className="bg-surface p-7">
-                  <Label>{etape.n}</Label>
-                  <h3 className="mt-3 font-serif text-[20px] font-normal text-ink">
-                    {etape.titre}
-                  </h3>
-                  <p className="mt-2.5 text-[15.5px] leading-relaxed">{etape.texte}</p>
-                </li>
-              ))}
-            </ol>
-          </Section>
-        </Reveal>
-
-        <Reveal>
-          <Section>
-            <SectionHead
-              label="Ce qui est évalué"
-              titre="Les cinq piliers de votre entreprise"
-              lede="Le diagnostic ne mesure pas une seule dimension. Un problème de trésorerie a souvent une cause commerciale, et une organisation qui coince finit toujours par coûter de l'argent."
-            />
-
-            <ul className="grid gap-px overflow-hidden rounded-carte border border-rule bg-rule sm:grid-cols-2">
-              {piliers.map((pilier) => {
-                const accent = ACCENTS[pilier.accent];
-                return (
-                  <li key={pilier.n} className="bg-surface p-6 last:sm:col-span-2">
+        {/* Les cinq piliers — pleine largeur. */}
+        <Section large>
+          <Reveal className="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-20">
+            <div>
+              <Label>Ce qui est évalué</Label>
+              <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] leading-[1.12]">
+                Un diagnostic entreprise sur les cinq piliers
+              </h2>
+            </div>
+            <p className="max-w-prose text-lg leading-relaxed text-body">
+              Le diagnostic d&apos;entreprise ne mesure pas une seule dimension. Un problème de
+              trésorerie a souvent une cause commerciale, et une organisation qui coince finit
+              toujours par coûter de l&apos;argent. C&apos;est cette lecture croisée que le cabinet
+              apporte aux PME de Toulouse et d&apos;Occitanie.
+            </p>
+          </Reveal>
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {piliers.map((pilier, i) => {
+              const teinte = ACCENTS[pilier.accent];
+              return (
+                <Reveal as="li" key={pilier.n} delay={i * 80}>
+                  <div
+                    className="relative h-full overflow-hidden rounded-[18px] border border-rule bg-surface p-6 pt-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_-26px_rgba(20,32,54,0.45)]"
+                    style={{ backgroundImage: `linear-gradient(180deg, ${teinte.vif}17 0%, transparent 55%)` }}
+                  >
+                    <span aria-hidden="true" className="absolute inset-x-0 top-0 h-[4px]" style={{ backgroundColor: teinte.vif }} />
                     <span
-                      className="flex items-baseline gap-2 font-mono text-[10px] uppercase tracking-[0.13em]"
-                      style={{ color: accent.texte }}
+                      aria-hidden="true"
+                      className="absolute right-5 top-4 font-serif text-[48px] leading-none"
+                      style={{ color: teinte.vif, opacity: 0.3 }}
                     >
-                      <span
-                        aria-hidden="true"
-                        className="h-[7px] w-[7px] shrink-0 rounded-full"
-                        style={{ backgroundColor: accent.vif }}
-                      />
                       {pilier.n}
                     </span>
-                    <h3 className="mt-2.5 font-serif text-[19px] font-normal text-ink">
-                      {pilier.nom}
-                    </h3>
-                    <p className="mt-2 text-[15px] leading-relaxed">{pilier.resume}</p>
-                  </li>
-                );
-              })}
-            </ul>
-          </Section>
-        </Reveal>
+                    <p className="font-mono text-[10.5px] uppercase tracking-[0.14em]" style={{ color: teinte.texte }}>
+                      Pilier {pilier.n}
+                    </p>
+                    <h3 className="mt-3 pr-10 font-serif text-[21px] font-normal leading-snug text-ink">{pilier.nom}</h3>
+                    <p className="mt-3 text-[14.5px] leading-relaxed">{pilier.resume}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </ul>
+        </Section>
 
-        <Reveal>
-          <Section ton="ink">
-            <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
-              <div>
-                <Label className="!text-[#6fc9c0]">Ce que ça n&apos;engage pas</Label>
-                <h2 className="my-4 max-w-[22ch] text-[clamp(27px,3.6vw,40px)] leading-[1.14] !text-[#f4f2ec]">
-                  Aucun rappel commercial sans votre accord
-                </h2>
-                <p className="max-w-prose text-lg leading-relaxed text-[#aeb6c3]">
-                  Le résultat est à vous. Nous ne vous appelons pas parce que vous avez rempli un
-                  questionnaire : si vous souhaitez en parler, vous demandez l&apos;entretien. Vos
-                  réponses ne sont pas revendues ni transmises à des tiers.
-                </p>
+        {/* Ce que ça n'engage pas — texte à gauche, engagements à droite. */}
+        <Section ton="ink">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <Reveal>
+              <Label className="!text-[#6fc9c0]">Ce que ça n&apos;engage pas</Label>
+              <h2 className="my-4 max-w-[22ch] text-[clamp(27px,3.6vw,40px)] leading-[1.14] !text-[#f4f2ec]">
+                Diagnostic gratuit : aucun rappel sans votre accord
+              </h2>
+              <p className="max-w-prose text-lg leading-relaxed text-[#aeb6c3]">
+                Le résultat est à vous. Nous ne vous appelons pas parce que vous avez rempli un
+                questionnaire : si vous souhaitez en parler, vous demandez l&apos;entretien.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/diagnostic/questionnaire/" arrow>
+                  Commencer le diagnostic
+                </Button>
+                <Button href="/contact/" variant="lineOnInk">
+                  Parler à Marjorie et Muriel
+                </Button>
               </div>
-
-              <Button href="/contact/" variant="lineOnInk" arrow className="shrink-0">
-                Parler à Marjorie et Muriel
-              </Button>
-            </div>
-          </Section>
-        </Reveal>
+            </Reveal>
+            <ul className="grid gap-4">
+              {ENGAGEMENTS.map((e, i) => (
+                <Reveal as="li" key={e.titre} delay={i * 100}>
+                  <div className="flex gap-5 rounded-[16px] border border-white/10 bg-white/[0.04] p-6">
+                    <span
+                      aria-hidden="true"
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[16px] text-white"
+                      style={{ backgroundColor: [ACCENTS.finance, ACCENTS.organisation, ACCENTS.qvt][i].vif }}
+                    >
+                      ✓
+                    </span>
+                    <div>
+                      <p className="font-serif text-[20px] !text-[#f4f2ec]">{e.titre}</p>
+                      <p className="mt-1.5 text-[15px] leading-relaxed text-[#aeb6c3]">{e.texte}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </Section>
       </main>
 
       <Footer />

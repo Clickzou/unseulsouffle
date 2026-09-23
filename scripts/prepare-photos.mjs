@@ -4,7 +4,8 @@
  *   node scripts/prepare-photos.mjs
  *
  * Source : captures-ecrans/ (photos récupérées du site legacy, en JPG/PNG lourds)
- * Sortie : public/equipe/<slug>.webp, 264 × 264 (3× pour un affichage à 88 px)
+ * Sortie : public/equipe/<slug>.webp, 320 × 320 (vignettes rondes)
+ *         public/equipe/portrait/<slug>.webp, 720 × 900 (4:5, page équipe)
  *
  * Par défaut, `sharp.strategy.attention` recadre sur la zone la plus saillante.
  * Ce n'est pas fiable sur tous les portraits : sur une photo en pied avec une
@@ -32,6 +33,8 @@ const SRC_DIR = path.join(ROOT, "captures-ecrans");
 const OUT_DIR = path.join(ROOT, "public", "equipe");
 
 const TAILLE = 320;
+const PORTRAIT = { largeur: 720, hauteur: 900 };
+const OUT_PORTRAIT = path.join(OUT_DIR, "portrait");
 
 const PHOTOS = [
   // Photo en pied, chemise blanche très lumineuse : `attention` cadrait le buste.
@@ -47,6 +50,32 @@ const PHOTOS = [
 ];
 
 mkdirSync(OUT_DIR, { recursive: true });
+mkdirSync(OUT_PORTRAIT, { recursive: true });
+
+/**
+ * Portrait 4:5 : le visage visé par `cadre` est placé dans le tiers haut, le
+ * cadre s'élargit pour montrer le buste. Sans `cadre`, recadrage `attention`.
+ */
+async function portrait(photo, src) {
+  const out = path.join(OUT_PORTRAIT, `${photo.slug}.webp`);
+  let image = sharp(src);
+  if (photo.cadre) {
+    const { width, height } = await sharp(src).metadata();
+    const { x, y, zoom = 1 } = photo.cadre;
+    const largeur = Math.round(Math.min(width, height / 1.25, Math.min(width, height) * zoom * 1.5));
+    const hauteur = Math.round(largeur * 1.25);
+    const left = Math.max(0, Math.min(Math.round(width * x - largeur / 2), width - largeur));
+    const top = Math.max(0, Math.min(Math.round(height * y - hauteur * 0.33), height - hauteur));
+    image = image.extract({ left, top, width: largeur, height: hauteur });
+  }
+  await image
+    .resize(PORTRAIT.largeur, PORTRAIT.hauteur, {
+      fit: "cover",
+      ...(photo.cadre ? {} : { position: sharp.strategy.attention }),
+    })
+    .webp({ quality: 84 })
+    .toFile(out);
+}
 
 let echecs = 0;
 
@@ -84,6 +113,8 @@ for (const photo of PHOTOS) {
       })
       .webp({ quality: 88 })
       .toFile(out);
+
+    await portrait(photo, src);
 
     const ko = Math.round(statSync(out).size / 1024);
     console.log(`ok (${ko} Ko)${photo.cadre ? "  cadrage manuel" : ""}`);

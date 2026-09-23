@@ -40,7 +40,7 @@ export function Piliers() {
               {nbExpertises} expertises de direction, {nbReferents} référents
             </h2>
             <p className="text-[14.5px] text-muted">
-              Mobilisées ensemble, jamais l&apos;une après l&apos;autre.
+              Un référent pour votre dossier, les autres en appui si le sujet l&apos;exige.
             </p>
         </div>
 

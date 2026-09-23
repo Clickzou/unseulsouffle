@@ -24,8 +24,13 @@ export type Bloc =
    *   **texte**       emphase — à réserver à la phrase citable de la section
    */
   | { type: "p"; texte: string }
-  /** Liste à puces. Même balisage que `p` dans chaque item. */
-  | { type: "liste"; items: string[] }
+  /** Intertitre H3, sous le H2 du chapitre (master § 6 : 2 à 4 par H2 sur un texte long). */
+  | { type: "h3"; texte: string }
+  /**
+   * Liste à puces. Même balisage que `p` dans chaque item.
+   * `style: "cartes"` l'affiche en cartes numérotées sur deux colonnes.
+   */
+  | { type: "liste"; items: string[]; style?: "cartes"; colonnes?: 2 | 3 }
   /**
    * Renvoi vers une étape de la méthode, par son numéro dans `etapes` (home.ts).
    * Le détail (symptôme, action, résultat, format) n'est donc écrit qu'une fois
@@ -33,7 +38,13 @@ export type Bloc =
    */
   | { type: "etape"; n: string }
   /** Tableau à deux colonnes — format le plus repris par les moteurs IA (master § 8.2). */
-  | { type: "tableau"; entetes: [string, string]; lignes: [string, string][] }
+  | {
+      type: "tableau";
+      entetes: [string, string];
+      lignes: [string, string][];
+      /** `contraste` : chaque ligne devient une carte « ✕ ceci → ✓ cela ». */
+      style?: "contraste";
+    }
   /**
    * Le comparatif « cabinet classique vs équipe de direction externalisée »,
    * repris tel quel de `comparatif` (home.ts). Le master le désigne comme l'actif
@@ -43,6 +54,8 @@ export type Bloc =
   | { type: "comparatif" }
   /** Les cinq expertises, depuis `piliers` (home.ts), avec leurs référents. */
   | { type: "expertises" }
+  /** La grille tarifaire d'une offre, lue dans `tarifs.ts` (source unique des prix). */
+  | { type: "tarifs"; offre: "dirigeant" | "entreprise" | "finance" }
   /**
    * Encadré de fin de section. `aFournir` marque une donnée que le client doit
    * livrer : même convention que la FAQ de la home, le placeholder est visible
@@ -55,6 +68,23 @@ export type Chapitre = {
   titre: string;
   /** Sur-titre monospace. Sert de repère de rubrique, jamais de décoration. */
   label?: string;
+  /**
+   * Phrase clé mise en exergue. Le chapitre passe alors en mise en page
+   * éditoriale : titre à gauche, exergue et premier bloc à droite, puis le reste
+   * des blocs en pleine largeur.
+   */
+  exergue?: string;
+  /** Pleine largeur, gouttière de 100 px sur grand écran (voir `Shell`). */
+  large?: boolean;
+  /** Titre et texte à gauche, listes en cartes à droite. */
+  cartesADroite?: boolean;
+  /** En pleine largeur : la fiche d'étape à droite (collante), le texte à gauche. */
+  ficheADroite?: boolean;
+  /**
+   * Déroulé : la première liste devient une frise horizontale numérotée sous le
+   * titre ; en dessous, le texte à gauche et la grille tarifaire à droite.
+   */
+  frise?: boolean;
   blocs: Bloc[];
 };
 

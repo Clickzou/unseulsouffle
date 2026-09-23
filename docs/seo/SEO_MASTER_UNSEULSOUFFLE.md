@@ -6,12 +6,16 @@
 > et la carte d'intention sont refondus pour une activité de conseil B2B haut de gamme
 > à faible volume et forte intention — modèle opposé au programmatique Clickzou.
 
-**Version** : 1.1
-**Date** : 2026-09-22
+**Version** : 1.2
+**Date** : 2026-09-23
 **Base** : audit unseulsouffle.fr du 2026-08-31 (22 constats) + SEO MASTER CLICKZOU v2.6
 **Maintenu par** : Clickzou + Claude
 
 **Journal**
+- v1.2 (2026-09-23) — Carte d'intention (§ 4) refondue sur les volumes SE Ranking : home
+  sur « cabinet de conseil Toulouse », Dirigeant sur « coaching dirigeant », Entreprise sur
+  « conseil en organisation », Finance déplacée en `/daf-externalise-toulouse/` (301).
+  Articles de fond lancés sur les requêtes hors menu (`BRIEF_ARTICLES.md`).
 - v1.1 (2026-09-22) — Ajout de la **règle de dosage** (§ 1) : le site promet un conseiller
   référent dédié au problème, jamais cinq expertises mobilisées d'un coup. Ligne directrice
   arrêtée par JC. Répercutée en § 6 (ton), § 7 (friction) et § 10 (anti-patterns).
@@ -220,7 +224,7 @@ articles de fond qui pointent vers elle.
 - Étapes couvertes : 03 Cartographier, 04 Structurer, 05 Renforcer
 
 ### Silo 3 — Pilotage financier
-- **Pilier** : `/expert-comptable-daf-externalisee-pme/`
+- **Pilier** : `/daf-externalise-toulouse/`
 - Requêtes : DAF externalisé PME, directeur financier à temps partagé, pilotage financier
   PME, tableau de bord de gestion, prévisionnel de trésorerie
 - Référent : Marjorie Anglade
@@ -262,20 +266,28 @@ Reprise directe de la règle Clickzou § 11.1. Sur un site de 13 pages, la home 
 aujourd'hui **toutes** les intentions et n'en possède aucune vraiment. C'est le premier
 plafond structurel à lever.
 
+Mise à jour du 2026-09-23 d'après les volumes SE Ranking (`docs/seo/ETUDE_MOTS_CLES.md`).
+
 | Intention / requête | Page propriétaire |
 |---|---|
-| équipe de direction externalisée, cabinet de conseil dirigeant PME Toulouse, accompagnement global PME ETI | **HOME** (`/`) |
-| accompagnement / coaching dirigeant PME | `/transformation-dirigeant/` |
-| conseil en organisation, transformation d'entreprise PME | `/transformation-entreprise/` |
-| DAF externalisé, pilotage financier PME | `/expert-comptable-daf-externalisee-pme/` |
-| intelligence collective, coopération, QVT | page Muriel Saffroy |
+| cabinet de conseil Toulouse, conseil aux entreprises | **HOME** (`/`) |
+| cabinet de conseil en management | `/un-seul-souffle/` (Le cabinet) |
+| coaching dirigeant, accompagnement dirigeant, coach de dirigeant | `/transformation-dirigeant/` |
+| conseil en organisation, audit organisationnel, consultant en organisation | `/transformation-entreprise/` |
+| DAF externalisé, DAF à temps partagé, directeur financier à temps partagé | `/daf-externalise-toulouse/` |
+| diagnostic d'entreprise | `/diagnostic/` |
+| coopération, intelligence collective (via articles) | page Muriel Saffroy |
 | organisation industrielle, performance production | pilier Silo 5 (à créer) |
 | stratégie commerciale externalisée | pilier Silo 6 (à créer) |
-| diagnostic / auto-évaluation d'entreprise | `/diagnostic/` (à créer — **404 actuellement**) |
+| requêtes hors menu (manager de transition, coaching d'équipe, consultant en management…) | articles `/infos-utiles/<slug>/` — voir ETUDE_MOTS_CLES.md § 3 |
+
+« Équipe de direction externalisée » (30/mois) reste la signature de marque dans le
+texte : elle n'est plus une cible de title ou de H1.
 
 **Règles :**
-- La home garde son identité « équipe de direction externalisée pour dirigeants de PME et
-  ETI, Toulouse ». Elle ne doit **pas** cibler les termes des silos en signal H1.
+- La home cible « cabinet de conseil Toulouse » ; « équipe de direction externalisée »
+  reste sa signature dans le texte. Elle ne doit **pas** cibler les termes des silos en
+  signal H1.
 - Ses mentions de services pointent en **lien à ancre exacte** vers la page dédiée,
   jamais en texte brut.
 - Ne pas créer de page « accompagnement dirigeant PME ETI » : la home la posséderait en
@@ -555,5 +567,6 @@ Chaque épisode de podcast est la matière première d'un cycle complet :
 |---|---|
 | `docs/seo/SEO_MASTER_UNSEULSOUFFLE.md` | Ce fichier — source de vérité |
 | `docs/seo/HOME-SEO.md` | Home rédigée intégralement, prête à intégrer |
+| `docs/seo/ETUDE_MOTS_CLES.md` | Volumes SE Ranking (2026-09-23), cible par page, réserve de mots-clés pour les articles |
 | `../audit/audit-unseulsouffle-2026-08-31.html` | Audit d'origine, 22 constats |
 | `../commercial/proposition-envoyee-muriel-saffroy.md` | Proposition commerciale envoyée |

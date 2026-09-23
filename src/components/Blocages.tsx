@@ -28,7 +28,7 @@ export function Blocages() {
       <SectionHead
         label="Les défis du dirigeant"
         titre={`${blocages.length === 5 ? "Cinq" : blocages.length} blocages qui reviennent chez presque tous les dirigeants de PME`}
-        lede="Un blocage financier pèse sur le moral du dirigeant. Une faille d'organisation freine la stratégie. Une tension d'équipe ralentit la production. Ces problèmes ne sont jamais isolés — mais le conseil traditionnel les traite un par un, chacun dans son couloir. C'est précisément pour sortir de ces silos que nous avons créé Un Seul Souffle."
+        lede="Un blocage financier pèse sur le moral du dirigeant. Une faille d'organisation freine la stratégie. Une tension d'équipe ralentit la production. Ces problèmes ne sont jamais isolés — mais le conseil aux entreprises traditionnel les traite un par un, chacun dans son couloir. C'est précisément pour sortir de ces silos que nous avons créé Un Seul Souffle."
         centre
       />
 

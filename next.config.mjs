@@ -8,6 +8,30 @@ const nextConfig = {
     formats: ["image/webp"],
   },
 
+  async redirects() {
+    return [
+      {
+        // Ancienne URL du pilier finance : elle portait « expert-comptable », titre
+        // réglementé, alors que la requête qui compte est « DAF externalisé »
+        // (docs/seo/ETUDE_MOTS_CLES.md). 301 — jamais 302 (master § 2).
+        source: "/expert-comptable-daf-externalisee-pme/",
+        destination: "/daf-externalise-toulouse/",
+        statusCode: 301,
+      },
+      {
+        // La rubrique d'articles s'appelle « Infos utiles » dans le menu : l'URL suit.
+        source: "/actualites/",
+        destination: "/infos-utiles/",
+        statusCode: 301,
+      },
+      {
+        source: "/actualites/:slug/",
+        destination: "/infos-utiles/:slug/",
+        statusCode: 301,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

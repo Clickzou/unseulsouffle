@@ -8,6 +8,8 @@
  * Réf. docs/seo/SEO_MASTER_UNSEULSOUFFLE.md
  */
 
+import { resumeTarifs } from "@/lib/content/tarifs";
+
 export const SITE_URL = "https://www.unseulsouffle.fr";
 
 /* ─────────── Palette ───────────
@@ -91,11 +93,12 @@ export const piliers: Pilier[] = [
 /* ─────────── Repères factuels (bloc L'essentiel) ─────────── */
 
 export const reperes: { label: string; valeur: string }[] = [
+  { label: "Métier", valeur: "Cabinet de conseil aux entreprises" },
   { label: "Entreprises accompagnées", valeur: "PME et ETI, 10 à 250 salariés" },
   { label: "Secteurs", valeur: "Industrie, agroalimentaire, services, distribution" },
   { label: "Zone", valeur: "Toulouse, Haute-Garonne, Occitanie" },
   { label: "Durée d'un parcours", valeur: "3 à 12 mois selon la profondeur" },
-  { label: "Premier échange", valeur: "Gratuit et confidentiel" },
+  { label: "Premier échange", valeur: "Gratuit et confidentiel, en visio ou dans vos locaux" },
 ];
 
 /* ─────────── Blocages ─────────── */
@@ -121,8 +124,8 @@ export const blocages: Blocage[] = [
     texte:
       "Trésorerie pilotée à vue, tableaux de bord absents ou peu fiables, décisions d'investissement prises sans marge de sécurité. Vous savez que l'entreprise gagne de l'argent, sans savoir précisément où ni pourquoi.",
     lien: {
-      href: "/expert-comptable-daf-externalisee-pme/",
-      label: "pilotage financier externalisé",
+      href: "/daf-externalise-toulouse/",
+      label: "DAF externalisé",
     },
   },
   {
@@ -204,7 +207,7 @@ export const etapes: Etape[] = [
     resultat:
       "Priorités clarifiées, recul retrouvé, meilleure qualité de décision — le dirigeant redevient disponible pour la transformation.",
     format:
-      "Parcours relationnel en abonnement mensuel, 4 jalons de 3 mois. Coaching individuel et autodiagnostic de qualité de vie au travail.",
+      "Au choix, en collectif (abonnement mensuel, sessions en visio) ou en individuel (coaching), par jalons de 3 mois. Autodiagnostic de qualité de vie au travail en option.",
   },
   {
     n: "02",
@@ -215,7 +218,7 @@ export const etapes: Etape[] = [
       "Difficulté à déléguer, équipes dépendantes, confiance entamée. Le collectif tourne en rond faute de co-responsabilité réelle.",
     action: "Nous installons la co-responsabilité et restaurons la qualité de coopération.",
     resultat: "Un collectif plus mature, réellement impliqué dans la transformation.",
-    format: "Cercles d'avancée en groupes de 6 à 8 personnes, sessions collectives de 3 h sur 3 mois.",
+    format: "Cercles d'avancée en groupes de 6 à 8 personnes, sessions de 3 h sur 3 mois, en présentiel ou en visio.",
   },
   {
     n: "03",
@@ -298,7 +301,7 @@ export const parcours: Parcours[] = [
     duree: "3 à 6 mois",
     depart: "Coaching individuel et cercles d'avancée",
     href: "/transformation-dirigeant/",
-    ancre: "Découvrir l'accompagnement du dirigeant",
+    ancre: "Découvrir le coaching dirigeant",
   },
   {
     cle: "entreprise",
@@ -315,7 +318,7 @@ export const parcours: Parcours[] = [
     duree: "6 à 12 mois",
     depart: "Diagnostic 360° et immersion terrain",
     href: "/transformation-entreprise/",
-    ancre: "Découvrir la transformation de l'entreprise",
+    ancre: "Découvrir le conseil en organisation",
   },
 ];
 
@@ -375,7 +378,7 @@ export const equipe: Membre[] = [
     nom: "Nicolas Vimini",
     statut: "Partenaire",
     expertise: "Stratégie Commerciale",
-    bio: "Directeur commercial externalisé, 20 ans d'expérience en développement commercial. Il intervient à temps partagé pour clarifier la stratégie commerciale, structurer l'organisation et piloter l'activité avec des indicateurs adaptés.",
+    bio: "Directeur commercial externalisé, 20 ans d'expérience en développement commercial. Il intervient pour clarifier la stratégie commerciale, structurer l'organisation et piloter l'activité avec des indicateurs adaptés.",
     href: "/notre-equipe/#nicolas-vimini",
     photo: "/equipe/nicolas-vimini.webp",
   },
@@ -449,10 +452,17 @@ export const faq: QuestionFAQ[] = [
   },
   {
     q: "Combien coûte un accompagnement Un Seul Souffle ?",
-    aFournir: true,
+    // Montants lus dans tarifs.ts : la FAQ ne peut pas contredire la page Tarifs.
     r: [
-      "[À COMPLÉTER — une fourchette et un premier palier suffisent]",
-      "Le silence sur le prix ne protège pas : il fait fuir les dirigeants sérieux et fait perdre du temps avec les autres.",
+      resumeTarifs,
+      "Le détail de chaque formule est sur la page tarifs.",
+    ],
+  },
+  {
+    q: "Pourquoi choisir un cabinet de conseil près de Toulouse ?",
+    r: [
+      "Parce que notre travail se fait sur le terrain, aux côtés de vos équipes, et pas seulement en réunion. Pour une PME de la région, un cabinet de conseil installé en Haute-Garonne, près de Toulouse, reste proche de ce terrain : la présence dans vos locaux fait partie de l'accompagnement, elle n'est pas une exception.",
+      "Nous intervenons principalement auprès des PME et ETI de Haute-Garonne et d'Occitanie. Le premier échange peut se tenir en visio ou dans vos locaux.",
     ],
   },
   {
@@ -464,7 +474,7 @@ export const faq: QuestionFAQ[] = [
   {
     q: "Quel type de problématiques traitez-vous ?",
     r: [
-      "Nous intervenons sur les problématiques qui touchent simultanément plusieurs dimensions de l'entreprise : manque de visibilité financière, organisation qui freine la croissance, tensions dans les équipes, dirigeant surchargé, performance industrielle insuffisante, stratégie commerciale à structurer. En résumé : tout ce qui bloque la transformation d'une PME ou d'une ETI qui veut passer un cap.",
+      "Notre conseil aux entreprises porte sur les problématiques qui touchent simultanément plusieurs dimensions de l'entreprise : manque de visibilité financière, organisation qui freine la croissance, tensions dans les équipes, dirigeant surchargé, performance industrielle insuffisante, stratégie commerciale à structurer. En résumé : tout ce qui bloque la transformation d'une PME ou d'une ETI qui veut passer un cap.",
     ],
   },
   {
@@ -476,7 +486,7 @@ export const faq: QuestionFAQ[] = [
   {
     q: "Combien de temps dure un accompagnement ?",
     r: [
-      "La durée varie selon la profondeur de l'intervention. Un accompagnement court sur un pilier spécifique peut durer 3 mois. Un parcours de transformation globale s'étend généralement sur 6 à 18 mois, avec des phases de diagnostic, d'action et de consolidation.",
+      "La durée varie selon la profondeur de l'intervention. Un accompagnement court sur un pilier spécifique peut durer 3 mois. Un parcours de transformation de l'entreprise s'étend généralement sur 6 à 12 mois, avec des phases de diagnostic, d'action et de consolidation.",
       "Nous veillons toujours à ce que l'entreprise devienne autonome à l'issue de l'accompagnement : notre objectif n'est pas de rester indispensables.",
     ],
   },

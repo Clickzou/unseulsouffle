@@ -18,19 +18,21 @@ import { buildHomeSchema } from "@/lib/seo/schema";
 import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
- * Page d'accueil — intention propriétaire : « équipe de direction externalisée,
- * cabinet de conseil dirigeant PME Toulouse ».
+ * Page d'accueil — intention propriétaire : « cabinet de conseil Toulouse »
+ * (170 recherches/mois, la seule requête générique locale mesurable — voir
+ * docs/seo/ETUDE_MOTS_CLES.md). « Équipe de direction externalisée » (30/mois)
+ * reste la signature de marque dans le texte, pas la cible.
  *
  * Règle structurante (master § 4) : la home NE cible PAS les termes des silos en
  * signal H1. Ses mentions de services pointent en lien à ancre exacte vers la page
  * dédiée, jamais en texte brut — sinon elle cannibalise ses propres pages piliers.
  */
 export const metadata: Metadata = {
-  // 59 / 60 caractères
-  title: "Accompagnement dirigeant PME ETI Toulouse | Un Seul Souffle",
-  // 146 / 150 caractères
+  // 56 / 60 caractères
+  title: "Cabinet de conseil pour PME à Toulouse | Un Seul Souffle",
+  // 144 / 150 caractères
   description:
-    "Équipe de direction externalisée pour dirigeants de PME et ETI à Toulouse : finance, organisation, stratégie, production, QVT. Diagnostic gratuit.",
+    "Cabinet de conseil pour dirigeants de PME et ETI à Toulouse : un conseiller référent, jusqu'à la mise en œuvre sur le terrain. Diagnostic gratuit.",
   alternates: { canonical: "/" },
   robots: ROBOTS,
   openGraph: {
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/",
     siteName: "Un Seul Souffle",
-    title: "Accompagnement de dirigeants de PME et ETI à Toulouse",
+    title: "Cabinet de conseil pour dirigeants de PME et ETI à Toulouse",
     description:
       "Un conseiller référent dédié à votre sujet, quatre autres expertises en appui si besoin. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.",
     images: [{ url: "/og-equipe.webp", width: 1200, height: 630, alt: "L'équipe Un Seul Souffle" }],

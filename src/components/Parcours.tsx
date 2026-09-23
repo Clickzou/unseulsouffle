@@ -41,7 +41,7 @@ export function Parcours() {
       <SectionHead
         label="Nos offres"
         titre="Deux parcours, selon l'endroit où ça bloque"
-        lede="La plupart des dirigeants savent que quelque chose coince, sans savoir si le nœud est chez eux ou dans l'organisation. C'est la seule question à trancher avant de commencer — et les deux parcours en découlent."
+        lede="La plupart des dirigeants qui contactent un cabinet de conseil savent que quelque chose coince, sans savoir si le nœud est chez eux ou dans l'organisation. C'est la seule question à trancher avant de commencer — et les deux parcours en découlent."
         centre
       />
 
@@ -55,7 +55,7 @@ export function Parcours() {
         Vous hésitez entre les deux ? C&apos;est le cas le plus fréquent, et c&apos;est
         exactement ce que le diagnostic tranche.{" "}
         <Link href="/diagnostic/" className="font-medium text-teal underline underline-offset-[3px]">
-          Faire le diagnostic en 5 minutes
+          Faire le diagnostic d&apos;entreprise en 5 minutes
         </Link>{" "}
         — ou en parler directement lors de l&apos;entretien découverte, gratuit et confidentiel.
       </p>
@@ -63,10 +63,10 @@ export function Parcours() {
       <p className="mx-auto mt-4 max-w-[72ch] text-center text-[15px] text-muted">
         Lorsque le blocage est d&apos;abord financier, l&apos;entrée se fait par le{" "}
         <Link
-          href="/expert-comptable-daf-externalisee-pme/"
+          href="/daf-externalise-toulouse/"
           className="text-teal underline decoration-1 underline-offset-[3px]"
         >
-          pilotage financier externalisé
+          DAF externalisé à temps partagé
         </Link>{" "}
         avant tout autre chantier.
       </p>

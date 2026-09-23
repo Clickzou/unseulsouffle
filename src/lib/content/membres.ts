@@ -136,7 +136,7 @@ export const membres: PageMembre[] = [
     ],
 
     silo: {
-      href: "/expert-comptable-daf-externalisee-pme/",
+      href: "/daf-externalise-toulouse/",
       ancre: "Découvrir le pilotage financier externalisé",
     },
   },
@@ -160,7 +160,7 @@ export const membres: PageMembre[] = [
       "Associée fondatrice d'Un Seul Souffle, Muriel Saffroy travaille la qualité de coopération dans les PME et les ETI. Courroie de transmission, elle s'assure que l'organisation interne est fluide et que les équipes sont alignées autour du cap.",
 
     essentiel:
-      "Muriel Saffroy est associée fondatrice du cabinet Un Seul Souffle et référente du pilier organisation et coopération. Elle intervient auprès de dirigeants de PME et d'ETI de 10 à 250 salariés en Occitanie sur la clarification des rôles, les modes de décision et l'intelligence collective. Elle anime les cercles d'avancée, sessions collectives de trois heures en groupes de six à huit personnes, et conduit l'étape Coopérer du parcours d'accompagnement du dirigeant.",
+      "Muriel Saffroy est associée fondatrice du cabinet Un Seul Souffle et référente du pilier organisation et coopération. Elle intervient auprès de dirigeants de PME et d'ETI de 10 à 250 salariés en Occitanie sur la clarification des rôles, les modes de décision et l'intelligence collective. Elle anime les cercles d'avancée, sessions collectives de trois heures en groupes de six à huit personnes, en présentiel ou en visio, et conduit l'étape Coopérer du parcours d'accompagnement du dirigeant.",
 
     prendEnCharge: [
       {

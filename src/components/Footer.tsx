@@ -15,16 +15,17 @@ const COLONNES = [
     liens: [
       { href: "/un-seul-souffle/", label: "Notre approche" },
       { href: "/notre-equipe/", label: "Notre équipe" },
-      { href: "/actualites/", label: "Actualités" },
+      { href: "/tarifs/", label: "Tarifs" },
+      { href: "/infos-utiles/", label: "Infos utiles" },
       { href: "/contact/", label: "Contact" },
     ],
   },
   {
     titre: "Accompagnements",
     liens: [
-      { href: "/transformation-dirigeant/", label: "Transformation du dirigeant" },
-      { href: "/transformation-entreprise/", label: "Transformation de l'entreprise" },
-      { href: "/expert-comptable-daf-externalisee-pme/", label: "Pilotage financier externalisé" },
+      { href: "/transformation-dirigeant/", label: "Coaching dirigeant" },
+      { href: "/transformation-entreprise/", label: "Conseil en organisation" },
+      { href: "/daf-externalise-toulouse/", label: "DAF externalisé" },
     ],
   },
 ];

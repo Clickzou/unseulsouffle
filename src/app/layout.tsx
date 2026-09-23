@@ -32,7 +32,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.unseulsouffle.fr"),
   title: {
-    default: "Accompagnement dirigeant PME ETI Toulouse | Un Seul Souffle",
+    default: "Cabinet de conseil pour PME à Toulouse | Un Seul Souffle",
     template: "%s | Un Seul Souffle",
   },
 };

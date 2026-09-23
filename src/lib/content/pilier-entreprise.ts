@@ -1,8 +1,11 @@
 import type { PagePilier } from "@/lib/content/pilier";
+import { offre } from "@/lib/content/tarifs";
 
 /**
  * Silo 2 — Transformation & organisation de l'entreprise (master § 3).
- * Intention propriétaire : « conseil en organisation, transformation d'entreprise PME ».
+ * Intention propriétaire : « conseil en organisation » (320/mois) et « audit
+ * organisationnel » (320/mois). « Transformation d'entreprise » ne fait que 50/mois :
+ * il reste le nom du parcours, plus la cible (docs/seo/ETUDE_MOTS_CLES.md).
  * Couvre les étapes 03 Cartographier, 04 Structurer et 05 Renforcer.
  *
  * C'est la page qui porte le comparatif GEO du cabinet : elle est la mieux placée
@@ -13,20 +16,20 @@ export const pilierEntreprise: PagePilier = {
   fil: "Transformation de l'entreprise",
   accent: "organisation",
 
-  // « Transformation d'entreprise PME Toulouse » = 41 + 18 = 59 / 60
-  metaTitle: "Transformation d'entreprise PME Toulouse",
-  // 148 / 150
+  // « Conseil en organisation PME à Toulouse » = 38 + 18 = 56 / 60
+  metaTitle: "Conseil en organisation PME à Toulouse",
+  // 146 / 150
   metaDescription:
-    "Conseil en organisation pour PME et ETI à Toulouse : cartographier le fonctionnement réel, structurer la croissance, rendre l'entreprise autonome.",
+    "Conseil en organisation et audit organisationnel pour PME et ETI à Toulouse : lire le fonctionnement réel, structurer la croissance, gagner en autonomie.",
   nomService: "Transformation et conseil en organisation de PME et d'ETI",
 
-  h1: "Transformation d'entreprise : structurer une PME en croissance",
+  h1: "Conseil en organisation : structurer une PME en croissance à Toulouse",
   lede:
-    "Votre entreprise grandit plus vite que sa structure. Les mêmes blocages reviennent, et rien ne se décide sans vous. Un conseiller référent prend le sujet en charge, traite ce qui bloque réellement — et laisse tranquille ce qui fonctionne.",
+    "Votre entreprise grandit plus vite que sa structure. Les mêmes blocages reviennent, et rien ne se décide sans vous. Notre conseil en organisation part du fonctionnement réel : un conseiller référent prend le sujet en charge, traite ce qui bloque réellement — et laisse tranquille ce qui fonctionne.",
 
   essentiel: {
     reponse:
-      "La transformation de l'entreprise d'Un Seul Souffle s'adresse aux PME et ETI de 10 à 250 salariés dont l'organisation ne suit plus la croissance. Un conseiller référent prend en charge votre situation et reste votre interlocuteur du début à la fin. L'accompagnement se déroule en trois étapes — Cartographier le fonctionnement réel, Structurer les chantiers prioritaires, Renforcer l'autonomie de l'organisation — sur 6 à 12 mois, à Toulouse et en Occitanie. Le périmètre est décidé avec vous : on n'ouvre que les chantiers qui bloquent réellement, et les autres expertises du cabinet ne sont appelées que si votre sujet l'exige.",
+      "Le conseil en organisation d'Un Seul Souffle s'adresse aux PME et ETI de 10 à 250 salariés dont l'organisation ne suit plus la croissance. Un conseiller référent prend en charge votre situation et reste votre interlocuteur du début à la fin. L'accompagnement se déroule en trois étapes — Cartographier le fonctionnement réel, Structurer les chantiers prioritaires, Renforcer l'autonomie de l'organisation — sur 6 à 12 mois, à Toulouse et en Occitanie. Le périmètre est décidé avec vous : on n'ouvre que les chantiers qui bloquent réellement, et les autres expertises du cabinet ne sont appelées que si votre sujet l'exige.",
     points: [
       "Pour qui : PME et ETI de 10 à 250 salariés dont la structure ne suit plus la croissance",
       "Un conseiller référent, interlocuteur unique du début à la fin",
@@ -42,12 +45,13 @@ export const pilierEntreprise: PagePilier = {
   chapitres: [
     {
       label: "Pour qui",
-      titre: "À qui s'adresse la transformation de l'entreprise",
+      titre: "À qui s'adresse le conseil en organisation",
+      cartesADroite: true,
       blocs: [
         {
           type: "p",
           texte:
-            "Cet accompagnement s'adresse aux entreprises qui ont réussi leur croissance et qui en paient maintenant la facture organisationnelle. L'effectif a doublé, les métiers se sont spécialisés, les clients sont plus exigeants — et le mode de fonctionnement est resté celui de l'entreprise d'avant.",
+            "Le conseil en organisation s'adresse aux entreprises qui ont réussi leur croissance et qui en paient maintenant la facture organisationnelle. L'effectif a doublé, les métiers se sont spécialisés, les clients sont plus exigeants — et le mode de fonctionnement est resté celui de l'entreprise d'avant.",
         },
         {
           type: "p",
@@ -56,6 +60,7 @@ export const pilierEntreprise: PagePilier = {
         },
         {
           type: "liste",
+          style: "cartes",
           items: [
             "Les mêmes problèmes reviennent malgré les réunions consacrées à les régler",
             "Chaque service a raison de son point de vue, et l'ensemble ne fonctionne pas",
@@ -67,7 +72,7 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "Si vous vous reconnaissez surtout dans un dirigeant saturé qui décide dans l'urgence, commencez plutôt par l'[accompagnement du dirigeant](/transformation-dirigeant/) : travailler la structure avant votre pilotage reviendrait à construire sur un point d'appui instable.",
+            "Si vous vous reconnaissez surtout dans un dirigeant saturé qui décide dans l'urgence, commencez plutôt par l'[accompagnement dirigeant](/transformation-dirigeant/) : travailler la structure avant votre pilotage reviendrait à construire sur un point d'appui instable.",
         },
       ],
     },
@@ -75,44 +80,41 @@ export const pilierEntreprise: PagePilier = {
     {
       label: "Le vrai blocage",
       titre: "L'organigramme ne décrit plus le fonctionnement réel",
+      exergue:
+        "Tant que l'écart entre les deux n'est pas cartographié, toute réorganisation se trompe de cible.",
       blocs: [
         {
           type: "p",
           texte:
-            "Dans une entreprise qui a grandi vite, il existe toujours deux organisations. Celle de l'organigramme, avec ses services, ses rattachements et ses fiches de poste. Et celle qui fait réellement tourner l'entreprise : des circuits informels, des personnes-ressources que tout le monde appelle, des arbitrages rendus dans les couloirs.",
+            "Dans une entreprise qui a grandi vite, il existe toujours deux organisations. Celle de l'organigramme, avec ses services, ses rattachements et ses fiches de poste. Et celle qui fait réellement tourner l'entreprise : des circuits informels, des personnes-ressources que tout le monde appelle, des arbitrages rendus dans les couloirs. C'est pourquoi tant de plans de transformation échouent : ils corrigent l'organisation officielle, qui n'était pas celle qui posait problème.",
         },
         {
-          type: "p",
-          texte:
-            "**Tant que l'écart entre les deux n'est pas cartographié, toute réorganisation se trompe de cible.** C'est la raison pour laquelle tant de plans de transformation échouent : ils corrigent l'organisation officielle, qui n'était pas celle qui posait problème.",
-        },
-        {
-          type: "p",
-          texte:
-            "Cet écart a un coût précis. Les personnes-ressources informelles deviennent des goulots d'étranglement et s'épuisent. Les nouveaux arrivants mettent des mois à comprendre qui décide vraiment. Et vous restez l'arbitre de dernier recours, parce que vous êtes le seul à avoir la vue d'ensemble des deux organisations.",
-        },
-        {
-          type: "p",
-          texte:
-            "S'y ajoute un second écart, entre les fonctions. La production lisse ses séries, le commerce promet des délais courts, la finance serre le besoin en fonds de roulement. Aucune ne se trompe : c'est leur combinaison qui produit le blocage. Le repérer demande une lecture d'ensemble — ce qui ne veut pas dire tout réorganiser.",
+          type: "liste",
+          style: "cartes",
+          colonnes: 3,
+          items: [
+            "**Les personnes-ressources s'épuisent.** Cet écart a un coût précis. Les personnes-ressources informelles deviennent des goulots d'étranglement et s'épuisent, et les nouveaux arrivants mettent des mois à comprendre qui décide vraiment.",
+            "**Vous restez l'arbitre de dernier recours.** Vous êtes le seul à avoir la vue d'ensemble des deux organisations. Chaque désaccord qui ne trouve pas sa place dans l'organigramme finit donc sur votre bureau.",
+            "**Les fonctions se contredisent.** La production lisse ses séries, le commerce promet des délais courts, la finance serre le besoin en fonds de roulement. Aucune ne se trompe : c'est leur combinaison qui produit le blocage. Le repérer demande une lecture d'ensemble — c'est le rôle du conseil en organisation, et cela ne veut pas dire tout réorganiser.",
+          ],
         },
       ],
     },
 
     {
       label: "Étape 03",
-      titre: "Cartographier : lire le système avant de le corriger",
+      titre: "Cartographier : un audit organisationnel du fonctionnement réel",
       blocs: [
         { type: "etape", n: "03" },
         {
           type: "p",
           texte:
-            "Le diagnostic 360° combine trois sources : une immersion sur le terrain, des entretiens individuels à tous les niveaux, et l'analyse des flux réels — commandes, informations, décisions, argent. Nous ne partons jamais de l'organigramme, qui décrit l'intention et non la pratique.",
+            "L'audit organisationnel qui ouvre le parcours, le diagnostic 360°, combine trois sources : une immersion sur le terrain, des entretiens individuels à tous les niveaux, et l'analyse des flux réels — commandes, informations, décisions, argent. Nous ne partons jamais de l'organigramme, qui décrit l'intention et non la pratique.",
         },
         {
           type: "p",
           texte:
-            "L'immersion terrain n'est pas une formalité. Une demi-journée passée à suivre une commande de bout en bout apprend davantage sur les interfaces entre services que trois réunions de direction. C'est aussi ce qui distingue une lecture systémique d'un audit documentaire.",
+            "L'immersion terrain n'est pas une formalité : nous venons sur vos sites, en Haute-Garonne comme ailleurs en Occitanie. Une demi-journée passée à suivre une commande de bout en bout apprend davantage sur les interfaces entre services que trois réunions de direction. C'est aussi ce qui distingue une lecture systémique d'un audit documentaire.",
         },
         {
           type: "p",
@@ -130,13 +132,15 @@ export const pilierEntreprise: PagePilier = {
 
     {
       label: "Étape 04",
-      titre: "Structurer : traiter les chantiers prioritaires, et eux seuls",
+      titre: "Structurer : un consultant en organisation sur vos seuls chantiers prioritaires",
+      large: true,
+      ficheADroite: true,
       blocs: [
         { type: "etape", n: "04" },
         {
           type: "p",
           texte:
-            "**Un conseiller référent conduit votre accompagnement.** C'est votre interlocuteur : celui qui connaît votre entreprise, qui suit les chantiers et à qui vous vous adressez. Il est choisi selon la nature de votre blocage principal — pilotage financier, organisation, commercial, production, qualité de vie au travail.",
+            "**Un conseiller référent conduit votre accompagnement.** C'est votre consultant en organisation et votre interlocuteur : celui qui connaît votre entreprise, qui suit les chantiers et à qui vous vous adressez. Il est choisi selon la nature de votre blocage principal — pilotage financier, organisation, commercial, production, qualité de vie au travail.",
         },
         {
           type: "p",
@@ -153,12 +157,12 @@ export const pilierEntreprise: PagePilier = {
           type: "encadre",
           titre: "Ce que nous ne touchons pas",
           texte:
-            "Ce qui fonctionne. Un accompagnement ne se mesure pas au nombre de chantiers ouverts, et remettre en cause une organisation qui tient ferait perdre du temps à tout le monde. Le périmètre est arrêté avec vous à l'issue du diagnostic, il est écrit dans la proposition, et il ne s'élargit pas sans votre accord.",
+            "Ce qui fonctionne. Un conseil en organisation ne se mesure pas au nombre de chantiers ouverts, et remettre en cause une organisation qui tient ferait perdre du temps à tout le monde. Le périmètre est arrêté avec vous à l'issue du diagnostic, il est écrit dans la proposition, et il ne s'élargit pas sans votre accord.",
         },
         {
           type: "p",
           texte:
-            "Beaucoup d'accompagnements se limitent d'ailleurs à un seul sujet. Le pilotage financier, par exemple, se traite seul, sans transformation globale : voir le [pilotage financier externalisé](/expert-comptable-daf-externalisee-pme/).",
+            "Beaucoup d'accompagnements se limitent d'ailleurs à un seul sujet. Le pilotage financier, par exemple, se traite seul, sans transformation globale : voir notre offre de [DAF externalisé](/daf-externalise-toulouse/).",
         },
         {
           type: "encadre",
@@ -177,7 +181,7 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "Une transformation qui s'arrête à la mise en œuvre laisse l'entreprise dépendante de ceux qui l'ont conduite. La dernière étape organise notre propre sortie : redistribution des responsabilités, clarification de la gouvernance, mise en place d'un pilotage collectif qui fonctionne sans arbitre extérieur.",
+            "Une transformation d'entreprise qui s'arrête à la mise en œuvre vous laisse dépendant de ceux qui l'ont conduite. La dernière étape organise notre propre sortie : redistribution des responsabilités, clarification de la gouvernance, mise en place d'un pilotage collectif qui fonctionne sans arbitre extérieur.",
         },
         {
           type: "p",
@@ -200,12 +204,14 @@ export const pilierEntreprise: PagePilier = {
 
     {
       label: "Notre modèle",
-      titre: "Cabinet de conseil classique ou équipe de direction externalisée",
+      titre: "Cabinet de conseil en organisation classique ou équipe de direction externalisée",
+      large: true,
+      cartesADroite: true,
       blocs: [
         {
           type: "p",
           texte:
-            "Beaucoup de dirigeants que nous rencontrons ont déjà fait appel à un cabinet, et gardent de l'expérience un rapport sérieux resté sans effet. Voici, point par point, ce qui sépare les deux modèles.",
+            "Beaucoup de dirigeants que nous rencontrons ont déjà fait appel à un cabinet de conseil en organisation, et gardent de l'expérience un rapport sérieux resté sans effet. Voici, point par point, ce qui sépare ce modèle de l'équipe de direction externalisée que propose notre [cabinet de conseil à Toulouse](/).",
         },
         { type: "comparatif" },
         {
@@ -218,7 +224,9 @@ export const pilierEntreprise: PagePilier = {
 
     {
       label: "Déroulé",
-      titre: "Comment se déroule une transformation, et ce qu'elle engage",
+      titre: "Comment se déroule une transformation d'entreprise, et ce qu'elle engage",
+      large: true,
+      frise: true,
       blocs: [
         {
           type: "liste",
@@ -235,8 +243,9 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "La durée totale va de 6 à 12 mois. Le diagnostic constitue un point d'arrêt volontaire : il a sa valeur propre, et vous n'êtes pas engagé sur la suite en le commandant.",
+            "La durée totale va de 6 à 12 mois. L'audit organisationnel constitue un point d'arrêt volontaire : il a sa valeur propre, et vous n'êtes pas engagé sur la suite en le commandant.",
         },
+        { type: "tarifs", offre: "entreprise" },
         {
           type: "encadre",
           titre: "Cas clients et résultats mesurés",
@@ -249,6 +258,10 @@ export const pilierEntreprise: PagePilier = {
   ],
 
   faq: [
+    {
+      q: "Combien coûte un conseil en organisation ?",
+      r: [offre("entreprise").reponse],
+    },
     {
       q: "Combien de temps dure une transformation d'entreprise ?",
       r: [
@@ -271,14 +284,14 @@ export const pilierEntreprise: PagePilier = {
       ],
     },
     {
-      q: "En quoi est-ce différent d'un cabinet de conseil classique ?",
+      q: "Qu'est-ce qui vous distingue d'un consultant en organisation classique ?",
       r: [
         "Sur trois points. Le livrable : une transformation mise en œuvre, pas un rapport de recommandations. La profondeur : votre référent peut s'appuyer sur quatre autres expertises de direction quand le sujet le demande, au lieu de vous renvoyer vers un prestataire extérieur. Le point de sortie : l'autonomie de votre entreprise, et non la remise du document.",
         "Un angle mort qui sort du périmètre commandé n'est donc ni écarté, ni facturé comme une mission supplémentaire.",
       ],
     },
     {
-      q: "Peut-on commander seulement le diagnostic ?",
+      q: "Peut-on commander seulement l'audit organisationnel ?",
       r: [
         "Oui, et c'est fréquent. Le diagnostic 360° a sa valeur propre : cartographie du fonctionnement réel, causes hiérarchisées, stratégie d'action priorisée. Beaucoup de dirigeants conduisent ensuite les chantiers eux-mêmes.",
         "Le commander ne vous engage pas sur la suite du parcours.",
@@ -295,7 +308,7 @@ export const pilierEntreprise: PagePilier = {
       q: "Intervenez-vous dans l'industrie et l'agroalimentaire ?",
       r: [
         "Oui. Le pilier production et performance est porté par des référents issus de l'industrie, et couvre les flux, les processus et les interfaces industriels ainsi que l'amélioration continue des sites.",
-        "Nous intervenons également dans les services et la distribution, sur des PME et ETI de 10 à 250 salariés.",
+        "Nous intervenons également dans les services et la distribution, sur des PME et ETI de 10 à 250 salariés, à Toulouse et en Occitanie.",
       ],
     },
     {
@@ -312,6 +325,6 @@ export const pilierEntreprise: PagePilier = {
     texte:
       "Si vous décidez dans l'urgence, si vos équipes attendent votre feu vert et si la charge mentale entame votre clarté, commencez par l'autre parcours : il travaille votre pilotage, puis la maturité du collectif, sur 3 à 6 mois.",
     href: "/transformation-dirigeant/",
-    ancre: "Découvrir l'accompagnement du dirigeant",
+    ancre: "Découvrir le coaching dirigeant",
   },
 };

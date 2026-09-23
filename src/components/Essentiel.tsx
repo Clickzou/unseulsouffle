@@ -21,7 +21,7 @@ const AFFIRMATIONS = [
     texte: (
       <>
         Un Seul Souffle est un{" "}
-        <strong className="font-normal text-ink">cabinet de conseil basé à Toulouse</strong> qui
+        <strong className="font-normal text-ink">cabinet de conseil à Toulouse</strong> et en Occitanie qui
         accompagne les dirigeants de PME et d&apos;ETI de 10 à 250 salariés, dans l&apos;industrie,
         l&apos;agroalimentaire, les services et la distribution.
       </>

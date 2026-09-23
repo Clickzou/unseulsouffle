@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FormulaireContact } from "@/components/contact/FormulaireContact";
 import Link from "next/link";
 
 import { EnTetePage } from "@/components/ui/EnTetePage";
@@ -62,49 +63,16 @@ function schema() {
   };
 }
 
-/** Champ de formulaire — styles regroupés ici pour ne pas les répéter six fois. */
-function Champ({
-  id,
-  label,
-  type = "text",
-  requis = false,
-  zone = false,
-  autoComplete,
+
+export default function ContactPage({
+  searchParams,
 }: {
-  id: string;
-  label: string;
-  type?: string;
-  requis?: boolean;
-  zone?: boolean;
-  autoComplete?: string;
+  searchParams?: { message?: string | string[] };
 }) {
-  const classes =
-    "mt-2 w-full rounded-bouton border border-rule bg-surface px-4 py-3 text-[15.5px] text-ink " +
-    "outline-none transition-colors placeholder:text-muted focus:border-teal";
+  // Message prérempli par le questionnaire de diagnostic (?message=…).
+  const brut = searchParams?.message;
+  const messageInitial = (Array.isArray(brut) ? brut[0] : brut)?.slice(0, 2000);
 
-  return (
-    <p className={zone ? "sm:col-span-2" : undefined}>
-      <label htmlFor={id} className="font-mono text-[10px] uppercase tracking-[0.13em] text-muted">
-        {label}
-        {requis && <span className="text-amber"> *</span>}
-      </label>
-      {zone ? (
-        <textarea id={id} name={id} rows={5} required={requis} className={classes} />
-      ) : (
-        <input
-          id={id}
-          name={id}
-          type={type}
-          required={requis}
-          autoComplete={autoComplete}
-          className={classes}
-        />
-      )}
-    </p>
-  );
-}
-
-export default function ContactPage() {
   return (
     <>
       <main>
@@ -122,26 +90,7 @@ export default function ContactPage() {
               <div>
                 <SectionHead label="Écrire" titre="Décrivez votre situation" />
 
-                {/* TODO client : brancher l'envoi (Brevo, Formspree ou route API)
-                    et le consentement analytics avant mise en ligne. */}
-                <p className="mb-7 rounded-carte border-l-2 border-amber bg-amber-wash px-5 py-4 font-mono text-[13px] leading-relaxed text-amber">
-                  [Formulaire non branché] Aucun envoi n&apos;est effectué tant que le service de
-                  réception n&apos;est pas configuré. En attendant, écrivez à contact@unseulsouffle.fr.
-                </p>
-
-                <form className="grid gap-5 sm:grid-cols-2">
-                  <Champ id="nom" label="Nom et prénom" requis autoComplete="name" />
-                  <Champ id="entreprise" label="Entreprise" autoComplete="organization" />
-                  <Champ id="email" label="Email" type="email" requis autoComplete="email" />
-                  <Champ id="telephone" label="Téléphone" type="tel" autoComplete="tel" />
-                  <Champ id="message" label="Votre situation en quelques lignes" requis zone />
-
-                  <div className="sm:col-span-2">
-                    <Button href="#" className="pointer-events-none opacity-60">
-                      Demander un entretien
-                    </Button>
-                  </div>
-                </form>
+                <FormulaireContact messageInitial={messageInitial} />
 
                 {/* Mention RGPD — absente du site legacy, exigée au devis validé. */}
                 <p className="mt-7 max-w-prose border-t border-rule-2 pt-5 text-[13.5px] leading-relaxed text-muted">

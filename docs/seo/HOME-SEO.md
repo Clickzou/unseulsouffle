@@ -84,7 +84,7 @@
 > Un blocage financier pèse sur le moral du dirigeant. Une faille d'organisation freine la stratégie. Une tension d'équipe ralentit la production. Ces problèmes ne sont jamais isolés — mais le conseil traditionnel les traite un par un, chacun dans son couloir. C'est précisément pour sortir de ces silos que nous avons créé Un Seul Souffle.
 
 **01 — Manque de visibilité financière**
-> Trésorerie pilotée à vue, tableaux de bord absents ou peu fiables, décisions d'investissement prises sans marge de sécurité. Vous savez que l'entreprise gagne de l'argent, sans savoir précisément où ni pourquoi. → [pilotage financier externalisé](/expert-comptable-daf-externalisee-pme/)
+> Trésorerie pilotée à vue, tableaux de bord absents ou peu fiables, décisions d'investissement prises sans marge de sécurité. Vous savez que l'entreprise gagne de l'argent, sans savoir précisément où ni pourquoi. → [pilotage financier externalisé](/daf-externalise-toulouse/)
 
 **02 — Stratégie incertaine**
 > Vision floue à 3 ans, stratégie commerciale fragile, positionnement peu différenciant, risques non anticipés. L'entreprise avance à l'énergie du dirigeant plutôt qu'à celle d'un cap partagé.
@@ -187,7 +187,7 @@
 > → **[Découvrir la transformation de l'entreprise](/transformation-entreprise/)**
 
 *Troisième lien contextuel, dans le corps du texte* :
-> Lorsque le blocage est d'abord financier, l'entrée se fait par le [pilotage financier externalisé](/expert-comptable-daf-externalisee-pme/) avant tout autre chantier.
+> Lorsque le blocage est d'abord financier, l'entrée se fait par le [pilotage financier externalisé](/daf-externalise-toulouse/) avant tout autre chantier.
 
 ---
 
@@ -362,7 +362,7 @@ contact@unseulsouffle.fr
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transformation du dirigeant", "url": "https://www.unseulsouffle.fr/transformation-dirigeant/" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transformation de l'entreprise", "url": "https://www.unseulsouffle.fr/transformation-entreprise/" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pilotage financier externalisé", "url": "https://www.unseulsouffle.fr/expert-comptable-daf-externalisee-pme/" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pilotage financier externalisé", "url": "https://www.unseulsouffle.fr/daf-externalise-toulouse/" } }
         ]
       }
     },

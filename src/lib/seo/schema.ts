@@ -94,7 +94,7 @@ export function buildHomeSchema() {
               itemOffered: {
                 "@type": "Service",
                 name: "Pilotage financier externalisé",
-                url: `${SITE_URL}/expert-comptable-daf-externalisee-pme/`,
+                url: `${SITE_URL}/daf-externalise-toulouse/`,
               },
             },
           ],
