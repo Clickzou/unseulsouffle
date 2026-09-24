@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 export function CTAFinal() {
   return (
     <Section ton="ink">
-      <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+      <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <Label className="!text-[#6fc9c0]">Première étape</Label>
           <h2 className="my-4 max-w-[20ch] text-[clamp(27px,3.6vw,40px)] leading-[1.14] !text-[#f4f2ec]">

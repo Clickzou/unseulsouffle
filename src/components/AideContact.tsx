@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { DEGRADE_LOGO } from "@/lib/content/home";
+import { lireChoix } from "@/lib/consentement";
 
 const CLE_STOCKAGE = "uss-aide-fermee";
 const SEUIL_DEFILEMENT = 0.35;
@@ -46,7 +47,9 @@ export function AideContact() {
 
     let fait = false;
     const montrer = () => {
-      if (fait) return;
+      // Le bandeau cookies occupe le bas de l'écran tant qu'aucun choix n'est
+      // fait : le panneau attend, sinon les deux se superposent sur mobile.
+      if (fait || !lireChoix()) return;
       fait = true;
       setVisible(true);
       window.removeEventListener("scroll", auDefilement);

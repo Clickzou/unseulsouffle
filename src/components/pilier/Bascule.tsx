@@ -14,7 +14,7 @@ import type { PagePilier } from "@/lib/content/pilier";
 export function Bascule({ page }: { page: PagePilier }) {
   return (
     <Section ton="band">
-      <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+      <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <Label>Autre parcours</Label>
           <h2 className="my-4 max-w-[24ch] text-[clamp(25px,3.2vw,35px)] leading-[1.16]">

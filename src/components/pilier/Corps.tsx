@@ -46,11 +46,13 @@ function BlocEtape({ n, accentPage }: { n: string; accentPage: string }) {
         </span>
       </div>
 
-      <dl className="px-6 sm:px-8">
+      {/* La fiche vit souvent dans une demi-colonne : c'est sa propre largeur, pas
+          celle de l'écran, qui décide si l'intitulé passe à gauche du texte. */}
+      <dl className="px-6 [container-type:inline-size] sm:px-8">
         {lignes.map(([label, valeur]) => (
           <div
             key={label}
-            className="grid gap-1.5 border-b border-rule-2 py-4 last:border-b-0 sm:grid-cols-[168px_1fr] sm:gap-6"
+            className="grid gap-1.5 border-b border-rule-2 py-4 last:border-b-0 [@container(min-width:520px)]:grid-cols-[168px_1fr] [@container(min-width:520px)]:gap-6"
           >
             <dt className="pt-[3px] font-mono text-[10px] uppercase tracking-[0.13em] text-muted">
               {label}
@@ -471,7 +473,7 @@ function RendreChapitre({
           {chapitre.titre}
         </h2>
         {liste && liste.type === "liste" && <Frise items={liste.items} accentPage={accentPage} />}
-        <div className="mt-16 grid gap-10 border-t border-rule pt-14 lg:grid-cols-2 lg:gap-20">
+        <div className="mt-16 grid grid-cols-1 gap-10 border-t border-rule pt-14 lg:grid-cols-2 lg:gap-20">
           <div className="[&>*:first-child]:mt-0">
             {reste.map((bloc, index) => (
               <RendreBloc key={index} bloc={bloc} accentPage={accentPage} />
@@ -493,7 +495,7 @@ function RendreChapitre({
       (bloc.type === "tableau" && bloc.style === "contraste") ||
       bloc.type === "comparatif";
     return (
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
         {/* Le texte d'abord, à gauche sur grand écran et au-dessus sur mobile. */}
         <div className="order-2 [&>ul]:mt-0">
           {chapitre.blocs.filter(estCartes).map((bloc, index) => (
@@ -519,7 +521,7 @@ function RendreChapitre({
     const [premier, ...suite] = chapitre.blocs;
     return (
       <>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
           <div>
             {chapitre.label && <Label style={{ color: accentPage }}>{chapitre.label}</Label>}
             <h2 className="mt-4 max-w-[18ch] text-[clamp(28px,3.6vw,42px)] leading-[1.12]">
@@ -566,7 +568,7 @@ function RendreChapitre({
 
     if (chapitre.ficheADroite && aGauche.length) {
       return (
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
           <div>
             {chapitre.label && <Label style={{ color: accentPage }}>{chapitre.label}</Label>}
             <h2 className="mb-7 mt-4 text-[clamp(28px,3.4vw,46px)] leading-[1.12]">{chapitre.titre}</h2>
@@ -583,7 +585,7 @@ function RendreChapitre({
       );
     }
     return (
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,44rem)] lg:gap-20">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,44rem)] lg:gap-20">
         <div className={aGauche.length ? "" : "lg:sticky lg:top-24 lg:self-start"}>
           {chapitre.label && <Label style={{ color: accentPage }}>{chapitre.label}</Label>}
           <h2 className="mt-4 text-[clamp(28px,3.4vw,46px)] leading-[1.12]">{chapitre.titre}</h2>
@@ -605,7 +607,7 @@ function RendreChapitre({
   const etapesCentre = chapitre.blocs.filter((bloc) => bloc.type === "etape");
   if (etapesCentre.length) {
     return (
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14">
         <div>
           {chapitre.label && <Label style={{ color: accentPage }}>{chapitre.label}</Label>}
           <h2 className="mb-7 mt-4 max-w-[26ch] text-[clamp(25px,3.2vw,35px)] leading-[1.16]">

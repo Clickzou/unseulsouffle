@@ -349,7 +349,7 @@ export const equipe: Membre[] = [
     bio: "Gardienne des ressources. Elle traduit la stratégie en chiffres pour garantir la viabilité et la sérénité du projet financier.",
     href: "/marjorie-anglade/",
     photo: "/equipe/marjorie-anglade.webp",
-    // linkedin: "[À FOURNIR]",
+    linkedin: "https://www.linkedin.com/in/marjorie-anglade-31tls/",
   },
   {
     slug: "muriel-saffroy",
@@ -359,7 +359,7 @@ export const equipe: Membre[] = [
     expertise: "Organisation & Leadership",
     bio: "Courroie de transmission. Elle s'assure que l'organisation interne est fluide et que les équipes sont alignées autour du cap.",
     href: "/muriel-saffroy/",
-    linkedin: "https://fr.linkedin.com/in/muriel-saffroy",
+    linkedin: "https://www.linkedin.com/in/muriel-saffroy/",
     photo: "/equipe/muriel-saffroy.webp",
   },
   {

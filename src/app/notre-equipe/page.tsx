@@ -311,9 +311,10 @@ export default function NotreEquipePage() {
           </ul>
         </Section>
 
-        {/* Les partenaires — cartes photo. */}
-        <Section large>
-          {/* Pleine largeur : titre à gauche, introduction à droite — pas de vide. */}
+        {/* Les partenaires — cartes photo, dans la largeur encadrée du site : en
+            pleine largeur, les portraits devenaient démesurés. */}
+        <Section>
+          {/* Titre à gauche, introduction à droite — pas de vide. */}
           <Reveal className="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-20">
             <div>
               <Label>Les partenaires</Label>

@@ -13,9 +13,8 @@ import { NON_INDEXABLE } from "@/lib/seo/indexation";
  * urgence, parce que l'absence de mentions légales est sanctionnable et non
  * seulement inesthétique.
  *
- * Les champs fournis par la cliente le 22/09/2026 sont intégrés. Ceux qui
- * manquent restent visibles en orange : un placeholder doit gêner jusqu'à ce que
- * la donnée arrive, sinon il survit à la mise en ligne.
+ * Tous les champs sont renseignés (cliente, 22 et 24/09/2026 ; hébergeur vérifié
+ * le 24/09/2026). Seul le RCS reste à confirmer sur le Kbis.
  *
  * `noindex` — master § 2 : les pages légales ne sont pas indexées, mais restent
  * suivies pour ne pas casser le maillage.
@@ -26,11 +25,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/mentions-legales/" },
   robots: NON_INDEXABLE,
 };
-
-/** Champ non fourni — rendu visible, jamais inventé. */
-function AFournir({ children }: { children: React.ReactNode }) {
-  return <span className="font-mono text-[12.5px] text-amber">[{children}]</span>;
-}
 
 function Bloc({ titre, children }: { titre: string; children: React.ReactNode }) {
   return (
@@ -59,19 +53,22 @@ export default function MentionsLegalesPage() {
           <div className="max-w-[70ch]">
             <Bloc titre="Éditeur du site">
               <p>
-                <strong className="font-normal text-ink">Un Seul Souffle</strong>
+                <strong className="font-normal text-ink">SARL Un Seul Souffle</strong>
+                <br />
+                Société à responsabilité limitée au capital de 600 €
                 <br />
                 2 rue du Fort — 31450 Ayguesvives, France
                 <br />
-                SIRET : 10066243600029
+                SIRET : 100 662 436 00029
                 <br />
-                Forme juridique : <AFournir>à fournir</AFournir>
+                {/* RCS déduit du siège (Ayguesvives relève du greffe de Toulouse) —
+                    à vérifier sur l'extrait Kbis. */}
+                RCS Toulouse 100 662 436
                 <br />
-                Capital social : <AFournir>à fournir</AFournir>
+                Numéro de TVA intracommunautaire : FR33100662436
                 <br />
-                Numéro de TVA intracommunautaire : <AFournir>à fournir</AFournir>
-                <br />
-                Téléphone : <AFournir>à fournir</AFournir>
+                Téléphone : <a href="tel:+33663446585">06 63 44 65 85</a> (Muriel Saffroy) —{" "}
+                <a href="tel:+33625080009">06 25 08 00 09</a> (Marjorie Anglade)
                 <br />
                 Courriel :{" "}
                 <a href="mailto:contact@unseulsouffle.fr">contact@unseulsouffle.fr</a>
@@ -80,7 +77,7 @@ export default function MentionsLegalesPage() {
 
             <Bloc titre="Direction de la publication">
               <p>
-                Directrice de la publication : <AFournir>nom à confirmer</AFournir>
+                Directrice de la publication : Marjorie Anglade, associée fondatrice
               </p>
             </Bloc>
 
@@ -88,17 +85,16 @@ export default function MentionsLegalesPage() {
               <p>
                 Ce site est hébergé par <strong className="font-normal text-ink">Vercel Inc.</strong>
                 <br />
+                {/* Adresse : celle des CGU et de la politique de confidentialité de
+                    vercel.com (vérifiée le 24/09/2026). Téléphone : celui déclaré par
+                    Vercel à la SEC (Form D) — le site n'en publie aucun. */}
                 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
+                <br />
+                Téléphone : +1 559 288 7060
                 <br />
                 <a href="https://vercel.com" rel="noopener">
                   vercel.com
                 </a>
-              </p>
-              <p className="mt-3">
-                <AFournir>
-                  Coordonnées à vérifier sur vercel.com avant publication — siège et
-                  téléphone de contact
-                </AFournir>
               </p>
             </Bloc>
 
@@ -147,12 +143,6 @@ export default function MentionsLegalesPage() {
               </p>
             </Bloc>
           </div>
-
-          <p className="mt-10 max-w-prose rounded-carte border-l-2 border-amber bg-amber-wash px-5 py-4 font-mono text-[13px] leading-relaxed text-amber">
-            [Avant mise en ligne] Les champs en orange sont obligatoires au titre de la LCEN.
-            Forme juridique, capital, TVA, téléphone, directrice de publication et coordonnées de
-            l&apos;hébergeur doivent être renseignés avant publication.
-          </p>
         </Section>
       </main>
 

@@ -24,10 +24,6 @@ export const metadata: Metadata = {
   robots: NON_INDEXABLE,
 };
 
-function AFournir({ children }: { children: React.ReactNode }) {
-  return <span className="font-mono text-[12.5px] text-amber">[{children}]</span>;
-}
-
 function Bloc({ titre, children }: { titre: string; children: React.ReactNode }) {
   return (
     <section className="border-b border-rule-2 py-7 last:border-b-0">
@@ -83,7 +79,8 @@ export default function ConfidentialitePage() {
                 <a href="mailto:contact@unseulsouffle.fr">contact@unseulsouffle.fr</a>.
               </p>
               <p className="mt-3">
-                Délégué à la protection des données : <AFournir>le cas échéant, à préciser</AFournir>
+                Déléguée à la protection des données : Marjorie Anglade, associée fondatrice —{" "}
+                <a href="mailto:contact@unseulsouffle.fr">contact@unseulsouffle.fr</a>
               </p>
             </Bloc>
 
@@ -130,8 +127,11 @@ export default function ConfidentialitePage() {
                 sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales.
               </p>
               <p className="mt-3">
-                Hébergement du site : Vercel Inc. Autres sous-traitants et outils :{" "}
-                <AFournir>outil d&apos;emailing, outil de diagnostic, mesure d&apos;audience — à lister</AFournir>
+                Sous-traitants : Vercel Inc. (hébergement du site), Resend Inc. (acheminement des
+                messages envoyés par le formulaire de contact) et, uniquement si vous l&apos;avez
+                accepté, Google Ireland Ltd (mesure d&apos;audience avec Google Analytics). Le
+                diagnostic en ligne est calculé dans votre navigateur : ses réponses ne nous sont
+                pas transmises.
               </p>
             </Bloc>
 
@@ -145,10 +145,10 @@ export default function ConfidentialitePage() {
                 données conclu avec l&apos;hébergeur.
               </p>
               <p className="mt-3">
-                <AFournir>
-                  À compléter une fois les autres outils arrêtés — un outil d&apos;emailing ou de
-                  questionnaire établi hors UE devra être ajouté ici
-                </AFournir>
+                Il en va de même pour Resend Inc., société américaine qui achemine les messages du
+                formulaire de contact (nom, coordonnées, contenu du message), et pour Google, si
+                vous acceptez la mesure d&apos;audience. Google adhère au cadre de protection des
+                données UE–États-Unis (Data Privacy Framework).
               </p>
             </Bloc>
 
@@ -175,12 +175,8 @@ export default function ConfidentialitePage() {
                 Le site dépose des cookies strictement nécessaires à son fonctionnement, qui ne
                 requièrent pas votre consentement, et des cookies de mesure d&apos;audience, qui ne
                 sont déposés qu&apos;après votre accord via le bandeau prévu à cet effet. Vous
-                pouvez modifier votre choix à tout moment.
-              </p>
-              <p className="mt-3">
-                <AFournir>Bandeau cookies à installer, en français</AFournir> — le site actuel
-                affiche un bandeau en anglais, ce qui ne constitue pas un recueil de consentement
-                valable.
+                pouvez modifier votre choix à tout moment. Le détail figure dans la{" "}
+                <Link href="/cookies/">politique cookies</Link>.
               </p>
             </Bloc>
 
@@ -201,9 +197,8 @@ export default function ConfidentialitePage() {
           </div>
 
           <p className="mt-10 max-w-prose rounded-carte border-l-2 border-amber bg-amber-wash px-5 py-4 font-mono text-[13px] leading-relaxed text-amber">
-            [Avant mise en ligne] Compléter la liste des sous-traitants, les transferts hors UE et
-            installer le bandeau cookies en français. Les durées de conservation indiquées sont des
-            durées d&apos;usage à faire valider.
+            [Avant mise en ligne] Faire valider les durées de conservation, qui sont des durées
+            d&apos;usage.
           </p>
         </Section>
       </main>

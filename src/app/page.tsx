@@ -83,7 +83,7 @@ export default function HomePage() {
           <CTAFinal />
         </Reveal>
       </main>
-      <Footer />
+      <Footer credit />
       <AideContact />
 
       <script

@@ -9,10 +9,11 @@ import { offre } from "@/lib/content/tarifs";
  * ATTENTION — TITRE RÉGLEMENTÉ. L'URL héritée contenait « expert-comptable » ; elle
  * est devenue /daf-externalise-toulouse/ (301 dans next.config.mjs). Le titre
  * d'expert-comptable est protégé (ordonnance du 19 septembre 1945) :
- * seule une personne inscrite à l'Ordre peut s'en prévaloir. Le contenu ne le
- * revendique donc nulle part. Il en fait au contraire son angle éditorial : la
- * page explique ce qui sépare un DAF externalisé d'un expert-comptable, ce qui
- * répond à la vraie question du dirigeant tout en captant la requête.
+ * seule une personne inscrite à l'Ordre peut s'en prévaloir. Marjorie Anglade
+ * l'est (confirmé par la cliente le 24/09/2026, n° SUPRA 190000386201) : le titre
+ * est cité pour elle, à titre personnel, parce qu'il rassure. Le cabinet, lui, ne
+ * le revendique pas et ne tient aucune comptabilité — c'est l'angle éditorial de
+ * la page : ce qui sépare un DAF externalisé d'un expert-comptable.
  * Voir la note de vigilance en fin de page.
  */
 export const pilierFinance: PagePilier = {
@@ -36,7 +37,7 @@ export const pilierFinance: PagePilier = {
       "Le pilotage financier externalisé d'Un Seul Souffle met à disposition des PME et ETI de 10 à 250 salariés une directrice financière à temps partagé, Marjorie Anglade. Elle installe les outils de pilotage qui manquent — prévisionnel de trésorerie, tableaux de bord de gestion, analyse de marge — et les fait vivre mois après mois. Ce service ne remplace pas votre expert-comptable, qui produit vos comptes et vos déclarations : il intervient en amont de la décision, quand la comptabilité intervient en aval. Il se souscrit seul, sans transformation globale de l'entreprise, à Toulouse et en Occitanie.",
     points: [
       "Pour qui : PME et ETI de 10 à 250 salariés, sans DAF en interne",
-      "Référente : Marjorie Anglade, associée fondatrice",
+      "Référente : Marjorie Anglade, associée fondatrice, expert-comptable inscrite à l'Ordre",
       "Ce que ça couvre : trésorerie, tableaux de bord, prévisionnel, analyse de marge",
       "Ne remplace pas : votre expert-comptable, avec qui le travail se fait en complément",
       "Format : temps partagé, volume adapté à la taille de l'entreprise",

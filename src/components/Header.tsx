@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Shell } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { MenuMobile } from "@/components/MenuMobile";
 
 /**
  * Menu UNIQUE du site.
@@ -17,9 +18,8 @@ import { Button } from "@/components/ui/Button";
  * le CTA côte à côte dépassaient 390 px et élargissaient la page entière, ce qui
  * coupait le texte de toutes les sections à droite.
  *
- * Le panneau mobile est un `<details>` natif : il s'ouvre et se ferme sans
- * JavaScript, reste accessible au clavier et fonctionne même si le bundle n'a
- * pas chargé — même choix que l'accordéon de la FAQ.
+ * Le menu mobile et tablette est dans MenuMobile : panneau plein écran, seul
+ * morceau client de l'en-tête.
  */
 const LIENS = [
   { href: "/un-seul-souffle/", label: "Le cabinet" },
@@ -37,9 +37,6 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
   return (
     <div className={surPhoto ? "absolute inset-x-0 top-0 z-20" : undefined}>
       <Shell>
-        {/* `details` enveloppe UNIQUEMENT le bouton et son panneau : `summary`
-            doit être le premier enfant direct de `details`, sinon le navigateur
-            en fabrique un (« Détails ») et replie tout le reste de la barre. */}
         <nav
           // Grand écran : grille 1fr / auto / 1fr, les liens sont au centre exact de
           // la barre quelle que soit la largeur du logo et du bouton.
@@ -96,45 +93,7 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
               <span className="hidden sm:inline">Diagnostic gratuit</span>
             </Button>
 
-            <details className="group relative shrink-0 lg:hidden">
-              {/* `summary` porte le rôle de bouton : focusable et actionnable au
-                  clavier sans code supplémentaire. Le marqueur natif est retiré
-                  par `list-none` (Firefox) et par la règle `::-webkit-details-marker`
-                  de globals.css (Chrome, Safari). */}
-              <summary
-                aria-label="Ouvrir le menu"
-                className={`flex cursor-pointer list-none items-center justify-center rounded-bouton border p-2 transition-colors ${
-                  surPhoto
-                    ? "border-white/25 text-[#e8e6e0] hover:border-white/50"
-                    : "border-rule text-ink hover:border-teal"
-                }`}
-              >
-                <span
-                  aria-hidden="true"
-                  className="grid h-[15px] w-[18px] grid-rows-3 items-center"
-                >
-                  <span className="h-[1.5px] w-full bg-current transition-transform group-open:translate-y-[6px] group-open:rotate-45" />
-                  <span className="h-[1.5px] w-full bg-current transition-opacity group-open:opacity-0" />
-                  <span className="h-[1.5px] w-full bg-current transition-transform group-open:-translate-y-[6px] group-open:-rotate-45" />
-                </span>
-              </summary>
-
-              {/* Panneau en surimpression, aligné à droite sous le bouton. Sa
-                  largeur est bornée par celle de l'écran moins les gouttières,
-                  pour qu'il ne puisse jamais provoquer de défilement latéral. */}
-              <ul className="absolute right-0 top-[calc(100%+12px)] z-30 grid w-[min(15rem,calc(100vw-2.5rem))] gap-px overflow-hidden rounded-carte border border-rule bg-rule-2 shadow-lift">
-                {LIENS.map((lien) => (
-                  <li key={lien.href}>
-                    <Link
-                      href={lien.href}
-                      className="block bg-surface px-4 py-3.5 text-[15.5px] text-body transition-colors hover:text-teal"
-                    >
-                      {lien.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </details>
+            <MenuMobile surPhoto={surPhoto} />
           </nav>
       </Shell>
     </div>

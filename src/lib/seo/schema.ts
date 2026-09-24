@@ -20,8 +20,15 @@ import type { PagePilier } from "@/lib/content/pilier";
  * postal moins prestigieux. Toulouse reste la zone d'intervention (`areaServed`),
  * ce qui est la manière correcte de cibler la ville sans y domicilier le cabinet.
  *
- * Manque encore : le téléphone professionnel.
+ * Téléphones fournis le 24/09/2026 : un par associée, sans standard commun. Le
+ * premier sert de numéro principal (`telephone`) ; c'est lui qui devra figurer
+ * sur la fiche Google Business pour garder un NAP cohérent.
  */
+const TELEPHONES = [
+  { numero: "+33663446585", nom: "Muriel Saffroy" },
+  { numero: "+33625080009", nom: "Marjorie Anglade" },
+];
+
 const ADRESSE = {
   streetAddress: "2 rue du Fort",
   postalCode: "31450",
@@ -33,11 +40,9 @@ const ADRESSE = {
 /** SIRET — obligation LCEN pour les mentions légales, et entité forte pour le GEO. */
 const SIRET = "10066243600029";
 
-/** TODO client — alimente l'entité pour les moteurs IA (master § 8, point 5). */
+/** Alimente l'entité pour les moteurs IA (master § 8, point 5). */
 const PROFILS = [
-  "https://fr.linkedin.com/in/muriel-saffroy",
-  // "[LinkedIn page entreprise]",
-  // "[LinkedIn Marjorie Anglade]",
+  "https://www.linkedin.com/company/un-seul-souffle/",
   // "[chaîne YouTube]",
   // "[podcast]",
 ];
@@ -50,7 +55,10 @@ export function buildHomeSchema() {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: "Un Seul Souffle",
+        legalName: "SARL Un Seul Souffle",
         url: `${SITE_URL}/`,
+        telephone: TELEPHONES[0].numero,
+        vatID: "FR33100662436",
         email: "contact@unseulsouffle.fr",
         slogan: "Structurer aujourd'hui, renforcer demain",
         description:
@@ -64,15 +72,25 @@ export function buildHomeSchema() {
         ],
         sameAs: PROFILS,
         founder: [
-          { "@type": "Person", name: "Muriel Saffroy" },
-          { "@type": "Person", name: "Marjorie Anglade" },
+          {
+            "@type": "Person",
+            name: "Muriel Saffroy",
+            sameAs: ["https://www.linkedin.com/in/muriel-saffroy/"],
+          },
+          {
+            "@type": "Person",
+            name: "Marjorie Anglade",
+            sameAs: ["https://www.linkedin.com/in/marjorie-anglade-31tls/"],
+          },
         ],
-        contactPoint: {
+        contactPoint: TELEPHONES.map((t) => ({
           "@type": "ContactPoint",
           contactType: "sales",
+          name: t.nom,
+          telephone: t.numero,
           email: "contact@unseulsouffle.fr",
           availableLanguage: "French",
-        },
+        })),
       },
       {
         "@type": "ProfessionalService",

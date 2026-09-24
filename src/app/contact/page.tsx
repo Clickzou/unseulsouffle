@@ -120,7 +120,15 @@ export default function ContactPage({
                     <br />
                     31450 Ayguesvives
                     <br />
-                    <span className="font-mono text-xs text-amber">[Téléphone]</span>
+                    Muriel Saffroy :{" "}
+                    <a href="tel:+33663446585" className="text-teal hover:underline">
+                      06 63 44 65 85
+                    </a>
+                    <br />
+                    Marjorie Anglade :{" "}
+                    <a href="tel:+33625080009" className="text-teal hover:underline">
+                      06 25 08 00 09
+                    </a>
                     <br />
                     <a
                       href="mailto:contact@unseulsouffle.fr"
