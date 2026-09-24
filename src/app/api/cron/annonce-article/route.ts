@@ -15,7 +15,8 @@ import { equipe } from "@/lib/content/home";
  * Variables d'environnement (Vercel) :
  *   CRON_SECRET              posé par Vercel dans l'en-tête Authorization du cron
  *   RESEND_API_KEY           même clé que le formulaire de contact
- *   ALERTE_PUBLICATION_TO    destinataire(s) de l'e-mail, séparés par des virgules
+ *   ALERTE_PUBLICATION_TO    destinataire(s), séparés par des virgules — par défaut
+ *                            contact@unseulsouffle.fr (choix de JC, 24/09/2026)
  *   ALERTE_FROM              expéditeur de cet e-mail (facultatif) — utile tant que
  *                            unseulsouffle.fr n'est pas vérifié dans Resend
  *   CONTACT_FROM             expéditeur par défaut, domaine vérifié dans Resend
@@ -130,7 +131,7 @@ export async function GET(requete: Request) {
 
   const cle = process.env.RESEND_API_KEY;
   const voir = params.get("voir") === "1";
-  const destinataires = (process.env.ALERTE_PUBLICATION_TO ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+  const destinataires = (process.env.ALERTE_PUBLICATION_TO || process.env.CONTACT_TO || "contact@unseulsouffle.fr").split(",").map((s) => s.trim()).filter(Boolean);
   if (!voir && (!cle || destinataires.length === 0)) {
     console.error("[annonce-article] RESEND_API_KEY ou ALERTE_PUBLICATION_TO absente.");
     return NextResponse.json({ ok: false, erreur: "configuration" }, { status: 503 });
