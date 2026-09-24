@@ -25,6 +25,9 @@ const PAGES: { path: string; priority: number }[] = [
   { path: "/contact/", priority: 0.6 },
 ];
 
+/** Publication programmée des articles : régénération toutes les heures. */
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Refonte en cours : sitemap vide plutôt que supprimé, pour que l'URL continue
   // de répondre 200 et que la bascule d'indexation le remplisse d'un coup.

@@ -14,6 +14,9 @@ import { articlesTries, articlesValides } from "@/lib/content/articles";
 import { couverture, minutesLecture, rubrique } from "@/lib/content/lecture";
 import { NON_INDEXABLE, ROBOTS } from "@/lib/seo/indexation";
 
+/** Publication programmée des articles : régénération toutes les heures. */
+export const revalidate = 3600;
+
 /**
  * Infos utiles — la rubrique d'articles de fond (le blog du cabinet).
  *

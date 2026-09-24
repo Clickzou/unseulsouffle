@@ -14,9 +14,12 @@ import { Shell, Label } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ACCENTS, SITE_URL, equipe } from "@/lib/content/home";
 import type { Article } from "@/lib/content/article";
-import { articles, trouverArticle } from "@/lib/content/articles";
+import { articlesPublies, trouverArticle } from "@/lib/content/articles";
 import { couverture, minutesLecture, rubrique } from "@/lib/content/lecture";
 import { NON_INDEXABLE, ROBOTS } from "@/lib/seo/indexation";
+
+/** Publication programmée des articles : régénération toutes les heures. */
+export const revalidate = 3600;
 
 /**
  * Article de fond — gabarit unique (master § 6 et § 9).
@@ -29,7 +32,7 @@ import { NON_INDEXABLE, ROBOTS } from "@/lib/seo/indexation";
  */
 
 export function generateStaticParams() {
-  return articles.map((article) => ({ slug: article.slug }));
+  return articlesPublies().map((article) => ({ slug: article.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {

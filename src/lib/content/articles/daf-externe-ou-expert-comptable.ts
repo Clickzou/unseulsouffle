@@ -8,9 +8,10 @@ import type { Article } from "@/lib/content/article";
  * L'intention « DAF externalisé » appartient au pilier /daf-externalise-toulouse/ :
  * cet article traite la comparaison des rôles et renvoie vers lui.
  *
- * VIGILANCE — TITRE RÉGLEMENTÉ. Ni le cabinet ni Marjorie Anglade ne sont
- * experts-comptables et ne tiennent de comptabilité (ordonnance du 19 septembre
- * 1945, art. 2 et 20). Le texte ne doit jamais le laisser entendre.
+ * VIGILANCE — TITRE RÉGLEMENTÉ. Marjorie Anglade est expert-comptable inscrite à
+ * l'Ordre (confirmé par la cliente le 24/09/2026), mais le cabinet Un Seul Souffle
+ * n'exerce pas l'expertise comptable et ne tient aucune comptabilité
+ * (ordonnance du 19 septembre 1945, art. 2 et 20).
  */
 export const article: Article = {
   slug: "daf-externe-ou-expert-comptable",
@@ -100,7 +101,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Ces travaux sont réservés. L'[article 20 de la même ordonnance](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000045178543) qualifie d'exercice illégal le fait, sans être inscrit au tableau de l'Ordre, d'exécuter habituellement ces travaux pour autrui ou d'en assurer la direction suivie. **Un DAF externe qui n'est pas inscrit à l'Ordre ne tient donc pas votre comptabilité.** C'est notre cas : nous ne sommes pas experts-comptables et nous ne tenons aucune comptabilité.",
+            "Ces travaux sont réservés. L'[article 20 de la même ordonnance](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000045178543) qualifie d'exercice illégal le fait, sans être inscrit au tableau de l'Ordre, d'exécuter habituellement ces travaux pour autrui ou d'en assurer la direction suivie. **Un DAF externe qui n'est pas inscrit à l'Ordre ne tient donc pas votre comptabilité.** Notre cabinet, lui, ne tient aucune comptabilité, par choix : Marjorie Anglade est expert-comptable inscrite à l'Ordre, mais elle intervient ici en directrice financière, à côté de votre expert-comptable et non à sa place.",
         },
         { type: "h3", texte: "L'expert-comptable n'est pas obligatoire, la comptabilité l'est" },
         {

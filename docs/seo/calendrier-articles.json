@@ -1,0 +1,887 @@
+[
+ {
+  "n": 1,
+  "date": "2026-10-05",
+  "slug": "calcul-bfr",
+  "kw": "calcul BFR",
+  "vol": 1300,
+  "kd": 0,
+  "sec": [
+   "comment calculer le BFR (480)",
+   "BFR normatif (320)",
+   "besoin en fonds de roulement définition (390)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 2,
+  "date": "2026-10-12",
+  "slug": "prendre-une-decision",
+  "kw": "prendre une décision",
+  "vol": 590,
+  "kd": 17,
+  "sec": [
+   "comment prendre une décision (170)",
+   "prise de décision (590)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 3,
+  "date": "2026-10-19",
+  "slug": "organigramme-entreprise",
+  "kw": "comment faire un organigramme",
+  "vol": 590,
+  "kd": 10,
+  "sec": [
+   "organigramme hiérarchique (590)",
+   "qu'est-ce qu'un organigramme (590)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 4,
+  "date": "2026-10-26",
+  "slug": "signes-du-burn-out",
+  "kw": "signes du burn out",
+  "vol": 590,
+  "kd": 30,
+  "sec": [
+   "burn out que faire (590)",
+   "burnout symptômes physiques (590)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "accompagnement dirigeant"
+  }
+ },
+ {
+  "n": 5,
+  "date": "2026-11-02",
+  "slug": "force-de-vente-externalisee",
+  "kw": "force de vente externalisée",
+  "vol": 590,
+  "kd": 6,
+  "sec": [
+   "externaliser la force de vente (590)",
+   "force commerciale (590)"
+  ],
+  "auteur": "nicolas-vimini",
+  "accent": "commercial",
+  "pilier": {
+   "href": "/",
+   "ancre": "cabinet de conseil à Toulouse"
+  }
+ },
+ {
+  "n": 6,
+  "date": "2026-11-09",
+  "slug": "seuil-de-rentabilite",
+  "kw": "comment calculer le seuil de rentabilité",
+  "vol": 390,
+  "kd": 27,
+  "sec": [
+   "point mort calcul (390)",
+   "formule marge sur coût variable (260)",
+   "marge de sécurité calcul (260)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 7,
+  "date": "2026-11-16",
+  "slug": "management-toxique",
+  "kw": "management toxique",
+  "vol": 810,
+  "kd": 8,
+  "sec": [],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 8,
+  "date": "2026-11-23",
+  "slug": "gain-de-productivite",
+  "kw": "gain de productivité",
+  "vol": 390,
+  "kd": 20,
+  "sec": [
+   "productivité industrielle (480)",
+   "gestion de la productivité (590)"
+  ],
+  "auteur": "yohan-castelar",
+  "accent": "production",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 9,
+  "date": "2026-11-30",
+  "slug": "budget-de-tresorerie",
+  "kw": "budget de trésorerie",
+  "vol": 590,
+  "kd": 21,
+  "sec": [
+   "plan de trésorerie",
+   "budget de la trésorerie (590)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 10,
+  "date": "2026-12-07",
+  "slug": "charge-mentale",
+  "kw": "la charge mentale",
+  "vol": 390,
+  "kd": 10,
+  "sec": [
+   "surcharge mentale symptômes (320)",
+   "définition charge mentale (260)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "accompagnement dirigeant"
+  }
+ },
+ {
+  "n": 11,
+  "date": "2026-12-14",
+  "slug": "delegation-de-pouvoir",
+  "kw": "délégation de pouvoir",
+  "vol": 480,
+  "kd": 9,
+  "sec": [
+   "modèle de délégation de pouvoirs (480)",
+   "délégataire définition (480)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 12,
+  "date": "2026-12-21",
+  "slug": "politique-commerciale",
+  "kw": "politique commerciale",
+  "vol": 390,
+  "kd": 9,
+  "sec": [
+   "stratégies commerciales (290)",
+   "stratégie business (390)"
+  ],
+  "auteur": "nicolas-vimini",
+  "accent": "commercial",
+  "pilier": {
+   "href": "/",
+   "ancre": "cabinet de conseil à Toulouse"
+  }
+ },
+ {
+  "n": 13,
+  "date": "2026-12-28",
+  "slug": "flux-de-tresorerie",
+  "kw": "flux de trésorerie",
+  "vol": 590,
+  "kd": 22,
+  "sec": [
+   "calcul trésorerie nette (590)",
+   "trésorerie définition (590)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 14,
+  "date": "2027-01-04",
+  "slug": "accompagnement-au-changement",
+  "kw": "accompagner le changement",
+  "vol": 590,
+  "kd": 8,
+  "sec": [
+   "change management (440)",
+   "accompagnement au changement (390)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 15,
+  "date": "2027-01-11",
+  "slug": "outils-amelioration-continue",
+  "kw": "outils amélioration continue",
+  "vol": 260,
+  "kd": 23,
+  "sec": [
+   "kaizen amélioration continue (110)",
+   "méthode amélioration continue (90)"
+  ],
+  "auteur": "patrick-calvet",
+  "accent": "production",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 16,
+  "date": "2027-01-18",
+  "slug": "role-du-manager",
+  "kw": "rôle du manager",
+  "vol": 480,
+  "kd": 8,
+  "sec": [
+   "manager d'équipe (590)",
+   "les managers (590)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 17,
+  "date": "2027-01-25",
+  "slug": "taux-de-marge",
+  "kw": "comment calculer le taux de marge",
+  "vol": 590,
+  "kd": 27,
+  "sec": [
+   "taux de marge brute (480)",
+   "marge brute (540)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 18,
+  "date": "2027-02-01",
+  "slug": "prevention-risques-psychosociaux",
+  "kw": "prévention des risques psychosociaux",
+  "vol": 480,
+  "kd": 27,
+  "sec": [
+   "6 facteurs de risques psychosociaux (320)",
+   "questionnaire RPS (260)",
+   "diagnostic RPS (260)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 19,
+  "date": "2027-02-08",
+  "slug": "structure-matricielle",
+  "kw": "structure matricielle",
+  "vol": 590,
+  "kd": 9,
+  "sec": [
+   "définition organisationnel (590)",
+   "organisations du travail (590)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 20,
+  "date": "2027-02-15",
+  "slug": "plan-d-action-commercial",
+  "kw": "plan d'action commercial exemple",
+  "vol": 320,
+  "kd": 22,
+  "sec": [
+   "plan d'action commerciale (320)",
+   "planification commerciale (210)"
+  ],
+  "auteur": "nicolas-vimini",
+  "accent": "commercial",
+  "pilier": {
+   "href": "/",
+   "ancre": "cabinet de conseil à Toulouse"
+  }
+ },
+ {
+  "n": 21,
+  "date": "2027-02-22",
+  "slug": "previsionnel-financier",
+  "kw": "prévisionnel financier",
+  "vol": 590,
+  "kd": 22,
+  "sec": [
+   "comment faire un prévisionnel (320)",
+   "bilan prévisionnel (260)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 22,
+  "date": "2027-03-01",
+  "slug": "gestion-de-conflit",
+  "kw": "gestion de conflit",
+  "vol": 480,
+  "kd": 16,
+  "sec": [
+   "gestion des conflits (480)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/muriel-saffroy/",
+   "ancre": "Muriel Saffroy"
+  }
+ },
+ {
+  "n": 23,
+  "date": "2027-03-08",
+  "slug": "cartographie-des-processus",
+  "kw": "cartographie des processus",
+  "vol": 260,
+  "kd": 9,
+  "sec": [
+   "fiche processus (390)"
+  ],
+  "auteur": "yohan-castelar",
+  "accent": "production",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 24,
+  "date": "2027-03-15",
+  "slug": "burn-out-ou-depression",
+  "kw": "burn out ou dépression",
+  "vol": 590,
+  "kd": 12,
+  "sec": [
+   "dépression ou burn out (590)",
+   "burnout et dépression (590)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "accompagnement dirigeant"
+  }
+ },
+ {
+  "n": 25,
+  "date": "2027-03-22",
+  "slug": "gestion-de-tresorerie",
+  "kw": "gestion de trésorerie",
+  "vol": 480,
+  "kd": 9,
+  "sec": [],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 26,
+  "date": "2027-03-29",
+  "slug": "comite-de-direction",
+  "kw": "comité de direction",
+  "vol": 590,
+  "kd": 15,
+  "sec": [
+   "CODIR entreprise (140)",
+   "comité exécutif (320)",
+   "COMEX définition (360)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 27,
+  "date": "2027-04-05",
+  "slug": "management-de-projet",
+  "kw": "management de projet",
+  "vol": 910,
+  "kd": 19,
+  "sec": [],
+  "auteur": "yohan-castelar",
+  "accent": "production",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 28,
+  "date": "2027-04-12",
+  "slug": "outils-d-aide-a-la-decision",
+  "kw": "outils d'aide à la décision",
+  "vol": 390,
+  "kd": 21,
+  "sec": [
+   "outil d'aide à la décision (260)",
+   "décisionnel (480)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 29,
+  "date": "2027-04-19",
+  "slug": "qvt-ou-qvct",
+  "kw": "QVT ou QVCT",
+  "vol": 260,
+  "kd": 16,
+  "sec": [
+   "démarche QVCT (170)",
+   "qualité de vie au travail définition (210)",
+   "qualité de vie au travail exemple (110)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 30,
+  "date": "2027-04-26",
+  "slug": "reorganisation-entreprise",
+  "kw": "réorganisation entreprise",
+  "vol": 320,
+  "kd": 9,
+  "sec": [
+   "réorganisation (590)",
+   "restructurer une entreprise (320)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 31,
+  "date": "2027-05-03",
+  "slug": "marge-nette",
+  "kw": "marge nette",
+  "vol": 590,
+  "kd": 9,
+  "sec": [
+   "calcul marge nette (480)",
+   "taux de marge nette"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 32,
+  "date": "2027-05-10",
+  "slug": "manager-une-equipe",
+  "kw": "manager une équipe",
+  "vol": 390,
+  "kd": 16,
+  "sec": [
+   "manager d équipe (590)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 33,
+  "date": "2027-05-17",
+  "slug": "cohesion-d-equipe",
+  "kw": "cohésion d'équipe",
+  "vol": 210,
+  "kd": 13,
+  "sec": [
+   "idée séminaire cohésion d'équipe (480)",
+   "activité cohésion d'équipe (320)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/muriel-saffroy/",
+   "ancre": "Muriel Saffroy"
+  }
+ },
+ {
+  "n": 34,
+  "date": "2027-05-24",
+  "slug": "tableau-de-bord-kpi",
+  "kw": "tableau de bord KPI",
+  "vol": 590,
+  "kd": 19,
+  "sec": [
+   "KPI tableau de bord (590)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 35,
+  "date": "2027-05-31",
+  "slug": "courbe-du-changement",
+  "kw": "la courbe du changement",
+  "vol": 390,
+  "kd": 11,
+  "sec": [
+   "définition du changement (390)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 36,
+  "date": "2027-06-07",
+  "slug": "processus-metier",
+  "kw": "processus métier",
+  "vol": 390,
+  "kd": 9,
+  "sec": [
+   "qu'est-ce qu'un processus (260)",
+   "process métier (390)"
+  ],
+  "auteur": "patrick-calvet",
+  "accent": "production",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 37,
+  "date": "2027-06-14",
+  "slug": "taux-de-rentabilite",
+  "kw": "taux de rentabilité",
+  "vol": 590,
+  "kd": 8,
+  "sec": [
+   "calcul de la rentabilité (390)",
+   "rentabilité économique (390)",
+   "taux de profitabilité (480)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 38,
+  "date": "2027-06-21",
+  "slug": "leadership-manager",
+  "kw": "leadership en management",
+  "vol": 480,
+  "kd": 19,
+  "sec": [
+   "manager leadership (480)",
+   "leadership managérial (480)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 39,
+  "date": "2027-06-28",
+  "slug": "surcharge-emotionnelle",
+  "kw": "charge émotionnelle",
+  "vol": 390,
+  "kd": 9,
+  "sec": [
+   "surcharge émotionnelle (390)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "accompagnement dirigeant"
+  }
+ },
+ {
+  "n": 40,
+  "date": "2027-07-05",
+  "slug": "croissance-externe",
+  "kw": "croissance externe",
+  "vol": 480,
+  "kd": 11,
+  "sec": [],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 41,
+  "date": "2027-07-12",
+  "slug": "manager-fonctionnel",
+  "kw": "manager fonctionnel",
+  "vol": 480,
+  "kd": 7,
+  "sec": [
+   "manager hiérarchique"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ },
+ {
+  "n": 42,
+  "date": "2027-07-19",
+  "slug": "decision-strategique",
+  "kw": "décision stratégique",
+  "vol": 170,
+  "kd": 8,
+  "sec": [
+   "comité stratégique (140)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 43,
+  "date": "2027-07-26",
+  "slug": "transmission-entreprise-familiale",
+  "kw": "transmission entreprise familiale",
+  "vol": 210,
+  "kd": 8,
+  "sec": [
+   "vendre son entreprise (390)",
+   "Bpifrance transmission (320)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 44,
+  "date": "2027-08-02",
+  "slug": "outils-intelligence-collective",
+  "kw": "outils intelligence collective",
+  "vol": 170,
+  "kd": 13,
+  "sec": [
+   "atelier intelligence collective (140)",
+   "intelligence collective définition (140)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/muriel-saffroy/",
+   "ancre": "Muriel Saffroy"
+  }
+ },
+ {
+  "n": 45,
+  "date": "2027-08-09",
+  "slug": "delegation-de-signature",
+  "kw": "délégation de signature",
+  "vol": 660,
+  "kd": 9,
+  "sec": [
+   "modèle de délégation de signature (320)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 46,
+  "date": "2027-08-16",
+  "slug": "seminaire-cohesion-d-equipe",
+  "kw": "idée séminaire cohésion d'équipe",
+  "vol": 480,
+  "kd": 15,
+  "sec": [
+   "journée de cohésion (260)",
+   "séminaire cohésion d'équipe (140)"
+  ],
+  "auteur": "olivia-artur",
+  "accent": "qvt",
+  "pilier": {
+   "href": "/muriel-saffroy/",
+   "ancre": "Muriel Saffroy"
+  }
+ },
+ {
+  "n": 47,
+  "date": "2027-08-23",
+  "slug": "budget-previsionnel",
+  "kw": "budget prévisionnel exemple",
+  "vol": 390,
+  "kd": 19,
+  "sec": [
+   "tableau budget prévisionnel (320)",
+   "prévisionnel définition (260)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 48,
+  "date": "2027-08-30",
+  "slug": "gerant-d-entreprise",
+  "kw": "dirigeant d'entreprise",
+  "vol": 320,
+  "kd": 26,
+  "sec": [
+   "gérant d'entreprise (260)",
+   "rôle du dirigeant"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-dirigeant/",
+   "ancre": "coaching dirigeant"
+  }
+ },
+ {
+  "n": 49,
+  "date": "2027-09-06",
+  "slug": "reprendre-une-entreprise",
+  "kw": "accompagnement reprise entreprise",
+  "vol": 90,
+  "kd": 12,
+  "sec": [
+   "comment reprendre une entreprise (110)",
+   "cession entreprise Bpifrance (170)"
+  ],
+  "auteur": "marjorie-anglade",
+  "accent": "finance",
+  "pilier": {
+   "href": "/daf-externalise-toulouse/",
+   "ancre": "DAF externalisé"
+  }
+ },
+ {
+  "n": 50,
+  "date": "2027-09-13",
+  "slug": "auditer-une-entreprise",
+  "kw": "auditer une entreprise",
+  "vol": 390,
+  "kd": 7,
+  "sec": [
+   "audit dans une entreprise (390)",
+   "faire un audit (210)"
+  ],
+  "auteur": "muriel-saffroy",
+  "accent": "organisation",
+  "pilier": {
+   "href": "/transformation-entreprise/",
+   "ancre": "conseil en organisation"
+  }
+ }
+]
