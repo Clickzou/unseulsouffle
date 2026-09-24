@@ -402,5 +402,5 @@ export const article: Article = {
   accent: "organisation",
   pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
 
-  valide: false,
+  valide: true,
 };

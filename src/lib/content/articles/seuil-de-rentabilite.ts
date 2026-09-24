@@ -353,5 +353,5 @@ export const article: Article = {
   accent: "finance",
   pilier: { href: "/daf-externalise-toulouse/", ancre: "DAF externalisé" },
 
-  valide: false,
+  valide: true,
 };

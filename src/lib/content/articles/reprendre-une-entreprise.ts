@@ -263,7 +263,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Dans les sociétés qui n'ont pas l'obligation de mettre en place un comité social et économique doté de certaines attributions, l'[article L23-10-1 du Code de commerce](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054140991) prévoit que, lorsque le propriétaire de plus de 50 % des parts ou de la majorité du capital veut les vendre, les salariés en sont informés au plus tard un mois avant la vente, afin de pouvoir présenter une offre. La vente peut intervenir plus tôt si chaque salarié a fait connaître sa décision de ne pas en présenter. Le texte prévoit une amende civile pouvant atteindre 0,5 % du montant de la vente. C'est une obligation du cédant, mais le repreneur a intérêt à vérifier qu'elle a été respectée.",
+            "Dans les sociétés qui n'ont pas l'obligation de mettre en place un comité social et économique doté de certaines attributions, l'[article L23-10-1 du Code de commerce](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054140991) prévoit que, lorsque le propriétaire de plus de 50 % des parts ou de la majorité du capital veut les vendre, les salariés en sont informés au plus tard un mois avant la vente, afin de pouvoir présenter une offre. Ce délai d'un mois, qui remplace l'ancien délai de deux mois, vaut pour les ventes conclues à partir du 26 juillet 2026 (loi du 26 mai 2026). La vente peut intervenir plus tôt si chaque salarié a fait connaître sa décision de ne pas en présenter. Le texte prévoit une amende civile pouvant atteindre 0,5 % du montant de la vente. C'est une obligation du cédant, mais le repreneur a intérêt à vérifier qu'elle a été respectée.",
         },
         { type: "h3", texte: "Les contrats de travail suivent l'entreprise" },
         {
@@ -381,5 +381,5 @@ export const article: Article = {
   accent: "finance",
   pilier: { href: "/daf-externalise-toulouse/", ancre: "DAF externalisé" },
 
-  valide: false,
+  valide: true,
 };

@@ -451,5 +451,5 @@ export const article: Article = {
   accent: "production",
   pilier: { href: "/transformation-entreprise/", ancre: "conseil en organisation" },
 
-  valide: false,
+  valide: true,
 };

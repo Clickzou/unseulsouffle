@@ -395,5 +395,5 @@ export const article: Article = {
   accent: "qvt",
   pilier: { href: "/muriel-saffroy/", ancre: "Muriel Saffroy" },
 
-  valide: false,
+  valide: true,
 };

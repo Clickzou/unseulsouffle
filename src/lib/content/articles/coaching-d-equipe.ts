@@ -426,5 +426,5 @@ export const article: Article = {
   accent: "organisation",
   pilier: { href: "/muriel-saffroy/", ancre: "Muriel Saffroy" },
 
-  valide: false,
+  valide: true,
 };

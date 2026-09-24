@@ -347,5 +347,5 @@ export const article: Article = {
   accent: "finance",
   pilier: { href: "/transformation-dirigeant/", ancre: "coaching dirigeant" },
 
-  valide: false,
+  valide: true,
 };

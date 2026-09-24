@@ -469,5 +469,5 @@ export const article: Article = {
   datePublication: "2026-09-23",
   accent: "commercial",
   pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
-  valide: false,
+  valide: true,
 };

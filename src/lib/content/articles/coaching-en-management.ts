@@ -448,5 +448,5 @@ export const article: Article = {
   accent: "qvt",
   pilier: { href: "/transformation-dirigeant/", ancre: "coaching dirigeant" },
 
-  valide: false,
+  valide: true,
 };

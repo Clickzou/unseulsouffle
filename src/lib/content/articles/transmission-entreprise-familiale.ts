@@ -17,7 +17,7 @@ import type { Article } from "@/lib/content/article";
  * - Fiscalité : pacte Dutreil décrit d'après l'article 787 B du CGI dans sa version
  *   en vigueur depuis le 21/02/2026 (engagement individuel porté à six ans). À
  *   revérifier sur Légifrance avant publication (loi de finances 2027 possible).
- * - Information des salariés : règles modifiées au 27/07/2026 ; le texte reste
+ * - Information des salariés : règles modifiées pour les ventes conclues à partir du 26/07/2026 (loi n° 2026-403) ; le texte reste
  *   général et renvoie vers un avocat.
  * - Liens internes limités aux articles publiés avant le 26/07/2027.
  * Sources ouvertes le 24/09/2026.
@@ -143,7 +143,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un cadre ou un groupe de salariés connaît déjà l'entreprise, ses clients et ses équipes. Leur principal frein est financier : toujours selon Bpifrance Le Lab, 44 % des repreneurs salariés ont eu du mal à trouver les financements nécessaires, contre 23 % des repreneurs familiaux. Pour une cession à un tiers, vérifiez aussi avec votre avocat les obligations d'information préalable des salariés, dont les règles ont été modifiées en juillet 2026, comme le précise la fiche [Cession du fonds de commerce aux salariés](https://entreprendre.service-public.gouv.fr/vosdroits/F37195) de Service Public Entreprendre.",
+            "Un cadre ou un groupe de salariés connaît déjà l'entreprise, ses clients et ses équipes. Leur principal frein est financier : toujours selon Bpifrance Le Lab, 44 % des repreneurs salariés ont eu du mal à trouver les financements nécessaires, contre 23 % des repreneurs familiaux. Pour une cession à un tiers, vérifiez aussi avec votre avocat les obligations d'information préalable des salariés, dont les règles ont été modifiées par la loi du 26 mai 2026 pour les ventes conclues à partir du 26 juillet 2026, comme le précise la fiche [Cession du fonds de commerce aux salariés](https://entreprendre.service-public.gouv.fr/vosdroits/F37195) de Service Public Entreprendre.",
         },
       ],
     },
@@ -359,5 +359,5 @@ export const article: Article = {
   accent: "finance",
   pilier: { href: "/daf-externalise-toulouse/", ancre: "DAF externalisé" },
 
-  valide: false,
+  valide: true,
 };

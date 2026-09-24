@@ -55,10 +55,11 @@ export type Article = {
   pilier: { href: string; ancre: string };
 
   /**
-   * `false` tant que la personne qui signe n'a pas relu et validé le texte.
-   * Un article non validé est servi en noindex et exclu du sitemap, quel que
-   * soit l'interrupteur général : on ne publie pas sous le nom de quelqu'un un
-   * texte qu'il n'a pas approuvé.
+   * `false` : servi en noindex et exclu du sitemap, quel que soit l'interrupteur
+   * général. Le 24/09/2026, JC a décidé de publier sans relecture préalable des
+   * auteurs : tous les articles sont à `true`, et un e-mail de contrôle part le
+   * vendredi précédant chaque publication (api/cron/annonce-article). Remettre
+   * `false` sur un article suffit à le retirer de l'index.
    */
   valide: boolean;
 };
