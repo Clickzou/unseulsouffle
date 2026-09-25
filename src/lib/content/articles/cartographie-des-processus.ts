@@ -447,7 +447,7 @@ export const article: Article = {
   ],
 
   auteur: "yohan-castelar",
-  datePublication: "2027-03-08",
+  datePublication: "2027-09-06",
   accent: "production",
   pilier: { href: "/transformation-entreprise/", ancre: "conseil en organisation" },
 

@@ -343,7 +343,7 @@ export const article: Article = {
   ],
 
   auteur: "marjorie-anglade",
-  datePublication: "2027-04-12",
+  datePublication: "2027-11-15",
   accent: "finance",
   pilier: { href: "/transformation-dirigeant/", ancre: "coaching dirigeant" },
 

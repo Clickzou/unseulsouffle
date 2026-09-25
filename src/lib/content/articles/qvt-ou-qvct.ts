@@ -381,7 +381,7 @@ export const article: Article = {
   ],
 
   auteur: "olivia-artur",
-  datePublication: "2027-04-19",
+  datePublication: "2027-12-06",
   accent: "qvt",
   pilier: { href: "/transformation-entreprise/", ancre: "conseil en organisation" },
 

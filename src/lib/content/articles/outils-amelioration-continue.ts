@@ -335,7 +335,7 @@ export const article: Article = {
   ],
 
   auteur: "patrick-calvet",
-  datePublication: "2027-01-11",
+  datePublication: "2027-05-03",
   accent: "production",
   pilier: { href: "/transformation-entreprise/", ancre: "conseil en organisation" },
 

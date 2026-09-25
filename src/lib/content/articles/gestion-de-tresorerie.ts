@@ -384,7 +384,7 @@ export const article: Article = {
   ],
 
   auteur: "marjorie-anglade",
-  datePublication: "2027-03-22",
+  datePublication: "2027-10-04",
   accent: "finance",
   pilier: { href: "/daf-externalise-toulouse/", ancre: "DAF externalisé" },
 

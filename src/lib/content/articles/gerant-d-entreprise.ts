@@ -370,7 +370,7 @@ export const article: Article = {
   ],
 
   auteur: "muriel-saffroy",
-  datePublication: "2027-08-30",
+  datePublication: "2028-09-18",
   accent: "organisation",
   pilier: { href: "/transformation-dirigeant/", ancre: "coaching dirigeant" },
 

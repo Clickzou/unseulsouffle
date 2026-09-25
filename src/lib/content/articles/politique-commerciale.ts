@@ -413,7 +413,7 @@ export const article: Article = {
   ],
 
   auteur: "nicolas-vimini",
-  datePublication: "2026-12-21",
+  datePublication: "2027-03-15",
   accent: "commercial",
   pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
 

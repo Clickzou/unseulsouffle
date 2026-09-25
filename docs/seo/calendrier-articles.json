@@ -20,7 +20,7 @@
  },
  {
   "n": 2,
-  "date": "2026-10-12",
+  "date": "2026-10-19",
   "slug": "prendre-une-decision",
   "kw": "prendre une décision",
   "vol": 590,
@@ -38,7 +38,7 @@
  },
  {
   "n": 3,
-  "date": "2026-10-19",
+  "date": "2026-11-02",
   "slug": "organigramme-entreprise",
   "kw": "comment faire un organigramme",
   "vol": 590,
@@ -56,7 +56,7 @@
  },
  {
   "n": 4,
-  "date": "2026-10-26",
+  "date": "2026-11-16",
   "slug": "signes-du-burn-out",
   "kw": "signes du burn out",
   "vol": 590,
@@ -74,7 +74,7 @@
  },
  {
   "n": 5,
-  "date": "2026-11-02",
+  "date": "2026-12-07",
   "slug": "force-de-vente-externalisee",
   "kw": "force de vente externalisée",
   "vol": 590,
@@ -92,7 +92,7 @@
  },
  {
   "n": 6,
-  "date": "2026-11-09",
+  "date": "2026-12-21",
   "slug": "seuil-de-rentabilite",
   "kw": "comment calculer le seuil de rentabilité",
   "vol": 390,
@@ -111,7 +111,7 @@
  },
  {
   "n": 7,
-  "date": "2026-11-16",
+  "date": "2027-01-04",
   "slug": "management-toxique",
   "kw": "management toxique",
   "vol": 810,
@@ -126,7 +126,7 @@
  },
  {
   "n": 8,
-  "date": "2026-11-23",
+  "date": "2027-01-18",
   "slug": "gain-de-productivite",
   "kw": "gain de productivité",
   "vol": 390,
@@ -144,7 +144,7 @@
  },
  {
   "n": 9,
-  "date": "2026-11-30",
+  "date": "2027-02-01",
   "slug": "budget-de-tresorerie",
   "kw": "budget de trésorerie",
   "vol": 590,
@@ -162,7 +162,7 @@
  },
  {
   "n": 10,
-  "date": "2026-12-07",
+  "date": "2027-02-15",
   "slug": "charge-mentale",
   "kw": "la charge mentale",
   "vol": 390,
@@ -180,7 +180,7 @@
  },
  {
   "n": 11,
-  "date": "2026-12-14",
+  "date": "2027-03-01",
   "slug": "delegation-de-pouvoir",
   "kw": "délégation de pouvoir",
   "vol": 480,
@@ -198,7 +198,7 @@
  },
  {
   "n": 12,
-  "date": "2026-12-21",
+  "date": "2027-03-15",
   "slug": "politique-commerciale",
   "kw": "politique commerciale",
   "vol": 390,
@@ -216,7 +216,7 @@
  },
  {
   "n": 13,
-  "date": "2026-12-28",
+  "date": "2027-04-05",
   "slug": "flux-de-tresorerie",
   "kw": "flux de trésorerie",
   "vol": 590,
@@ -234,7 +234,7 @@
  },
  {
   "n": 14,
-  "date": "2027-01-04",
+  "date": "2027-04-19",
   "slug": "accompagnement-au-changement",
   "kw": "accompagner le changement",
   "vol": 590,
@@ -252,7 +252,7 @@
  },
  {
   "n": 15,
-  "date": "2027-01-11",
+  "date": "2027-05-03",
   "slug": "outils-amelioration-continue",
   "kw": "outils amélioration continue",
   "vol": 260,
@@ -270,7 +270,7 @@
  },
  {
   "n": 16,
-  "date": "2027-01-18",
+  "date": "2027-05-17",
   "slug": "role-du-manager",
   "kw": "rôle du manager",
   "vol": 480,
@@ -288,7 +288,7 @@
  },
  {
   "n": 17,
-  "date": "2027-01-25",
+  "date": "2027-06-07",
   "slug": "taux-de-marge",
   "kw": "comment calculer le taux de marge",
   "vol": 590,
@@ -306,7 +306,7 @@
  },
  {
   "n": 18,
-  "date": "2027-02-01",
+  "date": "2027-06-21",
   "slug": "prevention-risques-psychosociaux",
   "kw": "prévention des risques psychosociaux",
   "vol": 480,
@@ -325,7 +325,7 @@
  },
  {
   "n": 19,
-  "date": "2027-02-08",
+  "date": "2027-07-05",
   "slug": "structure-matricielle",
   "kw": "structure matricielle",
   "vol": 590,
@@ -343,7 +343,7 @@
  },
  {
   "n": 20,
-  "date": "2027-02-15",
+  "date": "2027-07-19",
   "slug": "plan-d-action-commercial",
   "kw": "plan d'action commercial exemple",
   "vol": 320,
@@ -361,7 +361,7 @@
  },
  {
   "n": 21,
-  "date": "2027-02-22",
+  "date": "2027-08-02",
   "slug": "previsionnel-financier",
   "kw": "prévisionnel financier",
   "vol": 590,
@@ -379,7 +379,7 @@
  },
  {
   "n": 22,
-  "date": "2027-03-01",
+  "date": "2027-08-16",
   "slug": "gestion-de-conflit",
   "kw": "gestion de conflit",
   "vol": 480,
@@ -396,7 +396,7 @@
  },
  {
   "n": 23,
-  "date": "2027-03-08",
+  "date": "2027-09-06",
   "slug": "cartographie-des-processus",
   "kw": "cartographie des processus",
   "vol": 260,
@@ -413,7 +413,7 @@
  },
  {
   "n": 24,
-  "date": "2027-03-15",
+  "date": "2027-09-20",
   "slug": "burn-out-ou-depression",
   "kw": "burn out ou dépression",
   "vol": 590,
@@ -431,7 +431,7 @@
  },
  {
   "n": 25,
-  "date": "2027-03-22",
+  "date": "2027-10-04",
   "slug": "gestion-de-tresorerie",
   "kw": "gestion de trésorerie",
   "vol": 480,
@@ -446,7 +446,7 @@
  },
  {
   "n": 26,
-  "date": "2027-03-29",
+  "date": "2027-10-18",
   "slug": "comite-de-direction",
   "kw": "comité de direction",
   "vol": 590,
@@ -465,7 +465,7 @@
  },
  {
   "n": 27,
-  "date": "2027-04-05",
+  "date": "2027-11-01",
   "slug": "management-de-projet",
   "kw": "management de projet",
   "vol": 910,
@@ -480,7 +480,7 @@
  },
  {
   "n": 28,
-  "date": "2027-04-12",
+  "date": "2027-11-15",
   "slug": "outils-d-aide-a-la-decision",
   "kw": "outils d'aide à la décision",
   "vol": 390,
@@ -498,7 +498,7 @@
  },
  {
   "n": 29,
-  "date": "2027-04-19",
+  "date": "2027-12-06",
   "slug": "qvt-ou-qvct",
   "kw": "QVT ou QVCT",
   "vol": 260,
@@ -517,7 +517,7 @@
  },
  {
   "n": 30,
-  "date": "2027-04-26",
+  "date": "2027-12-20",
   "slug": "reorganisation-entreprise",
   "kw": "réorganisation entreprise",
   "vol": 320,
@@ -535,7 +535,7 @@
  },
  {
   "n": 31,
-  "date": "2027-05-03",
+  "date": "2028-01-03",
   "slug": "marge-nette",
   "kw": "marge nette",
   "vol": 590,
@@ -553,7 +553,7 @@
  },
  {
   "n": 32,
-  "date": "2027-05-10",
+  "date": "2028-01-17",
   "slug": "manager-une-equipe",
   "kw": "manager une équipe",
   "vol": 390,
@@ -570,7 +570,7 @@
  },
  {
   "n": 33,
-  "date": "2027-05-17",
+  "date": "2028-02-07",
   "slug": "cohesion-d-equipe",
   "kw": "cohésion d'équipe",
   "vol": 210,
@@ -588,7 +588,7 @@
  },
  {
   "n": 34,
-  "date": "2027-05-24",
+  "date": "2028-02-21",
   "slug": "tableau-de-bord-kpi",
   "kw": "tableau de bord KPI",
   "vol": 590,
@@ -605,7 +605,7 @@
  },
  {
   "n": 35,
-  "date": "2027-05-31",
+  "date": "2028-03-06",
   "slug": "courbe-du-changement",
   "kw": "la courbe du changement",
   "vol": 390,
@@ -622,7 +622,7 @@
  },
  {
   "n": 36,
-  "date": "2027-06-07",
+  "date": "2028-03-20",
   "slug": "processus-metier",
   "kw": "processus métier",
   "vol": 390,
@@ -640,7 +640,7 @@
  },
  {
   "n": 37,
-  "date": "2027-06-14",
+  "date": "2028-04-03",
   "slug": "taux-de-rentabilite",
   "kw": "taux de rentabilité",
   "vol": 590,
@@ -659,7 +659,7 @@
  },
  {
   "n": 38,
-  "date": "2027-06-21",
+  "date": "2028-04-17",
   "slug": "leadership-manager",
   "kw": "leadership en management",
   "vol": 480,
@@ -677,7 +677,7 @@
  },
  {
   "n": 39,
-  "date": "2027-06-28",
+  "date": "2028-05-01",
   "slug": "surcharge-emotionnelle",
   "kw": "charge émotionnelle",
   "vol": 390,
@@ -694,7 +694,7 @@
  },
  {
   "n": 40,
-  "date": "2027-07-05",
+  "date": "2028-05-15",
   "slug": "croissance-externe",
   "kw": "croissance externe",
   "vol": 480,
@@ -709,7 +709,7 @@
  },
  {
   "n": 41,
-  "date": "2027-07-12",
+  "date": "2028-06-05",
   "slug": "manager-fonctionnel",
   "kw": "manager fonctionnel",
   "vol": 480,
@@ -726,7 +726,7 @@
  },
  {
   "n": 42,
-  "date": "2027-07-19",
+  "date": "2028-06-19",
   "slug": "decision-strategique",
   "kw": "décision stratégique",
   "vol": 170,
@@ -743,7 +743,7 @@
  },
  {
   "n": 43,
-  "date": "2027-07-26",
+  "date": "2028-07-03",
   "slug": "transmission-entreprise-familiale",
   "kw": "transmission entreprise familiale",
   "vol": 210,
@@ -761,7 +761,7 @@
  },
  {
   "n": 44,
-  "date": "2027-08-02",
+  "date": "2028-07-17",
   "slug": "outils-intelligence-collective",
   "kw": "outils intelligence collective",
   "vol": 170,
@@ -779,7 +779,7 @@
  },
  {
   "n": 45,
-  "date": "2027-08-09",
+  "date": "2028-08-07",
   "slug": "delegation-de-signature",
   "kw": "délégation de signature",
   "vol": 660,
@@ -796,7 +796,7 @@
  },
  {
   "n": 46,
-  "date": "2027-08-16",
+  "date": "2028-08-21",
   "slug": "seminaire-cohesion-d-equipe",
   "kw": "idée séminaire cohésion d'équipe",
   "vol": 480,
@@ -814,7 +814,7 @@
  },
  {
   "n": 47,
-  "date": "2027-08-23",
+  "date": "2028-09-04",
   "slug": "budget-previsionnel",
   "kw": "budget prévisionnel exemple",
   "vol": 390,
@@ -832,7 +832,7 @@
  },
  {
   "n": 48,
-  "date": "2027-08-30",
+  "date": "2028-09-18",
   "slug": "gerant-d-entreprise",
   "kw": "dirigeant d'entreprise",
   "vol": 320,
@@ -850,7 +850,7 @@
  },
  {
   "n": 49,
-  "date": "2027-09-06",
+  "date": "2028-10-02",
   "slug": "reprendre-une-entreprise",
   "kw": "accompagnement reprise entreprise",
   "vol": 90,
@@ -868,7 +868,7 @@
  },
  {
   "n": 50,
-  "date": "2027-09-13",
+  "date": "2028-10-16",
   "slug": "auditer-une-entreprise",
   "kw": "auditer une entreprise",
   "vol": 390,

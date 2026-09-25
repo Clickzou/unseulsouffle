@@ -310,7 +310,7 @@ export const article: Article = {
   ],
 
   auteur: "muriel-saffroy",
-  datePublication: "2027-07-12",
+  datePublication: "2028-06-05",
   accent: "organisation",
   pilier: { href: "/transformation-entreprise/", ancre: "conseil en organisation" },
 

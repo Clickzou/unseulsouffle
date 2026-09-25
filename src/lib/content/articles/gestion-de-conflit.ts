@@ -371,7 +371,7 @@ export const article: Article = {
   ],
 
   auteur: "muriel-saffroy",
-  datePublication: "2027-03-01",
+  datePublication: "2027-08-16",
   accent: "organisation",
   pilier: { href: "/muriel-saffroy/", ancre: "Muriel Saffroy" },
 
