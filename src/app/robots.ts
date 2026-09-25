@@ -28,7 +28,8 @@ const CRAWLERS_IA = [
   "Applebot-Extended",
 ];
 
-const DISALLOW = ["/wp-admin/", "/api/"];
+// /apercu/ : liens provisoires des articles programmés (voir src/app/apercu/).
+const DISALLOW = ["/wp-admin/", "/api/", "/apercu/"];
 
 export default function robots(): MetadataRoute.Robots {
   if (!INDEXABLE) {

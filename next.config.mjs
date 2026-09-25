@@ -25,6 +25,12 @@ const nextConfig = {
         statusCode: 301,
       },
       {
+        // La page 1 de la liste d'articles n'a qu'une URL : /infos-utiles/.
+        source: "/infos-utiles/page/1/",
+        destination: "/infos-utiles/",
+        statusCode: 301,
+      },
+      {
         source: "/actualites/:slug/",
         destination: "/infos-utiles/:slug/",
         statusCode: 301,
@@ -34,6 +40,16 @@ const nextConfig = {
 
   async headers() {
     return [
+      {
+        // Aperçus provisoires des articles programmés (src/lib/apercu.ts) : jamais
+        // indexés, jamais mis en cache, et le jeton ne part pas dans le Referer.
+        source: "/apercu/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+          { key: "Referrer-Policy", value: "no-referrer" },
+          { key: "Cache-Control", value: "private, no-store" },
+        ],
+      },
       {
         // Cache navigateur long sur les assets — absent du site legacy (3,3 Mo par page).
         source: "/:all*(webp|avif|png|jpg|jpeg|svg|woff2)",
