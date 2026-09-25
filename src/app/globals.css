@@ -56,6 +56,29 @@
   animation: montee 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Respiration du symbole (en-tête d'Infos utiles) : il gonfle et s'élève à peine,
+   comme un souffle. Lent et de faible amplitude : c'est un décor, pas un appel. */
+@keyframes souffle {
+  0%,
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.045) rotate(-1.5deg);
+  }
+}
+
+.anim-souffle {
+  animation: souffle 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Une boucle infinie ramenée à 0,001 ms clignoterait : on la coupe. */
+  .anim-souffle {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

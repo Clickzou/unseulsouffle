@@ -145,9 +145,14 @@ function aujourdhui(): string {
  */
 const APERCU = process.env.APERCU_BROUILLONS === "1" && process.env.VERCEL_ENV !== "production";
 
+/** Date de publication atteinte, sans tenir compte de l'aperçu local des brouillons. */
+export function dateAtteinte(article: Article): boolean {
+  return article.datePublication <= aujourdhui();
+}
+
 /** Publié = date de publication atteinte. Avant, c'est un brouillon invisible. */
 export function estPublie(article: Article): boolean {
-  return APERCU || article.datePublication <= aujourdhui();
+  return APERCU || dateAtteinte(article);
 }
 
 export function articlesPublies(): Article[] {
@@ -157,6 +162,26 @@ export function articlesPublies(): Article[] {
 /** Articles publiés, du plus récent au plus ancien. */
 export function articlesTries(): Article[] {
   return articlesPublies().sort((a, b) => b.datePublication.localeCompare(a.datePublication));
+}
+
+/**
+ * Pagination de /infos-utiles/ : 10 articles en page 1 (l'article à la une + une
+ * grille de 9), puis 9 par page. Page 1 = /infos-utiles/, page n = /infos-utiles/page/n/.
+ */
+export const ARTICLES_PAGE_1 = 10;
+export const ARTICLES_PAR_PAGE = 9;
+
+export function nombrePagesArticles(): number {
+  const total = articlesPublies().length;
+  return total <= ARTICLES_PAGE_1 ? 1 : 1 + Math.ceil((total - ARTICLES_PAGE_1) / ARTICLES_PAR_PAGE);
+}
+
+/** Articles de la page `numero` (à partir de 1), du plus récent au plus ancien. */
+export function articlesDeLaPage(numero: number): Article[] {
+  const tries = articlesTries();
+  if (numero <= 1) return tries.slice(0, ARTICLES_PAGE_1);
+  const debut = ARTICLES_PAGE_1 + (numero - 2) * ARTICLES_PAR_PAGE;
+  return tries.slice(debut, debut + ARTICLES_PAR_PAGE);
 }
 
 /** Ne renvoie qu'un article publié : un brouillon répond 404. */

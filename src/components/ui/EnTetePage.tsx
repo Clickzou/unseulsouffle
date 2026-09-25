@@ -14,6 +14,7 @@ import { ACCENTS, type CleAccent } from "@/lib/content/home";
  */
 export function EnTetePage({
   fil,
+  parent,
   label,
   h1,
   lede,
@@ -25,6 +26,8 @@ export function EnTetePage({
 }: {
   /** Libellé court de la page dans le fil d'Ariane. */
   fil: string;
+  /** Étape intermédiaire du fil d'Ariane, entre l'accueil et la page (ex. page 2 d'une liste). */
+  parent?: { href: string; label: string };
   /** Sur-titre monospace. Reprend `fil` par défaut. */
   label?: string;
   h1: string;
@@ -70,6 +73,16 @@ export function EnTetePage({
               <span aria-hidden="true" className="px-2 text-rule">
                 /
               </span>
+              {parent && (
+                <>
+                  <Link href={parent.href} className="transition-colors hover:text-teal">
+                    {parent.label}
+                  </Link>
+                  <span aria-hidden="true" className="px-2 text-rule">
+                    /
+                  </span>
+                </>
+              )}
               <span className="text-body">{fil}</span>
             </nav>
 
