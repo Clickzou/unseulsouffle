@@ -235,7 +235,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La jurisprudence n'exige pas d'acceptation expresse, précise l'INRS, mais le délégataire doit être clairement informé de l'étendue de sa mission, du transfert de responsabilité pénale et des moyens dont il dispose. Faire signer le document et en discuter en face à face est la meilleure façon de s'en assurer.",
+            "La jurisprudence n'exige pas d'acceptation expresse, précise l'INRS, mais le délégataire doit être clairement informé de l'étendue de sa mission, du transfert de responsabilité pénale et des moyens dont il dispose. Faire signer le document et en discuter en face à face est la meilleure façon de s'en assurer. Cet échange permet aussi d'entendre [la charge émotionnelle](/infos-utiles/surcharge-emotionnelle/) que représente une responsabilité pénale nouvelle.",
         },
         {
           type: "encadre",

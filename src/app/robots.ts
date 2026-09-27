@@ -23,6 +23,7 @@ const CRAWLERS_IA = [
   "Perplexity-User",
   "Google-Extended",
   "ClaudeBot",
+  "Claude-SearchBot",
   "Claude-User",
   "CCBot",
   "Applebot-Extended",

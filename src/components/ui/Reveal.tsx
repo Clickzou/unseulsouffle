@@ -72,6 +72,7 @@ export function Reveal({
   return (
     <Balise
       ref={ref as React.Ref<never>}
+      data-reveal=""
       style={etat === "cache" ? style : { ...style, transitionDelay: `${delay}ms` }}
       className={clsx(
         "transition-[opacity,transform] duration-[850ms] ease-[cubic-bezier(.16,1,.3,1)]",

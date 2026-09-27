@@ -270,7 +270,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Ce qui est écrit n'a plus besoin d'être retenu. Une liste unique, et non cinq carnets, où tout ce qui vous traverse l'esprit atterrit dans la minute. Une revue hebdomadaire, courte, pour décider de chaque ligne : je fais, je confie, je planifie, j'abandonne. **L'objectif n'est pas d'être plus productif, c'est de ne plus confier à votre mémoire le rôle d'un logiciel de gestion.**",
+            "Ce qui est écrit n'a plus besoin d'être retenu. Une liste unique, et non cinq carnets, où tout ce qui vous traverse l'esprit atterrit dans la minute. Une revue hebdomadaire, courte, pour décider de chaque ligne : je fais, je confie, je planifie, j'abandonne. Ce tri est l'un des [outils de décision les plus simples](/infos-utiles/outils-d-aide-a-la-decision/) à tenir. **L'objectif n'est pas d'être plus productif, c'est de ne plus confier à votre mémoire le rôle d'un logiciel de gestion.**",
         },
         {
           type: "h3",
@@ -315,7 +315,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Ces leviers valent aussi pour vos salariés. Un manager intermédiaire coincé entre des demandes contradictoires vit la même surcharge que vous, avec moins de marges de manœuvre. Alléger votre charge mentale en la reportant intégralement sur lui ne règle rien.",
+            "Ces leviers valent aussi pour vos salariés. Un manager intermédiaire coincé entre des demandes contradictoires vit la même surcharge que vous, avec moins de marges de manœuvre. Alléger votre charge mentale en la reportant intégralement sur lui ne règle rien. Donnez-lui plutôt les moyens de [manager son équipe sans tout porter seul](/infos-utiles/manager-une-equipe/) : un périmètre, des priorités, du soutien.",
         },
       ],
     },

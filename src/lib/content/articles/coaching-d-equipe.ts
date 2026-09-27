@@ -114,7 +114,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La revue de l'IES reprend une définition du team building comme une intervention spécifique, typiquement [un programme d'une journée ou plus](https://www.employment-studies.co.uk/system/files/resources/files/mp88.pdf), centré sur les relations interpersonnelles. Elle note que les preuves de son effet durable sur la productivité sont mitigées, alors que le coaching d'équipe porte sur les processus de travail et prend beaucoup plus d'un ou deux jours. Un séminaire au vert peut détendre l'atmosphère. Il ne change pas la manière dont votre codir arbitre un budget.",
+            "La revue de l'IES reprend une définition du team building comme une intervention spécifique, typiquement [un programme d'une journée ou plus](https://www.employment-studies.co.uk/system/files/resources/files/mp88.pdf), centré sur les relations interpersonnelles. Elle note que les preuves de son effet durable sur la productivité sont mitigées, alors que le coaching d'équipe porte sur les processus de travail et prend beaucoup plus d'un ou deux jours. Un [séminaire au vert](/infos-utiles/seminaire-cohesion-d-equipe/) peut détendre l'atmosphère. Il ne change pas la manière dont votre codir arbitre un budget.",
         },
         { type: "h3", texte: "Médiation et coaching d'équipe" },
         {
@@ -318,7 +318,7 @@ export const article: Article = {
             "**Décisions** : nombre de sujets reportés d'une réunion à l'autre, délai entre la mise à l'ordre du jour et la décision, part des décisions qui remontent au dirigeant.",
             "**Coopération** : dossiers transversaux bloqués, désaccords traités en réunion plutôt qu'en aparté.",
             "**Vécu** : un court questionnaire à l'équipe, passé au début et à la fin, sur la clarté des rôles et la possibilité de dire un désaccord.",
-            "**Autonomie** : ce que l'équipe sait faire seule à la fin, sans le coach.",
+            "**Autonomie** : ce que l'équipe sait faire seule à la fin, sans le coach, comme animer elle-même [un atelier d'intelligence collective](/infos-utiles/outils-intelligence-collective/) sur un sujet réel.",
           ],
         },
         {

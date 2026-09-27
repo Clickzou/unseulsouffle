@@ -8,6 +8,9 @@ import { clsx } from "clsx";
  * grille des cinq piliers, où chaque carte a besoin de sa place. Sous `lg`, la
  * gouttière retombe sur celle des autres sections : 100 px sur un mobile ne
  * laisserait presque rien.
+ *
+ * `large={200}` : gouttière de 200 px à partir de xl, 100 px entre lg et xl (à
+ * 200 px, une grille de trois colonnes n'aurait plus la place sur un écran de 1024).
  */
 export function Shell({
   children,
@@ -16,13 +19,13 @@ export function Shell({
 }: {
   children: React.ReactNode;
   className?: string;
-  large?: boolean;
+  large?: boolean | 200;
 }) {
   return (
     <div
       className={clsx(
         "w-full px-5 sm:px-8",
-        large ? "lg:px-[100px]" : "mx-auto max-w-shell",
+        large === 200 ? "lg:px-[100px] xl:px-[200px]" : large ? "lg:px-[100px]" : "mx-auto max-w-shell",
         className,
       )}
     >
@@ -49,8 +52,8 @@ export function Section({
 }: {
   id?: string;
   ton?: Ton;
-  /** Pleine largeur, gouttière de 100 px sur grand écran (voir `Shell`). */
-  large?: boolean;
+  /** Pleine largeur, gouttière de 100 px (ou 200 px) sur grand écran (voir `Shell`). */
+  large?: boolean | 200;
   children: React.ReactNode;
 }) {
   return (

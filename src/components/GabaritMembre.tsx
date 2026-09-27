@@ -9,6 +9,8 @@ import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTAFinal } from "@/components/CTAFinal";
+import { ArticlesLies } from "@/components/infos-utiles/ArticlesLies";
+import { articlesDuMembre } from "@/lib/content/articles";
 import { ACCENTS, SITE_URL } from "@/lib/content/home";
 import type { PageMembre } from "@/lib/content/membres";
 import { ROBOTS } from "@/lib/seo/indexation";
@@ -226,6 +228,13 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
             </div>
           </Section>
         </Reveal>
+
+        {/* E-E-A-T (master § 5) : l'auteur est lié depuis ses articles, et inversement. */}
+        <ArticlesLies
+          articles={articlesDuMembre(membre.slug)}
+          label="Infos utiles"
+          titre={`Les articles de ${membre.nom}`}
+        />
 
         <Reveal>
           <FAQ

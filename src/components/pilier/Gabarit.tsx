@@ -6,6 +6,8 @@ import { Corps } from "@/components/pilier/Corps";
 import { Bascule } from "@/components/pilier/Bascule";
 import { FAQ } from "@/components/FAQ";
 import { CTAFinal } from "@/components/CTAFinal";
+import { ArticlesLies } from "@/components/infos-utiles/ArticlesLies";
+import { articlesDuPilier } from "@/lib/content/articles";
 import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
@@ -52,6 +54,13 @@ export function GabaritPilier({ page }: { page: PagePilier }) {
         </Reveal>
 
         <Corps page={page} />
+
+        {/* Articles du silo : ils pointent vers ce pilier, le pilier leur répond. */}
+        <ArticlesLies
+          articles={articlesDuPilier(page.href)}
+          label="Infos utiles"
+          titre={`Nos articles — ${page.fil.toLowerCase()}`}
+        />
 
         <Reveal>
           <Bascule page={page} />

@@ -58,7 +58,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un projet se distingue de l'activité courante par trois traits : il a un objectif unique, une date de fin et des ressources limitées. Installer un nouvel ERP, déménager un atelier, lancer une gamme, réorganiser un service après une croissance rapide : ce sont des projets. Produire, livrer et facturer chaque semaine, c'est l'exploitation. **Un projet qui n'a pas de date de fin n'est pas un projet, c'est une intention.**",
+            "Un projet se distingue de l'activité courante par trois traits : il a un objectif unique, une date de fin et des ressources limitées. Installer un nouvel ERP, déménager un atelier, lancer une gamme, réorganiser un service après une croissance rapide : ce sont des projets. Produire, livrer et facturer chaque semaine, c'est l'exploitation, organisée en [processus métier](/infos-utiles/processus-metier/) récurrents. **Un projet qui n'a pas de date de fin n'est pas un projet, c'est une intention.**",
         },
         {
           type: "h3",

@@ -162,7 +162,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Nommez la situation plutôt que de la contourner : « hier on était collègues, aujourd'hui j'ai une responsabilité différente, voilà comment je compte l'exercer ». Les relations amicales peuvent subsister, mais les décisions doivent être les mêmes pour tous. L'équité de traitement est l'un des premiers critères sur lesquels une équipe juge un nouveau manager.",
+            "Nommez la situation plutôt que de la contourner : « hier on était collègues, aujourd'hui j'ai une responsabilité différente, voilà comment je compte l'exercer ». Les relations amicales peuvent subsister, mais les décisions doivent être les mêmes pour tous. L'équité de traitement est l'un des premiers critères sur lesquels une équipe juge un nouveau manager. C'est sur ces actes, plus que sur le charisme, que se construit le [leadership d'un manager](/infos-utiles/leadership-manager/).",
         },
       ],
     },

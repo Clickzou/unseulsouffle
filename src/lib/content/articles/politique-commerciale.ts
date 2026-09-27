@@ -313,7 +313,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Promettre une livraison en quarante-huit heures ou un service sur mesure suppose que la production, la logistique et l'administration des ventes suivent. Une politique commerciale se construit avec ces fonctions, pas contre elles. Sinon, elle crée des promesses que l'entreprise ne tient pas, et des tensions internes qui remontent toutes au dirigeant.",
+            "Promettre une livraison en quarante-huit heures ou un service sur mesure suppose que la production, la logistique et l'administration des ventes suivent. Une politique commerciale se construit avec ces fonctions, pas contre elles. Sinon, elle crée des promesses que l'entreprise ne tient pas, et des tensions internes qui remontent toutes au dirigeant. Quand le blocage tient à l'organisation plutôt qu'aux règles de vente, c'est un sujet de [conseil en management](/infos-utiles/consultant-en-management/), à traiter avant de réécrire la politique.",
         },
       ],
     },

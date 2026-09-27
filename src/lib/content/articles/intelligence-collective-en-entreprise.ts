@@ -59,7 +59,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "L'étude note aussi ce qui ne prédisait pas la performance collective : la cohésion du groupe, la motivation et la satisfaction de ses membres. Une équipe qui s'entend bien n'est pas, de ce seul fait, une équipe qui décide bien.",
+            "L'étude note aussi ce qui ne prédisait pas la performance collective : [la cohésion du groupe](/infos-utiles/cohesion-d-equipe/), la motivation et la satisfaction de ses membres. Une équipe qui s'entend bien n'est pas, de ce seul fait, une équipe qui décide bien.",
         },
         {
           type: "h3",
@@ -183,7 +183,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Les outils d'intelligence collective les plus efficaces sont rarement spectaculaires. Ils servent tous le même but : faire sortir l'information que chacun détient seul, et découpler l'avis de chacun de celui du dirigeant. En voici six, choisis parce qu'ils se mettent en place sans formation ni matériel.",
+            "Les [outils d'intelligence collective](/infos-utiles/outils-intelligence-collective/) les plus efficaces sont rarement spectaculaires. Ils servent tous le même but : faire sortir l'information que chacun détient seul, et découpler l'avis de chacun de celui du dirigeant. En voici six, choisis parce qu'ils se mettent en place sans formation ni matériel.",
         },
         {
           type: "tableau",

@@ -205,7 +205,7 @@ export const article: Article = {
             "**Le chiffre d'affaires suit votre agenda.** Les mois où vous êtes absorbé par la production, les recrutements ou la banque, les ventes ralentissent.",
             "**Vous avez recruté un commercial, et cela n'a pas marché.** Sans objectifs clairs ni suivi, vous ne savez pas vraiment pourquoi le résultat n'est pas venu.",
             "**Personne ne sait dire ce qu'il y a dans le pipeline.** Les devis en cours sont dans des boîtes mail, des fichiers ou des mémoires, et la prévision de ventes à trois mois est une estimation.",
-            "**Les prix sont fixés au cas par cas.** Personne ne mesure l'effet des remises sur la marge.",
+            "**Les prix sont fixés au cas par cas.** Personne ne mesure l'effet des remises sur la marge, faute d'une [politique commerciale écrite](/infos-utiles/politique-commerciale/).",
             "**Vous préparez une transmission.** Un repreneur regardera de près si le portefeuille clients dépend de vous ou de l'entreprise.",
           ],
         },
@@ -255,7 +255,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Il en tire un nombre limité de chantiers prioritaires, validés avec vous : par exemple recentrer les cibles, formaliser l'offre, installer un outil de suivi, recruter un premier commercial. **On ne touche pas à ce qui fonctionne.** Si un client historique est bien géré par vous, il n'y a aucune raison de le transférer dès le premier mois.",
+            "Il en tire un nombre limité de chantiers prioritaires, validés avec vous : par exemple recentrer les cibles, formaliser l'offre, installer un outil de suivi, recruter un premier commercial. **On ne touche pas à ce qui fonctionne.** Si un client historique est bien géré par vous, il n'y a aucune raison de le transférer dès le premier mois. Ces chantiers se déclinent ensuite en un [plan d'action commercial daté](/infos-utiles/plan-d-action-commercial/), avec un responsable et un indicateur par action.",
         },
         {
           type: "h3",

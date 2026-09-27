@@ -20,7 +20,7 @@ export const pilierDirigeant: PagePilier = {
   metaTitle: "Coaching dirigeant de PME à Toulouse",
   // 148 / 150
   metaDescription:
-    "Coaching et accompagnement de dirigeants de PME et ETI à Toulouse : retrouver la clarté, décider sans urgence, mieux déléguer. Premier échange gratuit.",
+    "Coaching et accompagnement de dirigeants de PME et ETI à Toulouse : retrouver la clarté, décider sans urgence, déléguer. Premier échange gratuit.",
   nomService: "Accompagnement du dirigeant de PME et d'ETI",
 
   h1: "Coaching et accompagnement du dirigeant de PME à Toulouse",

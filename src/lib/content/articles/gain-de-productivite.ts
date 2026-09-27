@@ -216,7 +216,7 @@ export const article: Article = {
           items: [
             "**Observer le travail réel.** Suivre une commande de bout en bout, sur le terrain, en notant chaque attente, chaque ressaisie, chaque retour en arrière. Ce que décrivent les procédures et ce qui se passe réellement diffère presque toujours.",
             "**Cartographier le flux.** Dessiner le parcours, avec les temps de travail et les temps d'attente. La carte montre où se forment les files d'attente et quelles interfaces coûtent le plus.",
-            "**Choisir deux ou trois chantiers.** Pas dix. Les pertes les plus lourdes et les plus simples à traiter d'abord, avec un responsable et une échéance pour chacun.",
+            "**Choisir deux ou trois chantiers.** Pas dix. Les pertes les plus lourdes et les plus simples à traiter d'abord, avec un responsable et une échéance pour chacun. Chaque chantier [se pilote comme un projet](/infos-utiles/management-de-projet/), avec un point d'avancement régulier.",
             "**Construire la solution avec les équipes.** Les opérateurs connaissent les contournements qu'ils pratiquent chaque jour. Une solution imposée d'en haut sera contournée à son tour.",
             "**Standardiser et tenir.** Écrire la nouvelle façon de faire, la suivre dans les indicateurs, en parler chaque semaine. Sans cette étape, l'atelier revient à l'état antérieur en quelques mois.",
           ],
@@ -236,7 +236,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un chantier de productivité mal conduit peut dégrader les conditions de travail. Ce n'est pas une hypothèse : l'INRS, l'institut de référence en prévention des risques professionnels, a documenté ce risque de façon détaillée.",
+            "Un chantier de productivité mal conduit peut [dégrader les conditions de travail](/infos-utiles/qvt-ou-qvct/). Ce n'est pas une hypothèse : l'INRS, l'institut de référence en prévention des risques professionnels, a documenté ce risque de façon détaillée.",
         },
         { type: "h3", texte: "Ce que relève l'INRS" },
         {

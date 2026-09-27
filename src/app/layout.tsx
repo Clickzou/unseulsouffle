@@ -3,6 +3,7 @@ import { Newsreader, Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { BandeauCookies } from "@/components/cookies/BandeauCookies";
 import { MesureAudience } from "@/components/cookies/MesureAudience";
+import { RevealVue } from "@/components/ui/RevealVue";
 
 // `adjustFontFallback: false` + fallback explicite : Newsreader porte un axe optique
 // variable dont next/font ne trouve pas les métriques d'override. Sans ces deux
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${newsreader.variable} ${archivo.variable} ${plexMono.variable}`}>
       <body className="bg-ground text-body font-sans antialiased">
         {children}
+        <RevealVue />
         <BandeauCookies />
         <MesureAudience />
       </body>

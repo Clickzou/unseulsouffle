@@ -150,7 +150,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "À l'inverse, certains managers absorbent eux-mêmes toute la surcharge pour protéger leur équipe. C'est généreux et cela ne dure pas. D'autres la renvoient vers le bas sous forme d'humiliations ou de consignes contradictoires : on bascule alors dans un [management toxique](/infos-utiles/management-toxique/), souvent le fait d'un manager lui-même à bout, sans cadre ni appui.",
+            "À l'inverse, certains managers absorbent eux-mêmes toute la surcharge pour protéger leur équipe. C'est généreux et cela ne dure pas : absorber les tensions des autres crée une [surcharge émotionnelle](/infos-utiles/surcharge-emotionnelle/) que le manager voit rarement venir. D'autres la renvoient vers le bas sous forme d'humiliations ou de consignes contradictoires : on bascule alors dans un [management toxique](/infos-utiles/management-toxique/), souvent le fait d'un manager lui-même à bout, sans cadre ni appui.",
         },
       ],
     },

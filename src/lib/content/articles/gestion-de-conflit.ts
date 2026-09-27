@@ -186,7 +186,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La sortie d'un conflit n'est pas une poignée de main, c'est une règle : qui décide quoi, selon quel critère, et ce qui se passe en cas de désaccord. Écrivez-la, fixez une date pour vérifier qu'elle tient, et tenez cette date. Si la règle ne fonctionne pas, on la change ; on ne revient pas au rapport de force. C'est souvent le rôle du manager de proximité que de la faire vivre, ce que développe l'article sur le [rôle du manager](/infos-utiles/role-du-manager/).",
+            "La sortie d'un conflit n'est pas une poignée de main, c'est une règle : qui décide quoi, selon quel critère, et ce qui se passe en cas de désaccord. Écrivez-la, fixez une date pour vérifier qu'elle tient, et tenez cette date. Si la règle ne fonctionne pas, on la change ; on ne revient pas au rapport de force. C'est souvent le rôle du manager de proximité que de la faire vivre, ce que développe l'article sur le [rôle du manager](/infos-utiles/role-du-manager/). Un [séminaire de cohésion d'équipe](/infos-utiles/seminaire-cohesion-d-equipe/) peut ensuite aider le collectif à repartir, une fois le différend réglé, jamais avant.",
         },
       ],
     },

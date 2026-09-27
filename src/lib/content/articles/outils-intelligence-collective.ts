@@ -343,14 +343,14 @@ export const article: Article = {
           items: [
             "**La décision déjà prise** : l'atelier sert à faire valider un choix arrêté, et tout le monde le sent",
             "**L'outil plaqué sur un conflit** : quand deux personnes s'opposent, un World Café ne règle rien ; le sujet relève de la [gestion de conflit](/infos-utiles/gestion-de-conflit/)",
-            "**Le séminaire sans lendemain** : une journée intense, puis retour aux habitudes dès le lundi",
+            "**Le séminaire sans lendemain** : une journée intense, puis retour aux habitudes dès le lundi ; un [séminaire de cohésion bien conçu](/infos-utiles/seminaire-cohesion-d-equipe/) prévoit la suite dès le départ",
             "**La contradiction sanctionnée** : si une objection passée a coûté à son auteur, les outils produisent des avis prudents",
           ],
         },
         {
           type: "p",
           texte:
-            "Les outils prennent tout leur sens quand ils deviennent une habitude de l'équipe, plutôt qu'un événement. C'est le travail d'un [coaching d'équipe](/infos-utiles/coaching-d-equipe/) ou d'un groupe de pairs suivi dans la durée. Chez Un Seul Souffle, c'est l'étape Coopérer : des cercles d'avancée de six à huit personnes, en sessions de trois heures sur trois mois, en présentiel ou en visio, à partir des situations réelles des participants. Un conseiller référent suit le groupe du début à la fin, sur un périmètre convenu avec vous. Pour savoir si le nœud est dans la coopération ou ailleurs, commencez par un [diagnostic d'entreprise](/diagnostic/).",
+            "Les outils prennent tout leur sens quand ils deviennent une habitude de l'équipe, plutôt qu'un événement. Ils nourrissent alors [la cohésion de l'équipe](/infos-utiles/cohesion-d-equipe/) au quotidien, bien plus qu'une journée isolée. C'est le travail d'un [coaching d'équipe](/infos-utiles/coaching-d-equipe/) ou d'un groupe de pairs suivi dans la durée. Chez Un Seul Souffle, c'est l'étape Coopérer : des cercles d'avancée de six à huit personnes, en sessions de trois heures sur trois mois, en présentiel ou en visio, à partir des situations réelles des participants. Un conseiller référent suit le groupe du début à la fin, sur un périmètre convenu avec vous. Pour savoir si le nœud est dans la coopération ou ailleurs, commencez par un [diagnostic d'entreprise](/diagnostic/).",
         },
       ],
     },

@@ -181,7 +181,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une question simple, posée à l'équipe avant de lancer un projet : imaginons que dans un an, ce projet ait échoué ; pourquoi ? Les réponses font apparaître des risques que personne n'osait formuler. On garde les trois plus probables, et on décide pour chacun d'une parade ou d'un signal d'alerte. C'est un complément naturel aux méthodes décrites dans notre article sur la manière de [prendre une décision](/infos-utiles/prendre-une-decision/).",
+            "Une question simple, posée à l'équipe avant de lancer un projet : imaginons que dans un an, ce projet ait échoué ; pourquoi ? Les réponses font apparaître des risques que personne n'osait formuler. Cela suppose un [leadership qui accepte la contradiction](/infos-utiles/leadership-manager/) : sans lui, l'équipe se tait. On garde les trois plus probables, et on décide pour chacun d'une parade ou d'un signal d'alerte. C'est un complément naturel aux méthodes décrites dans notre article sur la manière de [prendre une décision](/infos-utiles/prendre-une-decision/).",
         },
       ],
     },

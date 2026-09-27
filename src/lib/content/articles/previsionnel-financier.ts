@@ -80,7 +80,7 @@ export const article: Article = {
             "Un investissement lourd : machine, bâtiment, système d'information",
             "Une demande de prêt ou de ligne de trésorerie auprès de la banque",
             "Une croissance rapide, qui consomme de la trésorerie avant d'en produire",
-            "Un recrutement structurant : un directeur, une équipe commerciale",
+            "Un recrutement structurant : un directeur, une équipe commerciale, ou son alternative, une [force de vente externalisée](/infos-utiles/force-de-vente-externalisee/)",
             "Une reprise, une cession, l'entrée d'un investisseur",
           ],
         },
@@ -290,7 +290,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une fois par mois, reprenez le plan de trésorerie et le compte de résultat, et placez le réel en face du prévu. Un écart n'est pas une faute : c'est une information. Un chiffre d'affaires conforme avec une trésorerie en retrait signale un problème d'encaissement. Une marge en baisse à volume constant pointe les prix ou les coûts d'achat. Chaque écart significatif mérite une explication écrite et, si besoin, une révision de l'hypothèse pour les mois suivants.",
+            "Une fois par mois, reprenez le plan de trésorerie et le compte de résultat, et placez le réel en face du prévu. Un écart n'est pas une faute : c'est une information. Un chiffre d'affaires conforme avec une trésorerie en retrait signale un problème d'encaissement. Une marge en baisse à volume constant pointe les prix ou les coûts d'achat. Chaque écart significatif mérite une explication écrite et, si besoin, une révision de l'hypothèse pour les mois suivants. Les montants validés au prévisionnel servent aussi à fixer les [plafonds d'une délégation de signature](/infos-utiles/delegation-de-signature/) : chaque responsable sait jusqu'où il peut engager l'entreprise.",
         },
         { type: "h3", texte: "Une obligation pour les plus grandes sociétés" },
         {

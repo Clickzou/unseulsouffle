@@ -196,7 +196,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le tableau des flux de trésorerie récapitule, pour un exercice passé, les trois familles de flux et la variation de trésorerie qui en résulte. Il se construit à partir de deux bilans successifs et du compte de résultat.",
+            "Le tableau des flux de trésorerie récapitule, pour un exercice passé, les trois familles de flux et la variation de trésorerie qui en résulte. Il se construit à partir de deux bilans successifs et du compte de résultat. Quand on [prépare une transmission familiale](/infos-utiles/transmission-entreprise-familiale/), il montre au successeur et à ses financeurs ce que le métier produit réellement en trésorerie.",
         },
         { type: "h3", texte: "Un document utile, rarement obligatoire en PME" },
         {
@@ -275,7 +275,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Avant de signer un bon de commande pour une machine ou un véhicule, regardez son effet sur le plan de trésorerie des douze mois suivants. Un investissement rentable payé comptant peut assécher l'entreprise ; le même, financé sur sa durée d'usage, passe sans tension.",
+            "Avant de signer un bon de commande pour une machine ou un véhicule, regardez son effet sur le plan de trésorerie des douze mois suivants. Un investissement rentable payé comptant peut assécher l'entreprise ; le même, financé sur sa durée d'usage, passe sans tension. Pour un projet plus lourd, un [prévisionnel financier sur plusieurs années](/infos-utiles/previsionnel-financier/) relie l'investissement au résultat, au bilan et à la trésorerie.",
         },
         { type: "h3", texte: "Séparer les rôles entre comptes et pilotage" },
         {

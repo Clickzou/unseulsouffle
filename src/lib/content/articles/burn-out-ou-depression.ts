@@ -266,7 +266,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La part de l'employeur n'est pas médicale, elle est organisationnelle. Charge de travail, rôles flous, décisions qui remontent toutes au même endroit, manque de reconnaissance : ce sont les leviers sur lesquels vous avez prise. Ils valent pour vos équipes comme pour vous, et nous les avons développés à propos de [la charge mentale](/infos-utiles/charge-mentale/).",
+            "La part de l'employeur n'est pas médicale, elle est organisationnelle. Charge de travail, rôles flous, décisions qui remontent toutes au même endroit, manque de reconnaissance : ce sont les leviers sur lesquels vous avez prise. Le [leadership de vos managers](/infos-utiles/leadership-manager/) en fait partie : soutenir, reconnaître, fixer un cap lisible. Ils valent pour vos équipes comme pour vous, et nous les avons développés à propos de [la charge mentale](/infos-utiles/charge-mentale/).",
         },
         { type: "h3", texte: "La reconnaissance en maladie professionnelle" },
         {

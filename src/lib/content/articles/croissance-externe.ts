@@ -256,7 +256,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Deux entreprises qui ne présentent pas leurs chiffres de la même façon ne peuvent pas être pilotées ensemble. Il faut rapidement aligner les calendriers de clôture, les plans de comptes utiles au pilotage, les règles de suivi des marges et le prévisionnel de trésorerie consolidé. Ce travail se fait avec les experts-comptables des deux sociétés, qui restent en charge des comptes.",
+            "Deux entreprises qui ne présentent pas leurs chiffres de la même façon ne peuvent pas être pilotées ensemble. Il faut rapidement aligner les calendriers de clôture, les plans de comptes utiles au pilotage, les règles de suivi des marges et le prévisionnel de trésorerie consolidé. Ce travail se fait avec les experts-comptables des deux sociétés, qui restent en charge des comptes. Le premier [budget prévisionnel commun](/infos-utiles/budget-previsionnel/) se construit dans la foulée : il fixe les objectifs de l'ensemble et sert de référence au suivi des synergies.",
         },
         { type: "h3", texte: "Ne pas sous-estimer l'organisation et les personnes" },
         {

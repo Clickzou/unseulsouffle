@@ -11,7 +11,7 @@ import { CTAFinal } from "@/components/CTAFinal";
 import { Reveal } from "@/components/ui/Reveal";
 import { ACCENTS, SITE_URL, equipe } from "@/lib/content/home";
 import type { Article } from "@/lib/content/article";
-import { articlesDeLaPage, nombrePagesArticles } from "@/lib/content/articles";
+import { articlesDeLaPage, dateAtteinte, nombrePagesArticles } from "@/lib/content/articles";
 import { couverture, minutesLecture, rubrique } from "@/lib/content/lecture";
 import { NON_INDEXABLE, ROBOTS } from "@/lib/seo/indexation";
 
@@ -93,6 +93,23 @@ function schema(numero: number, articles: Article[]) {
 
 /* ─────────── Morceaux de carte ─────────── */
 
+/**
+ * Pastille « Programmé » posée sur l'image. Ne s'affiche qu'en aperçu des
+ * brouillons (APERCU_BROUILLONS=1) : en production, un article programmé n'est
+ * pas listé du tout.
+ */
+function Programme({ article }: { article: Article }) {
+  if (dateAtteinte(article)) return null;
+  const date = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(
+    new Date(`${article.datePublication}T00:00:00Z`),
+  );
+  return (
+    <span className="absolute left-4 top-4 z-10 rounded-full bg-ink px-3 py-1 font-mono text-[11px] text-white shadow-md">
+      Programmé · {date}
+    </span>
+  );
+}
+
 function Etiquette({ article }: { article: Article }) {
   const teinte = ACCENTS[article.accent];
   return (
@@ -146,6 +163,7 @@ function ALaUne({ article }: { article: Article }) {
           sizes="(min-width: 1024px) 620px, 100vw"
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
         />
+        <Programme article={article} />
       </div>
       <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
         <div className="flex flex-wrap items-center gap-3">
@@ -182,6 +200,7 @@ function Carte({ article, large = false }: { article: Article; large?: boolean }
           sizes={large ? "(min-width: 1024px) 740px, (min-width: 640px) 50vw, 100vw" : "(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"}
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]"
         />
+        <Programme article={article} />
       </div>
       <div className="flex flex-1 flex-col p-6">
         <Etiquette article={article} />
@@ -299,7 +318,7 @@ export function ListeInfosUtiles({ numero }: { numero: number }) {
         </EnTetePage>
 
         {!vide && (
-          <Section>
+          <Section large={200}>
             {une && (
               <Reveal>
                 <ALaUne article={une} />

@@ -24,7 +24,7 @@ const LARGEURS = ["lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-spa
 
 export function Blocages() {
   return (
-    <Section ton="mist">
+    <Section ton="mist" large={200}>
       <SectionHead
         label="Les défis du dirigeant"
         titre={`${blocages.length === 5 ? "Cinq" : blocages.length} blocages qui reviennent chez presque tous les dirigeants de PME`}
@@ -42,15 +42,18 @@ export function Blocages() {
               key={blocage.n}
               className={`flex flex-col rounded-carte border border-rule-2 bg-surface px-6 pb-6 pt-6 shadow-lift ${LARGEURS[index]}`}
             >
-              <div className="mb-3 flex items-center gap-3">
+              {/* Titre mis en avant : plus grand, dans la teinte de l'expertise. */}
+              <div className="mb-4 flex items-center gap-3.5">
                 <span
                   aria-hidden="true"
-                  className="grid h-7 w-7 shrink-0 place-items-center rounded-full font-mono text-[10.5px] text-white"
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full font-mono text-[12px] text-white"
                   style={{ backgroundColor: accent.vif }}
                 >
                   {blocage.n}
                 </span>
-                <h3 className="text-[18.5px] leading-tight">{blocage.titre}</h3>
+                <h3 className="text-[23px] leading-tight lg:text-[25px]" style={{ color: accent.texte }}>
+                  {blocage.titre}
+                </h3>
               </div>
 
               <p className="text-[14.5px] leading-relaxed">{blocage.texte}</p>

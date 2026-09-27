@@ -65,7 +65,7 @@ export const article: Article = {
           type: "liste",
           items: [
             "**La structure** : les services, leurs périmètres et les liens hiérarchiques, ce que montre un [organigramme d'entreprise](/infos-utiles/organigramme-entreprise/)",
-            "**Les rôles** : ce que chacun décide, jusqu'où, et ce qui remonte",
+            "**Les rôles** : ce que chacun décide, jusqu'où, et ce qui remonte, y compris pour un [responsable fonctionnel sans autorité hiérarchique](/infos-utiles/manager-fonctionnel/)",
             "**Les processus** : le chemin d'une commande, d'un devis ou d'une réclamation à travers l'entreprise",
             "**Les instances** : les réunions où l'on arbitre, leur rythme et ce qu'on y tranche",
           ],

@@ -282,7 +282,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un audit réussi se termine par des décisions, pas par un document. Trois à cinq chantiers prioritaires, chacun avec un responsable, une échéance et un indicateur de progrès, valent mieux que trente recommandations. Et il faut dire aussi ce qui fonctionne : on n'y touche pas.",
+            "Un audit réussi se termine par des décisions, pas par un document. Trois à cinq chantiers prioritaires, chacun avec un responsable, une échéance et un indicateur de progrès, valent mieux que trente recommandations. Pour que ces chantiers tiennent après l'audit, [une démarche d'amélioration continue](/infos-utiles/outils-amelioration-continue/), portée par les équipes, prend ensuite le relais. Et il faut dire aussi ce qui fonctionne : on n'y touche pas.",
         },
         {
           type: "p",

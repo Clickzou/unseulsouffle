@@ -242,7 +242,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Chez Un Seul Souffle, un conseiller référent prend ce sujet en charge, sur un périmètre arrêté avec vous et écrit dans la proposition. Le travail commence par une lecture du fonctionnement réel : qui décide quoi aujourd'hui, où les consignes se contredisent, quels arbitrages remontent. Il se poursuit par la clarification des rôles et des règles de décision avec les personnes concernées. On ne touche pas à ce qui fonctionne. Si vous voulez d'abord situer où votre organisation coince, commencez par un [diagnostic d'entreprise](/diagnostic/).",
+            "Chez Un Seul Souffle, un conseiller référent prend ce sujet en charge, sur un périmètre arrêté avec vous et écrit dans la proposition. Le travail commence par [une lecture du fonctionnement réel](/infos-utiles/auditer-une-entreprise/) : qui décide quoi aujourd'hui, où les consignes se contredisent, quels arbitrages remontent. Il se poursuit par la clarification des rôles et des règles de décision avec les personnes concernées. On ne touche pas à ce qui fonctionne. Si vous voulez d'abord situer où votre organisation coince, commencez par un [diagnostic d'entreprise](/diagnostic/).",
         },
       ],
     },

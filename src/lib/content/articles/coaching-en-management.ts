@@ -59,7 +59,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le dirigeant et ses managers ne butent pas sur les mêmes difficultés. Le premier porte la charge de décision, l'isolement et le cap de l'entreprise. Les seconds sont pris entre les demandes de la direction et la réalité de leur équipe. Si c'est votre propre manière de décider et de déléguer qui pose question, le sujet relève du [coaching dirigeant](/transformation-dirigeant/), que nous traitons dans un parcours dédié. Cet article parle de vos managers.",
+            "Le dirigeant et ses managers ne butent pas sur les mêmes difficultés. Le premier porte la charge de décision, l'isolement et le cap de l'entreprise. Les [décisions stratégiques de l'entreprise](/infos-utiles/decision-strategique/) lui reviennent, leur exécution passe par les managers. Les seconds sont pris entre les demandes de la direction et la réalité de leur équipe. Si c'est votre propre manière de décider et de déléguer qui pose question, le sujet relève du [coaching dirigeant](/transformation-dirigeant/), que nous traitons dans un parcours dédié. Cet article parle de vos managers.",
         },
         {
           type: "h3",
@@ -198,7 +198,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le manager de proximité est le premier à voir la surcharge ou le découragement d'un collaborateur. L'INRS consacre d'ailleurs aux managers une série de conseils pour prévenir les risques psychosociaux, parmi lesquels évaluer la charge de travail, donner de l'autonomie, témoigner de la reconnaissance, donner du sens au travail et communiquer sur les changements ([INRS, Managers : agissez pour prévenir les risques psychosociaux](https://www.inrs.fr/publications/essentiels/risques-psychosociaux-managers.html)). Ces gestes s'apprennent mieux sur des situations vécues que dans une salle de formation.",
+            "Le manager de proximité est le premier à voir la surcharge ou le découragement d'un collaborateur. L'INRS consacre d'ailleurs aux managers une série de conseils pour prévenir les risques psychosociaux, parmi lesquels évaluer la charge de travail, donner de l'autonomie, témoigner de la reconnaissance, donner du sens au travail et communiquer sur les changements ([INRS, Managers : agissez pour prévenir les risques psychosociaux](https://www.inrs.fr/publications/essentiels/risques-psychosociaux-managers.html)). Ces gestes s'apprennent mieux sur des situations vécues que dans une salle de formation. Il n'a pas à poser de diagnostic pour autant : distinguer un [burn-out d'une dépression](/infos-utiles/burn-out-ou-depression/) relève d'un médecin, pas du manager.",
         },
       ],
     },

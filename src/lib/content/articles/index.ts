@@ -159,9 +159,20 @@ export function articlesPublies(): Article[] {
   return articles.filter(estPublie);
 }
 
-/** Articles publiés, du plus récent au plus ancien. */
+/**
+ * Articles publiés, du plus récent au plus ancien. En aperçu des brouillons,
+ * les programmés suivent, dans l'ordre de sortie : le prochain à paraître en
+ * premier, plutôt que le plus lointain en tête de liste.
+ */
 export function articlesTries(): Article[] {
-  return articlesPublies().sort((a, b) => b.datePublication.localeCompare(a.datePublication));
+  const enLigne = articles
+    .filter(dateAtteinte)
+    .sort((a, b) => b.datePublication.localeCompare(a.datePublication));
+  if (!APERCU) return enLigne;
+  const programmes = articles
+    .filter((article) => !dateAtteinte(article))
+    .sort((a, b) => a.datePublication.localeCompare(b.datePublication));
+  return [...enLigne, ...programmes];
 }
 
 /**
@@ -182,6 +193,32 @@ export function articlesDeLaPage(numero: number): Article[] {
   if (numero <= 1) return tries.slice(0, ARTICLES_PAGE_1);
   const debut = ARTICLES_PAGE_1 + (numero - 2) * ARTICLES_PAR_PAGE;
   return tries.slice(debut, debut + ARTICLES_PAR_PAGE);
+}
+
+/**
+ * Maillage progressif : un lien de contenu vers /infos-utiles/<slug>/ n'est actif
+ * que si l'article cible est publié. Avant sa date, `RichText` rend l'ancre en
+ * texte simple — jamais de lien vers une page qui répondrait 404. Le jour venu,
+ * la régénération horaire des pages (`revalidate`) active le lien partout, sans
+ * redéploiement. On peut donc lier dès la rédaction vers un article programmé.
+ *
+ * Toute autre URL (piliers, pagination, sources externes) reste un lien.
+ */
+export function lienActif(href: string): boolean {
+  const cible = /^\/infos-utiles\/([^/]+)\/$/.exec(href);
+  if (!cible) return true;
+  const article = articles.find((a) => a.slug === cible[1]);
+  return article !== undefined && estPublie(article);
+}
+
+/** Articles publiés rattachés à une page pilier (`pilier.href`), du plus récent au plus ancien. */
+export function articlesDuPilier(href: string): Article[] {
+  return articlesTries().filter((article) => article.pilier.href === href);
+}
+
+/** Articles publiés signés par un membre, ou rattachés à sa page (silo coopération). */
+export function articlesDuMembre(slug: string): Article[] {
+  return articlesTries().filter((article) => article.auteur === slug || article.pilier.href === `/${slug}/`);
 }
 
 /** Ne renvoie qu'un article publié : un brouillon répond 404. */

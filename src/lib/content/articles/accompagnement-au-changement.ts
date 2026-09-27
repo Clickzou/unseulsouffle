@@ -124,7 +124,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un projet que l'équipe n'a pas fait sien coûte deux fois : une première fois pour le déployer, une seconde pour le faire fonctionner malgré les contournements. Les tableurs parallèles qui survivent au nouveau logiciel, les anciennes procédures appliquées « en attendant », les départs de personnes clés qui ne se sont pas reconnues dans la nouvelle organisation : aucun de ces coûts n'apparaît dans le budget initial du projet.",
+            "Un projet que l'équipe n'a pas fait sien coûte deux fois : une première fois pour le déployer, une seconde pour le faire fonctionner malgré les contournements. Les tableurs parallèles qui survivent au nouveau logiciel, les anciennes procédures appliquées « en attendant », les départs de personnes clés qui ne se sont pas reconnues dans la nouvelle organisation : aucun de ces coûts n'apparaît dans le budget initial du projet. À l'inverse, [la productivité attendue du projet](/infos-utiles/gain-de-productivite/) n'apparaît qu'une fois l'ancienne façon de faire réellement abandonnée.",
         },
       ],
     },
@@ -222,7 +222,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "L'organigramme dit qui rend compte à qui ; il ne dit pas qui dépanne qui, ni par où passe réellement l'information. Si vous devez redessiner les rattachements, prenez le temps de [faire un organigramme](/infos-utiles/organigramme-entreprise/) qui corresponde au fonctionnement réel avant de dessiner le futur. Sans cette cartographie, le projet casse des liens informels que personne n'avait vus, et c'est souvent là que la production souffre les premières semaines.",
+            "L'organigramme dit qui rend compte à qui ; il ne dit pas qui dépanne qui, ni par où passe réellement l'information. Si vous devez redessiner les rattachements, prenez le temps de [faire un organigramme](/infos-utiles/organigramme-entreprise/) qui corresponde au fonctionnement réel avant de dessiner le futur. Décrire [chaque processus métier concerné](/infos-utiles/processus-metier/), de la demande au résultat, montre aussi où le changement déplace le travail. Sans cette cartographie, le projet casse des liens informels que personne n'avait vus, et c'est souvent là que la production souffre les premières semaines.",
         },
         {
           type: "h3",

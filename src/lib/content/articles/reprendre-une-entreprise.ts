@@ -185,7 +185,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le résultat global peut masquer une activité qui perd de l'argent, compensée par une autre. Demandez la marge par client, par produit ou par chantier. Si le cédant ne sait pas la produire, c'est une information en soi : l'entreprise est pilotée à l'intuition, et vous hériterez de cette intuition sans en avoir l'expérience.",
+            "Le résultat global, comme la [marge nette d'ensemble](/infos-utiles/marge-nette/), peut masquer une activité qui perd de l'argent, compensée par une autre. Demandez la marge par client, par produit ou par chantier. Si le cédant ne sait pas la produire, c'est une information en soi : l'entreprise est pilotée à l'intuition, et vous hériterez de cette intuition sans en avoir l'expérience.",
         },
         { type: "h3", texte: "Le besoin en fonds de roulement et la trésorerie" },
         {

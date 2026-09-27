@@ -266,7 +266,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Retrouver son rôle ne consiste pas à travailler moins, mais à travailler ailleurs : moins dans l'exécution, davantage dans les décisions qui n'appartiennent qu'à vous. Quatre gestes y contribuent.",
+            "Retrouver son rôle ne consiste pas à travailler moins, mais à travailler ailleurs : moins dans l'exécution, davantage dans [les décisions qui n'appartiennent qu'à vous](/infos-utiles/decision-strategique/). Quatre gestes y contribuent.",
         },
         {
           type: "liste",

@@ -301,7 +301,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La plupart des changements se conduisent en interne. Un regard extérieur devient utile dans trois cas : quand le changement touche plusieurs dimensions à la fois, par exemple l'organisation et la finance ; quand l'équipe de direction elle-même n'est pas alignée ; ou quand le creux s'éternise et que les tensions paralysent des projets entiers.",
+            "La plupart des changements se conduisent en interne. Un regard extérieur devient utile dans trois cas : quand le changement touche plusieurs dimensions à la fois, par exemple l'organisation et la finance ; quand l'équipe de direction elle-même n'est pas alignée ; ou quand le creux s'éternise et que les tensions paralysent des projets entiers. Dans ce dernier cas, [auditer l'entreprise avant d'agir](/infos-utiles/auditer-une-entreprise/) permet de vérifier si le blocage vient du changement lui-même ou d'un problème plus ancien.",
         },
         {
           type: "p",

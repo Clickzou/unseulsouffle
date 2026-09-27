@@ -193,7 +193,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "L'entreprise est rentable. En avril, elle signe un gros client et prévoit une hausse d'activité. Elle achète un stock supplémentaire en avril, payable en mai. Le compte de résultat de mai sera bon : les ventes progressent.",
+            "L'entreprise est rentable, avec un [taux de rentabilité](/infos-utiles/taux-de-rentabilite/) correct. En avril, elle signe un gros client et prévoit une hausse d'activité. Elle achète un stock supplémentaire en avril, payable en mai. Le compte de résultat de mai sera bon : les ventes progressent.",
         },
         { type: "h3", texte: "Ce que dit le budget de trésorerie" },
         {
@@ -235,7 +235,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le budget se nourrit de la comptabilité, des carnets de commandes et des échéanciers. Il gagne à s'appuyer sur des situations intermédiaires produites à temps par votre expert-comptable, qui n'a pas à tenir le budget à votre place : les rôles de chacun sont détaillés dans notre article [DAF externe ou expert-comptable](/infos-utiles/daf-externe-ou-expert-comptable/). En interne, une personne est responsable de la mise à jour, et le dirigeant le lit à date fixe.",
+            "Le budget se nourrit de la comptabilité, des carnets de commandes et des échéanciers. Il gagne à s'appuyer sur des situations intermédiaires produites à temps par votre expert-comptable, qui n'a pas à tenir le budget à votre place : les rôles de chacun sont détaillés dans notre article [DAF externe ou expert-comptable](/infos-utiles/daf-externe-ou-expert-comptable/). En interne, une personne est responsable de la mise à jour, et le dirigeant le lit à date fixe. Lors d'une [transmission d'entreprise familiale](/infos-utiles/transmission-entreprise-familiale/), ce budget tenu à jour permet aussi au successeur de reprendre le pilotage sans repartir de zéro.",
         },
       ],
     },

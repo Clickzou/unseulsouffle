@@ -199,7 +199,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Chefs d'équipe et responsables d'atelier sont le pivot. Ce sont eux qui animent les points courts, remontent les blocages et traitent ce qui relève de leur périmètre. Encore faut-il que ce périmètre soit clair. Si personne ne sait qui peut décider de modifier un poste ou un planning, l'amélioration s'arrête au premier désaccord. Un [organigramme d'entreprise](/infos-utiles/organigramme-entreprise/) à jour, qui décrit les rôles réels et pas seulement les titres, aide à lever ce frein.",
+            "Chefs d'équipe et responsables d'atelier sont le pivot. Ce sont eux qui animent les points courts, remontent les blocages et traitent ce qui relève de leur périmètre. Encore faut-il que ce périmètre soit clair. Si personne ne sait qui peut décider de modifier un poste ou un planning, l'amélioration s'arrête au premier désaccord. La question devient plus délicate dans [une organisation à double rattachement](/infos-utiles/structure-matricielle/), où le pilote du chantier n'est pas le responsable hiérarchique des opérateurs. Un [organigramme d'entreprise](/infos-utiles/organigramme-entreprise/) à jour, qui décrit les rôles réels et pas seulement les titres, aide à lever ce frein.",
         },
       ],
     },
@@ -211,7 +211,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Beaucoup de PME ont déjà tenté l'expérience : une formation, un premier chantier réussi, quelques mois d'enthousiasme, puis un retour progressif aux anciennes habitudes. Les causes sont presque toujours les mêmes.",
+            "Beaucoup de PME ont déjà tenté l'expérience : une formation, un premier chantier réussi, quelques mois d'enthousiasme, puis un retour progressif aux anciennes habitudes, étape bien connue de la [courbe du changement](/infos-utiles/courbe-du-changement/). Les causes sont presque toujours les mêmes.",
         },
         { type: "h3", texte: "L'outil plaqué sans le problème" },
         {

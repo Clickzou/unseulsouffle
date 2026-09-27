@@ -260,7 +260,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La rubrique la plus importante est aussi la plus délicate. Le pilote n'exécute pas tout le processus : il veille à ce qu'il produise son résultat, et il a le droit de proposer et de trancher des changements. L'ISO invite précisément à « définir les autorités, les responsabilités et les obligations relatives au management des processus ». **Nommer un pilote sans lui donner ce droit revient à désigner un coupable, pas un responsable.**",
+            "La rubrique la plus importante est aussi la plus délicate. Le pilote n'exécute pas tout le processus : il veille à ce qu'il produise son résultat, et il a le droit de proposer et de trancher des changements. L'ISO invite précisément à « définir les autorités, les responsabilités et les obligations relatives au management des processus ». Sa position ressemble à [celle d'un manager fonctionnel](/infos-utiles/manager-fonctionnel/) : il coordonne des personnes qui ne dépendent pas de lui hiérarchiquement. **Nommer un pilote sans lui donner ce droit revient à désigner un coupable, pas un responsable.**",
         },
       ],
     },

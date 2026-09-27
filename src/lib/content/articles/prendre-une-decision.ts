@@ -313,7 +313,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une difficulté nouvelle et durable à se concentrer ou à trancher, accompagnée de fatigue persistante ou de troubles du sommeil, n'est pas un problème de méthode. Nous ne sommes pas médecins : si ces signes s'installent, parlez-en à votre médecin traitant. En cas de détresse ou d'idées noires, le 3114 répond gratuitement, 24 h/24 et 7 j/7. Nous abordons ces signaux plus en détail dans notre article sur la [solitude du dirigeant](/infos-utiles/solitude-du-dirigeant/).",
+            "Une difficulté nouvelle et durable à se concentrer ou à trancher, accompagnée de fatigue persistante ou de troubles du sommeil, n'est pas un problème de méthode. Nous ne sommes pas médecins : si ces signes s'installent, parlez-en à votre médecin traitant. Lui seul peut dire s'il s'agit d'un [épuisement professionnel ou d'une dépression](/infos-utiles/burn-out-ou-depression/). En cas de détresse ou d'idées noires, le 3114 répond gratuitement, 24 h/24 et 7 j/7. Nous abordons ces signaux plus en détail dans notre article sur la [solitude du dirigeant](/infos-utiles/solitude-du-dirigeant/).",
         },
       ],
     },

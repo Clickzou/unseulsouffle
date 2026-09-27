@@ -307,7 +307,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Ce dispositif couvre le champ des ressources humaines. Une mission centrée sur l'organisation du travail, les rôles et le management peut s'en rapprocher ; une mission de stratégie commerciale, non. Posez la question à la Région avant de bâtir le dossier.",
+            "Ce dispositif couvre le champ des ressources humaines. Une mission centrée sur l'organisation du travail, les rôles et le management peut s'en rapprocher ; une mission de [stratégie commerciale](/infos-utiles/politique-commerciale/), non. Posez la question à la Région avant de bâtir le dossier. Pour un sujet de ventes, le livrable attendu est plutôt un [plan d'action commercial](/infos-utiles/plan-d-action-commercial/) : des actions datées, un responsable et un indicateur par ligne.",
         },
         { type: "h3", texte: "La PCRH, par votre OPCO" },
         {

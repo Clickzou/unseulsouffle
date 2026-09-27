@@ -211,7 +211,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le chiffre d'affaires progresse, les effectifs aussi, et le résultat ne suit pas. Plus de stock, plus d'encours clients, plus de charges fixes : la croissance consomme de la trésorerie avant d'en produire. C'est le moment où il faut savoir quelle activité finance l'autre, et c'est une question de pilotage, pas de comptabilité.",
+            "Le chiffre d'affaires progresse, les effectifs aussi, et le résultat ne suit pas : la [marge nette](/infos-utiles/marge-nette/) recule. Plus de stock, plus d'encours clients, plus de charges fixes : la croissance consomme de la trésorerie avant d'en produire. C'est le moment où il faut savoir quelle activité finance l'autre, et c'est une question de pilotage, pas de comptabilité.",
         },
         { type: "h3", texte: "3. Votre banque demande un prévisionnel" },
         {
@@ -223,7 +223,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Entrée d'un investisseur, rachat d'un concurrent, préparation d'une transmission : ces opérations demandent un business plan crédible, des hypothèses assumées et quelqu'un pour répondre aux questions de l'autre partie. C'est typiquement une mission bornée dans le temps, qui convient bien au temps partagé. Si le besoin est plutôt de reprendre les commandes d'une entreprise en crise, c'est un autre métier : voir notre comparatif [manager de transition ou direction à temps partagé](/infos-utiles/manager-de-transition-ou-direction-a-temps-partage/).",
+            "Entrée d'un investisseur, [rachat d'un concurrent](/infos-utiles/croissance-externe/), préparation d'une transmission : ces opérations demandent un business plan crédible, des hypothèses assumées et quelqu'un pour répondre aux questions de l'autre partie. C'est typiquement une mission bornée dans le temps, qui convient bien au temps partagé. Si le besoin est plutôt de reprendre les commandes d'une entreprise en crise, c'est un autre métier : voir notre comparatif [manager de transition ou direction à temps partagé](/infos-utiles/manager-de-transition-ou-direction-a-temps-partage/).",
         },
         {
           type: "encadre",

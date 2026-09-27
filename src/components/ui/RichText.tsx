@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { lienActif } from "@/lib/content/articles";
+
 /**
  * Balisage minimal pour les textes de contenu : `[texte](/url/)` et `**texte**`.
  *
@@ -7,6 +9,10 @@ import Link from "next/link";
  * interne se relit et s'audite depuis le contenu seul (master § 5 — 3 à 6 liens
  * contextuels par page de fond, à ancre exacte). Du JSX mêlé au texte rendrait
  * cette relecture impraticable.
+ *
+ * Un lien vers un article programmé reste du texte simple jusqu'à sa
+ * publication (`lienActif`) : le maillage entre articles se tisse au fil du
+ * calendrier.
  *
  * Deux règles seulement, et pas une de plus : tout ajout de syntaxe ferait de ce
  * fichier un moteur Markdown, qui n'a pas sa place ici.
@@ -44,6 +50,8 @@ export function RichText({ children }: { children: string }) {
           {libelle}
         </a>,
       );
+    } else if (!lienActif(href)) {
+      morceaux.push(libelle);
     } else {
       morceaux.push(
         <Link

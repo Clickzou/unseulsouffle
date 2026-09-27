@@ -271,7 +271,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Externaliser la vente ne signifie pas externaliser le pilotage. Ce qui reste chez vous est même ce qui décide de la réussite : la stratégie, les prix, la relation avec les grands comptes et la connaissance des clients.",
+            "Externaliser la vente ne signifie pas externaliser le pilotage. Ce qui reste chez vous est même ce qui décide de la réussite : la stratégie, les prix, la relation avec les grands comptes et la connaissance des clients. Ce que vous confiez au prestataire prend place dans votre [plan d'actions commerciales](/infos-utiles/plan-d-action-commercial/), avec ses objectifs et ses échéances.",
         },
         {
           type: "tableau",

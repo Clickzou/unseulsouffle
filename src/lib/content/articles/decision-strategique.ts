@@ -162,7 +162,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Dans une PME, la réponse pratique est presque toujours « le dirigeant ». La réponse juridique dépend de la forme de la société, et elle mérite d'être connue, parce qu'elle ouvre des possibilités que beaucoup de dirigeants ignorent.",
+            "Dans une PME, la réponse pratique est presque toujours « le dirigeant ». La réponse juridique dépend de la forme de la société, et elle mérite d'être connue, parce qu'elle ouvre des possibilités que beaucoup de dirigeants ignorent. Le [statut du dirigeant d'entreprise](/infos-utiles/gerant-d-entreprise/) fixe aussi l'étendue de ses pouvoirs et de sa responsabilité.",
         },
         { type: "h3", texte: "En société anonyme : le conseil d'administration" },
         {

@@ -33,14 +33,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // de répondre 200 et que la bascule d'indexation le remplisse d'un coup.
   if (!INDEXABLE) return [];
 
-  const lastModified = new Date();
-
   // /tarifs/ n'entre qu'une fois tous les prix réels (garde-fou de tarifs.ts).
   const chemins = tarifsProvisoires ? PAGES : [...PAGES, { path: "/tarifs/", priority: 0.7 }];
 
+  // Pas de `lastModified` sur les pages fixes : une date qui change à chaque
+  // régénération sans que la page ait changé fait ignorer tous les lastmod du
+  // site (master § 2). Seuls les articles portent une date exacte.
   const pages: MetadataRoute.Sitemap = chemins.map(({ path, priority }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified,
     changeFrequency: "monthly",
     priority,
   }));
@@ -52,7 +52,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...pages,
-    { url: `${SITE_URL}/infos-utiles/`, lastModified, changeFrequency: "weekly", priority: 0.6 },
+    {
+      url: `${SITE_URL}/infos-utiles/`,
+      // La liste change quand un article sort : sa date est celle du plus récent.
+      lastModified: new Date(
+        valides.reduce((max, a) => ((a.dateMaj ?? a.datePublication) > max ? (a.dateMaj ?? a.datePublication) : max), ""),
+      ),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
     ...valides.map((article) => ({
       url: `${SITE_URL}/infos-utiles/${article.slug}/`,
       lastModified: new Date(article.dateMaj ?? article.datePublication),

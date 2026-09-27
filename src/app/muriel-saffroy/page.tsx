@@ -6,6 +6,9 @@ import { membreParSlug } from "@/lib/content/membres";
 
 const membre = membreParSlug("muriel-saffroy");
 
+/** Liste des articles rattachés : régénération avec la publication programmée. */
+export const revalidate = 3600;
+
 export const metadata: Metadata = membre ? metadataMembre(membre) : {};
 
 export default function Page() {

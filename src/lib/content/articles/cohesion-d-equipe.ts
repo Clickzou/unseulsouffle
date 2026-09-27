@@ -262,7 +262,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Les activités ludiques ou sportives ont un effet sur le lien. Pour qu'il dure, associez-les à un temps consacré au travail lui-même : une question que l'équipe se pose vraiment, une règle de fonctionnement à écrire ensemble, un problème récurrent à résoudre. Le guide de l'Anact propose par exemple un atelier de discussion sur le « travail bien fait » : ce que chacun entend par là, et ce qui l'en empêche. Fixez enfin, avant de partir, qui suivra les engagements pris et quand.",
+            "Les activités ludiques ou sportives ont un effet sur le lien. Pour qu'il dure, associez-les à un temps consacré au travail lui-même : une question que l'équipe se pose vraiment, une règle de fonctionnement à écrire ensemble, un problème récurrent à résoudre. Le guide de l'Anact propose par exemple un atelier de discussion sur le « travail bien fait » : ce que chacun entend par là, et ce qui l'en empêche. Pour que ce temps aboutisse, appuyez-vous sur des [méthodes d'intelligence collective](/infos-utiles/outils-intelligence-collective/) éprouvées plutôt que sur un débat libre. Fixez enfin, avant de partir, qui suivra les engagements pris et quand.",
         },
         { type: "h3", texte: "Veiller à ce que tout le monde puisse participer" },
         {

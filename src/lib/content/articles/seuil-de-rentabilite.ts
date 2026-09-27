@@ -249,7 +249,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La machine alourdit le seuil tant qu'elle est amortie. Elle se justifie si elle augmente la capacité vendue ou réduit les charges variables d'au moins autant. Poser la question ainsi, avec des chiffres, évite de décider sur une intuition. Notre article sur la manière de [prendre une décision](/infos-utiles/prendre-une-decision/) détaille comment structurer ce type d'arbitrage.",
+            "La machine alourdit le seuil tant qu'elle est amortie. Elle se justifie si elle augmente la capacité vendue ou réduit les charges variables d'au moins autant. Le seuil dit si l'entreprise couvre ses charges ; la [rentabilité des capitaux investis](/infos-utiles/taux-de-rentabilite/) dit si l'argent engagé rapporte assez. Poser la question ainsi, avec des chiffres, évite de décider sur une intuition. Notre article sur la manière de [prendre une décision](/infos-utiles/prendre-une-decision/) détaille comment structurer ce type d'arbitrage.",
         },
       ],
     },
@@ -273,7 +273,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Au-delà d'un certain volume, il faut une équipe de plus, un second local, une deuxième machine. Les charges fixes font alors un saut, et le seuil avec elles. Un seuil calculé sur l'année passée ne vaut que dans la plage d'activité où la structure reste la même.",
+            "Au-delà d'un certain volume, il faut une équipe de plus, un second local, une deuxième machine. Les charges fixes font alors un saut, et le seuil avec elles. [Une opération de croissance externe](/infos-utiles/croissance-externe/) produit le même saut en une fois : le seuil se recalcule alors sur l'ensemble regroupé. Un seuil calculé sur l'année passée ne vaut que dans la plage d'activité où la structure reste la même.",
         },
         { type: "h3", texte: "Un seuil global cache des activités qui perdent de l'argent" },
         {

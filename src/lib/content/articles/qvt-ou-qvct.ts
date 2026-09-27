@@ -212,7 +212,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Dans une PME, la QVCT se joue d'abord entre un manager et son équipe. Si le manager n'a ni le temps ni la latitude de régler ce qui remonte, l'expression des salariés tourne à vide et produit de la frustration. Avant de lancer la démarche, vérifiez que ceux qui recueilleront les difficultés auront le droit d'agir sur au moins une partie d'entre elles.",
+            "Dans une PME, la QVCT se joue d'abord entre un manager et son équipe. Si le manager n'a ni le temps ni la latitude de régler ce qui remonte, l'expression des salariés tourne à vide et produit de la frustration. Avant de lancer la démarche, vérifiez que ceux qui recueilleront les difficultés auront le droit d'agir sur au moins une partie d'entre elles. Quand une équipe travaille aussi [sous l'autorité d'un manager fonctionnel](/infos-utiles/manager-fonctionnel/), précisez lequel des deux responsables traite quelles difficultés, pour éviter que chacun renvoie vers l'autre.",
         },
       ],
     },

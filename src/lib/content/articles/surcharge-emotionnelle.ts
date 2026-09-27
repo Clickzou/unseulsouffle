@@ -187,7 +187,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Annoncer un licenciement à quelqu'un que vous connaissez depuis quinze ans. Rassurer l'équipe alors que la trésorerie vous inquiète. Arbitrer un conflit entre deux personnes que vous appréciez. Encaisser la colère d'un client important sans la répercuter. Chacune de ces situations demande de gérer à la fois vos émotions et celles des autres, et d'afficher une assurance que vous ne ressentez pas toujours.",
+            "Annoncer un licenciement à quelqu'un que vous connaissez depuis quinze ans. Rassurer l'équipe alors que la trésorerie vous inquiète. Arbitrer un conflit entre deux personnes que vous appréciez. Encaisser la colère d'un client important sans la répercuter. Les [décisions stratégiques les plus lourdes](/infos-utiles/decision-strategique/), comme fermer une activité ou se séparer d'un associé, ajoutent leur propre poids émotionnel. Chacune de ces situations demande de gérer à la fois vos émotions et celles des autres, et d'afficher une assurance que vous ne ressentez pas toujours.",
         },
         {
           type: "h3",

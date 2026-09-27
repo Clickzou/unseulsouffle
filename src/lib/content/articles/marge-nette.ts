@@ -238,7 +238,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une hausse de prix acceptée par le marché va entièrement dans la marge. Dans notre exemple, 2 % de hausse sans perte de volume ajoutent 60 000 € au résultat avant impôt et portent la marge nette à 199 250 €, soit 6,5 % au lieu de 5,1 %. Aucune économie de charges n'a un effet aussi direct. Encore faut-il savoir quels clients et quels produits le supportent.",
+            "Une hausse de prix acceptée par le marché va entièrement dans la marge. Dans notre exemple, 2 % de hausse sans perte de volume ajoutent 60 000 € au résultat avant impôt et portent la marge nette à 199 250 €, soit 6,5 % au lieu de 5,1 %. Aucune économie de charges n'a un effet aussi direct. Encore faut-il savoir quels clients et quels produits le supportent. Fixez aussi par écrit qui peut accorder une remise ou signer un devis : une [délégation de signature précise](/infos-utiles/delegation-de-signature/) évite que la hausse se perde en négociation.",
         },
         { type: "h3", texte: "Connaître la marge par activité" },
         {

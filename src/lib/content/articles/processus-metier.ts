@@ -257,7 +257,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un processus décrit en salle de réunion est le processus tel que chacun croit qu'il fonctionne. Suivre une commande réelle, poste par poste, révèle les contournements, les fichiers personnels et les coups de téléphone qui font réellement tourner l'entreprise. C'est ce fonctionnement réel qu'il faut décrire, puis améliorer.",
+            "Un processus décrit en salle de réunion est le processus tel que chacun croit qu'il fonctionne. Suivre une commande réelle, poste par poste, révèle les contournements, les fichiers personnels et les coups de téléphone qui font réellement tourner l'entreprise. C'est ce fonctionnement réel qu'il faut décrire, puis améliorer. La même règle vaut pour [auditer une entreprise entière](/infos-utiles/auditer-une-entreprise/) : on part de ce qui se passe, pas de ce qui est écrit.",
         },
         { type: "h3", texte: "Un formalisme léger" },
         {

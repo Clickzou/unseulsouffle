@@ -296,7 +296,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une délégation vit avec l'organisation. Revoyez-les à chaque changement de fonction, et au moins une fois par an avec votre expert-comptable, qui voit passer les pièces et repère les écarts. Le partage des rôles entre lui et une direction financière est détaillé dans notre article [DAF externe ou expert-comptable](/infos-utiles/daf-externe-ou-expert-comptable/).",
+            "Une délégation vit avec l'organisation. Revoyez-les à chaque changement de fonction, et au moins une fois par an avec votre expert-comptable, qui voit passer les pièces et repère les écarts. Le chantier devient prioritaire quand vous [reprenez une entreprise](/infos-utiles/reprendre-une-entreprise/) : les délégations laissées par le cédant sont à relire et à confirmer une à une. Le partage des rôles entre lui et une direction financière est détaillé dans notre article [DAF externe ou expert-comptable](/infos-utiles/daf-externe-ou-expert-comptable/).",
         },
         {
           type: "p",

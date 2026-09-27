@@ -360,7 +360,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une telle réorganisation se conduit avec les personnes concernées, pas par une note de service ; notre article sur l'[accompagnement au changement](/infos-utiles/accompagnement-au-changement/) détaille les étapes à ne pas sauter.",
+            "Une telle [réorganisation d'entreprise](/infos-utiles/reorganisation-entreprise/) se conduit avec les personnes concernées, pas par une note de service ; notre article sur l'[accompagnement au changement](/infos-utiles/accompagnement-au-changement/) détaille les étapes à ne pas sauter. Les premiers mois, doutes et baisse d'engagement sont fréquents : les lire comme [une étape normale du changement](/infos-utiles/courbe-du-changement/) évite de conclure trop vite à l'échec.",
         },
         {
           type: "p",

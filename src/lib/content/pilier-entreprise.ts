@@ -20,7 +20,7 @@ export const pilierEntreprise: PagePilier = {
   metaTitle: "Conseil en organisation PME à Toulouse",
   // 146 / 150
   metaDescription:
-    "Conseil en organisation et audit organisationnel pour PME et ETI à Toulouse : lire le fonctionnement réel, structurer la croissance, gagner en autonomie.",
+    "Conseil en organisation et audit organisationnel pour PME et ETI à Toulouse : lire le fonctionnement réel, structurer la croissance, devenir autonome.",
   nomService: "Transformation et conseil en organisation de PME et d'ETI",
 
   h1: "Conseil en organisation : structurer une PME en croissance à Toulouse",

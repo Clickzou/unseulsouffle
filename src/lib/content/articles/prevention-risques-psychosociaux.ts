@@ -258,7 +258,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un manager de proximité voit avant tout le monde qu'une personne change. Son rôle est d'en parler avec elle et de l'orienter, pas d'interpréter. Notre article sur les [signes du burn-out](/infos-utiles/signes-du-burn-out/) décrit ce qu'il faut regarder et vers qui se tourner.",
+            "Un manager de proximité voit avant tout le monde qu'une personne change. Son rôle est d'en parler avec elle et de l'orienter, pas d'interpréter. Lors d'une réorganisation, connaître les [étapes de la courbe du changement](/infos-utiles/courbe-du-changement/) l'aide à distinguer une réaction passagère d'une souffrance qui s'installe. Notre article sur les [signes du burn-out](/infos-utiles/signes-du-burn-out/) décrit ce qu'il faut regarder et vers qui se tourner.",
         },
         { type: "h3", texte: "La santé relève des professionnels de santé" },
         {

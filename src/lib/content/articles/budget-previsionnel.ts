@@ -286,7 +286,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "En dessous de ces seuils, un budget reste demandé dès que l'entreprise sollicite un financement, prépare un investissement ou traverse une période difficile. Présenté avec ses hypothèses et le suivi des mois écoulés, il change la conversation avec le banquier.",
+            "En dessous de ces seuils, un budget reste demandé dès que l'entreprise sollicite un financement, prépare un investissement ou traverse une période difficile. Présenté avec ses hypothèses et le suivi des mois écoulés, il change la conversation avec le banquier. Au lendemain d'une [reprise par un nouveau dirigeant](/infos-utiles/reprendre-une-entreprise/), le premier budget sert aussi à vérifier que l'activité couvre les échéances de la dette de reprise.",
         },
       ],
     },

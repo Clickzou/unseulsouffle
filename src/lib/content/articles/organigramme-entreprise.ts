@@ -116,7 +116,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Beaucoup d'entreprises gagnent à publier deux vues : un organigramme hiérarchique pour l'autorité, et un organigramme fonctionnel pour les missions. Une PME industrielle avec deux sites peut aussi présenter une vue par site sous une direction commune. L'important est que chaque vue réponde à une question précise, et que toutes restent cohérentes entre elles.",
+            "Beaucoup d'entreprises gagnent à publier deux vues : un organigramme hiérarchique pour l'autorité, et un organigramme fonctionnel pour les missions. Une PME industrielle avec deux sites peut aussi présenter une vue par site sous une direction commune. L'important est que chaque vue réponde à une question précise, et que toutes restent cohérentes entre elles. [Une équipe projet temporaire](/infos-utiles/management-de-projet/) se montre plutôt à part, avec son responsable et sa date de fin, pour ne pas brouiller les liens d'autorité permanents.",
         },
       ],
     },
@@ -189,7 +189,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une case intitulée « responsable qualité » ne dit pas si cette personne peut arrêter une livraison non conforme. Or c'est exactement ce que les autres ont besoin de savoir. Dans beaucoup de PME, les rôles existent sur l'organigramme sans que personne ait reçu le droit explicite de trancher, et donc de se tromper. Dans ce cadre, faire valider chaque décision par le dirigeant devient la conduite la plus rationnelle.",
+            "Une case intitulée « responsable qualité » ne dit pas si cette personne peut arrêter une livraison non conforme. Or c'est exactement ce que les autres ont besoin de savoir. Dans beaucoup de PME, les rôles existent sur l'organigramme sans que personne ait reçu le droit explicite de trancher, et donc de se tromper. Dans ce cadre, faire valider chaque décision par le dirigeant devient la conduite la plus rationnelle. Ce flou pèse aussi sur les personnes : des rôles mal définis dégradent [la qualité de vie au travail](/infos-utiles/qvt-ou-qvct/), bien avant de se voir dans les résultats.",
         },
         { type: "h3", texte: "Rattacher trop de monde au dirigeant" },
         {

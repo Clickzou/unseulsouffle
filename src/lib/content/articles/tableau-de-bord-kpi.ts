@@ -228,7 +228,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Bpifrance Création insiste sur l'analyse des écarts entre prévisions et réalité, poste par poste, avec un objectif : agir rapidement, avant que les écarts ne se transforment en difficultés plus importantes. Un écart s'explique d'abord : erreur de donnée, décalage de calendrier ou vraie dérive. Seule la troisième appelle une action, et c'est elle qui doit figurer au compte rendu, avec un nom et une date.",
+            "Bpifrance Création insiste sur l'analyse des écarts entre prévisions et réalité, poste par poste, avec un objectif : agir rapidement, avant que les écarts ne se transforment en difficultés plus importantes. Un écart s'explique d'abord : erreur de donnée, décalage de calendrier ou vraie dérive. Seule la troisième appelle une action, et c'est elle qui doit figurer au compte rendu, avec un nom et une date. Encore faut-il que cette personne puisse agir : une [délégation de signature écrite](/infos-utiles/delegation-de-signature/) lui permet d'engager l'entreprise dans les limites fixées.",
         },
         { type: "h3", texte: "Des données fiables, à l'heure" },
         {

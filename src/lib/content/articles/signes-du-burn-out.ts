@@ -166,7 +166,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un dirigeant de PME n'est pas seulement exposé au burn-out. Il est aussi employeur, donc en première ligne pour voir ce qui change chez les autres. Le Code du travail le dit sans détour : selon l'[article L4121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035640828), « l'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé physique et mentale des travailleurs ».",
+            "Un [dirigeant de PME](/infos-utiles/gerant-d-entreprise/) n'est pas seulement exposé au burn-out. Il est aussi employeur, donc en première ligne pour voir ce qui change chez les autres. Le Code du travail le dit sans détour : selon l'[article L4121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035640828), « l'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé physique et mentale des travailleurs ».",
         },
         { type: "h3", texte: "Un phénomène qui progresse" },
         {
@@ -286,7 +286,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "L'INRS résume la prévention collective en une phrase : réduire les exigences et augmenter les ressources. Réduire les exigences, c'est revoir une charge, un délai, un périmètre. Augmenter les ressources, c'est du soutien, de l'équité, de la reconnaissance du travail accompli. Aucune de ces mesures n'est un séminaire bien-être. Toutes relèvent de l'organisation : qui décide, qui porte quoi, qui aide qui.",
+            "L'INRS résume la prévention collective en une phrase : réduire les exigences et augmenter les ressources. Réduire les exigences, c'est revoir une charge, un délai, un périmètre. Augmenter les ressources, c'est du soutien, de l'équité, de la reconnaissance du travail accompli. Aucune de ces mesures n'est un séminaire bien-être. Toutes relèvent de l'organisation : qui décide, qui porte quoi, qui aide qui. Elles se jouent aussi dans la manière de [manager une équipe au jour le jour](/infos-utiles/manager-une-equipe/) : points réguliers, charge suivie, aide accessible.",
         },
         { type: "h3", texte: "Le dirigeant n'échappe pas à la grille" },
         {

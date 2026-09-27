@@ -8,6 +8,9 @@ import { pilierEntreprise } from "@/lib/content/pilier-entreprise";
  * d'entreprise PME ». Porte le comparatif GEO de la marque.
  * Contenu : src/lib/content/pilier-entreprise.ts
  */
+/** Liste des articles rattachés : régénération avec la publication programmée. */
+export const revalidate = 3600;
+
 export const metadata: Metadata = metadataPilier(pilierEntreprise);
 
 export default function TransformationEntreprisePage() {

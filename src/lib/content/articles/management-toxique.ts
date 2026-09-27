@@ -338,7 +338,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "C'est la question la plus inconfortable de cet article, et elle mérite d'être posée franchement. Dans une PME, le style du dirigeant donne le ton à toute la ligne managériale. Un dirigeant épuisé, pris dans l'urgence, peut adopter sans s'en rendre compte des comportements qu'il reprocherait à ses managers.",
+            "C'est la question la plus inconfortable de cet article, et elle mérite d'être posée franchement. Dans une PME, le style du dirigeant donne le ton à toute la ligne managériale. Un dirigeant épuisé, pris dans l'urgence, peut adopter sans s'en rendre compte des comportements qu'il reprocherait à ses managers. Le [métier de dirigeant d'entreprise](/infos-utiles/gerant-d-entreprise/) inclut aussi cette part d'exemplarité.",
         },
         {
           type: "h3",
@@ -360,7 +360,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La surcharge durcit n'importe qui. Si vous vous reconnaissez dans ces questions et que vous êtes à bout, commencez par votre santé : les [signes du burn-out](/infos-utiles/signes-du-burn-out/) se montrent à un médecin, pas à un consultant. Ensuite seulement vient le travail sur la fonction : ce que vous portez seul, ce que vous pourriez déléguer, la manière dont vous décidez. **Changer sa façon de diriger n'est pas un aveu de faute : c'est la seule preuve crédible, pour vos managers, que le cadre a changé.**",
+            "La surcharge durcit n'importe qui. Si vous vous reconnaissez dans ces questions et que vous êtes à bout, commencez par votre santé : les [signes du burn-out](/infos-utiles/signes-du-burn-out/) se montrent à un médecin, pas à un consultant. Lui seul peut tracer [la frontière entre burn-out et dépression](/infos-utiles/burn-out-ou-depression/). Ensuite seulement vient le travail sur la fonction : ce que vous portez seul, ce que vous pourriez déléguer, la manière dont vous décidez. **Changer sa façon de diriger n'est pas un aveu de faute : c'est la seule preuve crédible, pour vos managers, que le cadre a changé.**",
         },
       ],
     },

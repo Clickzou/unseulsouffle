@@ -175,7 +175,7 @@ export const article: Article = {
             "**9 h 30, l'activité coopérative.** Une activité qui oblige à s'organiser à plusieurs, en groupes mélangés.",
             "**11 h, le retour sur l'activité.** Comment le groupe s'est organisé, qui a pris la parole, qui a décidé : souvent le miroir fidèle du fonctionnement au bureau.",
             "**12 h 30, le déjeuner.** Sans programme, c'est un temps de lien à part entière.",
-            "**14 h, l'atelier de fond.** Objectifs, rôles ou problème réel, selon ce que vous avez choisi, en sous-groupes puis en grand groupe.",
+            "**14 h, l'atelier de fond.** Objectifs, rôles ou problème réel, selon ce que vous avez choisi, en sous-groupes puis en grand groupe, avec des [outils d'animation collective](/infos-utiles/outils-intelligence-collective/) adaptés à l'objectif.",
             "**16 h 30, les engagements.** Trois à cinq décisions, chacune avec un responsable et une date, écrites devant tout le monde.",
             "**17 h, la clôture.** Un tour de table court, puis un moment convivial pour ceux qui le souhaitent.",
           ],

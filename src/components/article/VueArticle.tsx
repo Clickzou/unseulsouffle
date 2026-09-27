@@ -59,9 +59,17 @@ function schema(article: Article, auteur: (typeof equipe)[number] | undefined) {
         datePublished: article.datePublication,
         dateModified: article.dateMaj ?? article.datePublication,
         keywords: [article.motCle, ...article.motsClesSecondaires].join(", "),
+        // Couverture : requise pour les résultats enrichis d'article.
+        image: `${SITE_URL}${couverture(article).src}`,
         // Auteur : une personne réelle, jamais la marque (master § 2).
         author: auteur
-          ? { "@type": "Person", name: auteur.nom, jobTitle: auteur.expertise, url: auteurUrl }
+          ? {
+              "@type": "Person",
+              name: auteur.nom,
+              jobTitle: auteur.expertise,
+              url: auteurUrl,
+              sameAs: auteur.linkedin ? [auteur.linkedin] : undefined,
+            }
           : undefined,
         publisher: { "@id": `${SITE_URL}/#organization` },
         isPartOf: { "@id": `${SITE_URL}/#website` },

@@ -228,7 +228,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une ligne de trésorerie se négocie quand les comptes sont bons et le plan de trésorerie clair. Demandée en urgence, avec un solde déjà négatif, elle coûte plus cher ou n'est pas accordée. Présenter chaque année à votre banquier le budget et le point bas prévu fait partie de la gestion de trésorerie, au même titre que la relance des clients.",
+            "Une ligne de trésorerie se négocie quand les comptes sont bons et le plan de trésorerie clair. Demandée en urgence, avec un solde déjà négatif, elle coûte plus cher ou n'est pas accordée. Présenter chaque année à votre banquier le [budget prévisionnel de l'année](/infos-utiles/budget-previsionnel/) et le point bas prévu fait partie de la gestion de trésorerie, au même titre que la relance des clients.",
         },
         { type: "h3", texte: "Ne pas financer du long avec du court" },
         {

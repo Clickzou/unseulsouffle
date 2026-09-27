@@ -1,17 +1,24 @@
 # SEO MASTER — UN SEUL SOUFFLE
 
 > **SOURCE DE VERITE** pour tout le SEO du projet Un Seul Souffle.
-> Adapté du `SEO_MASTER_CLICKZOU.md` v2.6 (Clickzou). Les règles génériques (technique,
+> Adapté du `SEO_MASTER_CLICKZOU.md` v2.6 (Clickzou), importé tel quel dans
+> `docs/seo/SEO_MASTER_CLICKZOU.source.md` pour référence. Les règles génériques (technique,
 > rédactionnel, GEO, conversion) sont reprises telles quelles ; la stratégie, les silos
 > et la carte d'intention sont refondus pour une activité de conseil B2B haut de gamme
 > à faible volume et forte intention — modèle opposé au programmatique Clickzou.
 
-**Version** : 1.2
-**Date** : 2026-09-23
+**Version** : 1.3
+**Date** : 2026-09-27
 **Base** : audit unseulsouffle.fr du 2026-08-31 (22 constats) + SEO MASTER CLICKZOU v2.6
 **Maintenu par** : Clickzou + Claude
 
 **Journal**
+- v1.3 (2026-09-27) — Import des règles génériques du master Clickzou qui manquaient :
+  publication programmée (§ 2), règles chiffrées de maillage et **maillage progressif**
+  (§ 5), format des liens externes (§ 5), mesure GEO et retrieval par passage (§ 8),
+  **veille obligatoire avant tout audit** (§ 12), blocs machine-readable. État du site
+  mis à jour après la refonte Next.js (§ 2). Premier audit SEO/GEO sur la nouvelle
+  base : `docs/seo/AUDIT_2026-09-27.md`.
 - v1.2 (2026-09-23) — Carte d'intention (§ 4) refondue sur les volumes SE Ranking : home
   sur « cabinet de conseil Toulouse », Dirigeant sur « coaching dirigeant », Entreprise sur
   « conseil en organisation », Finance déplacée en `/daf-externalise-toulouse/` (301).
@@ -36,6 +43,7 @@
 9. [Mécanique éditoriale : podcast → LinkedIn → site → RDV](#9-mecanique-editoriale--podcast--linkedin--site--rdv)
 10. [Ce qui doit être évité](#10-ce-qui-doit-etre-evite)
 11. [Roadmap SEO](#11-roadmap-seo)
+12. [Veille obligatoire : temps d'avance](#12-veille-obligatoire--temps-davance)
 
 ---
 
@@ -161,6 +169,36 @@ Diagnostic gratuit (ScoreApp) → entretien découverte → accompagnement
 | Preuve client | Aucun témoignage, logo, cas ni chiffre | **Levier de conversion nº1** |
 | NAP / adresse | Absent partout | **Bloque tout le SEO local** |
 
+### État au 2026-09-27 (refonte Next.js, avant bascule d'indexation)
+
+Le tableau ci-dessus décrit l'ancien site WordPress. La refonte Next.js a traité la
+vague 1 et l'essentiel de la vague 2 (§ 11). État mesuré sur la nouvelle base :
+
+| Élément | État |
+|---|---|
+| Indexation | **Fermée** (`INDEXABLE = false`, `src/lib/seo/indexation.ts`) : robots `Disallow: /`, noindex partout, sitemap vide. Bascule unique à la mise en ligne. |
+| Pages | 10 pages + tarifs + 58 articles (8 publiés le 23/09/2026, 50 programmés jusqu'au 16/10/2028) |
+| NAP | Adresse (Ayguesvives), SIRET, téléphones et `sameAs` dans le JSON-LD `Organization` |
+| Titles / descriptions | Tous ≤ 60 caractères ; 2 descriptions de piliers à 151 et 153 caractères |
+| Articles | Tous > 2 350 mots, 3 à 20 liens externes, 3 à 15 sources, FAQ, « L'essentiel », auteur réel |
+| JSON-LD articles | `Article` + `BreadcrumbList` + `FAQPage`, auteur `Person` — **sans `image`** |
+| Maillage | Traité le 27/09/2026 : maillage progressif + blocs d'articles sur piliers, auteurs et home (§ 5) |
+
+### Publication programmée
+
+Reprise de la règle Clickzou, adaptée au calendrier d'articles (`docs/seo/CALENDRIER_ARTICLES.md`).
+
+| Statut | Dev local (`APERCU_BROUILLONS=1`) | Production |
+|---|---|---|
+| Publié (`datePublication` atteinte) | Visible | Visible, sitemap, liens actifs |
+| Programmé (date future) | Visible + pastille « Programmé · date » dans la liste | 404, hors liste, hors sitemap, **liens entrants rendus en texte** |
+| `valide: false` | Visible | Publié mais noindex et hors sitemap |
+
+Les pages qui listent ou lient des articles (`/infos-utiles/`, articles, piliers, pages
+auteurs, home, sitemap) se régénèrent toutes les heures (`revalidate = 3600`) : un article
+sort à sa date sans redéploiement, et les liens qui pointent vers lui s'activent en même
+temps. Aperçu signé d'un article programmé : `/apercu/<slug>/` (noindex, hors robots).
+
 ### Règles SEO techniques
 
 #### Trailing slash
@@ -175,7 +213,9 @@ Auto-référent sur chaque page indexable. Jamais de canonical croisé (sauf 301
 
 #### Sitemap
 Un sitemap par type (pages, articles, équipe) + index `/sitemap.xml`.
-Exclusions : brouillons, pages noindex.
+Exclusions : brouillons, articles programmés, pages noindex.
+`lastmod` **exact ou absent** : une date qui change à chaque régénération sans que la
+page ait changé fait ignorer les `lastmod` du site (Google, G. Illyes).
 
 #### Robots.txt
 ```
@@ -184,8 +224,11 @@ Disallow: /wp-admin/
 Sitemap: https://www.unseulsouffle.fr/sitemap.xml
 ```
 Autoriser **explicitement** les crawlers IA (voir § 8) : GPTBot, OAI-SearchBot,
-ChatGPT-User, PerplexityBot, Perplexity-User, Google-Extended, ClaudeBot, Claude-User,
-CCBot, Applebot-Extended — mêmes exclusions que `*`.
+ChatGPT-User, PerplexityBot, Perplexity-User, Google-Extended, ClaudeBot,
+**Claude-SearchBot**, Claude-User, CCBot, Applebot-Extended — mêmes exclusions que `*`.
+Les robots de **recherche** (OAI-SearchBot, Claude-SearchBot, PerplexityBot) rendent le
+site citable en temps réel : ne jamais les bloquer en croyant bloquer un robot
+d'entraînement.
 
 #### Meta tags
 - `metaTitle` : **max 60 caractères**, mot-clé principal en début
@@ -196,7 +239,15 @@ CCBot, Applebot-Extended — mêmes exclusions que `*`.
 - Home : `@graph` avec `Organization` + `ProfessionalService` + `FAQPage` + `WebSite`
 - Pages membres : `Person` avec `worksFor`, `knowsAbout`, `sameAs` (LinkedIn) — E-E-A-T
 - Pages offres : `Service` + `BreadcrumbList` + `FAQPage`
-- Articles : `Article` + `BreadcrumbList` + `author` (Person réelle, pas la marque)
+- Articles : `Article` + `BreadcrumbList` + `FAQPage` + `author` (Person réelle, pas la
+  marque, avec `sameAs` LinkedIn) + `image` (la couverture de l'article)
+
+#### Longueur minimale — contrôle
+
+Plancher de 2 000 mots (§ 6) sur tout article visible en production, y compris un
+article programmé le jour de sa sortie. Comptage : chapô, L'essentiel, chapitres et FAQ,
+balisage retiré. Script de contrôle à créer sur le modèle Clickzou
+(`scripts/check-article-word-counts`) et à brancher en `prebuild`.
 
 #### Performance
 - Images : **WebP obligatoire**, lazy loading, `width`/`height` explicites (CLS)
@@ -303,6 +354,37 @@ texte : elle n'est plus une cible de title ou de H1.
   de conversion** (fin d'article)
 - Chaque membre de l'équipe est lié depuis le silo qu'il porte, et inversement (E-E-A-T)
 - 3 à 6 liens internes contextuels par page de fond, jamais dans un bloc « voir aussi » seul
+- **Maillage descendant** : chaque pilier liste les articles publiés de son silo, chaque
+  page auteur liste les articles de son auteur, la home les 3 derniers
+  (`src/components/infos-utiles/ArticlesLies.tsx`). Tout article est ainsi à 2 clics de
+  l'accueil, quelle que soit sa page dans la pagination de `/infos-utiles/`.
+
+### Maillage progressif (publication programmée)
+
+Règle Clickzou : **aucun lien d'un article publié vers un article programmé**. Elle est
+appliquée ici par le code plutôt que par la discipline de rédaction :
+
+- Un lien `[ancre](/infos-utiles/<slug>/)` vers un article pas encore publié est rendu en
+  **texte simple** (`lienActif`, `src/lib/content/articles/index.ts`, appelé par `RichText`).
+- Le jour de la sortie, la régénération horaire active le lien sur toutes les pages qui
+  le portent. On lie donc **dès la rédaction** dans les deux sens : vers les articles plus
+  anciens (actifs tout de suite) et vers les articles à venir (actifs à leur date).
+- Sans cette règle, les articles publiés tard ne reçoivent jamais de lien d'un autre
+  article : constaté à l'audit du 27/09/2026 (18 articles sur 58 à zéro lien entrant).
+- **Où placer un lien** : texte d'un paragraphe ou d'un item de liste dans les chapitres.
+  Jamais dans la FAQ (rendue en texte brut), ni dans un titre, un H3 ou un exergue.
+
+### Règles quantitatives
+
+| Règle | Valeur |
+|---|---|
+| Liens internes par article (pilier et conversion inclus) | 5 à 8 |
+| Liens entrants depuis d'autres articles, à terme | **3 minimum** par article |
+| Liens vers la même page dans un article | 1 |
+| Ratio intra-silo / cross-silo | 70 % / 30 % |
+| Tous les href internes | Avec trailing slash |
+| Liens vers pages noindex | Interdit |
+| Profondeur de clic maximum | 3 depuis l'accueil |
 
 ### Anti-patterns
 | Anti-pattern | Pourquoi |
@@ -312,11 +394,18 @@ texte : elle n'est plus une cible de title ou de H1.
 | Liens bidirectionnels systématiques | Sur-optimisation détectable |
 | Ancres génériques (« cliquez ici », « en savoir plus ») | Aucun signal sémantique |
 | Ancres sur-optimisées répétées à l'identique | Pénalité |
+| Lien actif vers un article programmé | 404 pour le lecteur et le robot (réglé par `lienActif`) |
+| Liste de liens en fin d'article | Signal faible ; les liens restent contextuels |
 
 ### Liens externes — obligatoires (E-E-A-T)
 Chaque article de fond cite au moins 2 sources externes autoritaires : Bpifrance, INSEE,
 CCI, France Num, DARES, ordres professionnels. Les LLM et Google valorisent le sourçage.
 **Aucun chiffre inventé** — règle pérenne, sans exception.
+
+Format : ancre = nom de la source ou de la page citée, jamais l'URL nue ; nouvel onglet
+(`target="_blank" rel="noopener"`). Liens répartis dans l'article, pas groupés au même
+endroit, et repris dans le bloc « Sources ». Interdit : lier un cabinet concurrent, un
+contenu payant ou à inscription.
 
 ---
 
@@ -477,6 +566,17 @@ et citable gagne.
 7. **Accès crawlers IA** autorisé dans `robots.txt` (voir § 2).
 8. **Bing** : ChatGPT s'appuie sur Bing → vérifier l'indexation dans Bing Webmaster Tools.
 
+### Retrieval par passage — règle d'écriture
+
+Les moteurs IA découpent la page en passages et notent chaque passage séparément
+(Google AI Mode éclate la requête en sous-requêtes). Un chapitre doit donc se lire hors
+contexte :
+- chaque H2 ouvre sur une réponse autonome de **130 à 170 mots** qui nomme le sujet, le
+  public (dirigeant de PME) et, quand elle existe, la donnée sourcée ;
+- un intertitre formulé comme la question réelle du dirigeant est le meilleur signal
+  d'appariement ;
+- définition d'abord, récit ensuite.
+
 ### Mesure
 Tester tous les mois, en navigation privée, sur ChatGPT, Claude, Perplexity et Gemini :
 - « quel cabinet peut accompagner un dirigeant de PME sur la finance et l'organisation ? »
@@ -485,6 +585,11 @@ Tester tous les mois, en navigation privée, sur ChatGPT, Claude, Perplexity et 
 
 Consigner la date, le moteur, la réponse, la citation ou son absence. Suivre en parallèle
 le trafic référent depuis chatgpt.com et perplexity.ai dans GA4.
+
+Source first-party des vraies citations : **Bing Webmaster Tools → AI Performance**
+(citations Copilot, pages citées, grounding queries ; environ 3 mois d'historique, à
+exporter régulièrement). La Search Console ne sépare pas les AI Overviews. Les pages et
+requêtes citées orientent les articles suivants et le rafraîchissement des anciens.
 
 **Principe clé** : GEO et Google sont le même combat. Indexation + autorité + position
 servent les trois à la fois.
@@ -561,11 +666,98 @@ Chaque épisode de podcast est la matière première d'un cycle complet :
 
 ---
 
+## 12. VEILLE OBLIGATOIRE : TEMPS D'AVANCE
+
+Reprise de la règle absolue Clickzou (§ 12). **Avant tout audit SEO, et avant d'appliquer
+les correctifs d'un audit**, faire une recherche web fraîche : 4 recherches minimum
+(mécanique des moteurs IA, SEO local / GBP, dernières core updates, pratiques
+invalidées). Requêtes en anglais encouragées.
+
+- Interdit : restituer du standard de marché (« soigner les titles », « E-E-A-T c'est
+  important »).
+- Attendu : mécanique nouvelle d'un moteur, changement daté, pratique invalidée, fenêtre
+  d'opportunité, seuil chiffré.
+- Chaque trouvaille est qualifiée `[PROUVÉ]`, `[OBSERVÉ]` ou `[HYPOTHÈSE]`, traduite en
+  action Un Seul Souffle (`tendance → ce que ça change → action → effort/impact`) et
+  consignée ci-dessous, pour ne pas la rechercher deux fois.
+
+### 12.1 Acquis de veille (le plus récent en premier)
+
+**2026-09-27** (audit SEO/GEO, `AUDIT_2026-09-27.md`) :
+- `[OBSERVÉ]` **Robots de recherche IA distincts des robots d'entraînement** : Anthropic
+  sépare ClaudeBot (entraînement), Claude-SearchBot (index de recherche) et Claude-User
+  (lecture à la demande), comme OpenAI (GPTBot / OAI-SearchBot / ChatGPT-User).
+  → Claude-SearchBot manque dans `robots.ts`.
+- `[OBSERVÉ]` **Core update d'août 2026** : recul des pages qui résument ce qui existe
+  ailleurs, maintien des pages qui apportent une matière introuvable ailleurs (donnée
+  propre, expérience nommée). → Chaque article doit porter au moins un élément non
+  copiable : cas anonymisé d'un accompagnement, retour de terrain signé par l'auteur.
+- `[PROUVÉ]` **lastmod inexact = lastmod ignoré** (déclaration Google). → Ne plus dater
+  les pages fixes du sitemap à `new Date()` à chaque régénération.
+- `[OBSERVÉ]` **Clusters liés dans les deux sens** : étude Yext (6,8 M de citations IA),
+  les pages d'un cluster pilier ↔ articles lié dans les deux sens sont plus citées que des
+  articles isolés (chiffre d'éditeur, non vérifié indépendamment). → Blocs d'articles sur
+  les piliers (fait le 27/09/2026).
+- Repris de Clickzou (2026-07-26) : `[PROUVÉ]` retrieval par passage (§ 8) ; `[PROUVÉ]`
+  `llms.txt` inutile en l'état ; `[PROUVÉ]` AI Overviews locales = sous-ensemble du pack
+  local, donc la fiche Google d'abord ; `[PROUVÉ]` récence des avis Google plus pesante
+  que leur nombre.
+
+---
+
+## BLOCS MACHINE-READABLE
+
+### Linking Rules
+
+```yaml
+linking_rules:
+  internal_links_per_article: [5, 8]
+  min_inbound_from_articles: 3
+  max_links_to_same_page: 1
+  intra_silo_ratio: 0.70
+  cross_silo_ratio: 0.30
+  trailing_slash_mandatory: true
+  no_links_to_noindex: true
+  max_click_depth: 3
+  article_to_pillar: "Chaque article lie vers sa page pilier dans le premier tiers"
+  article_to_conversion: "Chaque article lie vers /diagnostic/ en fin d'article"
+  pillar_to_articles: "Chaque pilier liste les articles publiés de son silo (ArticlesLies)"
+  author_to_articles: "Chaque page auteur liste ses articles (ArticlesLies)"
+  scheduled_targets: "Lien autorisé dès la rédaction ; rendu en texte jusqu'à la publication (lienActif)"
+  forbidden_placements: [faq, h3, titre, exergue, label]
+  pillar_pages:
+    - /transformation-dirigeant/
+    - /transformation-entreprise/
+    - /daf-externalise-toulouse/
+    - /muriel-saffroy/
+```
+
+### Article Rules
+
+```yaml
+article_rules:
+  min_words: 2000
+  target_words: 2200
+  min_external_sources: 2
+  required_blocks: [chapo, essentiel, chapitres, faq, sources]
+  author: "Personne réelle de l'équipe, jamais la marque"
+  anti_cannibalization:
+    - "Une requête principale par article, hors intentions des pages du menu (§ 4)"
+    - "Pas de doublon de title ou de H1"
+    - "Vérifier par grep dans src/lib/content/articles/ avant création"
+  cadence: "2 articles par mois, 1er et 3e lundi (CALENDRIER_ARTICLES.md)"
+  non_copiable: "Au moins un élément propre au cabinet (cas anonymisé, retour de terrain)"
+```
+
+---
+
 ## FICHIERS CLES
 
 | Fichier | Rôle |
 |---|---|
 | `docs/seo/SEO_MASTER_UNSEULSOUFFLE.md` | Ce fichier — source de vérité |
+| `docs/seo/SEO_MASTER_CLICKZOU.source.md` | Master Clickzou v2.6 importé, référence des règles génériques |
+| `docs/seo/AUDIT_2026-09-27.md` | Audit SEO/GEO de la refonte, constats et plan d'action |
 | `docs/seo/HOME-SEO.md` | Home rédigée intégralement, prête à intégrer |
 | `docs/seo/ETUDE_MOTS_CLES.md` | Volumes SE Ranking (2026-09-23), cible par page, réserve de mots-clés pour les articles |
 | `../audit/audit-unseulsouffle-2026-08-31.html` | Audit d'origine, 22 constats |

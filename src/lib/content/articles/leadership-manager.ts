@@ -193,7 +193,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Si le rôle de manager se résume à absorber la pression d'en haut et les demandes d'en bas, sans marge de décision, il use ceux qui l'occupent et décourage ceux qui pourraient le prendre. Le leadership managérial n'est pas seulement une qualité à développer chez vos managers : c'est une condition pour que vous puissiez encore en recruter ou en promouvoir. Si un manager montre des signes d'épuisement durable, la première porte reste le médecin du travail ou le médecin traitant, pas un programme de développement.",
+            "Si le rôle de manager se résume à absorber la pression d'en haut et les demandes d'en bas, sans marge de décision, il use ceux qui l'occupent et décourage ceux qui pourraient le prendre. Il porte aussi une [charge émotionnelle souvent invisible](/infos-utiles/surcharge-emotionnelle/) : tensions, annonces difficiles, inquiétudes des équipes. Le leadership managérial n'est pas seulement une qualité à développer chez vos managers : c'est une condition pour que vous puissiez encore en recruter ou en promouvoir. Si un manager montre des signes d'épuisement durable, la première porte reste le médecin du travail ou le médecin traitant, pas un programme de développement.",
         },
       ],
     },

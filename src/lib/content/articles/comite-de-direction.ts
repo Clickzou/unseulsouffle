@@ -175,7 +175,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le CODIR n'est pas l'endroit où l'on règle un retard de livraison ou le planning de la semaine. Ces sujets appartiennent aux managers et à leurs équipes. Quand ils envahissent l'ordre du jour, c'est le signe que la délégation ne fonctionne pas en dessous, et que le comité compense un défaut d'organisation au lieu de la piloter.",
+            "Le CODIR n'est pas l'endroit où l'on règle un retard de livraison ou le planning de la semaine. Ces sujets appartiennent aux managers et à leurs équipes. Quand ils envahissent l'ordre du jour, c'est le signe que la délégation ne fonctionne pas en dessous, et que le comité compense un défaut d'organisation au lieu de la piloter. Un retard de livraison qui revient chaque mois signale plutôt [un processus métier mal tenu](/infos-utiles/processus-metier/), qui se corrige au niveau de son responsable.",
         },
         { type: "h3", texte: "Qui décide, à la fin ?" },
         {

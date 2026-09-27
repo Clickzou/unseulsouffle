@@ -201,7 +201,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le BFR normatif répond à une question de dirigeant : si mon chiffre d'affaires augmente de 20 %, combien de trésorerie cette croissance va-t-elle consommer ? La méthode consiste à exprimer chaque poste du BFR en jours de chiffre d'affaires HT, à partir de délais jugés normaux pour l'entreprise, puis à appliquer ce nombre de jours au chiffre d'affaires prévu.",
+            "Le BFR normatif répond à une question de dirigeant : si mon chiffre d'affaires augmente de 20 %, combien de trésorerie cette croissance va-t-elle consommer ? La méthode consiste à exprimer chaque poste du BFR en jours de chiffre d'affaires HT, à partir de délais jugés normaux pour l'entreprise, puis à appliquer ce nombre de jours au chiffre d'affaires prévu. Le même raisonnement vaut pour une [croissance par rachat d'entreprise](/infos-utiles/croissance-externe/) : le BFR de la société reprise se finance en plus du prix payé.",
         },
         { type: "h3", texte: "La méthode en quatre étapes" },
         {

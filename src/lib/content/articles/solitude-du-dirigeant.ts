@@ -57,7 +57,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Vous ne pouvez pas partager vos doutes sur un licenciement avec l'équipe concernée. Vous ne pouvez pas dire à vos managers que la trésorerie vous inquiète sans créer l'inquiétude que vous voulez éviter. Votre conjoint entend la fatigue, pas le dossier. Au bout du compte, la décision se prend seul, tard, et souvent sans l'avoir vraiment posée.",
+            "Vous ne pouvez pas partager vos doutes sur un licenciement avec l'équipe concernée. Vous ne pouvez pas dire à vos managers que la trésorerie vous inquiète sans créer l'inquiétude que vous voulez éviter. Votre conjoint entend la fatigue, pas le dossier. Au bout du compte, la décision se prend seul, tard, et souvent sans l'avoir vraiment posée. Des [outils simples pour structurer une décision](/infos-utiles/outils-d-aide-a-la-decision/) aident à la poser, mais ils ne remplacent pas un interlocuteur.",
         },
         {
           type: "h3",
@@ -303,7 +303,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La plupart des dirigeants délèguent des tâches et gardent les décisions. La charge mentale reste donc entière. Déléguer vraiment, c'est donner à un manager le droit explicite de trancher dans un périmètre, y compris le droit de se tromper. Quand le problème est un poste manquant, par exemple la finance, un [DAF externe](/infos-utiles/daf-externe-ou-expert-comptable/) ou une [direction à temps partagé](/infos-utiles/manager-de-transition-ou-direction-a-temps-partage/) peut reprendre un pan entier d'arbitrages que vous portez aujourd'hui seul.",
+            "La plupart des dirigeants délèguent des tâches et gardent les décisions. La charge mentale reste donc entière. Déléguer vraiment, c'est donner à un manager le droit explicite de trancher dans un périmètre, y compris le droit de se tromper. Cela suppose des managers capables de [manager leur équipe au quotidien](/infos-utiles/manager-une-equipe/) sans vous renvoyer chaque arbitrage. Quand le problème est un poste manquant, par exemple la finance, un [DAF externe](/infos-utiles/daf-externe-ou-expert-comptable/) ou une [direction à temps partagé](/infos-utiles/manager-de-transition-ou-direction-a-temps-partage/) peut reprendre un pan entier d'arbitrages que vous portez aujourd'hui seul.",
         },
         {
           type: "h3",

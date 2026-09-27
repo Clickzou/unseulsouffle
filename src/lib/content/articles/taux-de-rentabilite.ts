@@ -289,7 +289,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "La plupart des dirigeants découvrent leurs taux de rentabilité à la clôture, quand il est trop tard pour agir sur l'exercice. Les suivre en cours d'année suppose deux choses : des situations intermédiaires fiables, produites avec votre expert-comptable, et quelques indicateurs choisis, lus chaque mois ou chaque trimestre.",
+            "La plupart des dirigeants découvrent leurs taux de rentabilité à la clôture, quand il est trop tard pour agir sur l'exercice. Les suivre en cours d'année suppose deux choses : des situations intermédiaires fiables, produites avec votre expert-comptable, et quelques indicateurs choisis, lus chaque mois ou chaque trimestre. Comparés à un [budget prévisionnel chiffré](/infos-utiles/budget-previsionnel/), ils montrent aussitôt si l'exercice tient sa trajectoire.",
         },
         { type: "h3", texte: "Quels indicateurs retenir" },
         {

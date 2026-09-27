@@ -150,7 +150,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une réorganisation industrielle, l'intégration d'une entreprise rachetée, le déploiement d'un nouvel outil de gestion : certains projets demandent un chef de projet dédié pendant plusieurs mois. Si personne en interne n'a ni le temps ni l'expérience de ce type de chantier, un manager de transition peut le piloter et le transmettre.",
+            "Une réorganisation industrielle, l'intégration d'une entreprise rachetée, le déploiement d'un nouvel outil de gestion : certains projets demandent [un chef de projet dédié](/infos-utiles/management-de-projet/) pendant plusieurs mois. Si personne en interne n'a ni le temps ni l'expérience de ce type de chantier, un manager de transition peut le piloter et le transmettre.",
         },
         {
           type: "encadre",
@@ -204,7 +204,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Installer un manager de transition dans une organisation qui dysfonctionne produit souvent le même résultat : tant qu'il est là, ça tient, parce qu'il absorbe lui-même les arbitrages. À son départ, le fonctionnement antérieur revient. Le problème n'était pas l'absence d'un bon manager, mais la manière dont les rôles et les décisions sont répartis.",
+            "Installer un manager de transition dans une organisation qui dysfonctionne produit souvent le même résultat : tant qu'il est là, ça tient, parce qu'il absorbe lui-même les arbitrages. À son départ, le fonctionnement antérieur revient. Le problème n'était pas l'absence d'un bon manager, mais la manière dont les rôles et les décisions sont répartis. Ce qui fait tenir un correctif, ce sont des [rituels d'amélioration continue](/infos-utiles/outils-amelioration-continue/) que l'équipe fait vivre elle-même, sans attendre qu'un intervenant les anime.",
         },
         {
           type: "p",

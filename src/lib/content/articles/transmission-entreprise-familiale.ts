@@ -242,7 +242,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Un enfant ou un salarié qui rachète devra convaincre une banque. Des comptes clairs, un prévisionnel crédible et une trésorerie sous contrôle rendent son dossier plus solide. En préparant l'entreprise, vous préparez aussi le financement de votre successeur.",
+            "Un enfant ou un salarié qui rachète devra convaincre une banque. Des comptes clairs, un prévisionnel crédible et une trésorerie sous contrôle rendent son dossier plus solide. En préparant l'entreprise, vous préparez aussi le financement de votre successeur. Son parcours suivra les étapes de toute [reprise d'entreprise](/infos-utiles/reprendre-une-entreprise/) : lecture des comptes, prix, montage du financement.",
         },
       ],
     },

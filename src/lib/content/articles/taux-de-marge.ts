@@ -231,7 +231,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Le taux moyen de 42,9 % est flatteur. Le client C représente pourtant 20 % du chiffre d'affaires et 10 % seulement de la marge. La question n'est pas forcément de s'en séparer : c'est de renégocier, de revoir le service rendu, ou d'accepter la situation en connaissance de cause.",
+            "Le taux moyen de 42,9 % est flatteur. Le client C représente pourtant 20 % du chiffre d'affaires et 10 % seulement de la marge. La question n'est pas forcément de s'en séparer : c'est de renégocier, de revoir le service rendu, ou d'accepter la situation en connaissance de cause. La même lecture sert lors d'une [transmission au sein de la famille](/infos-utiles/transmission-entreprise-familiale/) : le successeur doit savoir quels clients portent réellement la marge.",
         },
         {
           type: "p",
@@ -287,7 +287,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "Une entreprise peut améliorer sa marge et manquer de trésorerie. Une marge encaissée à 60 jours, sur des marchandises payées comptant et stockées trois mois, mobilise de l'argent avant d'en rapporter : c'est la logique détaillée dans notre article sur le [calcul du BFR](/infos-utiles/calcul-bfr/).",
+            "Une entreprise peut améliorer sa marge et manquer de trésorerie. Une marge encaissée à 60 jours, sur des marchandises payées comptant et stockées trois mois, mobilise de l'argent avant d'en rapporter : c'est la logique détaillée dans notre article sur le [calcul du BFR](/infos-utiles/calcul-bfr/). Marge et trésorerie se suivent donc ensemble, ce qui suppose de [piloter la trésorerie semaine après semaine](/infos-utiles/gestion-de-tresorerie/).",
         },
         { type: "h3", texte: "Qui porte ce suivi" },
         {

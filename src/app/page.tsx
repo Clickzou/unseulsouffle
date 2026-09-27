@@ -10,6 +10,8 @@ import { Parcours } from "@/components/Parcours";
 import { Preuve } from "@/components/Preuve";
 import { PourQui } from "@/components/PourQui";
 import { FAQ } from "@/components/FAQ";
+import { ArticlesLies } from "@/components/infos-utiles/ArticlesLies";
+import { articlesTries } from "@/lib/content/articles";
 import { CTAFinal } from "@/components/CTAFinal";
 import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
@@ -27,6 +29,9 @@ import { ROBOTS } from "@/lib/seo/indexation";
  * signal H1. Ses mentions de services pointent en lien à ancre exacte vers la page
  * dédiée, jamais en texte brut — sinon elle cannibalise ses propres pages piliers.
  */
+/** Derniers articles : la home se régénère avec la publication programmée. */
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   // 56 / 60 caractères
   title: "Cabinet de conseil pour PME à Toulouse | Un Seul Souffle",
@@ -76,6 +81,11 @@ export default function HomePage() {
         <Reveal>
           <PourQui />
         </Reveal>
+        <ArticlesLies
+          articles={articlesTries().slice(0, 3)}
+          label="Infos utiles"
+          titre="Les derniers articles du cabinet"
+        />
         <Reveal>
           <FAQ />
         </Reveal>
