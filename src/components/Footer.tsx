@@ -29,6 +29,7 @@ const COLONNES = [
       { href: "/transformation-dirigeant/", label: "Coaching dirigeant" },
       { href: "/transformation-entreprise/", label: "Conseil en organisation" },
       { href: "/daf-externalise-toulouse/", label: "DAF externalisé" },
+      { href: "/conseil-strategie-commerciale-toulouse/", label: "Stratégie commerciale" },
       { href: "/diagnostic/", label: "Diagnostic gratuit" },
     ],
   },

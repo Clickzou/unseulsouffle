@@ -238,7 +238,14 @@ function CartePartenaire({ membre }: { membre: Membre }) {
         <p className="text-[14.5px] leading-relaxed">{membre.bio}</p>
         <div aria-hidden="true" className="flex-1" />
         <div className="mt-5 flex items-center justify-between gap-3 border-t border-rule-2 pt-4">
-          <span className="text-[13px] text-muted">{pilier?.nom}</span>
+          {/* E-E-A-T (master § 5) : le référent est lié à sa page d'offre, et inversement. */}
+          {pilier?.page ? (
+            <Link href={pilier.page.href} className="text-[13px] font-medium hover:underline" style={{ color: teinte.texte }}>
+              {pilier.page.ancre} →
+            </Link>
+          ) : (
+            <span className="text-[13px] text-muted">{pilier?.nom}</span>
+          )}
           <LienLinkedIn membre={membre} />
         </div>
       </div>

@@ -81,7 +81,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "C'est ce travail de traduction que nous menons au sein de notre [cabinet de conseil à Toulouse](/) avec les PME et ETI d'Occitanie : non pas écrire le plan à votre place, mais le construire avec ceux qui l'exécuteront, pour qu'il soit encore utilisé en juin.",
+            "C'est ce travail de traduction que nous menons en [accompagnement commercial](/conseil-strategie-commerciale-toulouse/) avec les PME et ETI d'Occitanie : non pas écrire le plan à votre place, mais le construire avec ceux qui l'exécuteront, pour qu'il soit encore utilisé en juin.",
         },
       ],
     },
@@ -383,7 +383,7 @@ export const article: Article = {
   auteur: "nicolas-vimini",
   datePublication: "2027-07-19",
   accent: "commercial",
-  pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
+  pilier: { href: "/conseil-strategie-commerciale-toulouse/", ancre: "conseil en stratégie commerciale" },
 
   valide: true,
 };

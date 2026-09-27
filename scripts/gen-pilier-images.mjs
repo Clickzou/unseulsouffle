@@ -44,6 +44,11 @@ const IMAGES = {
     "A manager and a team leader walking side by side through the floor of a well-organized mid-sized French workshop, " +
     "seen from behind, a clear gap between them, one pointing towards a production area with neatly marked flows and shelves. " +
     "Clean industrial space, natural light from high windows, orderly and calm.",
+  commercial:
+    "Close-up at table height of a business meeting in the small showroom of a French industrial SME: only the forearms and " +
+    "hands of two people across a light wooden table, one hand sliding a small manufactured metal part towards the other, " +
+    "a closed plain grey catalogue and a pen beside it. No heads, no faces, no shoulders in the frame. No whiteboard, no " +
+    "screen, no paper with writing. Blurred shelves with products in the background, natural light, confident atmosphere.",
   finance:
     "A person seen from behind sitting at a clean desk in a bright office, looking at a laptop whose screen is turned away from " +
     "the camera, a closed leather folder and a plain white cup beside it. Through the large window, the warm red brick rooftops " +

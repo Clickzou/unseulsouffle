@@ -13,6 +13,8 @@
 **Maintenu par** : Clickzou + Claude
 
 **Journal**
+- v1.3.1 (2026-09-27) — Pilier Silo 6 créé : `/conseil-strategie-commerciale-toulouse/`
+  (§ 3, § 4). Les 4 articles commerciaux y sont rattachés.
 - v1.3 (2026-09-27) — Import des règles génériques du master Clickzou qui manquaient :
   publication programmée (§ 2), règles chiffrées de maillage et **maillage progressif**
   (§ 5), format des liens externes (§ 5), mesure GEO et retrieval par passage (§ 8),
@@ -246,8 +248,10 @@ d'entraînement.
 
 Plancher de 2 000 mots (§ 6) sur tout article visible en production, y compris un
 article programmé le jour de sa sortie. Comptage : chapô, L'essentiel, chapitres et FAQ,
-balisage retiré. Script de contrôle à créer sur le modèle Clickzou
-(`scripts/check-article-word-counts`) et à brancher en `prebuild`.
+balisage retiré. Contrôle : `scripts/check-article-word-counts.mjs`, branché en `prebuild`
+(le build échoue sous le plancher) ; `npm run words:check` affiche tous les articles.
+Les articles **programmés** sont contrôlés aussi : ils sortent sans redéploiement, ce
+build est donc le dernier contrôle qu'ils verront.
 
 #### Performance
 - Images : **WebP obligatoire**, lazy loading, `width`/`height` explicites (CLS)
@@ -292,9 +296,14 @@ articles de fond qui pointent vers elle.
 - Référents : Yohan Castelar, Patrick Calvet
 
 ### Silo 6 — Stratégie commerciale
-- **Pilier** : à créer
-- Requêtes : directeur commercial à temps partagé, structurer sa stratégie commerciale
-  PME, pilotage commercial par indicateurs
+- **Pilier** : `/conseil-strategie-commerciale-toulouse/` (créé le 27/09/2026)
+- Requête propriétaire : conseil en stratégie commerciale (70, KD 9), consultant en
+  stratégie commerciale (50, KD 0)
+- Secondaires : stratégie commerciale (290), accompagnement commercial (140), audit
+  commercial (110), organisation commerciale (110), pilotage commercial (90)
+- Laissés aux articles : directeur commercial externalisé, force de vente externalisée,
+  externalisation commerciale, politique commerciale, plan d'action commercial
+- « Directeur commercial à temps partagé » : 10/mois, pas une cible
 - Référent : Nicolas Vimini
 
 ### Hiérarchie de circulation
@@ -329,7 +338,8 @@ Mise à jour du 2026-09-23 d'après les volumes SE Ranking (`docs/seo/ETUDE_MOTS
 | diagnostic d'entreprise | `/diagnostic/` |
 | coopération, intelligence collective (via articles) | page Muriel Saffroy |
 | organisation industrielle, performance production | pilier Silo 5 (à créer) |
-| stratégie commerciale externalisée | pilier Silo 6 (à créer) |
+| conseil / consultant en stratégie commerciale, audit commercial, accompagnement commercial | `/conseil-strategie-commerciale-toulouse/` |
+| directeur commercial externalisé | article `/infos-utiles/directeur-commercial-externalise/` |
 | requêtes hors menu (manager de transition, coaching d'équipe, consultant en management…) | articles `/infos-utiles/<slug>/` — voir ETUDE_MOTS_CLES.md § 3 |
 
 « Équipe de direction externalisée » (30/mois) reste la signature de marque dans le
@@ -730,6 +740,7 @@ linking_rules:
     - /transformation-entreprise/
     - /daf-externalise-toulouse/
     - /muriel-saffroy/
+    - /conseil-strategie-commerciale-toulouse/
 ```
 
 ### Article Rules

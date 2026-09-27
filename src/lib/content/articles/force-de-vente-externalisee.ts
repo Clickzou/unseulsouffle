@@ -76,7 +76,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "En tant que [cabinet de conseil à Toulouse](/) qui accompagne des PME et ETI de 10 à 250 salariés, nous voyons souvent ce choix se faire dans l'urgence, après un trimestre décevant. C'est justement le moment où il mérite d'être posé à froid.",
+            "Dans nos missions de [stratégie commerciale auprès des PME](/conseil-strategie-commerciale-toulouse/) et ETI de 10 à 250 salariés, nous voyons souvent ce choix se faire dans l'urgence, après un trimestre décevant. C'est justement le moment où il mérite d'être posé à froid.",
         },
       ],
     },
@@ -399,7 +399,7 @@ export const article: Article = {
   auteur: "nicolas-vimini",
   datePublication: "2026-12-07",
   accent: "commercial",
-  pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
+  pilier: { href: "/conseil-strategie-commerciale-toulouse/", ancre: "conseil en stratégie commerciale" },
 
   valide: true,
 };

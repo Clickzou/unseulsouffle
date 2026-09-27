@@ -26,6 +26,10 @@ const PHOTOS: Record<string, { src: string; alt: string }> = {
     src: "/images/piliers/entreprise.webp",
     alt: "Deux personnes de dos traversant un atelier de production organisé",
   },
+  commercial: {
+    src: "/images/piliers/commercial.webp",
+    alt: "Mains de deux personnes autour d'une table, une pièce usinée posée sur des documents, lors d'un rendez-vous client",
+  },
   finance: {
     src: "/images/piliers/finance.webp",
     alt: "Personne de dos à son bureau devant un ordinateur, toits de Toulouse par la fenêtre",

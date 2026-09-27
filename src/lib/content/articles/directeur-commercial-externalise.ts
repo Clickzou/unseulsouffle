@@ -75,7 +75,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "En tant que [cabinet de conseil à Toulouse](/) qui accompagne des PME et des ETI de 10 à 250 salariés, nous abordons la direction commerciale externalisée comme un chantier de structuration. Un référent unique prend le sujet en charge, sur le périmètre convenu avec vous, et pas sur le reste de l'entreprise.",
+            "En tant que cabinet de [conseil en stratégie commerciale](/conseil-strategie-commerciale-toulouse/) à Toulouse, qui accompagne des PME et des ETI de 10 à 250 salariés, nous abordons la direction commerciale externalisée comme un chantier de structuration. Un référent unique prend le sujet en charge, sur le périmètre convenu avec vous, et pas sur le reste de l'entreprise.",
         },
       ],
     },
@@ -468,6 +468,6 @@ export const article: Article = {
   auteur: "nicolas-vimini",
   datePublication: "2026-09-23",
   accent: "commercial",
-  pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
+  pilier: { href: "/conseil-strategie-commerciale-toulouse/", ancre: "conseil en stratégie commerciale" },
   valide: true,
 };

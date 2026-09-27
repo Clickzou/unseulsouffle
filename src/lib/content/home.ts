@@ -50,6 +50,8 @@ export type Pilier = {
   accent: CleAccent;
   /** Slugs de `equipe`. Le pilier production en compte deux. */
   referents: string[];
+  /** Page d'offre dédiée, quand elle existe : liée depuis la carte du référent. */
+  page?: { href: string; ancre: string };
 };
 
 export const piliers: Pilier[] = [
@@ -73,6 +75,7 @@ export const piliers: Pilier[] = [
     accent: "commercial",
     resume: "Positionnement, structuration de l'offre et pilotage de l'activité par les indicateurs.",
     referents: ["nicolas-vimini"],
+    page: { href: "/conseil-strategie-commerciale-toulouse/", ancre: "Conseil en stratégie commerciale" },
   },
   {
     n: "04",
@@ -134,6 +137,10 @@ export const blocages: Blocage[] = [
     accent: "commercial",
     texte:
       "Vision floue à trois ans, stratégie commerciale fragile, positionnement peu différenciant, risques non anticipés. L'entreprise avance à l'énergie du dirigeant plutôt qu'à celle d'un cap partagé.",
+    lien: {
+      href: "/conseil-strategie-commerciale-toulouse/",
+      label: "Conseil en stratégie commerciale",
+    },
   },
   {
     n: "03",

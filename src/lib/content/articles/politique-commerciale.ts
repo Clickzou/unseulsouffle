@@ -80,7 +80,7 @@ export const article: Article = {
         {
           type: "p",
           texte:
-            "C'est à ce troisième niveau que la plupart des PME décrochent. La stratégie est claire dans la tête du dirigeant, les objectifs sont fixés, mais rien ne relie les deux aux décisions prises chaque jour en rendez-vous. Comme [cabinet de conseil à Toulouse](/) qui travaille avec des PME et des ETI de 10 à 250 salariés, c'est souvent par ce chaînon manquant que nous abordons le sujet commercial.",
+            "C'est à ce troisième niveau que la plupart des PME décrochent. La stratégie est claire dans la tête du dirigeant, les objectifs sont fixés, mais rien ne relie les deux aux décisions prises chaque jour en rendez-vous. Comme cabinet de conseil qui [structure la stratégie commerciale](/conseil-strategie-commerciale-toulouse/) de PME et d'ETI de 10 à 250 salariés, c'est souvent par ce chaînon manquant que nous abordons le sujet commercial.",
         },
         {
           type: "tableau",
@@ -415,7 +415,7 @@ export const article: Article = {
   auteur: "nicolas-vimini",
   datePublication: "2027-03-15",
   accent: "commercial",
-  pilier: { href: "/", ancre: "cabinet de conseil à Toulouse" },
+  pilier: { href: "/conseil-strategie-commerciale-toulouse/", ancre: "conseil en stratégie commerciale" },
 
   valide: true,
 };

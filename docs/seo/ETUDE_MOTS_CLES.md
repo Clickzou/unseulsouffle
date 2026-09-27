@@ -32,6 +32,7 @@ pour un site neuf.
 | Le cabinet | cabinet de conseil en management (140, KD 20) | cabinet conseil management (40), méthode d'accompagnement, conseil PME Occitanie |
 | Dirigeant | coaching dirigeant (590, KD 9-18) | accompagnement dirigeant (320), coach de dirigeant (210), coaching professionnel toulouse (170, KD 6), coaching de dirigeant (140) |
 | Entreprise | conseil en organisation (320, KD 8) | audit organisationnel (320, KD 6), consultant en organisation (170), transformation d'entreprise (50) |
+| Stratégie commerciale (créée le 27/09/2026) | conseil en stratégie commerciale (70, KD 9) + consultant en stratégie commerciale (50, KD 0) | stratégie commerciale (290, KD 18), accompagnement commercial (140, KD 6), audit commercial (110, KD 6), organisation commerciale (110, KD 8), pilotage commercial (90, KD 12) |
 | Finance | DAF externalisé (480, KD 9) | daf temps partagé / daf en temps partagé (260), directeur financier à temps partagé (70), directeur financier externalisé (50) |
 | Diagnostic | diagnostic d'entreprise (90, KD 10) | diagnostic entreprise (140) |
 | Équipe, Contact | aucune — pages de confiance et de conversion | — |
@@ -78,6 +79,31 @@ vers son pilier et vers le diagnostic (master § 5 et § 9).
 | coaching toulouse | 480 | 12 | Intention mêlée (sport, vie personnelle) : pas une cible de page. |
 
 ---
+
+### Mesures du 27/09/2026 — silo commercial
+
+| Mot-clé | Vol. | KD | Page propriétaire |
+|---|---|---|---|
+| développement commercial | 1 500 | 83 | Aucune : trop disputé |
+| stratégie commerciale | 290 | 18 | Pilier commercial (secondaire) |
+| coaching commercial | 260 | 9 | Aucune : intention formation des vendeurs |
+| externalisation commerciale | 210 | 11 | Article force de vente externalisée |
+| plan commercial | 210 | 23 | Article plan d'action commercial |
+| accompagnement commercial | 140 | 6 | Pilier commercial |
+| consultant commercial | 140 | 8 | Pilier commercial (variante) |
+| audit commercial | 110 | 6 | Pilier commercial |
+| organisation commerciale | 110 | 8 | Pilier commercial |
+| pilotage commercial | 90 | 12 | Pilier commercial |
+| conseil en stratégie commerciale | 70 | 9 | **Pilier commercial (principale)** |
+| diagnostic commercial | 70 | 7 | Pilier commercial (variante) |
+| consultant en stratégie commerciale | 50 | 0 | **Pilier commercial (principale)** |
+| direction commerciale externalisée | 50 | 4 | Article directeur commercial externalisé |
+| directeur commercial externalisé | 50 | 5 | Article directeur commercial externalisé |
+| directeur commercial à temps partagé | 10 | 6 | — |
+
+Sans volume : stratégie commerciale pme, cabinet conseil commercial, consultant
+développement commercial, directeur commercial à temps partiel, externaliser sa
+direction commerciale.
 
 ## 4. Requêtes testées sans volume mesurable
 

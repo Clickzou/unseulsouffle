@@ -17,6 +17,7 @@ const PAGES: { path: string; priority: number }[] = [
   { path: "/transformation-dirigeant/", priority: 0.9 },
   { path: "/transformation-entreprise/", priority: 0.9 },
   { path: "/daf-externalise-toulouse/", priority: 0.8 },
+  { path: "/conseil-strategie-commerciale-toulouse/", priority: 0.8 },
   { path: "/un-seul-souffle/", priority: 0.7 },
   { path: "/notre-equipe/", priority: 0.7 },
   { path: "/diagnostic/", priority: 0.7 },
