@@ -18,7 +18,7 @@ Nous vous posons donc, pour chacun de vos articles, deux ou trois questions pré
 - **Chiffres.** Un ordre de grandeur est précieux, à condition de le présenter comme tel (« en général deux à trois mois », « dans la plupart de mes missions »). Aucun chiffre approximatif présenté comme exact.
 - **Désaccord bienvenu.** Si une idée de l'article ne correspond pas à ce que vous voyez sur le terrain, dites-le. C'est souvent la matière la plus utile.
 
-**À qui répondre** : [À COMPLÉTER avant envoi — adresse ou numéro qui recueille les réponses]
+**À qui répondre** : envoyez vos réponses à Muriel Saffroy ou à Marjorie Anglade. Elles les regroupent et les transmettent à JC Castanet (jc@clickzou.fr), qui les intègre aux articles.
 
 **Par où commencer**
 
