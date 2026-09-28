@@ -5,6 +5,7 @@ import { cheminApercu } from "@/lib/apercu";
 import { sansAnnotation } from "@/lib/content/article";
 import { articles, dateAtteinte } from "@/lib/content/articles";
 import { SITE_URL, equipe } from "@/lib/content/home";
+import { couverture } from "@/lib/content/lecture";
 
 /**
  * Liste des articles pour le tableau de bord client Clickzou (clickzou.fr/espace-client).
@@ -56,6 +57,8 @@ export async function GET(requete: Request) {
         statut: publie ? "publie" : "programme",
         url: `${SITE_URL}/infos-utiles/${a.slug}/`,
         urlActuelle: `${base}/infos-utiles/${a.slug}/`,
+        // Photo de couverture : proposée par défaut pour les posts LinkedIn de l'espace client.
+        image: `${base}${couverture(a).src}`,
         apercuUrl: publie ? null : `${base}${cheminApercu(a)}`,
         auteur: equipe.find((m) => m.slug === a.auteur)?.nom ?? a.auteur,
         motCle: sansAnnotation(a.motCle),
