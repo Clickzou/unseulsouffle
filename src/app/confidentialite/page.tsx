@@ -196,10 +196,6 @@ export default function ConfidentialitePage() {
             </Bloc>
           </div>
 
-          <p className="mt-10 max-w-prose rounded-carte border-l-2 border-amber bg-amber-wash px-5 py-4 font-mono text-[13px] leading-relaxed text-amber">
-            [Avant mise en ligne] Faire valider les durées de conservation, qui sont des durées
-            d&apos;usage.
-          </p>
         </Section>
       </main>
 

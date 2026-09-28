@@ -193,13 +193,14 @@ export function Footer({ credit = false }: { credit?: boolean }) {
           </div>
           {credit && (
             <p>
-              Refonte site internet par{" "}
+              {/* Ancre sur la prestation, pas sur la marque (demande de JC le 28/09/2026). */}
               <a
                 href="https://clickzou.fr/agence-refonte-site-internet-toulouse/"
                 className="text-body underline decoration-rule underline-offset-[3px] transition-colors hover:text-teal hover:decoration-teal"
               >
-                Clickzou
-              </a>
+                Refonte site internet
+              </a>{" "}
+              par Clickzou
             </p>
           )}
         </div>
