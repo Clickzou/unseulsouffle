@@ -11,7 +11,7 @@ import { RichText } from "@/components/ui/RichText";
 import { Shell, Label } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ACCENTS, SITE_URL, equipe } from "@/lib/content/home";
-import type { Article } from "@/lib/content/article";
+import { requetes, type Article } from "@/lib/content/article";
 import { couverture, minutesLecture, rubrique } from "@/lib/content/lecture";
 
 /**
@@ -58,7 +58,7 @@ function schema(article: Article, auteur: (typeof equipe)[number] | undefined) {
         inLanguage: "fr-FR",
         datePublished: article.datePublication,
         dateModified: article.dateMaj ?? article.datePublication,
-        keywords: [article.motCle, ...article.motsClesSecondaires].join(", "),
+        keywords: [requetes(article).principale, ...requetes(article).secondaires].join(", "),
         // Couverture : requise pour les résultats enrichis d'article.
         image: `${SITE_URL}${couverture(article).src}`,
         // Auteur : une personne réelle, jamais la marque (master § 2).

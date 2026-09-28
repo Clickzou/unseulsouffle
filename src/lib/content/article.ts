@@ -63,3 +63,17 @@ export type Article = {
    */
   valide: boolean;
 };
+
+/**
+ * Une requête sans l'annotation de travail qui la suit dans `motCle` et
+ * `motsClesSecondaires` (« calcul BFR (1300/mois, KD 0) — SE Ranking, 24/09/2026 »
+ * → « calcul BFR »). À utiliser partout où les requêtes sortent du code : balisage, API.
+ */
+export function sansAnnotation(requete: string): string {
+  return requete.replace(/\s*\(.*$/, "").trim();
+}
+
+/** Requête principale puis secondaires, nettoyées. */
+export function requetes(article: Pick<Article, "motCle" | "motsClesSecondaires">): { principale: string; secondaires: string[] } {
+  return { principale: sansAnnotation(article.motCle), secondaires: article.motsClesSecondaires.map(sansAnnotation) };
+}

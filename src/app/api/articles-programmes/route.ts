@@ -2,6 +2,7 @@ import { timingSafeEqual } from "crypto";
 import { NextResponse } from "next/server";
 
 import { cheminApercu } from "@/lib/apercu";
+import { sansAnnotation } from "@/lib/content/article";
 import { articles, dateAtteinte } from "@/lib/content/articles";
 import { SITE_URL, equipe } from "@/lib/content/home";
 
@@ -57,8 +58,8 @@ export async function GET(requete: Request) {
         urlActuelle: `${base}/infos-utiles/${a.slug}/`,
         apercuUrl: publie ? null : `${base}${cheminApercu(a)}`,
         auteur: equipe.find((m) => m.slug === a.auteur)?.nom ?? a.auteur,
-        motCle: a.motCle,
-        motsClesSecondaires: a.motsClesSecondaires,
+        motCle: sansAnnotation(a.motCle),
+        motsClesSecondaires: a.motsClesSecondaires.map(sansAnnotation),
         metaDescription: a.metaDescription,
         chapo: brut(a.chapo),
         essentiel: { reponse: brut(a.essentiel.reponse), points: a.essentiel.points.map(brut) },
