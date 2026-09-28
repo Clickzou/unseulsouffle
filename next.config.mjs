@@ -35,6 +35,24 @@ const nextConfig = {
         destination: "/infos-utiles/:slug/",
         statusCode: 301,
       },
+      // Adresses de l'ancien site WordPress (sitemap relevé le 28/09/2026) sans
+      // équivalent à l'identique : leur référencement suit la nouvelle page.
+      {
+        source: "/la-solitude-du-dirigeant-comment-trouver-des-solutions-grace-au-coaching-au-codeveloppement-et-a-lintelligence-collective/",
+        destination: "/infos-utiles/solitude-du-dirigeant/",
+        statusCode: 301,
+      },
+      {
+        // « Organisation PME » : devenue le pilier transformation & organisation.
+        source: "/organisation-pme-offres-muriel/",
+        destination: "/transformation-entreprise/",
+        statusCode: 301,
+      },
+      {
+        source: "/category/:slug/",
+        destination: "/infos-utiles/",
+        statusCode: 301,
+      },
     ];
   },
 
