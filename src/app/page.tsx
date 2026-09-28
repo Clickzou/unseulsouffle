@@ -7,7 +7,7 @@ import { Blocages } from "@/components/Blocages";
 import { Comparatif } from "@/components/Comparatif";
 import { Methode } from "@/components/Methode";
 import { Parcours } from "@/components/Parcours";
-import { Preuve } from "@/components/Preuve";
+import { AvisGoogle } from "@/components/AvisGoogle";
 import { PourQui } from "@/components/PourQui";
 import { FAQ } from "@/components/FAQ";
 import { ArticlesLies } from "@/components/infos-utiles/ArticlesLies";
@@ -75,9 +75,8 @@ export default function HomePage() {
         <Reveal>
           <Parcours />
         </Reveal>
-        <Reveal>
-          <Preuve />
-        </Reveal>
+        {/* Rendu seulement quand la fiche Google a des avis. */}
+        <AvisGoogle />
         <Reveal>
           <PourQui />
         </Reveal>

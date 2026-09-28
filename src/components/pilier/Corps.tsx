@@ -406,7 +406,9 @@ export function RendreBloc({ bloc, accentPage }: { bloc: Bloc; accentPage: strin
       return <BlocTarifs cle={bloc.offre} accentPage={accentPage} />;
 
     case "encadre":
-      return <BlocEncadre titre={bloc.titre} texte={bloc.texte} aFournir={bloc.aFournir} />;
+      // Une donnée encore à fournir par la cliente ne s'affiche pas en ligne.
+      if (bloc.aFournir) return null;
+      return <BlocEncadre titre={bloc.titre} texte={bloc.texte} />;
   }
 }
 
