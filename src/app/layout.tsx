@@ -4,6 +4,7 @@ import "./globals.css";
 import { BandeauCookies } from "@/components/cookies/BandeauCookies";
 import { MesureAudience } from "@/components/cookies/MesureAudience";
 import { RevealVue } from "@/components/ui/RevealVue";
+import { SITE_URL } from "@/lib/content/home";
 
 // `adjustFontFallback: false` + fallback explicite : Newsreader porte un axe optique
 // variable dont next/font ne trouve pas les métriques d'override. Sans ces deux
@@ -33,7 +34,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.unseulsouffle.fr"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Cabinet de conseil pour PME à Toulouse | Un Seul Souffle",
     template: "%s | Un Seul Souffle",

@@ -38,7 +38,7 @@ export async function GET(requete: Request) {
   if (!autorise(requete)) return NextResponse.json({ ok: false }, { status: 401 });
 
   // Deux adresses :
-  //   - `url` : l'adresse DÉFINITIVE (SITE_URL, www.unseulsouffle.fr), celle que
+  //   - `url` : l'adresse DÉFINITIVE (SITE_URL, unseulsouffle.fr), celle que
   //     l'on diffuse — posts LinkedIn compris, qui restent en ligne des années ;
   //   - `urlActuelle` / `apercuUrl` : le domaine réellement servi, celui de la
   //     requête (vercel.app tant que le vrai domaine n'est pas branché), pour que

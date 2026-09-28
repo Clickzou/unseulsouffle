@@ -10,7 +10,7 @@
 
 import { resumeTarifs } from "@/lib/content/tarifs";
 
-export const SITE_URL = "https://www.unseulsouffle.fr";
+export const SITE_URL = "https://unseulsouffle.fr";
 
 /* ─────────── Palette ───────────
  * Les cinq teintes du logo — les cinq rubans qui convergent. Chacune identifie

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { articles } from "@/lib/content/articles";
 import type { Article } from "@/lib/content/article";
-import { equipe } from "@/lib/content/home";
+import { SITE_URL, equipe } from "@/lib/content/home";
 
 /**
  * E-mail de contrôle avant publication — décision de JC le 24/09/2026 : les
@@ -140,7 +140,7 @@ export async function GET(requete: Request) {
 
   // Domaine réellement servi (vercel.app tant que le vrai domaine n'est pas branché).
   const hote = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  const base = hote ? `https://${hote}` : "https://www.unseulsouffle.fr";
+  const base = hote ? `https://${hote}` : SITE_URL;
 
   const titres = aVenir.map((a) => a.h1).join(" · ");
   const html = `
