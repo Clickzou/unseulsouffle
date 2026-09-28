@@ -16,7 +16,7 @@ import type { Metadata } from "next";
  * confidentialité, 404, actualités tant qu'elle est vide — utilisent
  * `NON_INDEXABLE` et ne dépendent pas de cet interrupteur.
  */
-export const INDEXABLE = false;
+export const INDEXABLE = true;
 
 /** Pages exclues en permanence, quel que soit l'état de l'interrupteur. */
 export const NON_INDEXABLE: Metadata["robots"] = {
