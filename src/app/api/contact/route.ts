@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { signalerEvenement } from "@/lib/evenements";
 
 /**
  * Envoi du formulaire de contact via Resend (API REST, sans dépendance).
@@ -124,5 +125,7 @@ export async function POST(requete: Request) {
     );
   }
 
+  // Compteur « Demandes via la page contact » de l'espace client (sans donnée personnelle).
+  await signalerEvenement("contact");
   return NextResponse.json({ ok: true });
 }

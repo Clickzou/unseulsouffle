@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 
 import { ACCENTS, equipe, piliers } from "@/lib/content/home";
@@ -42,6 +42,21 @@ export function Questionnaire() {
   const pilierCourant = question ? PILIERS_DIAGNOSTIC[question.pilier] : null;
   const teinte = pilierCourant ? ACCENTS[pilierCourant.accent] : ACCENTS.finance;
   const progression = Math.round(((etape + 1) / (total + 1)) * 100);
+
+  // Compteurs de l'espace client (diagnostics commencés / terminés) : une fois
+  // chacun par visite, même si le visiteur revient en arrière ou recommence.
+  const signales = useRef(new Set<string>());
+  useEffect(() => {
+    const type = etape === 0 ? "diagnostic_debut" : fini ? "diagnostic_fin" : null;
+    if (!type || signales.current.has(type)) return;
+    signales.current.add(type);
+    fetch("/api/evenement/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type }),
+      keepalive: true,
+    }).catch(() => {});
+  }, [etape, fini]);
 
   // Remonte en haut du questionnaire à chaque écran (utile sur mobile).
   useEffect(() => {
