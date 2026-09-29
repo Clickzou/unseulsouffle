@@ -50,6 +50,8 @@ export const pilierFinance: PagePilier = {
     {
       label: "La confusion à lever",
       titre: "DAF externalisé ou expert-comptable : deux métiers différents",
+      large: true,
+      cartesADroite: true,
       blocs: [
         {
           type: "p",
@@ -93,6 +95,8 @@ export const pilierFinance: PagePilier = {
     {
       label: "Pour qui",
       titre: "Quand une PME a besoin d'un DAF à temps partagé",
+      large: true,
+      cartesADroite: true,
       blocs: [
         {
           type: "p",
@@ -101,6 +105,7 @@ export const pilierFinance: PagePilier = {
         },
         {
           type: "liste",
+          style: "cartes",
           items: [
             "Vous savez que l'entreprise gagne de l'argent, sans savoir précisément où ni pourquoi",
             "Votre trésorerie se pilote au solde bancaire, pas à un prévisionnel",
@@ -121,6 +126,8 @@ export const pilierFinance: PagePilier = {
     {
       label: "Le travail",
       titre: "Ce que fait un directeur financier externalisé dans votre PME",
+      large: false,
+      exergue: "Trois outils, dans cet ordre : le prévisionnel de trésorerie, les tableaux de bord, l'analyse de marge.",
       blocs: [
         {
           type: "p",
@@ -154,6 +161,9 @@ export const pilierFinance: PagePilier = {
     {
       label: "Le modèle",
       titre: "Directeur financier à temps partagé : le modèle et ce qu'il implique",
+      // Même fin que les autres piliers : le texte à gauche, la grille tarifaire à droite.
+      large: true,
+      frise: true,
       blocs: [
         {
           type: "p",

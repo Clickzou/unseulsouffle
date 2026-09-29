@@ -15,30 +15,53 @@ import { NON_INDEXABLE } from "@/lib/seo/indexation";
  * anglais, sans menu et sans issue. Sur une maquette montrée à une cliente,
  * c'est le pire écran possible : il ressemble à une panne.
  *
- * Celle-ci garde l'en-tête, le pied de page et une sortie vers les pages qui
- * existent. La liste ci-dessous distingue ce qui est en ligne de ce qui reste à
- * produire : pendant la refonte, elle sert d'état d'avancement ; à la mise en
- * ligne, il suffira de retirer le bloc « à venir ».
+ * Celle-ci garde l'en-tête, le pied de page et une sortie vers les pages du
+ * site. Depuis la mise en ligne (28/09/2026), elle ne parle plus de refonte :
+ * les anciennes adresses WordPress sont redirigées (next.config.mjs), un visiteur
+ * qui arrive ici a suivi un lien erroné.
  */
 export const metadata: Metadata = {
   title: "Page introuvable",
   robots: NON_INDEXABLE,
 };
 
-const EN_LIGNE = [
-  { href: "/", label: "Accueil" },
-  { href: "/transformation-dirigeant/", label: "Transformation du dirigeant" },
-  { href: "/transformation-entreprise/", label: "Transformation de l'entreprise" },
+// Mêmes libellés et même ordre que le pied de page (Footer.tsx).
+const ACCOMPAGNEMENTS = [
+  { href: "/transformation-dirigeant/", label: "Coaching dirigeant" },
+  { href: "/transformation-entreprise/", label: "Conseil en organisation" },
+  { href: "/daf-externalise-toulouse/", label: "DAF externalisé" },
+  { href: "/conseil-strategie-commerciale-toulouse/", label: "Stratégie commerciale" },
+  { href: "/diagnostic/", label: "Diagnostic gratuit" },
 ];
 
-const A_VENIR = [
-  "Le cabinet",
-  "Notre équipe",
-  "Diagnostic",
-  "Contact",
-  "Pilotage financier externalisé",
-  "Infos utiles",
+const CABINET = [
+  { href: "/", label: "Accueil" },
+  { href: "/un-seul-souffle/", label: "Notre approche" },
+  { href: "/notre-equipe/", label: "Notre équipe" },
+  { href: "/tarifs/", label: "Tarifs" },
+  { href: "/infos-utiles/", label: "Infos utiles" },
+  { href: "/contact/", label: "Contact" },
 ];
+
+function ListeLiens({ titre, liens }: { titre: string; liens: { href: string; label: string }[] }) {
+  return (
+    <div>
+      <h2 className="font-mono text-[10px] uppercase tracking-[0.13em] text-teal">{titre}</h2>
+      <ul className="mt-4 grid gap-2.5">
+        {liens.map((page) => (
+          <li key={page.href}>
+            <Link
+              href={page.href}
+              className="border-b border-teal/35 text-[15.5px] text-teal transition-colors hover:border-teal"
+            >
+              {page.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function NotFound() {
   return (
@@ -51,7 +74,7 @@ export default function NotFound() {
             <Label style={{ color: ACCENTS.production.texte }}>Erreur 404</Label>
 
             <h1 className="mt-4 max-w-[18ch] text-[clamp(31px,4.4vw,48px)] leading-[1.08] text-ink">
-              Cette page n&apos;existe pas encore
+              Cette page est introuvable
             </h1>
 
             <div
@@ -61,40 +84,13 @@ export default function NotFound() {
             />
 
             <p className="mt-7 max-w-prose text-lg leading-relaxed text-body">
-              La refonte est en cours : les pages sont mises en ligne au fur et à mesure. Si vous
-              êtes arrivé ici depuis le menu, c&apos;est que la page visée fait partie de celles qui
-              restent à produire.
+              L&apos;adresse suivie ne correspond à aucune page du site. Elle a peut-être changé,
+              ou le lien contient une erreur. Voici les pages principales du cabinet.
             </p>
 
             <div className="mt-11 grid gap-10 sm:grid-cols-2">
-              <div>
-                <h2 className="font-mono text-[10px] uppercase tracking-[0.13em] text-teal">
-                  Déjà en ligne
-                </h2>
-                <ul className="mt-4 grid gap-2.5">
-                  {EN_LIGNE.map((page) => (
-                    <li key={page.href}>
-                      <Link
-                        href={page.href}
-                        className="border-b border-teal/35 text-[15.5px] text-teal transition-colors hover:border-teal"
-                      >
-                        {page.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="font-mono text-[10px] uppercase tracking-[0.13em] text-muted">
-                  À venir
-                </h2>
-                <ul className="mt-4 grid gap-2.5 text-[15.5px] text-muted">
-                  {A_VENIR.map((label) => (
-                    <li key={label}>{label}</li>
-                  ))}
-                </ul>
-              </div>
+              <ListeLiens titre="Accompagnements" liens={ACCOMPAGNEMENTS} />
+              <ListeLiens titre="Le cabinet" liens={CABINET} />
             </div>
 
             <div className="mt-11">

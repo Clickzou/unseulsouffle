@@ -76,7 +76,7 @@ export type Chapitre = {
   exergue?: string;
   /** Pleine largeur, gouttière de 100 px sur grand écran (voir `Shell`). */
   large?: boolean;
-  /** Titre et texte à gauche, listes en cartes à droite. */
+  /** Titre et texte à gauche, listes en cartes et tableaux à droite. */
   cartesADroite?: boolean;
   /** En pleine largeur : la fiche d'étape à droite (collante), le texte à gauche. */
   ficheADroite?: boolean;

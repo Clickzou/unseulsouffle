@@ -492,14 +492,14 @@ function RendreChapitre({
   }
 
   if (chapitre.cartesADroite) {
+    // Tout tableau passe à droite : le tableau simple sert quand le contraste ✕ / ✓
+    // serait faux (expert-comptable et DAF ne s'opposent pas, page Finance).
     const estCartes = (bloc: Bloc) =>
-      (bloc.type === "liste" && bloc.style === "cartes") ||
-      (bloc.type === "tableau" && bloc.style === "contraste") ||
-      bloc.type === "comparatif";
+      (bloc.type === "liste" && bloc.style === "cartes") || bloc.type === "tableau" || bloc.type === "comparatif";
     return (
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
         {/* Le texte d'abord, à gauche sur grand écran et au-dessus sur mobile. */}
-        <div className="order-2 [&>ul]:mt-0">
+        <div className="order-2 [&>*:first-child]:mt-0">
           {chapitre.blocs.filter(estCartes).map((bloc, index) => (
             <RendreBloc key={index} bloc={bloc} accentPage={accentPage} />
           ))}
