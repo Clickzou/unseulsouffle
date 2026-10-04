@@ -1,7 +1,7 @@
 # Mail à Muriel et Marjorie — retour sur leurs demandes du 04/10/2026
 
 Rédigé le 04/10/2026, à envoyer par JC depuis sa messagerie (Gmail n'est pas connecté à
-Claude). Statut : **brouillon, non envoyé** — mettre à jour cette ligne à l'envoi.
+Claude). Statut : **envoyé le 04/10/2026 à 22 h 45** par JC (Zoho, en réponse au fil « Retour site »).
 
 ---
 
