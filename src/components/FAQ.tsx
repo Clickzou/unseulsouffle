@@ -1,4 +1,5 @@
 import { Section, SectionHead } from "@/components/ui/Section";
+import { RichText } from "@/components/ui/RichText";
 import { faq as faqHome, type QuestionFAQ } from "@/lib/content/home";
 
 /**
@@ -52,7 +53,7 @@ export function FAQ({
                     item.aFournir && i === 0 ? "font-mono text-[13px] text-amber" : undefined
                   }
                 >
-                  {paragraphe}
+                  <RichText>{paragraphe}</RichText>
                 </p>
               ))}
             </div>

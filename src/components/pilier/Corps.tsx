@@ -3,6 +3,7 @@ import { RichText } from "@/components/ui/RichText";
 import { ACCENTS, comparatif, equipe, etapes, piliers } from "@/lib/content/home";
 import type { Bloc, Chapitre, PagePilier } from "@/lib/content/pilier";
 import { offre as lireOffre } from "@/lib/content/tarifs";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -187,7 +188,7 @@ function BlocComparatif() {
   );
 }
 
-/** Les cinq expertises et leurs référents, depuis `piliers` et `equipe`. */
+/** Les six expertises et leurs référents, depuis `piliers` et `equipe`. */
 function BlocExpertises() {
   return (
     <ul className="my-9 grid gap-px overflow-hidden rounded-carte border border-rule bg-rule sm:grid-cols-2">
@@ -199,7 +200,7 @@ function BlocExpertises() {
           .join(" · ");
 
         return (
-          <li key={pilier.n} className="bg-surface p-6 last:sm:col-span-2">
+          <li key={pilier.n} className="bg-surface p-6 [&:last-child:nth-child(odd)]:sm:col-span-2">
             <span
               className="flex items-baseline gap-2 font-mono text-[10px] uppercase tracking-[0.13em]"
               style={{ color: accent.texte }}
@@ -409,7 +410,48 @@ export function RendreBloc({ bloc, accentPage }: { bloc: Bloc; accentPage: strin
       // Une donnée encore à fournir par la cliente ne s'affiche pas en ligne.
       if (bloc.aFournir) return null;
       return <BlocEncadre titre={bloc.titre} texte={bloc.texte} />;
+
+    case "referent":
+      return <BlocReferent slug={bloc.slug} texte={bloc.texte} accentPage={accentPage} />;
   }
+}
+
+/** Le référent de la page : photo, nom, expertise, présentation, lien vers sa fiche. */
+function BlocReferent({ slug, texte, accentPage }: { slug: string; texte: string[]; accentPage: string }) {
+  const membre = equipe.find((m) => m.slug === slug);
+  if (!membre) throw new Error(`Référent inconnu : ${slug}`);
+
+  return (
+    <div className="my-9 grid gap-6 rounded-carte border border-rule bg-surface p-6 sm:grid-cols-[160px_1fr] sm:gap-8 sm:p-8">
+      {membre.photo && (
+        <Image
+          src={membre.photo}
+          alt={`${membre.nom}, ${membre.expertise.toLowerCase()} chez Un Seul Souffle à Toulouse`}
+          width={320}
+          height={320}
+          className="h-[160px] w-[160px] rounded-full object-cover"
+        />
+      )}
+      <div>
+        <p className="font-serif text-[24px] leading-tight text-ink">{membre.nom}</p>
+        <p className="mt-1 font-mono text-[10.5px] uppercase tracking-[0.12em]" style={{ color: accentPage }}>
+          {membre.statut} · {membre.expertise}
+        </p>
+        {texte.map((paragraphe) => (
+          <p key={paragraphe} className="mt-4 max-w-prose text-[16.5px] leading-[1.7]">
+            <RichText>{paragraphe}</RichText>
+          </p>
+        ))}
+        <Link
+          href={membre.href}
+          className="mt-5 inline-block text-[14.5px] font-medium underline decoration-1 underline-offset-[3px]"
+          style={{ color: accentPage }}
+        >
+          Découvrir le parcours de {membre.nom.split(" ")[0]} →
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 /* ─────────── Chapitre ─────────── */

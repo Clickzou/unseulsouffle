@@ -13,26 +13,26 @@ import { offre } from "@/lib/content/tarifs";
  */
 export const pilierEntreprise: PagePilier = {
   href: "/transformation-entreprise/",
-  fil: "Transformation de l'entreprise",
+  fil: "Parcours entreprise",
   accent: "organisation",
 
   // « Conseil en organisation PME à Toulouse » = 38 + 18 = 56 / 60
   metaTitle: "Conseil en organisation PME à Toulouse",
-  // 146 / 150
+  // 145 / 150
   metaDescription:
-    "Conseil en organisation et audit organisationnel pour PME et ETI à Toulouse : lire le fonctionnement réel, structurer la croissance, devenir autonome.",
-  nomService: "Transformation et conseil en organisation de PME et d'ETI",
+    "Conseil en organisation et audit organisationnel pour TPE et PME à Toulouse : croissance, difficulté, restructuration ou transmission. Jusqu'au terrain.",
+  nomService: "Transformation et conseil en organisation de TPE et PME",
 
-  h1: "Conseil en organisation : structurer une PME en croissance à Toulouse",
+  h1: "Conseil en organisation à Toulouse : structurer une PME en croissance, en difficulté ou à transmettre",
   lede:
-    "Votre entreprise grandit plus vite que sa structure. Les mêmes blocages reviennent, et rien ne se décide sans vous. Notre conseil en organisation part du fonctionnement réel : un conseiller référent prend le sujet en charge, traite ce qui bloque réellement — et laisse tranquille ce qui fonctionne.",
+    "Votre entreprise grandit plus vite que sa structure, traverse une difficulté, se restructure ou prépare une cession ou une transmission. Dans tous les cas, les mêmes blocages reviennent, et rien ne se décide sans vous. Notre conseil en organisation part du fonctionnement réel : un expert référent prend le sujet en charge, traite ce qui bloque réellement — et laisse tranquille ce qui fonctionne.",
 
   essentiel: {
     reponse:
-      "Le conseil en organisation d'Un Seul Souffle s'adresse aux PME et ETI de 10 à 250 salariés dont l'organisation ne suit plus la croissance. Un conseiller référent prend en charge votre situation et reste votre interlocuteur du début à la fin. L'accompagnement se déroule en trois étapes — Cartographier le fonctionnement réel, Structurer les chantiers prioritaires, Renforcer l'autonomie de l'organisation — sur 6 à 12 mois, à Toulouse et en Occitanie. Le périmètre est décidé avec vous : on n'ouvre que les chantiers qui bloquent réellement, et les autres expertises du cabinet ne sont appelées que si votre sujet l'exige.",
+      "Le conseil en organisation d'Un Seul Souffle s'adresse aux TPE et PME de 10 à 250 salariés dont l'organisation ne suit plus : croissance, difficulté, restructuration, cession ou transmission. Un expert référent prend en charge votre situation et reste votre interlocuteur du début à la fin. L'accompagnement se déroule en trois étapes — Cartographier le fonctionnement réel, Structurer les chantiers prioritaires, Renforcer l'autonomie de l'organisation — sur 6 à 12 mois, à Toulouse et en Occitanie. Le périmètre est décidé avec vous : on n'ouvre que les chantiers qui bloquent réellement, et les autres expertises du cabinet ne sont appelées que si votre sujet l'exige.",
     points: [
-      "Pour qui : PME et ETI de 10 à 250 salariés dont la structure ne suit plus la croissance",
-      "Un conseiller référent, interlocuteur unique du début à la fin",
+      "Pour qui : TPE et PME de 10 à 250 salariés dont la structure ne suit plus (croissance, difficulté, restructuration, cession, transmission)",
+      "Un expert référent, interlocuteur unique du début à la fin",
       "Périmètre décidé avec vous — on ne réorganise pas ce qui fonctionne",
       "Étapes couvertes : 03 Cartographier, 04 Structurer, 05 Renforcer",
       "Durée : 6 à 12 mois d'accompagnement, selon les chantiers ouverts",
@@ -51,12 +51,12 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "Le conseil en organisation s'adresse aux entreprises qui ont réussi leur croissance et qui en paient maintenant la facture organisationnelle. L'effectif a doublé, les métiers se sont spécialisés, les clients sont plus exigeants — et le mode de fonctionnement est resté celui de l'entreprise d'avant.",
+            "Le conseil en organisation s'adresse aux entreprises dont le mode de fonctionnement ne correspond plus à ce qu'elles vivent. Certaines ont réussi leur croissance et en paient la facture organisationnelle : l'effectif a doublé, les métiers se sont spécialisés, et l'organisation est restée celle de l'entreprise d'avant. D'autres traversent une difficulté ou une restructuration, et doivent faire autant avec moins. D'autres encore préparent une cession ou une transmission, et doivent pouvoir fonctionner sans leur dirigeant actuel.",
         },
         {
           type: "p",
           texte:
-            "**Trois signes permettent de trancher.** La croissance va plus vite que la structure. Les expertises ne se coordonnent pas entre elles : la finance, la production et le commerce prennent des décisions cohérentes chacune de son côté, et incohérentes ensemble. L'entreprise dépend encore entièrement de vous.",
+            "**Trois signes permettent de trancher.** La structure ne suit plus ce que vit l'entreprise. Les expertises ne se coordonnent pas entre elles : la finance, la production et le commerce prennent des décisions cohérentes chacune de son côté, et incohérentes ensemble. L'entreprise dépend encore entièrement de vous.",
         },
         {
           type: "liste",
@@ -86,7 +86,7 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "Dans une entreprise qui a grandi vite, il existe toujours deux organisations. Celle de l'organigramme, avec ses services, ses rattachements et ses fiches de poste. Et celle qui fait réellement tourner l'entreprise : des circuits informels, des personnes-ressources que tout le monde appelle, des arbitrages rendus dans les couloirs. C'est pourquoi tant de plans de transformation échouent : ils corrigent l'organisation officielle, qui n'était pas celle qui posait problème.",
+            "Dans une entreprise qui a grandi vite, qui a traversé des crises ou qui s'est restructurée, il existe toujours deux organisations. Celle de l'organigramme, avec ses services, ses rattachements et ses fiches de poste. Et celle qui fait réellement tourner l'entreprise : des circuits informels, des personnes-ressources que tout le monde appelle, des arbitrages rendus dans les couloirs. C'est pourquoi tant de plans de transformation échouent : ils corrigent l'organisation officielle, qui n'était pas celle qui posait problème.",
         },
         {
           type: "liste",
@@ -140,7 +140,7 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "p",
           texte:
-            "**Un conseiller référent conduit votre accompagnement.** C'est votre consultant en organisation et votre interlocuteur : celui qui connaît votre entreprise, qui suit les chantiers et à qui vous vous adressez. Il est choisi selon la nature de votre blocage principal — pilotage financier, organisation, commercial, production, qualité de vie au travail.",
+            "**Un expert référent conduit votre accompagnement.** C'est votre consultant en organisation et votre interlocuteur : celui qui connaît votre entreprise, qui suit les chantiers et à qui vous vous adressez. Il est choisi selon la nature de votre blocage principal — pilotage financier, organisation et coopération, stratégie commerciale, organisation industrielle, stratégie industrielle, qualité de vie au travail.",
         },
         {
           type: "p",
@@ -197,14 +197,14 @@ export const pilierEntreprise: PagePilier = {
           type: "encadre",
           titre: "Ce que vous obtenez à la fin de l'étape 05",
           texte:
-            "Une gouvernance clarifiée, des responsabilités redistribuées et des relais internes en place. Une entreprise autonome et capable d'absorber sa prochaine étape de croissance.",
+            "Une gouvernance clarifiée, des responsabilités redistribuées et des relais internes en place. Une entreprise autonome, capable d'aborder sa prochaine étape — croissance, cession ou transmission.",
         },
       ],
     },
 
     {
       label: "Notre modèle",
-      titre: "Cabinet de conseil en organisation classique ou équipe de direction externalisée",
+      titre: "Une équipe de direction externalisée plus efficiente qu'un cabinet de conseil classique",
       large: true,
       cartesADroite: true,
       blocs: [
@@ -279,14 +279,14 @@ export const pilierEntreprise: PagePilier = {
     {
       q: "Combien d'intervenants aurons-nous en face de nous ?",
       r: [
-        "Un. Un conseiller référent prend en charge votre situation et reste votre interlocuteur du début à la fin. Il est choisi selon la nature de votre blocage principal.",
+        "Un. Un expert référent prend en charge votre situation et reste votre interlocuteur du début à la fin. Il est choisi selon la nature de votre blocage principal.",
         "Il peut faire appel à un collègue du cabinet quand un chantier précis le demande, sur ce sujet et le temps de ce sujet. Vous en êtes informé avant, et le référent ne change pas.",
       ],
     },
     {
       q: "Qu'est-ce qui vous distingue d'un consultant en organisation classique ?",
       r: [
-        "Sur trois points. Le livrable : une transformation mise en œuvre, pas un rapport de recommandations. La profondeur : votre référent peut s'appuyer sur quatre autres expertises de direction quand le sujet le demande, au lieu de vous renvoyer vers un prestataire extérieur. Le point de sortie : l'autonomie de votre entreprise, et non la remise du document.",
+        "Sur trois points. Le livrable : une transformation mise en œuvre, pas un rapport de recommandations. La profondeur : votre référent peut s'appuyer sur cinq autres expertises de direction quand le sujet le demande, au lieu de vous renvoyer vers un prestataire extérieur. Le point de sortie : l'autonomie de votre entreprise, et non la remise du document.",
         "Un angle mort qui sort du périmètre commandé n'est donc ni écarté, ni facturé comme une mission supplémentaire.",
       ],
     },
@@ -305,10 +305,10 @@ export const pilierEntreprise: PagePilier = {
       ],
     },
     {
-      q: "Intervenez-vous dans l'industrie et l'agroalimentaire ?",
+      q: "Intervenez-vous dans l'industrie ?",
       r: [
-        "Oui. Le pilier production et performance est porté par des référents issus de l'industrie, et couvre les flux, les processus et les interfaces industriels ainsi que l'amélioration continue des sites.",
-        "Nous intervenons également dans les services et la distribution, sur des PME et ETI de 10 à 250 salariés, à Toulouse et en Occitanie.",
+        "Oui. Deux expertises du cabinet sont portées par des référents issus de l'industrie : l'[organisation industrielle](/conseil-organisation-industrielle-toulouse/) (flux, processus, méthodes, ingénierie) et la [stratégie industrielle](/conseil-strategie-industrielle-toulouse/) (capacités, investissements, sites, trajectoire).",
+        "Nous intervenons également dans les services, sur des TPE et PME de 10 à 250 salariés, à Toulouse et en Occitanie, et sur toute la France quand la mission s'inscrit dans la durée.",
       ],
     },
     {

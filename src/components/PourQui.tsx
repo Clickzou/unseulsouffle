@@ -7,12 +7,10 @@ import { moments, ACCENTS } from "@/lib/content/home";
  * D'abord les trois moments où un dirigeant appelle — chacun dans une teinte du
  * logo, pour qu'il reconnaisse le sien avant d'avoir lu le détail.
  *
- * Ensuite, et c'est le passage qui compte : ce pour quoi le cabinet n'est PAS
- * fait. Sur un marché où tout le monde promet tout, dire non est le signal de
- * confiance le plus efficace — et cela qualifie les demandes en amont, ce qui
- * fait gagner du temps commercial. La version précédente le traitait en note de
- * marge ; il a ici son propre bloc, à parité avec le reste. Ne pas le retirer
- * pour « ne pas perdre de leads » : c'est justement son intérêt.
+ * Ensuite, l'encadré gris. Il disait ce pour quoi le cabinet n'était pas fait
+ * (une expertise ponctuelle sur un seul sujet) ; à la demande de la cliente
+ * (retour du 04/10/2026), il dit désormais l'inverse : un expert peut aussi
+ * intervenir seul.
  */
 export function PourQui() {
   return (
@@ -20,7 +18,7 @@ export function PourQui() {
       <SectionHead
         label="Périmètre"
         titre="Les entreprises que notre cabinet de conseil accompagne en Occitanie"
-        lede="Depuis Toulouse, nous accompagnons des PME et ETI de 10 à 250 salariés, principalement en Haute-Garonne et en Occitanie, dans l'industrie, l'agroalimentaire, les services et la distribution."
+        lede="Depuis Toulouse, nous accompagnons des TPE et PME de 10 à 250 salariés, principalement en Haute-Garonne et en Occitanie, dans l'industrie et les services."
         centre
       />
 
@@ -49,15 +47,15 @@ export function PourQui() {
         })}
       </ul>
 
-      {/* Le refus, traité franchement plutôt qu'en bas de page en petits caractères. */}
+      {/* Une seule expertise : un expert peut intervenir seul. */}
       <div className="mx-auto mt-6 grid max-w-[74ch] gap-4 rounded-carte border border-rule-2 bg-mist px-7 py-6 sm:grid-cols-[auto_1fr] sm:items-baseline sm:gap-7">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-amber">
-          Et quand ce n&apos;est pas nous
+          Une seule expertise ?
         </p>
         <p className="text-[15px] leading-relaxed">
-          Un cabinet-conseil comme le nôtre est moins adapté à une mission d&apos;expertise ponctuelle sur un seul
-          sujet. Dans ce cas, un spécialiste unique vous coûtera moins cher et ira plus vite —{" "}
-          <strong className="font-medium text-ink">nous le disons quand c&apos;est le cas.</strong>
+          Si vous n&apos;avez besoin que d&apos;une expertise,{" "}
+          <strong className="font-medium text-ink">un de nos experts peut aussi intervenir seul</strong>, sur
+          le seul sujet qui vous occupe.
         </p>
       </div>
     </Section>

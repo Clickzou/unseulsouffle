@@ -33,7 +33,7 @@ import { NON_INDEXABLE, ROBOTS } from "@/lib/seo/indexation";
  *     page 1 tant qu'aucun article n'était validé.
  */
 
-const TITRE = "Infos utiles pour dirigeants de PME";
+const TITRE = "Nos articles pour dirigeants de TPE et PME";
 
 export function cheminPage(numero: number): string {
   return numero <= 1 ? "/infos-utiles/" : `/infos-utiles/page/${numero}/`;
@@ -46,8 +46,8 @@ export function metadataInfosUtiles(numero: number): Metadata {
     title: numero <= 1 ? TITRE : `${TITRE} — page ${numero}`,
     description:
       numero <= 1
-        ? "Articles de fond pour les dirigeants de PME et d'ETI : organisation, pilotage financier, management, place du dirigeant. Signés par l'équipe."
-        : `Page ${numero} sur ${total} des articles de fond pour dirigeants de PME et d'ETI : organisation, pilotage financier, management, place du dirigeant.`,
+        ? "Articles de fond pour les dirigeants de TPE et PME : organisation, pilotage financier, management, place du dirigeant. Signés par l'équipe."
+        : `Page ${numero} sur ${total} des articles de fond pour dirigeants de TPE et PME : organisation, pilotage financier, management, place du dirigeant.`,
     alternates: { canonical: cheminPage(numero) },
     robots: indexable ? ROBOTS : NON_INDEXABLE,
   };
@@ -57,7 +57,7 @@ function schema(numero: number, articles: Article[]) {
   const url = `${SITE_URL}${cheminPage(numero)}`;
   const fil = [
     { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: "Infos utiles", item: `${SITE_URL}/infos-utiles/` },
+    { "@type": "ListItem", position: 2, name: "Nos articles", item: `${SITE_URL}/infos-utiles/` },
   ];
   if (numero > 1) fil.push({ "@type": "ListItem", position: 3, name: `Page ${numero}`, item: url });
 
@@ -286,9 +286,9 @@ export function ListeInfosUtiles({ numero }: { numero: number }) {
     <>
       <main>
         <EnTetePage
-          fil={numero <= 1 ? "Infos utiles" : `Page ${numero}`}
-          parent={numero <= 1 ? undefined : { href: "/infos-utiles/", label: "Infos utiles" }}
-          label={numero <= 1 ? "Infos utiles" : `Infos utiles · page ${numero} sur ${total}`}
+          fil={numero <= 1 ? "Nos articles" : `Page ${numero}`}
+          parent={numero <= 1 ? undefined : { href: "/infos-utiles/", label: "Nos articles" }}
+          label={numero <= 1 ? "Nos articles" : `Nos articles · page ${numero} sur ${total}`}
           accent="commercial"
           aside={<SymboleAnime />}
           anime
@@ -303,7 +303,7 @@ export function ListeInfosUtiles({ numero }: { numero: number }) {
             vide
               ? "Cette rubrique accueillera les articles de fond du cabinet. Rien n'y est publié pour l'instant — nous préférons le dire plutôt que d'afficher un contenu de remplissage."
               : numero <= 1
-                ? "Des articles de fond sur les sujets qui bloquent réellement les PME et les ETI : organisation, pilotage financier, management, place du dirigeant. Écrits et signés par la personne qui traite le sujet au cabinet."
+                ? "Des articles de fond sur les sujets qui bloquent réellement les TPE et les PME : organisation, pilotage financier, management, place du dirigeant. Écrits et signés par la personne qui traite le sujet au cabinet."
                 : "La suite des articles de fond du cabinet, du plus récent au plus ancien : organisation, pilotage financier, management, place du dirigeant."
           }
         >

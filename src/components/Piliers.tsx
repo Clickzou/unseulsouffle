@@ -4,10 +4,10 @@ import { Shell } from "@/components/ui/Section";
 import { piliers, equipe, ACCENTS, type Membre } from "@/lib/content/home";
 
 /**
- * Les cinq expertises, juste sous le hero.
+ * Les six expertises, juste sous le hero.
  *
  * C'est le bloc qui répond à « qui fait quoi » — la promesse même du cabinet,
- * cinq compétences de direction portées chacune par quelqu'un. Il est donc traité
+ * six compétences de direction portées chacune par quelqu'un. Il est donc traité
  * en vraies cartes détachées, et non en simple rail de texte.
  *
  * Chaque pilier porte un accent repris des cinq teintes du logo. La couleur est
@@ -22,11 +22,9 @@ import { piliers, equipe, ACCENTS, type Membre } from "@/lib/content/home";
 const NOMBRES = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit"];
 
 export function Piliers() {
-  // Le titre est calculé, jamais écrit en dur : il annonçait « cinq référents »
-  // alors que le pilier production en compte deux, soit six personnes. Même
-  // logique que le titre des blocages — un compte codé en dur finit par mentir.
+  // Le compte est calculé, jamais écrit en dur : même logique que le titre des
+  // blocages — un compte codé en dur finit par mentir.
   const nbExpertises = NOMBRES[piliers.length];
-  const nbReferents = NOMBRES[new Set(piliers.flatMap((p) => p.referents)).size];
 
   return (
     // Le fond court bord à bord ; la gouttière de 100 px est portée par le Shell,
@@ -37,14 +35,17 @@ export function Piliers() {
         <div id="expertises" className="scroll-mt-24 py-14 sm:py-16">
           <div className="mb-8 flex flex-wrap items-baseline gap-x-5 gap-y-1">
             <h2 className="font-serif text-[26px] font-light leading-tight text-ink first-letter:uppercase">
-              {nbExpertises} expertises de direction, {nbReferents} référents
+              {nbExpertises} expertises de direction, un seul référent pour vous
             </h2>
-            <p className="text-[14.5px] text-muted">
-              Un référent pour votre dossier, les autres en appui si le sujet l&apos;exige.
+            {/* Texte de la cliente (retour du 04/10/2026). */}
+            <p className="max-w-[80ch] text-[14.5px] text-muted">
+              Un interlocuteur unique, {nbExpertises} regards qui se croisent. Votre référent porte votre
+              dossier. Les experts échangent en continu pour confronter leurs regards, ouvrir
+              l&apos;espace et mobiliser la bonne compétence au bon moment.
             </p>
         </div>
 
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
           {piliers.map((pilier) => {
             const referents = pilier.referents
               .map((slug) => equipe.find((m) => m.slug === slug))
@@ -66,9 +67,8 @@ export function Piliers() {
                     {pilier.n}
                   </span>
 
-                  {/* Deux référents sur le pilier production : vignettes en léger
-                      chevauchement, avec un liseré pour rester lisibles l'une sur
-                      l'autre sans casser l'alignement des cinq colonnes. */}
+                  {/* Vignettes en léger chevauchement s'il y a plusieurs référents,
+                      avec un liseré pour rester lisibles l'une sur l'autre. */}
                   <div className="flex shrink-0 -space-x-3">
                     {referents.map((membre) => (
                       <Image
@@ -84,7 +84,13 @@ export function Piliers() {
                 </div>
 
                 <h3 className="font-serif text-[19px] font-light leading-tight text-ink">
-                  {pilier.nom}
+                  {pilier.page ? (
+                    <Link href={pilier.page.href} className="transition-colors hover:text-teal">
+                      {pilier.nom}
+                    </Link>
+                  ) : (
+                    pilier.nom
+                  )}
                 </h3>
 
                 <p className="mt-2.5 text-[13.5px] leading-relaxed text-body">{pilier.resume}</p>

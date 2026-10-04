@@ -204,7 +204,7 @@ export default function TarifsPage() {
             <SectionHead
               label="Ce qui est toujours inclus"
               titre="Un prix clair, un périmètre écrit"
-              lede="Quel que soit le format, un conseiller référent suit votre dossier du début à la fin. Les autres expertises du cabinet n'interviennent que si votre sujet l'exige, et jamais sans votre accord sur le périmètre et le prix."
+              lede="Quel que soit le format, un expert référent suit votre dossier du début à la fin. Les autres expertises du cabinet n'interviennent que si votre sujet l'exige, et jamais sans votre accord sur le périmètre et le prix."
             />
           </Section>
         </Reveal>

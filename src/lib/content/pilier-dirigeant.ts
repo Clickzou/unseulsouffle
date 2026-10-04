@@ -13,27 +13,27 @@ import { offre } from "@/lib/content/tarifs";
  */
 export const pilierDirigeant: PagePilier = {
   href: "/transformation-dirigeant/",
-  fil: "Transformation du dirigeant",
+  fil: "Parcours dirigeant",
   accent: "qvt",
 
   // « Coaching dirigeant de PME à Toulouse » = 36 + 18 = 54 / 60
   metaTitle: "Coaching dirigeant de PME à Toulouse",
   // 148 / 150
   metaDescription:
-    "Coaching et accompagnement de dirigeants de PME et ETI à Toulouse : retrouver la clarté, décider sans urgence, déléguer. Premier échange gratuit.",
-  nomService: "Accompagnement du dirigeant de PME et d'ETI",
+    "Coaching et accompagnement de dirigeants de TPE et PME à Toulouse : retrouver la clarté, décider sans urgence, déléguer. Premier échange gratuit.",
+  nomService: "Accompagnement du dirigeant de TPE et PME",
 
   h1: "Coaching et accompagnement du dirigeant de PME à Toulouse",
   lede:
-    "Vous dirigez une PME ou une ETI, et vous portez seul l'essentiel des décisions. Notre coaching dirigeant travaille d'abord votre clarté, puis la maturité du collectif autour de vous — jusqu'à ce que les décisions cessent de toutes remonter à vous.",
+    "Vous dirigez une TPE ou une PME, et vous portez seul l'essentiel des décisions. Notre coaching dirigeant travaille d'abord votre clarté, puis la maturité du collectif autour de vous — jusqu'à ce que les décisions cessent de toutes remonter à vous.",
 
   essentiel: {
     reponse:
-      "Le coaching et l'accompagnement du dirigeant d'Un Seul Souffle s'adressent aux dirigeantes et dirigeants de PME et d'ETI de 10 à 250 salariés qui décident dans l'urgence et délèguent mal. Il se déroule en deux étapes — Aligner, pour retrouver de la clarté stratégique, puis Coopérer, pour installer la co-responsabilité — et se suit au choix en collectif, en abonnement mensuel à partir de 112 € par mois avec quatre sessions en visio chaque mois, ou en individuel, en coaching. Un conseiller référent suit votre parcours. L'autodiagnostic de qualité de vie au travail s'ajoute seulement si vous en avez besoin. Ce n'est ni une formation au management, ni une thérapie.",
+      "Le coaching et l'accompagnement du dirigeant d'Un Seul Souffle s'adressent aux dirigeantes et dirigeants de TPE et PME de 10 à 250 salariés qui décident dans l'urgence et ne délèguent pas suffisamment. Il se déroule en deux étapes — Aligner, pour retrouver de la clarté stratégique, puis Coopérer, pour installer la co-responsabilité. L'étape Aligner se suit en coaching individuel, à partir de 1 500 € HT par trimestre. Un expert référent suit votre parcours. L'autodiagnostic de qualité de vie au travail s'ajoute seulement si vous en avez besoin. Ce n'est ni une formation au management, ni une thérapie.",
     points: [
-      "Pour qui : dirigeant de PME ou d'ETI, 10 à 250 salariés, quand le nœud est chez vous et non dans l'organisation",
-      "Tarif : à partir de 112 € par mois",
-      "Deux formats au choix : en collectif (abonnement mensuel, 4 sessions en visio par mois, webinaires et replay) ou en individuel (coaching)",
+      "Pour qui : dirigeant de TPE ou de PME, 10 à 250 salariés, quand le nœud est chez vous et non dans l'organisation",
+      "Tarif : à partir de 1 500 € HT par trimestre en individuel",
+      "Coaching individuel, avec un nombre de séances défini selon vos besoins et vos objectifs",
       "En option : autodiagnostic de qualité de vie au travail",
       "Étapes couvertes : 01 Aligner et 02 Coopérer",
       "Zone : Toulouse, Haute-Garonne, Occitanie — en présentiel ou en visio",
@@ -44,32 +44,42 @@ export const pilierDirigeant: PagePilier = {
   chapitres: [
     {
       label: "Pour qui",
-      titre: "À qui s'adresse le coaching dirigeant",
+      titre: "À qui s'adresse le coaching dirigeant ?",
       cartesADroite: true,
       blocs: [
+        // Texte de la cliente (retour du 04/10/2026).
         {
           type: "p",
           texte:
-            "Parmi les offres de coaching professionnel à Toulouse, le coaching dirigeant vise un profil précis : celui dont l'entreprise fonctionne — parfois même très bien — mais qui sent que tout repose sur lui. Le chiffre d'affaires est là, les clients sont satisfaits, les équipes sont compétentes. Et pourtant, chaque décision non routinière finit sur votre bureau.",
+            "Parmi les offres de coaching professionnel à Toulouse, le coaching dirigeant s'adresse à celles et ceux qui ont construit leur entreprise grâce à leur expertise, leur énergie et leur capacité à décider.",
         },
         {
           type: "p",
           texte:
-            "**Trois signes suffisent à reconnaître la situation.** Vous portez tout, et vous décidez dans l'urgence plutôt qu'au moment choisi. Vous déléguez mal, et vos équipes attendent votre feu vert avant d'avancer. La charge mentale entame votre clarté de décision, et vous vous en rendez compte sans parvenir à inverser la pente.",
+            "**L'entreprise grandit. Et avec elle, le rôle du dirigeant doit évoluer.** Vous avez peut-être été le meilleur commercial, le meilleur technicien, l'expert sur lequel tout reposait. Vous avez développé votre activité grâce à votre savoir-faire et à votre engagement.",
         },
         {
           type: "p",
           texte:
-            "Si ces trois phrases décrivent votre semaine, le nœud est chez vous. C'est une bonne nouvelle : c'est le point le plus rapide à faire bouger. Si en revanche vous vous reconnaissez surtout dans une structure qui ne suit plus la croissance, c'est le [conseil en organisation](/transformation-entreprise/) qu'il faut regarder.",
+            "Mais lorsque l'entreprise franchit un cap, on ne peut plus la piloter uniquement depuis son expertise métier. Il faut apprendre à prendre de la hauteur, à déléguer, à s'entourer de personnes clés, à faire grandir ses managers et à construire une organisation capable de porter la croissance avec vous.",
+        },
+        {
+          type: "p",
+          texte:
+            "Le coaching n'est alors pas là pour réparer un problème. Il vous accompagne dans le passage d'expert à dirigeant.",
+        },
+        {
+          type: "p",
+          texte:
+            "Et si, au contraire, votre principal enjeu concerne une organisation qui ne suit plus la croissance, des rôles mal définis ou des dysfonctionnements entre les équipes, c'est le [conseil en organisation](/transformation-entreprise/) qu'il faut regarder.",
         },
         {
           type: "liste",
           style: "cartes",
           items: [
-            "Vous êtes dirigeant, dirigeante, ou membre d'un binôme de direction",
-            "Votre entreprise compte de 10 à 250 salariés — industrie, agroalimentaire, services, distribution",
-            "Vous n'avez personne, en interne, à qui parler de vos arbitrages sans conséquence politique",
-            "Vous avez déjà essayé de déléguer, et ce qui est délégué vous revient",
+            "**Vous êtes devenu le principal point de passage de l'entreprise.** Les décisions remontent vers vous, les équipes attendent votre validation et vous avez du mal à lâcher ce que vous maîtrisez le mieux.",
+            "**Votre entreprise grandit et votre rôle doit changer.** Vous devez passer de « celui qui sait et qui fait » à celui qui donne une direction, construit son équipe et crée les conditions de la réussite collective.",
+            "**Votre prochaine étape ne se joue plus dans votre expertise, mais dans votre capacité à piloter.** Vous avez besoin de prendre de la hauteur, de clarifier vos priorités, de vous entourer des bonnes personnes et de structurer votre manière de décider.",
           ],
         },
       ],
@@ -117,7 +127,7 @@ export const pilierDirigeant: PagePilier = {
         {
           type: "p",
           texte:
-            "**Cette étape se suit au choix en collectif ou en individuel.** En collectif, c'est un abonnement mensuel **à partir de 112 € par mois** : quatre sessions en visio chaque mois, avec des webinaires, des modules et des outils de lecture disponibles en replay. Vous travaillez aux côtés d'autres dirigeants qui traversent la même chose — ce qui, pour un dirigeant isolé, fait déjà une partie du travail. En individuel, c'est un coaching seul à seul, pour prendre du recul et retrouver une capacité de décision sereine, au rythme de votre agenda.",
+            "**Cette étape se suit en coaching individuel**, seul à seul, pour prendre du recul et retrouver une capacité de décision sereine, au rythme de votre agenda. Elle se construit par trimestre, avec un nombre de séances de 1 h 30 défini selon vos besoins et vos objectifs, en présentiel ou en visio, **à partir de 1 500 € HT par trimestre**.",
         },
         {
           type: "p",
@@ -259,7 +269,7 @@ export const pilierDirigeant: PagePilier = {
             "**Prise de contact, 30 minutes.** Un échange gratuit et sans engagement, pour qualifier la situation et vérifier que le nœud est bien chez vous.",
             "**Diagnostic flash de votre situation.** Un point de départ daté, que nous reprenons plus tard pour mesurer ce qui a bougé.",
             "**Proposition sur-mesure.** Périmètre, format et tarif par écrit. Rien ne démarre sans votre accord.",
-            "**Étape 01 Aligner.** Au choix : en collectif (abonnement mensuel, 4 sessions en visio par mois, webinaires et replay) ou en individuel (coaching).",
+            "**Étape 01 Aligner.** Coaching individuel, construit par trimestre, avec un nombre de séances défini selon vos besoins.",
             "**Étape 02 Coopérer.** Cercles d'avancée de 6 à 8 personnes, sessions de 3 h sur 3 mois, en présentiel ou en visio.",
             "**Point de sortie.** Bilan des décisions redistribuées, et décision sur la suite — qui vous appartient.",
           ],
@@ -275,13 +285,6 @@ export const pilierDirigeant: PagePilier = {
           texte:
             "Le coaching se poursuit parfois par une mission de [conseil en organisation de l'entreprise](/transformation-entreprise/), quand le travail sur votre pilotage met au jour un problème de structure — mais ce n'est jamais un passage obligé, et c'est vous qui le décidez.",
         },
-        {
-          type: "encadre",
-          titre: "Tarif et durée totale à confirmer avant mise en ligne",
-          aFournir: true,
-          texte:
-            "[À confirmer avec la cliente] Le tarif de 112 € par mois et la cadence « 4 étapes de 3 mois » proviennent de la page actuelle du site. Vérifier qu'ils sont toujours d'actualité, préciser ce que couvre exactement l'abonnement, et trancher la durée totale du parcours dirigeant avant publication.",
-        },
       ],
     },
   ],
@@ -294,7 +297,7 @@ export const pilierDirigeant: PagePilier = {
     {
       q: "Combien de temps dure un coaching dirigeant ?",
       r: [
-        "De 3 à 6 mois. L'étape 01 Aligner se suit en individuel ou en collectif, par jalons ; l'étape 02 Coopérer se déroule en cercles d'avancée de 3 heures sur 3 mois, en groupe de 6 à 8 personnes, en présentiel ou en visio.",
+        "De 3 à 6 mois. L'étape 01 Aligner se suit en coaching individuel, par trimestre ; l'étape 02 Coopérer se déroule en cercles d'avancée de 3 heures sur 3 mois, en groupe de 6 à 8 personnes, en présentiel ou en visio.",
         "La durée dépend surtout du nombre de personnes que vous souhaitez embarquer dans la seconde étape. Nous la fixons dans la proposition écrite, après le premier échange.",
       ],
     },
@@ -308,7 +311,7 @@ export const pilierDirigeant: PagePilier = {
     {
       q: "Mes équipes doivent-elles être impliquées ?",
       r: [
-        "Pas pour l'étape 01, qui vous concerne seul — en coaching individuel ou avec d'autres dirigeants, jamais avec vos propres équipes — et reste confidentielle. Pour l'étape 02, oui : les cercles d'avancée réunissent 6 à 8 personnes de votre encadrement, et c'est précisément là que la co-responsabilité s'installe.",
+        "Pas pour l'étape 01, qui vous concerne seul — en coaching individuel, jamais avec vos propres équipes — et reste confidentielle. Pour l'étape 02, oui : les cercles d'avancée réunissent 6 à 8 personnes de votre encadrement, et c'est précisément là que la co-responsabilité s'installe.",
         "Vous choisissez les participants. Nous vous aidons à composer le groupe lors du cadrage.",
       ],
     },

@@ -19,17 +19,15 @@ const COLONNES = [
       { href: "/un-seul-souffle/", label: "Notre approche" },
       { href: "/notre-equipe/", label: "Notre équipe" },
       { href: "/tarifs/", label: "Tarifs" },
-      { href: "/infos-utiles/", label: "Infos utiles" },
+      { href: "/infos-utiles/", label: "Nos articles" },
       { href: "/contact/", label: "Contact" },
     ],
   },
   {
     titre: "Accompagnements",
     liens: [
-      { href: "/transformation-dirigeant/", label: "Coaching dirigeant" },
-      { href: "/transformation-entreprise/", label: "Conseil en organisation" },
-      { href: "/daf-externalise-toulouse/", label: "DAF externalisé" },
-      { href: "/conseil-strategie-commerciale-toulouse/", label: "Stratégie commerciale" },
+      { href: "/transformation-dirigeant/", label: "Parcours dirigeant" },
+      { href: "/transformation-entreprise/", label: "Parcours entreprise" },
       { href: "/diagnostic/", label: "Diagnostic gratuit" },
     ],
   },
@@ -73,8 +71,8 @@ export function Footer({ credit = false }: { credit?: boolean }) {
                 className="mx-auto mb-5 h-auto w-[104px] sm:mx-0"
               />
               <p className="mx-auto max-w-[34ch] text-[14.5px] leading-relaxed text-body sm:mx-0">
-                Équipe de direction externalisée pour les dirigeants de PME et
-                d&apos;ETI, à Toulouse et en Occitanie.
+                Équipe de direction externalisée pour les dirigeants de TPE et
+                PME, à Toulouse et en Occitanie.
               </p>
             </div>
 
@@ -145,7 +143,7 @@ export function Footer({ credit = false }: { credit?: boolean }) {
             ))}
 
             <div className="col-span-2 sm:col-span-1">
-              <Titre>Domaines</Titre>
+              <Titre>Nos expertises</Titre>
               <ul className="grid gap-2.5 text-sm sm:grid-cols-1 max-sm:grid-cols-2 max-sm:gap-x-6">
                 {piliers.map((pilier) => (
                   <li
@@ -157,7 +155,13 @@ export function Footer({ credit = false }: { credit?: boolean }) {
                       className="h-[7px] w-[7px] shrink-0 translate-y-[-1px] rounded-full"
                       style={{ backgroundColor: ACCENTS[pilier.accent].vif }}
                     />
-                    {pilier.nom}
+                    {pilier.page ? (
+                      <Link href={pilier.page.href} className="transition-colors hover:text-teal">
+                        {pilier.nom}
+                      </Link>
+                    ) : (
+                      pilier.nom
+                    )}
                   </li>
                 ))}
               </ul>

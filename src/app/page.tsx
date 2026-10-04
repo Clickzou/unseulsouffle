@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title: "Cabinet de conseil pour PME à Toulouse | Un Seul Souffle",
   // 144 / 150 caractères
   description:
-    "Cabinet de conseil pour dirigeants de PME et ETI à Toulouse : un conseiller référent, jusqu'à la mise en œuvre sur le terrain. Diagnostic gratuit.",
+    "Cabinet de conseil pour dirigeants de TPE et PME à Toulouse : un expert référent, jusqu'à la mise en œuvre sur le terrain. Diagnostic gratuit.",
   alternates: { canonical: "/" },
   robots: ROBOTS,
   openGraph: {
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/",
     siteName: "Un Seul Souffle",
-    title: "Cabinet de conseil pour dirigeants de PME et ETI à Toulouse",
+    title: "Cabinet de conseil pour dirigeants de TPE et PME à Toulouse",
     description:
-      "Un conseiller référent dédié à votre sujet, quatre autres expertises en appui si besoin. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.",
+      "Un expert référent dédié à votre sujet, cinq autres expertises en appui si besoin. Pas un rapport : un accompagnement jusqu'à la mise en œuvre.",
     images: [{ url: "/og-equipe.webp", width: 1200, height: 630, alt: "L'équipe Un Seul Souffle" }],
   },
 };
@@ -82,7 +82,7 @@ export default function HomePage() {
         </Reveal>
         <ArticlesLies
           articles={articlesTries().slice(0, 3)}
-          label="Infos utiles"
+          label="Nos articles"
           titre="Les derniers articles du cabinet"
         />
         <Reveal>

@@ -23,11 +23,11 @@ import { MenuMobile } from "@/components/MenuMobile";
  */
 const LIENS = [
   { href: "/un-seul-souffle/", label: "Le cabinet" },
-  { href: "/transformation-dirigeant/", label: "Dirigeant" },
-  { href: "/transformation-entreprise/", label: "Entreprise" },
+  { href: "/transformation-dirigeant/", label: "Parcours dirigeant" },
+  { href: "/transformation-entreprise/", label: "Parcours entreprise" },
   { href: "/notre-equipe/", label: "Équipe" },
   { href: "/tarifs/", label: "Tarifs" },
-  { href: "/infos-utiles/", label: "Infos utiles" },
+  { href: "/infos-utiles/", label: "Nos articles" },
   { href: "/contact/", label: "Contact" },
 ];
 

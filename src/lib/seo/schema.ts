@@ -11,6 +11,14 @@
 import { SITE_URL, faq, parcours } from "@/lib/content/home";
 import type { PagePilier } from "@/lib/content/pilier";
 
+/** Réponse de FAQ sans le balisage de RichText : liens et gras ne vont pas dans le JSON-LD. */
+function texteBrut(paragraphes: string[]): string {
+  return paragraphes
+    .join(" ")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1");
+}
+
 /**
  * NAP officiel, fourni par la cliente le 22/09/2026.
  *
@@ -62,7 +70,7 @@ export function buildHomeSchema() {
         email: "contact@unseulsouffle.fr",
         slogan: "Structurer aujourd'hui, renforcer demain",
         description:
-          "Équipe de direction externalisée qui accompagne les dirigeants de PME et d'ETI. Un conseiller référent prend en charge chaque situation et s'appuie, quand le sujet l'exige, sur quatre autres expertises de direction : finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail.",
+          "Équipe de direction externalisée qui accompagne les dirigeants de TPE et PME. Un expert référent prend en charge chaque situation et s'appuie, quand le sujet l'exige, sur cinq autres expertises de direction : finance, organisation et coopération, stratégie commerciale, production, qualité de vie au travail.",
         address: { "@type": "PostalAddress", ...ADRESSE },
         identifier: { "@type": "PropertyValue", propertyID: "SIRET", value: SIRET },
         areaServed: [
@@ -95,10 +103,10 @@ export function buildHomeSchema() {
       {
         "@type": "ProfessionalService",
         "@id": `${SITE_URL}/#service`,
-        name: "Accompagnement de dirigeants de PME et ETI",
+        name: "Accompagnement de dirigeants de TPE et PME",
         provider: { "@id": `${SITE_URL}/#organization` },
         serviceType: "Conseil en organisation et accompagnement de dirigeants",
-        audience: { "@type": "BusinessAudience", name: "PME et ETI de 10 à 250 salariés" },
+        audience: { "@type": "BusinessAudience", name: "TPE et PME de 10 à 250 salariés" },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Parcours d'accompagnement",
@@ -126,7 +134,7 @@ export function buildHomeSchema() {
           .map((item) => ({
             "@type": "Question",
             name: item.q,
-            acceptedAnswer: { "@type": "Answer", text: item.r.join(" ") },
+            acceptedAnswer: { "@type": "Answer", text: texteBrut(item.r) },
           })),
       },
       {
@@ -170,7 +178,7 @@ export function buildPilierSchema(page: PagePilier) {
           { "@type": "AdministrativeArea", name: "Haute-Garonne" },
           { "@type": "AdministrativeArea", name: "Occitanie" },
         ],
-        audience: { "@type": "BusinessAudience", name: "PME et ETI de 10 à 250 salariés" },
+        audience: { "@type": "BusinessAudience", name: "TPE et PME de 10 à 250 salariés" },
       },
       {
         "@type": "BreadcrumbList",
@@ -186,7 +194,7 @@ export function buildPilierSchema(page: PagePilier) {
         mainEntity: questions.map((item) => ({
           "@type": "Question",
           name: item.q,
-          acceptedAnswer: { "@type": "Answer", text: item.r.join(" ") },
+          acceptedAnswer: { "@type": "Answer", text: texteBrut(item.r) },
         })),
       },
     ],

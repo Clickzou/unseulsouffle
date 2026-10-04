@@ -39,7 +39,7 @@ const CABINET = [
   { href: "/un-seul-souffle/", label: "Notre approche" },
   { href: "/notre-equipe/", label: "Notre équipe" },
   { href: "/tarifs/", label: "Tarifs" },
-  { href: "/infos-utiles/", label: "Infos utiles" },
+  { href: "/infos-utiles/", label: "Nos articles" },
   { href: "/contact/", label: "Contact" },
 ];
 

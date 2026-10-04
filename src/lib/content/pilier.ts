@@ -54,6 +54,12 @@ export type Bloc =
   | { type: "comparatif" }
   /** Les cinq expertises, depuis `piliers` (home.ts), avec leurs référents. */
   | { type: "expertises" }
+  /**
+   * Le référent de la page, avec sa photo (retour cliente : « plus de photos,
+   * un site plus humain »). Nom, photo et lien sont lus dans `equipe` (home.ts)
+   * par le slug ; `texte` est la présentation propre à cette page.
+   */
+  | { type: "referent"; slug: string; texte: string[] }
   /** La grille tarifaire d'une offre, lue dans `tarifs.ts` (source unique des prix). */
   | { type: "tarifs"; offre: "dirigeant" | "entreprise" | "finance" }
   /**

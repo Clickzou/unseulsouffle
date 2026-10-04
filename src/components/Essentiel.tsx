@@ -21,9 +21,9 @@ const AFFIRMATIONS = [
     texte: (
       <>
         Un Seul Souffle est un{" "}
-        <strong className="font-normal text-ink">cabinet de conseil à Toulouse</strong> et en Occitanie qui
-        accompagne les dirigeants de PME et d&apos;ETI de 10 à 250 salariés, dans l&apos;industrie,
-        l&apos;agroalimentaire, les services et la distribution.
+        <strong className="font-normal text-ink">cabinet d&apos;experts opérationnels à Toulouse</strong> et
+        en Occitanie qui accompagne les dirigeants de TPE et PME de 10 à 250 salariés, dans
+        l&apos;industrie et les services.
       </>
     ),
   },
@@ -32,10 +32,10 @@ const AFFIRMATIONS = [
     accent: ACCENTS.organisation.texte,
     texte: (
       <>
-        Un <strong className="font-normal text-ink">conseiller référent</strong> prend en charge
-        votre sujet et reste votre interlocuteur. Derrière lui, quatre autres compétences de
-        direction — finance, organisation et coopération, stratégie commerciale, production, qualité
-        de vie au travail — qu&apos;il mobilise{" "}
+        Un <strong className="font-normal text-ink">expert référent</strong> prend en charge
+        votre sujet et reste votre interlocuteur. Derrière lui, cinq autres compétences de
+        direction — finance, organisation et coopération, stratégie commerciale, organisation
+        industrielle, stratégie industrielle, qualité de vie au travail — qu&apos;il mobilise{" "}
         <em className="italic text-teal">seulement si votre situation l&apos;exige</em>.
       </>
     ),
@@ -67,14 +67,15 @@ export function Essentiel() {
 
           <div className="mt-9 grid gap-7">
             {AFFIRMATIONS.map((item) => (
-              <div key={item.repere} className="grid gap-2 sm:grid-cols-[104px_1fr] sm:gap-6">
+              <div key={item.repere} className="grid gap-2 sm:grid-cols-[150px_1fr] sm:gap-6">
+                {/* Repères agrandis à la demande de la cliente (retour du 04/10/2026). */}
                 <span
-                  className="flex items-baseline gap-2 pt-[9px] font-mono text-[10px] uppercase tracking-[0.14em]"
+                  className="flex items-baseline gap-2.5 pt-[5px] font-mono text-[14px] font-medium uppercase leading-snug tracking-[0.1em]"
                   style={{ color: item.accent }}
                 >
                   <span
                     aria-hidden="true"
-                    className="h-[7px] w-[7px] shrink-0 rounded-full"
+                    className="h-[9px] w-[9px] shrink-0 rounded-full"
                     style={{ backgroundColor: item.accent }}
                   />
                   {item.repere}

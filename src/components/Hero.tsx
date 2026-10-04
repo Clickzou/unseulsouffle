@@ -26,7 +26,7 @@ export function Hero() {
         <header className="max-w-[46rem] pb-24 pt-32 sm:pb-32 sm:pt-40 lg:pb-40 lg:pt-44">
           {/* Toulouse quitte le kicker : il est désormais dans le H1, l'y laisser
               ferait doublon à deux lignes d'écart. */}
-          <Label className="anim-montee !text-[#7fd3ca]">PME · ETI de 10 à 250 salariés</Label>
+          <Label className="anim-montee !text-[#7fd3ca]">TPE · PME de 10 à 250 salariés</Label>
 
           {/* Le H1 porte la requête de la home en toutes lettres : « cabinet de
               conseil » + Toulouse. « Accompagnement dirigeant » appartient à
@@ -34,7 +34,7 @@ export function Hero() {
               reprend plus en H1. La signature de marque (« équipe de direction
               externalisée »), actif GEO, passe juste en dessous. */}
           <h1 style={{ animationDelay: "90ms" }} className="anim-montee mt-6 max-w-[16ch] text-[clamp(38px,5.6vw,64px)] leading-[1.06] !text-[#f6f4ee]">
-            Cabinet de conseil pour dirigeants de PME et ETI à{" "}
+            Cabinet de conseil pour dirigeants de TPE et PME à{" "}
             <em className="italic text-[#7fd3ca]">Toulouse</em>
           </h1>
 
@@ -44,10 +44,10 @@ export function Hero() {
 
           <p style={{ animationDelay: "270ms" }} className="anim-montee mt-6 max-w-[58ch] text-lg leading-relaxed text-[#d3d8e0]">
             Vous ne manquez pas d&apos;experts autour de vous. Vous manquez d&apos;une lecture
-            d&apos;ensemble. Un Seul Souffle est un cabinet de conseil qui accompagne les
-            dirigeants de PME et d&apos;ETI à Toulouse et en Occitanie : un conseiller référent
+            d&apos;ensemble. Un Seul Souffle est un cabinet d&apos;experts opérationnels qui accompagne les
+            dirigeants de TPE et PME à Toulouse et en Occitanie : un expert référent
             prend en charge votre sujet, et
-            s&apos;appuie sur quatre autres expertises de direction quand votre situation
+            s&apos;appuie sur cinq autres expertises de direction quand votre situation
             l&apos;exige — jusqu&apos;à la mise en œuvre sur le terrain.
           </p>
 

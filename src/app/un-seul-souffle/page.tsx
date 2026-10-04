@@ -29,18 +29,19 @@ export const metadata: Metadata = {
   title: "Cabinet de conseil en management, Toulouse",
   // ≤ 150
   description:
-    "Cabinet de conseil en management pour dirigeants de PME et ETI à Toulouse et en Occitanie : notre méthode d'accompagnement, nos valeurs, la cordée.",
+    "Cabinet de conseil en management pour dirigeants de TPE et PME à Toulouse et en Occitanie : notre méthode d'accompagnement, nos valeurs, la cordée.",
   alternates: { canonical: "/un-seul-souffle/" },
   robots: ROBOTS,
 };
 
-/** Les cinq expertises, à droite de l'en-tête, chacune dans la teinte de son ruban. */
-const expertises: { nom: string; accent: CleAccent }[] = [
-  { nom: "Finances", accent: "finance" },
-  { nom: "Coopération", accent: "organisation" },
-  { nom: "QVT", accent: "qvt" },
-  { nom: "Stratégie", accent: "commercial" },
-  { nom: "Production", accent: "production" },
+/** Les six expertises, à droite de l'en-tête, chacune dans la teinte de son ruban. */
+const expertises: { nom: string; accent: CleAccent; href: string }[] = [
+  { nom: "Finances", accent: "finance", href: "/daf-externalise-toulouse/" },
+  { nom: "Coopération", accent: "organisation", href: "/organisation-cooperation-toulouse/" },
+  { nom: "Stratégie commerciale", accent: "commercial", href: "/conseil-strategie-commerciale-toulouse/" },
+  { nom: "Organisation industrielle", accent: "production", href: "/conseil-organisation-industrielle-toulouse/" },
+  { nom: "Stratégie industrielle", accent: "industrie", href: "/conseil-strategie-industrielle-toulouse/" },
+  { nom: "QVT", accent: "qvt", href: "/qvt-equilibre-travail-toulouse/" },
 ];
 
 /** Dégradé de la corde : les teintes des cinq étapes, dans l'ordre de la montée. */
@@ -56,7 +57,7 @@ function schema() {
         url: `${SITE_URL}/un-seul-souffle/`,
         name: "Un Seul Souffle, cabinet de conseil en management à Toulouse",
         description:
-          "Cabinet de conseil en management pour les dirigeants de PME et d'ETI, à Toulouse et en Occitanie. Un conseiller référent prend en charge chaque situation, avec quatre autres expertises de direction en appui quand le sujet l'exige.",
+          "Cabinet de conseil en management pour les dirigeants de TPE et PME, à Toulouse et en Occitanie. Un expert référent prend en charge chaque situation, avec cinq autres expertises de direction en appui quand le sujet l'exige.",
         isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": `${SITE_URL}/#organization` },
       },
@@ -87,7 +88,7 @@ export default function CabinetPage() {
           accent="organisation"
           anime
           h1="Cabinet de conseil en management à Toulouse, jusqu'à la mise en œuvre"
-          lede="Un Seul Souffle est un cabinet de conseil en management pour les dirigeants de PME et d'ETI de 10 à 250 salariés, à Toulouse et en Occitanie. Un conseiller référent prend en charge votre situation et la suit du début à la fin. Ce qui nous distingue n'est pas le nombre d'experts mobilisés : c'est que nous ne partons pas à la remise du rapport."
+          lede="Un Seul Souffle est un cabinet de conseil en management pour les dirigeants de TPE et PME de 10 à 250 salariés, à Toulouse et en Occitanie. Un expert référent prend en charge votre situation et la suit du début à la fin. Ce qui nous distingue n'est pas le nombre d'experts mobilisés : c'est que nous ne partons pas à la remise du rapport."
           aside={
             <div>
               <p
@@ -108,9 +109,12 @@ export default function CabinetPage() {
                       borderLeftWidth: 3,
                     }}
                   >
-                    <span className="font-serif text-[19px] font-normal text-ink">
+                    <Link
+                      href={expertise.href}
+                      className="font-serif text-[19px] font-normal text-ink transition-colors hover:text-teal"
+                    >
                       {expertise.nom}
-                    </span>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -213,11 +217,23 @@ export default function CabinetPage() {
 
               <p className="mt-7 max-w-prose text-[16px] leading-[1.72]">
                 Au cœur de notre méthode, une règle simple : une cordée a un premier de cordée.
-                C&apos;est votre conseiller référent : celui qui
+                C&apos;est votre expert référent : celui qui
                 connaît votre entreprise et qui reste votre interlocuteur. Les autres membres
                 n&apos;interviennent que lorsque le passage l&apos;exige — et vous savez toujours
                 qui est encordé avec vous.
               </p>
+
+              {/* La cordée en montagne, demandée par la cliente (retour du 04/10/2026).
+                  Générée par scripts/gen-pilier-images.mjs (entrée `cordee`). */}
+              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-carte">
+                <Image
+                  src="/cabinet/cordee.webp"
+                  alt="Cordée de quatre alpinistes encordés, vus de loin, montant une arête enneigée vers un sommet ensoleillé des Pyrénées"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </Reveal>
 
             <ol className="relative">

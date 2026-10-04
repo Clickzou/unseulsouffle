@@ -22,10 +22,16 @@ const QUESTIONS: Question[] = PILIERS_DIAGNOSTIC.flatMap((p, pilier) =>
 
 const NON_CONCERNE = -1;
 
-/** Référents d'un pilier, depuis home.ts (même accent). */
+/**
+ * Référents d'un domaine du diagnostic, depuis home.ts (même accent). Le domaine
+ * production couvre les deux expertises industrielles : organisation (teinte
+ * `production`) et stratégie (teinte `industrie`).
+ */
 function referents(accent: string) {
-  const pilier = piliers.find((p) => p.accent === accent);
-  return (pilier?.referents ?? [])
+  const accents = accent === "production" ? ["production", "industrie"] : [accent];
+  return piliers
+    .filter((p) => accents.includes(p.accent))
+    .flatMap((p) => p.referents)
     .map((slug) => equipe.find((m) => m.slug === slug))
     .filter((m): m is (typeof equipe)[number] => Boolean(m));
 }

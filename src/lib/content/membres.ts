@@ -19,7 +19,7 @@ export type PageMembre = {
   statut: string;
   /** Domaine porté, tel qu'affiché sur la page équipe. */
   expertise: string;
-  accent: "finance" | "organisation" | "commercial" | "production" | "qvt";
+  accent: "finance" | "organisation" | "commercial" | "production" | "industrie" | "qvt";
   photo: string;
   linkedin?: string;
 
@@ -30,11 +30,25 @@ export type PageMembre = {
 
   /** Réponse directe extractible — checklist GEO (master § 8, point 1). */
   essentiel: string;
+  /** Paragraphes de présentation, sous la réponse directe. */
+  presentation?: string[];
 
   /** Ce dont elle se charge, en clair. */
   prendEnCharge: { titre: string; texte: string }[];
+  /** Titre de la section `prendEnCharge` (par défaut « Ce qu'elle prend en charge »). */
+  titrePrendEnCharge?: string;
+  /**
+   * Son rôle dans les étapes du parcours entreprise : deux blocs par étape.
+   * `n` renvoie à `etapes` (home.ts), dont le verbe est repris à l'affichage.
+   */
+  etapes?: {
+    intro: string;
+    liste: { n: string; accroche: string; blocs: { titre: string; texte: string }[] }[];
+  };
   /** Situations concrètes dans lesquelles on fait appel à elle. */
   situations: string[];
+  /** Phrase de conclusion sous la liste des situations. */
+  situationsConclusion?: string;
   /** Sections rédigées, propres à la personne. */
   chapitres: { titre: string; paragraphes: string[] }[];
   faq: QuestionFAQ[];
@@ -49,20 +63,20 @@ export const membres: PageMembre[] = [
     statut: "Associée fondatrice",
     expertise: "Pilotage financier",
     accent: "finance",
-    photo: "/equipe/marjorie-anglade.webp",
+    photo: "/equipe/marjorie-anglade-v2.webp",
     linkedin: "https://www.linkedin.com/in/marjorie-anglade-31tls/",
 
     // 51 / 60
     metaTitle: "Marjorie Anglade — pilotage financier",
     // 144 / 150
     metaDescription:
-      "Marjorie Anglade, associée fondatrice d'Un Seul Souffle : direction financière externalisée pour PME et ETI, trésorerie, tableaux de bord, marges.",
+      "Marjorie Anglade, associée fondatrice d'Un Seul Souffle : direction financière externalisée pour TPE et PME, trésorerie, tableaux de bord, marges.",
     h1: "Marjorie Anglade, pilotage financier des PME",
     lede:
       "Associée fondatrice d'Un Seul Souffle, Marjorie Anglade prend en charge le pilotage financier des entreprises accompagnées. Elle traduit la stratégie en chiffres pour garantir la viabilité et la sérénité du projet.",
 
     essentiel:
-      "Marjorie Anglade est associée fondatrice du cabinet Un Seul Souffle et référente du pilier finance et pilotage. Expert-comptable inscrite au tableau de l'Ordre, elle intervient ici en directrice financière à temps partagé auprès de PME et d'ETI de 10 à 250 salariés en Occitanie, sur le prévisionnel de trésorerie, les tableaux de bord de gestion et l'analyse de marge. Elle ne se substitue pas à l'expert-comptable de l'entreprise : elle travaille à partir des comptes produits, en amont des décisions du dirigeant.",
+      "Marjorie Anglade est associée fondatrice du cabinet Un Seul Souffle et référente du pilier finance et pilotage. Expert-comptable inscrite au tableau de l'Ordre, elle intervient ici en directrice financière à temps partagé auprès de TPE et PME de 10 à 250 salariés en Occitanie, sur le prévisionnel de trésorerie, les tableaux de bord de gestion et l'analyse de marge. Elle ne se substitue pas à l'expert-comptable de l'entreprise : elle travaille à partir des comptes produits, en amont des décisions du dirigeant.",
 
     prendEnCharge: [
       {
@@ -133,7 +147,7 @@ export const membres: PageMembre[] = [
       {
         q: "Sur quels secteurs intervient-elle ?",
         r: [
-          "Les secteurs couverts par le cabinet : industrie, agroalimentaire, services et distribution, sur des PME et ETI de 10 à 250 salariés en Haute-Garonne et en Occitanie.",
+          "Les secteurs couverts par le cabinet : industrie, agroalimentaire, services et distribution, sur des TPE et PME de 10 à 250 salariés en Haute-Garonne et en Occitanie.",
         ],
       },
       {
@@ -156,20 +170,25 @@ export const membres: PageMembre[] = [
     statut: "Associée fondatrice",
     expertise: "Organisation et coopération",
     accent: "organisation",
-    photo: "/equipe/muriel-saffroy.webp",
+    photo: "/equipe/muriel-saffroy-v2.webp",
     linkedin: "https://www.linkedin.com/in/muriel-saffroy/",
 
     // 56 / 60
     metaTitle: "Muriel Saffroy — coopération en entreprise",
     // 147 / 150
     metaDescription:
-      "Muriel Saffroy, associée fondatrice d'Un Seul Souffle : intelligence collective, clarification des rôles et coopération des équipes en PME et ETI.",
+      "Muriel Saffroy, associée fondatrice d'Un Seul Souffle : intelligence collective, clarification des rôles et coopération des équipes en TPE et PME.",
     h1: "Muriel Saffroy, coopération et intelligence collective",
     lede:
-      "Associée fondatrice d'Un Seul Souffle, Muriel Saffroy travaille la qualité de coopération dans les PME et les ETI. Courroie de transmission, elle s'assure que l'organisation interne est fluide et que les équipes sont alignées autour du cap.",
+      "Associée fondatrice d'Un Seul Souffle, Muriel Saffroy travaille la qualité de coopération dans les TPE et les PME. Courroie de transmission, elle s'assure que l'organisation interne est fluide et que les équipes sont alignées autour du cap.",
 
     essentiel:
-      "Muriel Saffroy est associée fondatrice du cabinet Un Seul Souffle et référente du pilier organisation et coopération. Elle intervient auprès de dirigeants de PME et d'ETI de 10 à 250 salariés en Occitanie sur la clarification des rôles, les modes de décision et l'intelligence collective. Elle anime les cercles d'avancée, sessions collectives de trois heures en groupes de six à huit personnes, en présentiel ou en visio, et conduit l'étape Coopérer du parcours d'accompagnement du dirigeant.",
+      "Muriel Saffroy est associée fondatrice du cabinet Un Seul Souffle et référente du pilier organisation et coopération. Elle intervient auprès de dirigeants de TPE et PME de 10 à 250 salariés en Occitanie sur la clarification des rôles, les modes de décision et l'intelligence collective.",
+    presentation: [
+      "Elle accompagne les dirigeants et les managers dans les évolutions de leur posture, de leur organisation et de leur coopération. Son regard croise intelligence relationnelle, systémique et expérience du terrain industriel pour comprendre ce qui se joue entre les personnes, les métiers et les niveaux de décision.",
+      "Elle anime les cercles d'avancée, sessions collectives de trois heures en groupes de six à huit personnes, en présentiel ou en visio, et conduit l'étape Coopérer du parcours d'accompagnement du dirigeant.",
+      "Référente Organisation & coopération, elle apporte également une vision d'ensemble de l'entreprise dans les étapes Cartographier, Structurer et Renforcer, en mettant en lien les différents enjeux et les expertises de l'équipe. Elle relie les pièces du puzzle.",
+    ],
 
     prendEnCharge: [
       {
@@ -193,14 +212,76 @@ export const membres: PageMembre[] = [
           "Ce qu'il tranche réellement, à quel rythme et sur quels éléments. Un CODIR qui valide sans décider est l'une des raisons les plus fréquentes pour lesquelles un dirigeant reste le centre de tout.",
       },
     ],
+    titrePrendEnCharge: "Ce qu'elle prend en charge auprès des dirigeants",
+
+    etapes: {
+      intro:
+        "Elle relie le fonctionnement humain de l'entreprise à son organisation réelle, pour faire émerger les leviers de performance qui se trouvent dans les interfaces.",
+      liste: [
+        {
+          n: "03",
+          accroche: "Elle aide à voir ce qui se joue réellement.",
+          blocs: [
+            {
+              titre: "Les interfaces entre les métiers",
+              texte:
+                "Comprendre ce qui se joue entre direction, production, qualité, maintenance, commerce et fonctions support. Identifier les endroits où l'information se perd, où les décisions ralentissent et où les tensions apparaissent.",
+            },
+            {
+              titre: "Les savoirs du terrain",
+              texte:
+                "Faire émerger ce que les équipes savent de leur activité, de leurs contraintes et de leurs solutions. Mettre au jour les compétences, les irritants et les informations qui restent souvent invisibles à la direction.",
+            },
+          ],
+        },
+        {
+          n: "04",
+          accroche: "Elle met chacun au bon endroit et crée les bonnes interfaces.",
+          blocs: [
+            {
+              titre: "Les responsabilités et les interfaces",
+              texte:
+                "Clarifier qui porte quoi, jusqu'où va la responsabilité de chacun et comment les décisions circulent. Construire une organisation qui ne repose plus sur le dirigeant comme point de passage systématique.",
+            },
+            {
+              titre: "La coopération entre les fonctions",
+              texte:
+                "Créer les conditions pour que les métiers travaillent réellement ensemble, au-delà des organigrammes et des réunions. Transformer les désaccords et les différences de regard en ressources pour l'entreprise.",
+            },
+          ],
+        },
+        {
+          n: "05",
+          accroche: "Elle rend l'organisation plus autonome et durable.",
+          blocs: [
+            {
+              titre: "L'autonomie des équipes et des managers",
+              texte:
+                "Faire évoluer les pratiques managériales pour que les décisions puissent être prises au bon niveau et que les managers deviennent de véritables relais du projet de l'entreprise.",
+            },
+            {
+              titre: "L'intelligence collective dans la durée",
+              texte:
+                "Ancrer les nouvelles façons de travailler, de décider et de coopérer pour que la performance ne dépende plus d'une personne ou d'une intervention extérieure.",
+            },
+          ],
+        },
+      ],
+    },
 
     situations: [
       "Les décisions remontent toutes au dirigeant, malgré une équipe compétente",
+      "Le dirigeant doit passer de l'expertise au pilotage de son entreprise",
+      "L'entreprise grandit, mais l'organisation ne suit plus",
       "Le comité de direction valide mais ne tranche pas",
+      "Les responsabilités se chevauchent et les décisions ralentissent",
       "Les désaccords se règlent en bilatéral après la réunion, jamais pendant",
+      "Le terrain voit des choses que la direction ne voit pas, mais personne ne crée l'espace pour les faire remonter",
       "Des conflits internes paralysent des projets entiers",
       "La délégation a été tentée, et ce qui est délégué revient",
     ],
+    situationsConclusion:
+      "Ces situations ont un point commun : le problème n'est pas toujours là où on le cherche. C'est en regardant les relations, les interfaces et le fonctionnement global du système que les vrais leviers apparaissent.",
 
     chapitres: [
       {
@@ -208,8 +289,9 @@ export const membres: PageMembre[] = [
         paragraphes: [
           "Muriel Saffroy vient de l'industrie. Après un DEA de biologie à Clermont-Ferrand et un master de gestion des entreprises agricoles et agroalimentaires à l'ESA Purpan de Toulouse, elle dirige de 1994 à 2014 deux sites meuniers, pour Moulin Fayol et les Grands Moulins de Paris, à Revel et à Montluçon : production, logistique, qualité, maintenance et sécurité.",
           "Elle y crée le laboratoire qualité, conduit les certifications HACCP, bio et ISO 9002, met en place un encadrement intermédiaire et pilote la reconstruction complète d'un site. De 2014 à 2016, elle est responsable de production aux Grands Moulins de Paris à Brienne-le-Château : 400 tonnes par jour, huit services, soixante collaborateurs.",
-          "Depuis 2017, elle accompagne dirigeants, managers et équipes sur le leadership et la coopération, et intervient comme manager de transition dans des contextes de crise ou de réorganisation. Elle est coach professionnelle certifiée ICF (Coaching Ways, 2017, titre RNCP) et facilitatrice certifiée en intelligence collective (Didascalis, 2021).",
-          "Ce parcours explique sa manière de travailler : les questions de rôles et de décision, elle les a d'abord vécues en tant que responsable d'équipes, sur des lignes de production où une décision mal portée se voit dans l'heure.",
+          "Depuis 2017, elle accompagne dirigeants, managers et équipes sur le leadership, la coopération et les transformations organisationnelles. Ses années de coaching et de facilitation en intelligence collective lui ont permis d'enrichir son expérience industrielle d'un autre regard : celui des personnes, de leurs interactions et des ressources qui existent déjà dans l'entreprise.",
+          "Elle apprend à aller chercher ce que chacun sait, sait faire et peut apporter, à faire dialoguer les regards et à mettre en complémentarité les compétences plutôt qu'à chercher une solution unique. Elle intervient également comme manager de transition dans des contextes de crise ou de réorganisation. Elle est coach professionnelle certifiée ICF (Coaching Ways, 2017, titre RNCP) et facilitatrice certifiée de l'intelligence collective (Didascalis, 2021).",
+          "Ce double parcours — vingt ans à diriger des sites industriels, puis plusieurs années à accompagner les personnes et les collectifs — fonde aujourd'hui sa manière de travailler. Elle regarde à la fois le fonctionnement réel de l'entreprise et ce que les personnes qui la composent peuvent lui apporter. Les questions de rôles, de décision et de coopération, elle les a d'abord vécues comme responsable d'équipes, sur des lignes de production où une décision mal portée se voit dans l'heure.",
         ],
       },
       {
@@ -247,13 +329,14 @@ export const membres: PageMembre[] = [
         q: "Est-ce de la formation au management ?",
         r: [
           "Non. Une formation transmet un contenu identique pour tous ; ce travail porte sur les décisions réelles de l'entreprise et sur la façon dont elles circulent. Le contenu vient des participants, la méthode vient du cabinet.",
+          "Lorsque nous détectons un besoin de formation, nous mobilisons les financements de votre OPCO (opérateur de compétences).",
         ],
       },
     ],
 
     silo: {
-      href: "/transformation-dirigeant/",
-      ancre: "Découvrir l'accompagnement du dirigeant",
+      href: "/organisation-cooperation-toulouse/",
+      ancre: "Découvrir l'organisation et la coopération",
     },
   },
 ];

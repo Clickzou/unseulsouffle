@@ -11,7 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { CTAFinal } from "@/components/CTAFinal";
 import { ArticlesLies } from "@/components/infos-utiles/ArticlesLies";
 import { articlesDuMembre } from "@/lib/content/articles";
-import { ACCENTS, SITE_URL } from "@/lib/content/home";
+import { ACCENTS, SITE_URL, etapes } from "@/lib/content/home";
 import type { PageMembre } from "@/lib/content/membres";
 import { ROBOTS } from "@/lib/seo/indexation";
 
@@ -150,6 +150,11 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
                     {membre.essentiel}
                   </p>
                 </div>
+                {membre.presentation?.map((p) => (
+                  <p key={p} className="mt-5 max-w-prose text-[17px] leading-[1.72] sm:ml-[128px]">
+                    {p}
+                  </p>
+                ))}
               </div>
             </div>
           </Section>
@@ -157,7 +162,7 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
 
         <Reveal>
           <Section>
-            <SectionHead label="Son périmètre" titre="Ce qu'elle prend en charge" />
+            <SectionHead label="Son périmètre" titre={membre.titrePrendEnCharge ?? "Ce qu'elle prend en charge"} />
             <ul className="grid gap-px overflow-hidden rounded-carte border border-rule bg-rule sm:grid-cols-2">
               {membre.prendEnCharge.map((item) => (
                 <li key={item.titre} className="bg-surface p-6">
@@ -176,13 +181,56 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
           </Section>
         </Reveal>
 
+        {/* Son rôle dans les étapes 03, 04 et 05 du parcours entreprise. */}
+        {membre.etapes && (
+          <Reveal>
+            <Section ton="ground" large>
+              {/* Titre à gauche, introduction à droite : pas de vide en pleine largeur. */}
+              <div className="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-20">
+                <div>
+                  <Label>Dans le parcours entreprise</Label>
+                  <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] leading-[1.12]">
+                    Son rôle dans les étapes Cartographier, Structurer et Renforcer
+                  </h2>
+                </div>
+                <p className="max-w-prose text-lg leading-relaxed text-body">{membre.etapes.intro}</p>
+              </div>
+              <ol className="grid gap-6 lg:grid-cols-3">
+                {membre.etapes.liste.map((etape) => {
+                  const verbe = etapes.find((e) => e.n === etape.n)?.verbe ?? "";
+                  return (
+                    <li
+                      key={etape.n}
+                      className="relative overflow-hidden rounded-[16px] border border-rule bg-surface p-7 pt-8"
+                    >
+                      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px]" style={{ backgroundColor: accent.vif }} />
+                      <p className="font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: accent.texte }}>
+                        {etape.n} — {verbe}
+                      </p>
+                      <h3 className="mt-3 font-serif text-[22px] font-normal leading-snug text-ink">
+                        {etape.accroche}
+                      </h3>
+                      {etape.blocs.map((bloc) => (
+                        <div key={bloc.titre} className="mt-6 border-t border-rule-2 pt-5">
+                          <h4 className="font-serif text-[18px] font-normal text-ink">{bloc.titre}</h4>
+                          <p className="mt-2 text-[15px] leading-relaxed">{bloc.texte}</p>
+                        </div>
+                      ))}
+                    </li>
+                  );
+                })}
+              </ol>
+            </Section>
+          </Reveal>
+        )}
+
         <Reveal>
           <Section ton="surface">
             <SectionHead
               label="Quand faire appel à elle"
               titre="Les situations qu'elle traite"
             />
-            <ul className="grid max-w-prose gap-3">
+            <ul className="grid gap-x-10 gap-y-3 md:grid-cols-2">
               {membre.situations.map((situation) => (
                 <li key={situation} className="relative pl-6 text-[16.5px] leading-[1.65]">
                   <span
@@ -194,6 +242,11 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
                 </li>
               ))}
             </ul>
+            {membre.situationsConclusion && (
+              <p className="mt-8 max-w-prose font-serif text-[19px] font-light italic leading-[1.55] text-ink">
+                {membre.situationsConclusion}
+              </p>
+            )}
           </Section>
         </Reveal>
 
@@ -232,7 +285,7 @@ export function GabaritMembre({ membre }: { membre: PageMembre }) {
         {/* E-E-A-T (master § 5) : l'auteur est lié depuis ses articles, et inversement. */}
         <ArticlesLies
           articles={articlesDuMembre(membre.slug)}
-          label="Infos utiles"
+          label="Nos articles"
           titre={`Les articles de ${membre.nom}`}
         />
 

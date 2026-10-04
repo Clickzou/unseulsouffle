@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { AideContact } from "@/components/AideContact";
 import { Reveal } from "@/components/ui/Reveal";
 import { ACCENTS, piliers, SITE_URL } from "@/lib/content/home";
+import { PILIERS_DIAGNOSTIC } from "@/lib/content/questionnaire";
 import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
@@ -81,6 +82,21 @@ function schema() {
 /** Aperçu illustratif du résultat : une barre par pilier, clairement marqué « Exemple ». */
 const APERCU = [72, 45, 60, 38, 55];
 
+/**
+ * Les cinq domaines évalués, lus dans le questionnaire : depuis le 04/10/2026 le
+ * cabinet compte six expertises, mais le diagnostic garde la production comme un
+ * seul domaine (organisation et stratégie industrielles).
+ */
+const DOMAINES = PILIERS_DIAGNOSTIC.map((domaine, i) => ({
+  n: String(i + 1).padStart(2, "0"),
+  nom: domaine.nom,
+  accent: domaine.accent,
+  resume:
+    domaine.accent === "production"
+      ? "Flux, processus et méthodes de production, capacités et choix industriels : l'outil d'aujourd'hui et celui de demain."
+      : (piliers.find((p) => p.accent === domaine.accent)?.resume ?? ""),
+}));
+
 function ApercuResultat() {
   return (
     <div className="relative">
@@ -97,7 +113,7 @@ function ApercuResultat() {
           </span>
         </div>
         <ul className="mt-6 grid gap-5">
-          {piliers.map((pilier, i) => {
+          {DOMAINES.map((pilier, i) => {
             const teinte = ACCENTS[pilier.accent];
             return (
               <li key={pilier.n}>
@@ -207,7 +223,7 @@ export default function DiagnosticPage() {
             </p>
           </Reveal>
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {piliers.map((pilier, i) => {
+            {DOMAINES.map((pilier, i) => {
               const teinte = ACCENTS[pilier.accent];
               return (
                 <Reveal as="li" key={pilier.n} delay={i * 80}>

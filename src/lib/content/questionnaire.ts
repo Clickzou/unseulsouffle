@@ -128,8 +128,8 @@ export const PILIERS_DIAGNOSTIC: PilierDiagnostic[] = [
       titre: "Votre priorité : la performance opérationnelle",
       texte:
         "Les flux et les interfaces coincent, et les mêmes problèmes reviennent. L'accompagnement porte sur les processus, les indicateurs et l'amélioration continue, sur le terrain.",
-      href: "/transformation-entreprise/",
-      ancre: "Découvrir le conseil en organisation",
+      href: "/conseil-organisation-industrielle-toulouse/",
+      ancre: "Découvrir le conseil en organisation industrielle",
     },
     actions: [
       "Identifiez les trois problèmes qui reviennent le plus souvent en production et notez leur fréquence.",

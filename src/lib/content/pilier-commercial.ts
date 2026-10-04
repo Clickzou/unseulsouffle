@@ -24,8 +24,8 @@ export const pilierCommercial: PagePilier = {
   metaTitle: "Conseil en stratégie commerciale, Toulouse",
   // 146 / 150
   metaDescription:
-    "Conseil en stratégie commerciale pour PME et ETI à Toulouse : audit commercial, cap, organisation et pilotage de la vente par des indicateurs utiles.",
-  nomService: "Conseil en stratégie commerciale pour PME et ETI",
+    "Conseil en stratégie commerciale pour TPE et PME à Toulouse : audit commercial, cap, organisation et pilotage de la vente par des indicateurs utiles.",
+  nomService: "Conseil en stratégie commerciale pour TPE et PME",
 
   h1: "Conseil en stratégie commerciale pour PME à Toulouse : de la vente au feeling à un cap piloté",
   lede:
@@ -33,9 +33,9 @@ export const pilierCommercial: PagePilier = {
 
   essentiel: {
     reponse:
-      "Le conseil en stratégie commerciale d'Un Seul Souffle aide les dirigeants de PME et d'ETI de 10 à 250 salariés à clarifier leur cap commercial, à structurer leur organisation de vente et à la piloter par quelques indicateurs. Il commence par un audit commercial du fonctionnement réel — clients, offre, prix, équipe, suivi — puis fixe avec le dirigeant les chantiers prioritaires et les accompagne sur le terrain. Le référent est Nicolas Vimini, directeur commercial externalisé avec vingt ans d'expérience en développement commercial. Il ne vend pas à votre place : il construit avec vous et votre équipe une façon de vendre qui tient sans lui. L'intervention se souscrit seule, sur le périmètre convenu, à Toulouse et en Occitanie.",
+      "Le conseil en stratégie commerciale d'Un Seul Souffle aide les dirigeants de TPE et PME de 10 à 250 salariés à clarifier leur cap commercial, à structurer leur organisation de vente et à la piloter par quelques indicateurs. Il commence par un audit commercial du fonctionnement réel — clients, offre, prix, équipe, suivi — puis fixe avec le dirigeant les chantiers prioritaires et les accompagne sur le terrain. Le référent est Nicolas Vimini, directeur commercial externalisé avec vingt ans d'expérience en développement commercial. Il ne vend pas à votre place : il construit avec vous et votre équipe une façon de vendre qui tient sans lui. L'intervention se souscrit seule, sur le périmètre convenu, à Toulouse et en Occitanie.",
     points: [
-      "Pour qui : PME et ETI de 10 à 250 salariés, dirigeant qui porte encore la vente",
+      "Pour qui : TPE et PME de 10 à 250 salariés, dirigeant qui porte encore la vente",
       "Référent : Nicolas Vimini, directeur commercial externalisé, 20 ans en développement commercial",
       "Ce que ça couvre : audit commercial, cap, politique commerciale, organisation, indicateurs",
       "Ce que ça n'est pas : une équipe de vendeurs mise à disposition",

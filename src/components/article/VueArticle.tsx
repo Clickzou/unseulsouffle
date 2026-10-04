@@ -80,7 +80,7 @@ function schema(article: Article, auteur: (typeof equipe)[number] | undefined) {
         "@id": `${url}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` },
-          { "@type": "ListItem", position: 2, name: "Infos utiles", item: `${SITE_URL}/infos-utiles/` },
+          { "@type": "ListItem", position: 2, name: "Nos articles", item: `${SITE_URL}/infos-utiles/` },
           { "@type": "ListItem", position: 3, name: article.h1, item: url },
         ],
       },
@@ -264,7 +264,7 @@ export function VueArticle({ article, apercu = false }: { article: Article; aper
                     /
                   </span>
                   <Link href="/infos-utiles/" className="transition-colors hover:text-teal">
-                    Infos utiles
+                    Nos articles
                   </Link>
                 </nav>
 

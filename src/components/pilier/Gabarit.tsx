@@ -58,7 +58,7 @@ export function GabaritPilier({ page }: { page: PagePilier }) {
         {/* Articles du silo : ils pointent vers ce pilier, le pilier leur répond. */}
         <ArticlesLies
           articles={articlesDuPilier(page.href)}
-          label="Infos utiles"
+          label="Nos articles"
           titre={`Nos articles — ${page.fil.toLowerCase()}`}
         />
 

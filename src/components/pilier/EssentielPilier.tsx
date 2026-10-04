@@ -36,9 +36,33 @@ const PHOTOS: Record<string, { src: string; alt: string }> = {
   },
 };
 
+/**
+ * Pages d'expertise ajoutées le 04/10/2026 : elles partagent leur teinte avec un
+ * parcours (organisation, qvt) ou avec une autre expertise, leur photo est donc
+ * choisie par l'URL et non par l'accent.
+ */
+const PHOTOS_PAR_PAGE: Record<string, { src: string; alt: string }> = {
+  "/organisation-cooperation-toulouse/": {
+    src: "/images/piliers/cooperation.webp",
+    alt: "Mains de plusieurs personnes autour d'une table de réunion, un dossier passant de l'une à l'autre",
+  },
+  "/qvt-equilibre-travail-toulouse/": {
+    src: "/images/piliers/qvt.webp",
+    alt: "Personne de dos assise sur un banc dans la cour arborée de son entreprise, une tasse à la main, pendant une pause",
+  },
+  "/conseil-organisation-industrielle-toulouse/": {
+    src: "/images/piliers/organisation-industrielle.webp",
+    alt: "Atelier de production organisé, allées de circulation marquées au sol, un ingénieur de dos observant une machine",
+  },
+  "/conseil-strategie-industrielle-toulouse/": {
+    src: "/images/piliers/strategie-industrielle.webp",
+    alt: "Dirigeant de dos sur une mezzanine, regardant un vaste hall de production en fin de journée",
+  },
+};
+
 export function EssentielPilier({ page }: { page: PagePilier }) {
   const accent = ACCENTS[page.accent];
-  const photo = PHOTOS[page.accent];
+  const photo = PHOTOS_PAR_PAGE[page.href] ?? PHOTOS[page.accent];
 
   return (
     <Section ton="surface">

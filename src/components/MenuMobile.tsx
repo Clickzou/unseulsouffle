@@ -23,10 +23,19 @@ const GROUPES = [
   {
     titre: "Accompagnements",
     liens: [
-      { href: "/transformation-dirigeant/", label: "Coaching dirigeant" },
-      { href: "/transformation-entreprise/", label: "Conseil en organisation" },
+      { href: "/transformation-dirigeant/", label: "Parcours dirigeant" },
+      { href: "/transformation-entreprise/", label: "Parcours entreprise" },
+    ],
+  },
+  {
+    titre: "Nos expertises",
+    liens: [
       { href: "/daf-externalise-toulouse/", label: "DAF externalisé" },
+      { href: "/organisation-cooperation-toulouse/", label: "Organisation & coopération" },
       { href: "/conseil-strategie-commerciale-toulouse/", label: "Stratégie commerciale" },
+      { href: "/conseil-organisation-industrielle-toulouse/", label: "Organisation industrielle" },
+      { href: "/conseil-strategie-industrielle-toulouse/", label: "Stratégie industrielle" },
+      { href: "/qvt-equilibre-travail-toulouse/", label: "Équilibre & QVT" },
     ],
   },
   {
@@ -35,7 +44,7 @@ const GROUPES = [
       { href: "/un-seul-souffle/", label: "Notre approche" },
       { href: "/notre-equipe/", label: "Notre équipe" },
       { href: "/tarifs/", label: "Tarifs" },
-      { href: "/infos-utiles/", label: "Infos utiles" },
+      { href: "/infos-utiles/", label: "Nos articles" },
       { href: "/contact/", label: "Contact" },
     ],
   },

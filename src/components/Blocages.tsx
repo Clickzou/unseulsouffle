@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/Button";
 import { blocages, piliers, ACCENTS } from "@/lib/content/home";
 
 /**
- * Les cinq blocages, chacun dans la teinte du pilier qui le traite.
+ * Les six blocages, chacun dans la teinte du pilier qui le traite.
  *
- * C'est la section qui fait le plus pour l'argument du cabinet : les cinq
- * problèmes du dirigeant et les cinq expertises se répondent un à un, et la
+ * C'est la section qui fait le plus pour l'argument du cabinet : les six
+ * problèmes du dirigeant et les six expertises se répondent un à un, et la
  * couleur rend cette correspondance lisible sans qu'on ait à l'expliquer. Chaque
  * carte nomme donc explicitement le pilier qui prend le sujet en charge — ce qui
  * répond, dans la foulée du problème, au « et vous faites quoi pour ça ? ».
@@ -16,18 +16,19 @@ import { blocages, piliers, ACCENTS } from "@/lib/content/home";
  * « ces 4 défis ? » au-dessus d'une liste de cinq. Le compte vient de `blocages`,
  * l'écart ne peut donc plus réapparaître.
  *
- * La grille est en six colonnes : trois cartes sur deux colonnes, puis deux sur
- * trois. Cinq éléments dans une grille de trois laisseraient une case vide.
+ * Six blocages depuis le retour cliente du 04/10/2026 (la production est scindée
+ * en deux cartes, posées côte à côte en fin de grille) : deux rangées de trois.
+ * La grille garde six colonnes pour pouvoir repasser à 3 + 2 si le compte change.
  */
 
-const LARGEURS = ["lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-3", "lg:col-span-3"];
+const LARGEURS = ["lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2"];
 
 export function Blocages() {
   return (
     <Section ton="mist" large={200}>
       <SectionHead
         label="Les défis du dirigeant"
-        titre={`${blocages.length === 5 ? "Cinq" : blocages.length} blocages qui reviennent chez presque tous les dirigeants de PME`}
+        titre={`${["Cinq", "Six", "Sept"][blocages.length - 5] ?? blocages.length} blocages qui reviennent chez presque tous les dirigeants de PME`}
         lede="Un blocage financier pèse sur le moral du dirigeant. Une faille d'organisation freine la stratégie. Une tension d'équipe ralentit la production. Ces problèmes ne sont jamais isolés — mais le conseil aux entreprises traditionnel les traite un par un, chacun dans son couloir. C'est précisément pour sortir de ces silos que nous avons créé Un Seul Souffle."
         centre
       />
@@ -72,7 +73,7 @@ export function Blocages() {
                   le lecteur relie le problème à la réponse sans effort. */}
               {pilier && (
                 <p className="mt-auto flex items-baseline gap-2 border-t border-rule-2 pt-3.5 text-[13px]">
-                  <span className="font-mono text-[9.5px] uppercase tracking-[0.13em] text-muted">
+                  <span className="shrink-0 whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.13em] text-muted">
                     Traité par
                   </span>
                   <Link

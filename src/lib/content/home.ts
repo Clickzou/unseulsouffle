@@ -28,18 +28,31 @@ export const ACCENTS = {
   commercial: { texte: "#c2571a", vif: "#f5851f" },
   production: { texte: "#b3341c", vif: "#e8441f" },
   qvt: { texte: "#a06a12", vif: "#fbb03b" },
+  /**
+   * Sixième expertise (retour cliente du 04/10/2026) : la production est scindée
+   * en organisation industrielle (Yohan, teinte `production`) et stratégie
+   * industrielle (Patrick). Le logo n'a que cinq rubans : la stratégie
+   * industrielle prend une variante brique, plus sombre, du ruban production —
+   * deux faces du même sujet. Elle n'entre pas dans le dégradé du logo.
+   */
+  industrie: { texte: "#7c3420", vif: "#a4472b" },
 } as const;
 
 export type CleAccent = keyof typeof ACCENTS;
 
 /** Le dégradé des cinq rubans, pour les filets qui évoquent le logo entier. */
-export const DEGRADE_LOGO = Object.values(ACCENTS)
-  .map((a) => a.vif)
+export const DEGRADE_LOGO = (["finance", "organisation", "commercial", "production", "qvt"] as const)
+  .map((cle) => ACCENTS[cle].vif)
   .join(", ");
 
 /* ─────────── Piliers ───────────
- * Les cinq expertises, sous le hero. `referents` contient des slugs de `equipe` :
+ * Les six expertises, sous le hero. `referents` contient des slugs de `equipe` :
  * photo et nom sont résolus à l'affichage, ils ne sont donc écrits qu'une fois.
+ *
+ * Six et non plus cinq depuis le retour cliente du 04/10/2026 : l'ancien pilier
+ * « Production & performance » (Yohan et Patrick) est scindé en organisation
+ * industrielle (faire mieux fonctionner l'outil d'aujourd'hui) et stratégie
+ * industrielle (savoir si l'outil est adapté à là où l'entreprise veut aller).
  */
 
 export type Pilier = {
@@ -48,9 +61,9 @@ export type Pilier = {
   resume: string;
   /** Clé dans ACCENTS. Le pilier garde sa teinte partout où il réapparaît. */
   accent: CleAccent;
-  /** Slugs de `equipe`. Le pilier production en compte deux. */
+  /** Slugs de `equipe`. */
   referents: string[];
-  /** Page d'offre dédiée, quand elle existe : liée depuis la carte du référent. */
+  /** Page d'offre dédiée : liée depuis la carte de l'expertise. */
   page?: { href: string; ancre: string };
 };
 
@@ -61,13 +74,16 @@ export const piliers: Pilier[] = [
     accent: "finance",
     resume: "Trésorerie, tableaux de bord, prévisionnel : la stratégie traduite en chiffres.",
     referents: ["marjorie-anglade"],
+    page: { href: "/daf-externalise-toulouse/", ancre: "DAF externalisé" },
   },
   {
     n: "02",
     nom: "Organisation & coopération",
     accent: "organisation",
-    resume: "Rôles, modes de décision et qualité de coopération entre les équipes.",
+    resume:
+      "Rôles, modes de décision, management, interfaces et relations de travail : faire circuler l'intelligence du terrain pour renforcer la performance collective.",
     referents: ["muriel-saffroy"],
+    page: { href: "/organisation-cooperation-toulouse/", ancre: "Organisation et coopération" },
   },
   {
     n: "03",
@@ -79,17 +95,29 @@ export const piliers: Pilier[] = [
   },
   {
     n: "04",
-    nom: "Production & performance",
+    nom: "Organisation industrielle & ingénierie",
     accent: "production",
-    resume: "Flux, processus et interfaces industriels, amélioration continue des sites.",
-    referents: ["yohan-castelar", "patrick-calvet"],
+    resume:
+      "Organisation des productions et ingénierie, flux et processus : concevoir et améliorer un système industriel performant.",
+    referents: ["yohan-castelar"],
+    page: { href: "/conseil-organisation-industrielle-toulouse/", ancre: "Conseil en organisation industrielle" },
   },
   {
     n: "05",
+    nom: "Stratégie industrielle",
+    accent: "industrie",
+    resume:
+      "Vision industrielle, performance des sites et trajectoire de transformation : aligner l'outil industriel avec la stratégie de l'entreprise.",
+    referents: ["patrick-calvet"],
+    page: { href: "/conseil-strategie-industrielle-toulouse/", ancre: "Conseil en stratégie industrielle" },
+  },
+  {
+    n: "06",
     nom: "Équilibre & QVT",
     accent: "qvt",
     resume: "Charge mentale, énergie et sens au travail, pour le dirigeant comme pour ses équipes.",
     referents: ["olivia-artur"],
+    page: { href: "/qvt-equilibre-travail-toulouse/", ancre: "Conseil en QVT" },
   },
 ];
 
@@ -97,8 +125,8 @@ export const piliers: Pilier[] = [
 
 export const reperes: { label: string; valeur: string }[] = [
   { label: "Métier", valeur: "Cabinet de conseil aux entreprises" },
-  { label: "Entreprises accompagnées", valeur: "PME et ETI, 10 à 250 salariés" },
-  { label: "Secteurs", valeur: "Industrie, agroalimentaire, services, distribution" },
+  { label: "Entreprises accompagnées", valeur: "TPE et PME, 10 à 250 salariés" },
+  { label: "Secteurs", valeur: "Industrie et services" },
   { label: "Zone", valeur: "Toulouse, Haute-Garonne, Occitanie" },
   { label: "Durée d'un parcours", valeur: "3 à 12 mois selon la profondeur" },
   { label: "Premier échange", valeur: "Gratuit et confidentiel, en visio ou dans vos locaux" },
@@ -148,6 +176,10 @@ export const blocages: Blocage[] = [
     accent: "organisation",
     texte:
       "Rôles mal définis, décisions qui remontent toutes au même endroit, conflits internes qui paralysent des projets entiers. L'organisation consomme plus d'énergie qu'elle n'en produit.",
+    lien: {
+      href: "/organisation-cooperation-toulouse/",
+      label: "Organisation et coopération",
+    },
   },
   {
     n: "04",
@@ -155,13 +187,32 @@ export const blocages: Blocage[] = [
     accent: "qvt",
     texte:
       "Stress, fatigue, charge mentale permanente. Votre clarté de décision baisse, et l'engagement des équipes suit la même courbe. C'est le blocage dont on parle le moins et qui coûte le plus cher.",
+    lien: {
+      href: "/qvt-equilibre-travail-toulouse/",
+      label: "Conseil en QVT et équilibre au travail",
+    },
   },
   {
     n: "05",
-    titre: "Production sous tension",
+    titre: "Production et industrialisation à structurer",
     accent: "production",
     texte:
-      "Flux mal pilotés, terrain perfectible, pertes de productivité, absence d'indicateurs pour structurer et sécuriser la performance industrielle au quotidien.",
+      "Flux mal organisés, processus ou méthodes à revoir, implantation perfectible, besoins d'industrialisation ou d'ingénierie insuffisamment structurés. L'organisation industrielle ne permet pas encore d'exploiter tout le potentiel de l'outil de production.",
+    lien: {
+      href: "/conseil-organisation-industrielle-toulouse/",
+      label: "Conseil en organisation industrielle",
+    },
+  },
+  {
+    n: "06",
+    titre: "Outil industriel à faire évoluer",
+    accent: "industrie",
+    texte:
+      "Capacités, investissements, organisation des sites ou choix industriels ne sont plus totalement alignés avec les ambitions de l'entreprise. Il faut définir une trajectoire industrielle cohérente avec sa stratégie.",
+    lien: {
+      href: "/conseil-strategie-industrielle-toulouse/",
+      label: "Conseil en stratégie industrielle",
+    },
   },
 ];
 
@@ -172,7 +223,7 @@ export const comparatif: { critere: string; classique: string; uss: string }[] =
   {
     critere: "Expertise",
     classique: "Un seul angle, le reste renvoyé ailleurs",
-    uss: "Un référent dédié, quatre expertises en appui si le sujet l'exige",
+    uss: "Un référent dédié, cinq autres expertises en appui si le sujet l'exige",
   },
   { critere: "Présence", classique: "Ponctuelle, en réunion", uss: "Sur le terrain, aux côtés des équipes" },
   { critere: "Point de sortie", classique: "La remise du rapport", uss: "L'autonomie de l'entreprise" },
@@ -214,7 +265,7 @@ export const etapes: Etape[] = [
     resultat:
       "Priorités clarifiées, recul retrouvé, meilleure qualité de décision — le dirigeant redevient disponible pour la transformation.",
     format:
-      "Au choix, en collectif (abonnement mensuel, sessions en visio) ou en individuel (coaching), par jalons de 3 mois. Autodiagnostic de qualité de vie au travail en option.",
+      "Coaching individuel, construit par trimestre, avec un nombre de séances défini selon vos besoins et vos objectifs. Autodiagnostic de qualité de vie au travail en option.",
   },
   {
     n: "02",
@@ -295,7 +346,7 @@ export type Parcours = {
 export const parcours: Parcours[] = [
   {
     cle: "dirigeant",
-    titre: "Transformation du Dirigeant",
+    titre: "Parcours dirigeant",
     etapes: "Étapes 1 & 2",
     verbes: "Aligner · Coopérer",
     pourQui: "Le nœud est chez vous.",
@@ -312,12 +363,12 @@ export const parcours: Parcours[] = [
   },
   {
     cle: "entreprise",
-    titre: "Transformation de l'Entreprise",
+    titre: "Parcours entreprise",
     etapes: "Étapes 3, 4 & 5",
     verbes: "Cartographier · Structurer · Renforcer",
     pourQui: "Le nœud est dans l'organisation.",
     signes: [
-      "La croissance va plus vite que la structure",
+      "L'organisation ne suit plus : croissance, difficulté, restructuration ou transmission",
       "Les expertises ne se coordonnent pas entre elles",
       "L'entreprise dépend encore entièrement de vous",
     ],
@@ -355,7 +406,7 @@ export const equipe: Membre[] = [
     expertise: "Pilotage Financier",
     bio: "Gardienne des ressources. Elle traduit la stratégie en chiffres pour garantir la viabilité et la sérénité du projet financier.",
     href: "/marjorie-anglade/",
-    photo: "/equipe/marjorie-anglade.webp",
+    photo: "/equipe/marjorie-anglade-v2.webp",
     linkedin: "https://www.linkedin.com/in/marjorie-anglade-31tls/",
   },
   {
@@ -363,11 +414,11 @@ export const equipe: Membre[] = [
     initiales: "MS",
     nom: "Muriel Saffroy",
     statut: "Associée fondatrice",
-    expertise: "Organisation & Leadership",
+    expertise: "Organisation & coopération",
     bio: "Courroie de transmission. Elle s'assure que l'organisation interne est fluide et que les équipes sont alignées autour du cap.",
     href: "/muriel-saffroy/",
     linkedin: "https://www.linkedin.com/in/muriel-saffroy/",
-    photo: "/equipe/muriel-saffroy.webp",
+    photo: "/equipe/muriel-saffroy-v2.webp",
   },
   {
     slug: "olivia-artur",
@@ -377,7 +428,7 @@ export const equipe: Membre[] = [
     expertise: "QVT & Sophrologie",
     bio: "Sophrologue et praticienne PNL. Elle aide les personnes et les équipes à prendre soin de leur énergie, de leur santé mentale et de leur sens au travail.",
     href: "/notre-equipe/#olivia-artur",
-    photo: "/equipe/olivia-artur.webp",
+    photo: "/equipe/olivia-artur-v2.webp",
   },
   {
     slug: "nicolas-vimini",
@@ -387,27 +438,27 @@ export const equipe: Membre[] = [
     expertise: "Stratégie Commerciale",
     bio: "Directeur commercial externalisé, 20 ans d'expérience en développement commercial. Il intervient pour clarifier la stratégie commerciale, structurer l'organisation et piloter l'activité avec des indicateurs adaptés.",
     href: "/notre-equipe/#nicolas-vimini",
-    photo: "/equipe/nicolas-vimini.webp",
+    photo: "/equipe/nicolas-vimini-v2.webp",
   },
   {
     slug: "yohan-castelar",
     initiales: "YC",
     nom: "Yohan Castelar",
     statut: "Partenaire",
-    expertise: "Production",
-    bio: "Yohan conçoit des organisations industrielles plus fluides. Il structure les processus, les interfaces et les flux d'information pour que la production fonctionne de manière simple, cohérente et efficace. Il bâtit le système.",
+    expertise: "Organisation industrielle",
+    bio: "Ingénieur mécanique de formation, profil bureau d'études et ingénierie, Yohan travaille en prise directe sur l'organisation des productions. Il structure les flux, les processus, les méthodes et les interfaces pour que la production fonctionne de manière simple, cohérente et efficace. Il bâtit le système.",
     href: "/notre-equipe/#yohan-castelar",
-    photo: "/equipe/yohan-castelar.webp",
+    photo: "/equipe/yohan-castelar-v2.webp",
   },
   {
     slug: "patrick-calvet",
     initiales: "PC",
     nom: "Patrick Calvet",
     statut: "Partenaire",
-    expertise: "Production",
-    bio: "Patrick accompagne les dirigeants dans la transformation de leurs sites industriels. Il agit sur le management, les investissements et l'amélioration continue pour développer durablement la performance. Il pilote le système.",
+    expertise: "Stratégie industrielle",
+    bio: "Patrick accompagne les dirigeants dans leurs réflexions industrielles structurantes : performance globale des sites, capacités, investissements, transformation et trajectoire industrielle. Il aide l'entreprise à faire évoluer son outil industriel au rythme de son ambition.",
     href: "/notre-equipe/#patrick-calvet",
-    photo: "/equipe/patrick-calvet.webp",
+    photo: "/equipe/patrick-calvet-v2.webp",
   },
 ];
 
@@ -451,25 +502,25 @@ export type QuestionFAQ = { q: string; r: string[]; aFournir?: boolean };
 
 export const faq: QuestionFAQ[] = [
   {
-    q: "En quoi Un Seul Souffle est-il différent d'un cabinet de conseil classique ?",
-    r: [
-      "Un cabinet classique analyse et recommande. Un Seul Souffle agit. Nous fonctionnons comme une équipe de direction externalisée : nous ne remettons pas un rapport, nous nous impliquons directement dans la transformation de votre entreprise, aux côtés de vos équipes, jusqu'à la mise en œuvre concrète sur le terrain.",
-      "Vous avez un conseiller référent, dédié à votre sujet et interlocuteur unique. La différence est qu'il ne travaille pas seul : quand un angle mort sort de son périmètre, le collègue compétent le reprend en interne, sur ce point précis, au lieu de vous renvoyer vers un autre prestataire.",
-    ],
-  },
-  {
     q: "Combien coûte un accompagnement Un Seul Souffle ?",
     // Montants lus dans tarifs.ts : la FAQ ne peut pas contredire la page Tarifs.
     r: [
-      resumeTarifs,
-      "Le détail de chaque formule est sur la page tarifs.",
+      ...resumeTarifs,
+      "Les tarifs détaillés de chaque formule sont présentés sur notre page Tarifs.",
+    ],
+  },
+  {
+    q: "En quoi Un Seul Souffle est-il différent d'un cabinet de conseil classique ?",
+    r: [
+      "Un cabinet classique analyse et recommande. Un Seul Souffle agit. Nous fonctionnons comme une équipe de direction externalisée : nous ne remettons pas un rapport, nous nous impliquons directement dans la transformation de votre entreprise, aux côtés de vos équipes, jusqu'à la mise en œuvre concrète sur le terrain.",
+      "Vous avez un expert référent, dédié à votre sujet et interlocuteur unique. La différence est qu'il ne travaille pas seul : quand un angle mort sort de son périmètre, le collègue compétent le reprend en interne, sur ce point précis, au lieu de vous renvoyer vers un autre prestataire.",
     ],
   },
   {
     q: "Pourquoi choisir un cabinet de conseil près de Toulouse ?",
     r: [
       "Parce que notre travail se fait sur le terrain, aux côtés de vos équipes, et pas seulement en réunion. Pour une PME de la région, un cabinet de conseil installé en Haute-Garonne, près de Toulouse, reste proche de ce terrain : la présence dans vos locaux fait partie de l'accompagnement, elle n'est pas une exception.",
-      "Nous intervenons principalement auprès des PME et ETI de Haute-Garonne et d'Occitanie. Le premier échange peut se tenir en visio ou dans vos locaux.",
+      "Nous intervenons principalement auprès des TPE et PME de Haute-Garonne et d'Occitanie. Le premier échange peut se tenir en visio ou dans vos locaux.",
     ],
   },
   {
@@ -481,7 +532,7 @@ export const faq: QuestionFAQ[] = [
   {
     q: "Quel type de problématiques traitez-vous ?",
     r: [
-      "Notre conseil aux entreprises porte sur les problématiques qui touchent simultanément plusieurs dimensions de l'entreprise : manque de visibilité financière, organisation qui freine la croissance, tensions dans les équipes, dirigeant surchargé, performance industrielle insuffisante, stratégie commerciale à structurer. En résumé : tout ce qui bloque la transformation d'une PME ou d'une ETI qui veut passer un cap.",
+      "Notre conseil aux entreprises porte sur les problématiques qui touchent simultanément plusieurs dimensions de l'entreprise : manque de visibilité financière, organisation qui freine la croissance, tensions dans les équipes, dirigeant surchargé, performance industrielle insuffisante, stratégie commerciale à structurer. En résumé : tout ce qui bloque la transformation d'une TPE ou d'une PME qui veut passer un cap.",
     ],
   },
   {
@@ -519,7 +570,7 @@ export const faq: QuestionFAQ[] = [
   {
     q: "Pour quels types de structures travaillez-vous ?",
     r: [
-      "Nous intervenons principalement auprès de PME et ETI de 10 à 250 salariés, en Haute-Garonne et en Occitanie, dans l'industrie, l'agroalimentaire, les services et la distribution. Notre approche est particulièrement adaptée aux dirigeants qui veulent structurer leur croissance, traverser une transformation ou préparer la transmission de leur entreprise.",
+      "Nous intervenons principalement auprès de TPE et PME de 10 à 250 salariés, en Haute-Garonne et en Occitanie, dans l'industrie et les services, et sur toute la France quand la mission s'inscrit dans la durée. Notre approche est adaptée aux dirigeants qui veulent structurer leur croissance, traverser une difficulté ou une restructuration, ou préparer la cession ou la transmission de leur entreprise.",
     ],
   },
 ];

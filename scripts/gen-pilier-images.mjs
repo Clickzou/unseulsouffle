@@ -8,7 +8,11 @@
  *
  * Même clé, même modèle et même politique d'image que gen-hero-images.mjs :
  * photoréaliste, aucun visage frontal reconnaissable, aucun texte incrusté.
- * Sortie : public/images/piliers/<cle>.webp, 4:3, 1400 × 1050.
+ * Sortie : public/images/piliers/<cle>.webp, 4:3, 1400 × 1050 (ou le dossier indiqué
+ * par l'entrée, pour la cordée de la page cabinet).
+ *
+ * Cache d'un an `immutable` sur les images (next.config.mjs) : une image régénérée
+ * doit changer de nom de fichier, sinon les visiteurs gardent l'ancienne.
  */
 
 import { fal } from "@fal-ai/client";
@@ -53,6 +57,34 @@ const IMAGES = {
     "A person seen from behind sitting at a clean desk in a bright office, looking at a laptop whose screen is turned away from " +
     "the camera, a closed leather folder and a plain white cup beside it. Through the large window, the warm red brick rooftops " +
     "of Toulouse under a clear sky. Calm, focused, precise atmosphere.",
+  // Pages d'expertise ajoutées après le retour cliente du 04/10/2026.
+  // Première génération refusée : visages de face reconnaissables, uniquement des hommes.
+  cooperation:
+    "Close-up at table height of a working session around a high light-oak table in a French SME: only the forearms and " +
+    "hands of five people, women and men, some sleeves of work jackets, some of shirts and a cardigan. One hand passes a closed " +
+    "plain grey folder to another, two hands rest flat on the table, one hand open mid-gesture. No heads, no faces, no " +
+    "shoulders in the frame. Blurred workshop through a glass wall in the background, natural light, cooperative atmosphere.",
+  qvt:
+    "A person seen from behind sitting alone on a wooden bench in the small planted courtyard of a French company during a " +
+    "break, holding a plain white cup with both hands, looking at the trees. In the soft-focus background, the glass facade of " +
+    "the offices and two blurred colleagues walking. Quiet, restful, early morning light, calm and human atmosphere.",
+  "organisation-industrielle":
+    "Wide view of a well-organized production workshop of a French SME: clean floor with painted flow lanes, workstations " +
+    "aligned along a logical flow, neatly stored parts on blank shelves. In the middle ground an engineer seen from behind, " +
+    "in a light work jacket, observing a machine and holding a tablet whose screen is turned away. High windows, natural light, orderly.",
+  "strategie-industrielle":
+    "A company director seen from behind, standing at the railing of a mezzanine and looking down over a vast industrial " +
+    "production hall: lines of machines, wide aisles, an empty area of floor ready for future expansion. Golden late-afternoon " +
+    "light falling through skylights, sense of scale, perspective and long-term vision.",
+  // Page « Le cabinet » : la cordée en montagne (demande de la cliente).
+  cordee: {
+    dossier: "cabinet",
+    prompt:
+      "A rope team of four mountaineers roped together, seen from behind and from far away, climbing a snowy ridge of the " +
+      "Pyrenees towards a sunlit summit. The leader goes first, the rope clearly visible linking each climber to the next, " +
+      "regular spacing, steady pace. Deep blue sky, crisp early-morning light, vast mountain landscape, calm determination. " +
+      "Outdoor mountaineering photograph, no company setting.",
+  },
 };
 
 function loadFalKey() {
@@ -64,7 +96,15 @@ function loadFalKey() {
   throw new Error("FAL_KEY absente.");
 }
 
-async function generer(slug, prompt) {
+/** Une entrée est un prompt (sortie dans images/piliers/) ou { dossier, prompt }. */
+const promptDe = (entree) => (typeof entree === "string" ? entree : entree.prompt);
+const sortieDe = (slug, entree) =>
+  typeof entree === "string"
+    ? path.join(OUT_DIR, `${slug}.webp`)
+    : path.join(ROOT, "public", entree.dossier, `${slug}.webp`);
+
+async function generer(slug, entree) {
+  const prompt = promptDe(entree);
   const result = await fal.subscribe(MODEL, {
     input: {
       prompt: `${prompt} ${REALISM}`,
@@ -80,7 +120,8 @@ async function generer(slug, prompt) {
   if (!url) throw new Error("aucune image renvoyée");
   const res = await fetch(url);
   if (!res.ok) throw new Error(`téléchargement HTTP ${res.status}`);
-  const out = path.join(OUT_DIR, `${slug}.webp`);
+  const out = sortieDe(slug, entree);
+  mkdirSync(path.dirname(out), { recursive: true });
   await sharp(Buffer.from(await res.arrayBuffer()))
     .resize(1400, 1050, { fit: "cover" })
     .webp({ quality: 80 })
@@ -95,9 +136,9 @@ const cibles = args.filter((a) => !a.startsWith("--"));
 fal.config({ credentials: loadFalKey() });
 mkdirSync(OUT_DIR, { recursive: true });
 
-const liste = Object.entries(IMAGES).filter(([slug]) => {
+const liste = Object.entries(IMAGES).filter(([slug, entree]) => {
   if (cibles.length) return cibles.includes(slug);
-  return force || !existsSync(path.join(OUT_DIR, `${slug}.webp`));
+  return force || !existsSync(sortieDe(slug, entree));
 });
 
 // En parallèle : les appels fal sont indépendants.

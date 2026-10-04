@@ -25,8 +25,8 @@ export const pilierFinance: PagePilier = {
   metaTitle: "DAF externalisé pour PME à Toulouse",
   // 144 / 150
   metaDescription:
-    "DAF externalisé à temps partagé pour PME et ETI à Toulouse : trésorerie, tableaux de bord, prévisionnel. Le pilotage, au-delà de la comptabilité.",
-  nomService: "Direction financière externalisée pour PME et ETI",
+    "DAF externalisé à temps partagé pour TPE et PME à Toulouse : trésorerie, tableaux de bord, prévisionnel. Le pilotage, au-delà de la comptabilité.",
+  nomService: "Direction financière externalisée pour TPE et PME",
 
   h1: "DAF externalisé pour PME à Toulouse : piloter au-delà de la comptabilité",
   lede:
@@ -34,9 +34,9 @@ export const pilierFinance: PagePilier = {
 
   essentiel: {
     reponse:
-      "Le pilotage financier externalisé d'Un Seul Souffle met à disposition des PME et ETI de 10 à 250 salariés une directrice financière à temps partagé, Marjorie Anglade. Elle installe les outils de pilotage qui manquent — prévisionnel de trésorerie, tableaux de bord de gestion, analyse de marge — et les fait vivre mois après mois. Ce service ne remplace pas votre expert-comptable, qui produit vos comptes et vos déclarations : il intervient en amont de la décision, quand la comptabilité intervient en aval. Il se souscrit seul, sans transformation globale de l'entreprise, à Toulouse et en Occitanie.",
+      "Le pilotage financier externalisé d'Un Seul Souffle met à disposition des TPE et PME de 10 à 250 salariés une directrice financière à temps partagé, Marjorie Anglade. Elle installe les outils de pilotage qui manquent — prévisionnel de trésorerie, tableaux de bord de gestion, analyse de marge — et les fait vivre mois après mois. Ce service ne remplace pas votre expert-comptable, qui produit vos comptes et vos déclarations : il intervient en amont de la décision, quand la comptabilité intervient en aval. Il se souscrit seul, sans transformation globale de l'entreprise, à Toulouse et en Occitanie.",
     points: [
-      "Pour qui : PME et ETI de 10 à 250 salariés, sans DAF en interne",
+      "Pour qui : TPE et PME de 10 à 250 salariés, sans DAF en interne",
       "Référente : Marjorie Anglade, associée fondatrice, expert-comptable inscrite à l'Ordre",
       "Ce que ça couvre : trésorerie, tableaux de bord, prévisionnel, analyse de marge",
       "Ne remplace pas : votre expert-comptable, avec qui le travail se fait en complément",
@@ -194,7 +194,7 @@ export const pilierFinance: PagePilier = {
       q: "Qu'est-ce qu'un DAF externalisé à temps partagé ?",
       r: [
         "C'est un directeur financier qui n'est pas salarié de votre entreprise et qui intervient chez vous pour un volume défini, réparti sur l'année. Il construit le prévisionnel de trésorerie, installe les tableaux de bord et analyse vos marges, puis les fait vivre mois après mois.",
-        "Un directeur financier externalisé apporte la compétence d'un DAF sans le coût d'un poste à plein temps. Chez Un Seul Souffle, c'est Marjorie Anglade qui tient ce rôle auprès des PME et ETI d'Occitanie.",
+        "Un directeur financier externalisé apporte la compétence d'un DAF sans le coût d'un poste à plein temps. Chez Un Seul Souffle, c'est Marjorie Anglade qui tient ce rôle auprès des TPE et PME d'Occitanie.",
       ],
     },
     {

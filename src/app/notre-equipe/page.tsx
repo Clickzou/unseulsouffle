@@ -23,7 +23,8 @@ import { ROBOTS } from "@/lib/seo/indexation";
  *
  * Mise en page : les associées en grand (ce sont les interlocutrices du premier
  * échange), les partenaires en cartes photo, chacun dans la teinte de son pilier.
- * Les quatre partenaires ont ici leur ancre (`#slug`), cible des liens de la home.
+ * Les quatre partenaires ont ici leur ancre (`#slug`), cible des liens de la home
+ * et du bloc « Votre référent » des pages d'expertise.
  *
  * À FOURNIR (client) : parcours détaillé des partenaires, profils LinkedIn
  * manquants (Marjorie Anglade et les quatre partenaires), accord de publication.
@@ -32,10 +33,10 @@ import { ROBOTS } from "@/lib/seo/indexation";
  */
 export const metadata: Metadata = {
   // 45 / 60
-  title: "Notre équipe — cinq expertises",
+  title: "Notre équipe — six expertises",
   // 148 / 150
   description:
-    "Marjorie Anglade, Muriel Saffroy et leurs partenaires : finance, organisation, commercial, production et QVT au service des dirigeants de PME.",
+    "Marjorie Anglade, Muriel Saffroy et leurs partenaires : finance, coopération, commercial, industrie et QVT, au service des dirigeants de TPE et PME.",
   alternates: { canonical: "/notre-equipe/" },
   robots: ROBOTS,
 };
@@ -52,7 +53,7 @@ function teinteDe(slug: string) {
   return pilier ? ACCENTS[pilier.accent] : ACCENTS.finance;
 }
 
-const portrait = (slug: string) => `/equipe/portrait/${slug}.webp`;
+const portrait = (slug: string) => `/equipe/portrait/${slug}-v2.webp`;
 
 function schema() {
   return {
@@ -261,14 +262,14 @@ const REGLE = [
       "Celui ou celle dont le métier correspond à votre blocage principal devient votre interlocuteur, du premier échange à la fin de l'accompagnement.",
   },
   {
-    titre: "Les autres en appui, si le sujet l'exige",
+    titre: "La complémentarité au service de votre sujet",
     texte:
-      "Le reste de l'équipe n'intervient que si votre situation le demande, sur un point précis — pas de chantier ouvert par principe.",
+      "Votre référent ne travaille jamais seul. Les six experts croisent régulièrement leurs regards, confrontent leurs analyses et mettent leurs expertises en complémentarité pour élargir la compréhension de votre situation et faire émerger de nouvelles pistes.",
   },
   {
     titre: "Vous savez qui intervient, et pourquoi",
     texte:
-      "Chaque intervention est décidée avec vous et écrite dans la proposition. Le périmètre ne s'élargit pas sans votre accord.",
+      "Chaque intervention est décidée avec vous et écrite dans la proposition. Vous bénéficiez d'un interlocuteur unique, tout en ayant accès, lorsque c'est pertinent, à la complémentarité des expertises de l'équipe. Le périmètre ne s'élargit pas sans votre accord.",
   },
 ];
 
@@ -291,7 +292,7 @@ export default function NotreEquipePage() {
           accent="qvt"
           anime
           h1="Les personnes qui interviennent chez vous"
-          lede="Deux associées fondatrices et quatre partenaires, chacun référent d'un domaine. Celui dont le métier correspond à votre blocage principal devient votre interlocuteur — et le reste de l'équipe n'intervient que si votre situation l'exige."
+          lede="Deux associées fondatrices et quatre partenaires, six expertises complémentaires. Un référent devient votre interlocuteur privilégié et s'appuie sur les autres experts lorsque nécessaire. Nos échanges réguliers permettent de croiser les regards, confronter les analyses et ouvrir l'espace des possibles."
           aside={<Mosaique />}
           asideLarge
         >
@@ -299,6 +300,25 @@ export default function NotreEquipePage() {
             Parler à Marjorie et Muriel
           </Button>
         </EnTetePage>
+
+        {/* La complémentarité — texte de la cliente (retour du 04/10/2026). Deux
+            colonnes qui remplissent la largeur : titre à gauche, texte à droite. */}
+        <Section ton="mist">
+          <Reveal className="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-20">
+            <div>
+              <Label>Un interlocuteur unique. Six regards complémentaires.</Label>
+              <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] leading-[1.12]">
+                La complémentarité est notre force
+              </h2>
+            </div>
+            <p className="max-w-prose text-lg leading-relaxed text-body">
+              Nous ne travaillons pas chacun dans notre silo. Nos expériences et nos expertises se
+              répondent. Nous échangeons régulièrement autour des situations que nous accompagnons
+              pour confronter nos regards, questionner nos évidences et faire émerger ce que chacun,
+              seul, n&apos;aurait peut-être pas vu.
+            </p>
+          </Reveal>
+        </Section>
 
         {/* Les associées — pleine largeur, deux grandes cartes. */}
         <Section ton="surface" large>
@@ -346,7 +366,11 @@ export default function NotreEquipePage() {
         {/* La règle du référent. */}
         <Section ton="surface">
           <Reveal>
-            <SectionHead label="Comment nous travaillons" titre="Une équipe, un seul interlocuteur" centre />
+            <SectionHead
+              label="Comment nous travaillons"
+              titre="Une équipe, un seul interlocuteur. Six regards croisés à votre service."
+              centre
+            />
           </Reveal>
           <ol className="grid gap-6 md:grid-cols-3">
             {REGLE.map((etape, i) => {
