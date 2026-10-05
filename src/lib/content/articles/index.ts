@@ -10,6 +10,7 @@
  */
 
 import type { Article } from "@/lib/content/article";
+import { appliquerCorrections } from "@/lib/content/edition-client";
 import { article as coachingDEquipe } from "./coaching-d-equipe";
 import { article as coachingEnManagement } from "./coaching-en-management";
 import { article as consultantEnManagement } from "./consultant-en-management";
@@ -72,6 +73,7 @@ import { article as reprendreUneEntreprise } from "./reprendre-une-entreprise";
 import { article as auditerUneEntreprise } from "./auditer-une-entreprise";
 
 // L'ordre compte à date égale : le premier est mis à la une sur /infos-utiles/.
+// Relectures de la cliente (espace Clickzou) appliquées au chargement : voir edition-client.ts.
 export const articles: Article[] = [
   managerDeTransitionOuDirectionATempsPartage,
   solitudeDuDirigeant,
@@ -132,7 +134,7 @@ export const articles: Article[] = [
   gerantDEntreprise,
   reprendreUneEntreprise,
   auditerUneEntreprise,
-];
+].map(appliquerCorrections);
 
 /** Date du jour à Paris, au format AAAA-MM-JJ (celui de `datePublication`). */
 function aujourdhui(): string {
