@@ -75,12 +75,28 @@ une **cordée en montagne** sur la page Le cabinet.
 12. Titre de la méthode : « Notre méthode d'accompagnement **des** entreprises » (le
     document disait « aux entreprises »).
 
+## Réponses des associées (05/10/2026)
+
+Les 7 points du mail du 04/10 sont validés tels quels, aucune modification du site :
+
+- taille : 10 à 250 salariés partout — déjà le cas (seule exception, voulue : l'article
+  « consultant en management » cite l'aide de la Région Occitanie, ouverte de 5 à 250) ;
+- FAQ prix : la phrase « Un minimum… » reste retirée ;
+- QVT : les deux offres restent ;
+- tarif de Yohan et Patrick : validé ;
+- FAQ de Yohan et Patrick : validées ;
+- diagnostic en ligne : reste sur 5 domaines ;
+- page Parcours entreprise : titre et introduction validés.
+
+Témoignages : elles ne voyaient plus la section des avis Google. Vérifié le 05/10 : elle est
+en ligne sur l'accueil (entre « Parcours » et « Pour qui »), 5,0/5. L'API Google ne renvoie
+que les 5 avis les plus pertinents ; la section se met à jour toutes les 24 h.
+
 ## Reste à faire
 
-- Relecture des 4 nouvelles pages par chaque expert (Muriel, Olivia, Yohan, Patrick).
-- Page entreprise : titre et introduction réécrits par l'agence pour ne plus parler
-  seulement de croissance (difficulté, restructuration, cession, transmission) — à valider.
+- Relecture des 4 nouvelles pages par chaque expert (Muriel, Olivia, Yohan, Patrick) :
+  annoncée pour la fin de la semaine du 05/10.
 - Les 27 articles du blog emploient encore « PME et ETI » : à reprendre un par un
   (« ETI » y désigne parfois la catégorie de l'INSEE, un remplacement automatique fausserait
   le sens).
-- Témoignages et cas clients : toujours en attente.
+- Cas clients : toujours en attente. D'autres avis Google vont arriver.
