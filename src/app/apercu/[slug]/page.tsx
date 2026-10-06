@@ -20,14 +20,16 @@ import { articles, dateAtteinte } from "@/lib/content/articles";
 
 export const dynamic = "force-dynamic";
 
-type Props = { params: { slug: string }; searchParams: { e?: string; s?: string } };
+// Next 15 : params et searchParams sont des promesses.
+type Props = { params: Promise<{ slug: string }>; searchParams: Promise<{ e?: string; s?: string }> };
 
 export const metadata: Metadata = {
   title: "Aperçu d'article",
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false, noimageindex: true } },
 };
 
-export default function ApercuArticle({ params, searchParams }: Props) {
+export default async function ApercuArticle(props: Props) {
+  const [params, searchParams] = await Promise.all([props.params, props.searchParams]);
   const article = articles.find((a) => a.slug === params.slug);
   if (!article || !apercuValide(article.slug, searchParams.e, searchParams.s)) notFound();
 

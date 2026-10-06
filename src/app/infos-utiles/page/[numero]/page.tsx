@@ -24,13 +24,16 @@ export function generateStaticParams() {
   return Array.from({ length: Math.max(0, nombrePagesArticles() - 1) }, (_, i) => ({ numero: String(i + 2) }));
 }
 
-export function generateMetadata({ params }: { params: { numero: string } }): Metadata {
-  const numero = numeroValide(params.numero);
+// Next 15 : params est une promesse.
+type Props = { params: Promise<{ numero: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const numero = numeroValide((await params).numero);
   return numero ? metadataInfosUtiles(numero) : {};
 }
 
-export default function InfosUtilesPageSuivante({ params }: { params: { numero: string } }) {
-  const numero = numeroValide(params.numero);
+export default async function InfosUtilesPageSuivante({ params }: Props) {
+  const numero = numeroValide((await params).numero);
   if (!numero) notFound();
   return <ListeInfosUtiles numero={numero} />;
 }

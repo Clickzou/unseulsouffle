@@ -20,8 +20,11 @@ export function generateStaticParams() {
   return articlesPublies().map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = trouverArticle(params.slug);
+// Next 15 : params est une promesse.
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const article = trouverArticle((await params).slug);
   if (!article) return {};
   const href = `/infos-utiles/${article.slug}/`;
   return {
@@ -42,8 +45,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = trouverArticle(params.slug);
+export default async function ArticlePage({ params }: Props) {
+  const article = trouverArticle((await params).slug);
   if (!article) notFound();
   return <VueArticle article={article} />;
 }

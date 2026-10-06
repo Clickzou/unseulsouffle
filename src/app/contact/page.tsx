@@ -64,13 +64,14 @@ function schema() {
 }
 
 
-export default function ContactPage({
+export default async function ContactPage({
   searchParams,
 }: {
-  searchParams?: { message?: string | string[] };
+  // Next 15 : searchParams est une promesse.
+  searchParams: Promise<{ message?: string | string[] }>;
 }) {
   // Message prérempli par le questionnaire de diagnostic (?message=…).
-  const brut = searchParams?.message;
+  const brut = (await searchParams).message;
   const messageInitial = (Array.isArray(brut) ? brut[0] : brut)?.slice(0, 2000);
 
   return (
