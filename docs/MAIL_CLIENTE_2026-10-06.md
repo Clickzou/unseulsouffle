@@ -1,7 +1,7 @@
 # Mail à Muriel et Marjorie — posts LinkedIn selon leur axe de communication (06/10/2026)
 
 Rédigé le 06/10/2026, à envoyer par JC depuis sa messagerie (Gmail n'est pas connecté à
-Claude). Statut : **version finale validée par JC le 06/10/2026**, à envoyer (le tableau des jeudis est en liste pour passer dans un mail).
+Claude). Statut : **envoyé le 06/10/2026** par JC (le tableau des jeudis est en liste pour passer dans un mail).
 
 ---
 
