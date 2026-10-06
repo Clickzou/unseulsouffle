@@ -1,7 +1,7 @@
 # Mail à Muriel et Marjorie — posts LinkedIn selon leur axe de communication (06/10/2026)
 
 Rédigé le 06/10/2026, à envoyer par JC depuis sa messagerie (Gmail n'est pas connecté à
-Claude). Statut : **brouillon, pas encore envoyé**.
+Claude). Statut : **version finale validée par JC le 06/10/2026**, à envoyer (le tableau des jeudis est en liste pour passer dans un mail).
 
 ---
 
@@ -27,16 +27,14 @@ Merci pour votre axe de communication et pour les instructions de votre projet C
 
 **Vos posts du jeudi en octobre et novembre**
 
-| Date | Sujet |
-|---|---|
-| Jeudi 8 octobre | Absentéisme : qualité de vie au travail, ou problème d'organisation ? |
-| Jeudi 15 octobre | Piloter sa production sans indicateurs fiables |
-| Jeudi 22 octobre | Votre entreprise peut-elle absorber la croissance que vous cherchez ? |
-| Jeudi 29 octobre | Le diagnostic gratuit |
-| Jeudi 5 novembre | +15 % de chiffre d'affaires : et la trésorerie ? |
-| Jeudi 12 novembre | « Je fais du chiffre, mais mes marges se dégradent » |
-| Jeudi 19 novembre | « Je n'arrive pas à recruter » |
-| Jeudi 26 novembre | « L'entreprise grandit, mais notre organisation ne suit plus » |
+- Jeudi 8 octobre : Absentéisme : qualité de vie au travail, ou problème d'organisation ?
+- Jeudi 15 octobre : Piloter sa production sans indicateurs fiables
+- Jeudi 22 octobre : Votre entreprise peut-elle absorber la croissance que vous cherchez ?
+- Jeudi 29 octobre : Le diagnostic gratuit
+- Jeudi 5 novembre : +15 % de chiffre d'affaires : et la trésorerie ?
+- Jeudi 12 novembre : « Je fais du chiffre, mais mes marges se dégradent »
+- Jeudi 19 novembre : « Je n'arrive pas à recruter »
+- Jeudi 26 novembre : « L'entreprise grandit, mais notre organisation ne suit plus »
 
 Le mardi, les posts portent sur les articles du mois : le BFR et la prise de décision en octobre, l'organigramme et le burn-out en novembre. Marjorie, votre post sur le BFR du mercredi 7 octobre remplace bien celui prévu le mardi 6.
 
