@@ -125,7 +125,8 @@ export async function POST(requete: Request) {
     );
   }
 
-  // Compteur « Demandes via la page contact » de l'espace client (sans donnée personnelle).
-  await signalerEvenement("contact");
+  // Compteur « Demandes via la page contact » de l'espace client. L'e-mail ne sert
+  // qu'à marquer « demande envoyée » un diagnostic de la même personne.
+  await signalerEvenement("contact", email);
   return NextResponse.json({ ok: true });
 }

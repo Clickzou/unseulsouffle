@@ -4,23 +4,26 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 
 import { ACCENTS, equipe, piliers } from "@/lib/content/home";
-import { niveau, PILIERS_DIAGNOSTIC, PROFIL, REPONSES } from "@/lib/content/questionnaire";
+import {
+  calculerScores,
+  niveau,
+  NON_CONCERNE,
+  PILIERS_DIAGNOSTIC,
+  PROFIL,
+  QUESTIONS,
+  REPONSES,
+  resultatDiagnostic,
+} from "@/lib/content/questionnaire";
 
 /**
- * Questionnaire du diagnostic : une question par écran, résultat immédiat.
+ * Questionnaire du diagnostic : une question par écran, puis une étape
+ * facultative de coordonnées, puis le résultat.
  *
- * Tout se passe dans le navigateur : aucune réponse n'est envoyée ni stockée
- * côté serveur. C'est ce qui permet à la page de dire « vos réponses restent
- * chez vous » sans réserve.
+ * Le calcul se fait dans le navigateur. Les réponses ne partent que si le
+ * visiteur laisse ses coordonnées et coche l'accord (/api/diagnostic/ : e-mail
+ * aux associées + onglet Diagnostics de l'espace client). Sinon, rien ne quitte
+ * le navigateur, et l'écran de résultat le dit.
  */
-
-type Question = { pilier: number; index: number; texte: string };
-
-const QUESTIONS: Question[] = PILIERS_DIAGNOSTIC.flatMap((p, pilier) =>
-  p.affirmations.map((texte, index) => ({ pilier, index, texte })),
-);
-
-const NON_CONCERNE = -1;
 
 /**
  * Référents d'un domaine du diagnostic, depuis home.ts (même accent). Le domaine
@@ -41,6 +44,8 @@ export function Questionnaire() {
   const [etape, setEtape] = useState(-1);
   const [profil, setProfil] = useState<string | null>(null);
   const [reponses, setReponses] = useState<number[]>(Array(QUESTIONS.length).fill(-2));
+  // Étape des coordonnées, entre la dernière question et le résultat.
+  const [coordonnees, setCoordonnees] = useState<"a_proposer" | "envoyees" | "refusees">("a_proposer");
 
   const total = QUESTIONS.length;
   const fini = etape >= total;
@@ -75,31 +80,33 @@ export function Questionnaire() {
     window.setTimeout(() => setEtape((e) => e + 1), 220);
   }
 
-  const scores = useMemo(
-    () =>
-      PILIERS_DIAGNOSTIC.map((p, i) => {
-        const notes = reponses
-          .filter((_, q) => QUESTIONS[q].pilier === i)
-          .filter((v) => v >= 0);
-        if (notes.length === 0) return null; // pilier non concerné
-        return Math.round((notes.reduce((a, b) => a + b, 0) / (notes.length * 3)) * 100);
-      }),
-    [reponses],
-  );
+  const scores = useMemo(() => calculerScores(reponses), [reponses]);
 
+  // Celui qui a déjà laissé ses coordonnées n'est pas sollicité une seconde fois.
   function recommencer() {
     setReponses(Array(QUESTIONS.length).fill(-2));
     setProfil(null);
     setEtape(-1);
+    if (coordonnees === "refusees") setCoordonnees("a_proposer");
+  }
+
+  /* ─────────── Coordonnées (facultatif) ─────────── */
+  if (fini && coordonnees === "a_proposer") {
+    return (
+      <Coordonnees
+        reponses={reponses}
+        taille={profil}
+        onRetour={() => setEtape(total - 1)}
+        onEnvoye={() => setCoordonnees("envoyees")}
+        onPasser={() => setCoordonnees("refusees")}
+      />
+    );
   }
 
   /* ─────────── Résultat ─────────── */
   // Ordre de lecture : 1. le verdict, 2. les trois étapes à suivre, 3. le détail.
   if (fini) {
-    const classes = scores
-      .map((score, i) => ({ score, i }))
-      .filter((x): x is { score: number; i: number } => x.score !== null)
-      .sort((a, b) => a.score - b.score);
+    const { classes } = resultatDiagnostic(reponses);
     const prioritaire = classes[0];
     const second = classes[1] && classes[1].score < 45 ? classes[1] : null;
     const p = PILIERS_DIAGNOSTIC[prioritaire.i];
@@ -246,8 +253,10 @@ export function Questionnaire() {
             </p>
           )}
           <p className="mt-6 border-t border-rule-2 pt-5 text-[13.5px] leading-relaxed text-muted">
-            Ce diagnostic est une auto-évaluation : une première lecture, pas un audit. Vos réponses
-            n&apos;ont pas quitté votre navigateur — elles ne sont ni enregistrées ni transmises.
+            Ce diagnostic est une auto-évaluation : une première lecture, pas un audit.{" "}
+            {coordonnees === "envoyees"
+              ? "Vos coordonnées et ce résultat ont été transmis à Un Seul Souffle, et à lui seul, pour vous recontacter."
+              : "Vos réponses n'ont pas quitté votre navigateur : elles ne sont ni enregistrées ni transmises."}
           </p>
         </section>
       </div>
@@ -318,6 +327,136 @@ export function Questionnaire() {
 }
 
 /* ─────────── Morceaux ─────────── */
+
+function Coordonnees({
+  reponses,
+  taille,
+  onRetour,
+  onEnvoye,
+  onPasser,
+}: {
+  reponses: number[];
+  taille: string | null;
+  onRetour: () => void;
+  onEnvoye: () => void;
+  onPasser: () => void;
+}) {
+  const [envoi, setEnvoi] = useState(false);
+  const [erreur, setErreur] = useState("");
+
+  async function envoyer(evenement: React.FormEvent<HTMLFormElement>) {
+    evenement.preventDefault();
+    setEnvoi(true);
+    setErreur("");
+    const champs = Object.fromEntries(new FormData(evenement.currentTarget).entries());
+    try {
+      const reponse = await fetch("/api/diagnostic/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...champs, consentement: champs.consentement === "oui", taille, reponses }),
+      });
+      const resultat = await reponse.json().catch(() => ({ ok: false }));
+      if (reponse.ok && resultat.ok) return onEnvoye();
+      setErreur(resultat.erreur ?? "L'envoi a échoué. Réessayez, ou voyez votre résultat sans laisser vos coordonnées.");
+    } catch {
+      setErreur("Connexion impossible. Réessayez, ou voyez votre résultat sans laisser vos coordonnées.");
+    }
+    setEnvoi(false);
+  }
+
+  const classes =
+    "mt-2 w-full rounded-bouton border border-rule bg-ground px-4 py-3 text-[15.5px] text-ink " +
+    "outline-none transition-colors placeholder:text-muted focus:border-teal";
+  const Champ = ({
+    id,
+    label,
+    type = "text",
+    requis = false,
+    autoComplete,
+  }: {
+    id: string;
+    label: string;
+    type?: string;
+    requis?: boolean;
+    autoComplete?: string;
+  }) => (
+    <p>
+      <label htmlFor={`diag-${id}`} className="font-mono text-[10px] uppercase tracking-[0.13em] text-muted">
+        {label}
+        {requis && <span className="text-amber"> *</span>}
+      </label>
+      <input id={`diag-${id}`} name={id} type={type} required={requis} autoComplete={autoComplete} className={classes} />
+    </p>
+  );
+
+  return (
+    <Carte progression={100} teinte={ACCENTS.finance} surtitre="Votre résultat est prêt" onRetour={onRetour}>
+      <h2 className="font-serif text-[clamp(24px,2.6vw,34px)] leading-snug text-ink">
+        Souhaitez-vous que l&apos;on vous rappelle&nbsp;?
+      </h2>
+      <p className="mt-4 max-w-prose text-[16px] leading-relaxed">
+        Laissez vos coordonnées : Marjorie ou Muriel vous rappelle pour parler de votre résultat.
+        C&apos;est facultatif, votre résultat s&apos;affiche dans tous les cas.
+      </p>
+
+      <form onSubmit={envoyer} className="mt-8 grid gap-5 sm:grid-cols-2">
+        <Champ id="nom" label="Nom et prénom" requis autoComplete="name" />
+        <Champ id="entreprise" label="Entreprise" autoComplete="organization" />
+        <Champ id="email" label="Email" type="email" requis autoComplete="email" />
+        <Champ id="telephone" label="Téléphone" type="tel" autoComplete="tel" />
+
+        <p className="flex items-start gap-3 text-[14.5px] leading-relaxed sm:col-span-2">
+          <input
+            id="diag-consentement"
+            name="consentement"
+            type="checkbox"
+            value="oui"
+            required
+            className="mt-1 h-4 w-4 shrink-0 accent-teal"
+          />
+          <label htmlFor="diag-consentement">
+            J&apos;accepte qu&apos;Un Seul Souffle reçoive mes coordonnées et les réponses à ce diagnostic
+            pour me recontacter. Elles ne sont transmises à personne d&apos;autre.{" "}
+            <Link href="/confidentialite/" className="underline decoration-rule underline-offset-4 hover:text-teal">
+              Politique de confidentialité
+            </Link>
+          </label>
+        </p>
+
+        {/* Champ piège anti-robots : invisible pour les visiteurs. */}
+        <p aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+          <label htmlFor="diag-site">Site web</label>
+          <input id="diag-site" name="site" type="text" tabIndex={-1} autoComplete="off" />
+        </p>
+
+        <div className="sm:col-span-2">
+          {erreur && (
+            <p role="alert" className="mb-4 rounded-carte border-l-2 border-[#b3341c] bg-[#fde8e4] px-4 py-3 text-[14.5px] text-[#8a2615]">
+              {erreur}
+            </p>
+          )}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <button
+              type="submit"
+              disabled={envoi}
+              className="group inline-flex items-center gap-2 rounded-bouton border border-teal bg-teal px-5 py-3 text-[14.5px] font-medium text-ground transition-colors hover:border-teal-dark hover:bg-teal-dark disabled:opacity-60"
+            >
+              {envoi ? "Envoi en cours…" : "Être rappelé et voir mon résultat"}
+              {!envoi && <span className="transition-transform group-hover:translate-x-[3px]">→</span>}
+            </button>
+            <button
+              type="button"
+              onClick={onPasser}
+              className="text-[14.5px] text-muted underline decoration-rule underline-offset-4 hover:text-teal"
+            >
+              Voir mon résultat sans laisser mes coordonnées
+            </button>
+          </div>
+        </div>
+      </form>
+    </Carte>
+  );
+}
 
 function FeuilleDeRoute({
   teinte,

@@ -2,7 +2,9 @@
  * Questionnaire du diagnostic d'entreprise (/diagnostic/questionnaire/).
  *
  * 1 question de profil + 20 affirmations, 4 par pilier, notées sur 4 niveaux.
- * Le calcul se fait dans le navigateur : aucune réponse n'est envoyée.
+ * Le calcul se fait dans le navigateur. Les réponses ne partent que si le
+ * visiteur laisse ses coordonnées (consentement) : /api/diagnostic/ refait
+ * alors le même calcul côté serveur, avec `resultatDiagnostic`.
  *
  * ⚠ À FAIRE RELIRE PAR LA CLIENTE : les affirmations et les recommandations ont
  * été rédigées pour la refonte (2026-09-23). Elles ne citent aucun chiffre ni
@@ -170,4 +172,44 @@ export function niveau(score: number): { libelle: string; ton: "solide" | "surve
   if (score >= 70) return { libelle: "Solide", ton: "solide" };
   if (score >= 45) return { libelle: "À surveiller", ton: "surveiller" };
   return { libelle: "Exposé", ton: "expose" };
+}
+
+/* ─────────── Calcul du résultat (navigateur et serveur) ─────────── */
+
+export type Question = { pilier: number; index: number; texte: string };
+
+export const QUESTIONS: Question[] = PILIERS_DIAGNOSTIC.flatMap((p, pilier) =>
+  p.affirmations.map((texte, index) => ({ pilier, index, texte })),
+);
+
+/** Réponse « Non concerné » ; -2 = pas encore répondu. Sinon la valeur de REPONSES (0 à 3). */
+export const NON_CONCERNE = -1;
+
+/** Score sur 100 de chaque pilier, dans l'ordre de PILIERS_DIAGNOSTIC ; null = non concerné. */
+export function calculerScores(reponses: number[]): (number | null)[] {
+  return PILIERS_DIAGNOSTIC.map((_, i) => {
+    const notes = reponses.filter((_, q) => QUESTIONS[q]?.pilier === i).filter((v) => v >= 0);
+    if (notes.length === 0) return null;
+    return Math.round((notes.reduce((a, b) => a + b, 0) / (notes.length * 3)) * 100);
+  });
+}
+
+/**
+ * Pilier prioritaire (le score le plus bas), scores par pilier et affirmations
+ * auxquelles le visiteur a répondu « pas du tout » ou « plutôt non ».
+ */
+export function resultatDiagnostic(reponses: number[]) {
+  const scores = calculerScores(reponses);
+  const classes = scores
+    .map((score, i) => ({ score, i }))
+    .filter((x): x is { score: number; i: number } => x.score !== null)
+    .sort((a, b) => a.score - b.score);
+  return {
+    scores,
+    classes,
+    prioritaire: classes[0] as { score: number; i: number } | undefined,
+    non: QUESTIONS.map((q, i) => ({ q, v: reponses[i] }))
+      .filter(({ v }) => v >= 0 && v <= 1)
+      .map(({ q }) => ({ pilier: q.pilier, affirmation: q.texte })),
+  };
 }

@@ -128,10 +128,15 @@ export default function ConfidentialitePage() {
               </p>
               <p className="mt-3">
                 Sous-traitants : Vercel Inc. (hébergement du site), Resend Inc. (acheminement des
-                messages envoyés par le formulaire de contact) et, uniquement si vous l&apos;avez
-                accepté, Google Ireland Ltd (mesure d&apos;audience avec Google Analytics). Le
-                diagnostic en ligne est calculé dans votre navigateur : ses réponses ne nous sont
-                pas transmises.
+                messages envoyés par le formulaire de contact et par le diagnostic), Clickzou
+                (prestataire web du cabinet, qui héberge l&apos;espace sécurisé où les associées
+                retrouvent les diagnostics) et, uniquement si vous l&apos;avez accepté, Google
+                Ireland Ltd (mesure d&apos;audience avec Google Analytics).
+              </p>
+              <p className="mt-3">
+                Le diagnostic en ligne est calculé dans votre navigateur. Ses réponses ne nous sont
+                transmises que si, à la fin, vous laissez vos coordonnées et cochez la case
+                d&apos;accord pour être recontacté ; sinon, rien ne quitte votre navigateur.
               </p>
             </Bloc>
 
@@ -146,7 +151,8 @@ export default function ConfidentialitePage() {
               </p>
               <p className="mt-3">
                 Il en va de même pour Resend Inc., société américaine qui achemine les messages du
-                formulaire de contact (nom, coordonnées, contenu du message), et pour Google, si
+                formulaire de contact et du diagnostic (nom, coordonnées, contenu du message ou
+                résultat du diagnostic), et pour Google, si
                 vous acceptez la mesure d&apos;audience. Google adhère au cadre de protection des
                 données UE–États-Unis (Data Privacy Framework).
               </p>

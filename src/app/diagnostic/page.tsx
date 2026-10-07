@@ -140,8 +140,8 @@ function ApercuResultat() {
 
 const ENGAGEMENTS = [
   { titre: "Le résultat est à vous", texte: "Vous le gardez, que vous nous recontactiez ou non." },
-  { titre: "Aucun rappel sans votre accord", texte: "Si vous souhaitez en parler, c'est vous qui demandez l'entretien." },
-  { titre: "Vos réponses restent chez vous", texte: "Le calcul se fait dans votre navigateur : rien n'est enregistré ni transmis." },
+  { titre: "Aucun rappel sans votre accord", texte: "Nous ne vous rappelons que si vous nous laissez vos coordonnées." },
+  { titre: "Vos réponses restent chez vous", texte: "Le calcul se fait dans votre navigateur : sans vos coordonnées, rien n'est enregistré ni transmis." },
 ];
 
 export default function DiagnosticPage() {
