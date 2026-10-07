@@ -146,7 +146,7 @@ export const resumeTarifs: string[] = [
   "L'accompagnement peut prendre deux formes selon votre besoin.",
   `Pour les dirigeants, l'accompagnement individuel démarre à ${offres[0].lignes[0].prix.replace("À partir de ", "")}. Il se construit avec un nombre de séances défini selon vos besoins et vos objectifs.`,
   `Pour les entreprises, nos interventions démarrent à 2 jours d'accompagnement, au tarif ${TARIF_JOUR}. Elles sont proposées sur mesure : accompagnement industriel, organisation, stratégie, finance, coopération ou QVT. Chaque proposition précise clairement le périmètre, les modalités et le prix avant tout démarrage.`,
-  "Le premier échange de 30 minutes est offert pour comprendre votre situation et déterminer le format le plus adapté.",
+  "Le premier échange de 30 minutes avec Muriel ou Marjorie est offert pour comprendre votre situation et déterminer le format le plus adapté.",
 ];
 
 /** Vrai tant qu'au moins un prix affiché est une estimation. */

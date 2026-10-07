@@ -241,7 +241,7 @@ function BlocTarifs({ cle, accentPage }: { cle: "dirigeant" | "entreprise" | "fi
         ))}
       </ul>
       <p className="border-t border-rule-2 bg-ground px-6 py-3.5 text-[13.5px] text-muted sm:px-8">
-        Premier échange de 30 minutes gratuit. Toutes les offres sur la page{" "}
+        Premier échange de 30 minutes avec Muriel ou Marjorie, gratuit. Toutes les offres sur la page{" "}
         <Link href="/tarifs/" className="text-teal underline decoration-1 underline-offset-[3px]">
           tarifs
         </Link>

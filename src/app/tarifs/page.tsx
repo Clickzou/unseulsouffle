@@ -48,7 +48,7 @@ const QUESTIONS = [
   {
     q: "Le premier échange est-il payant ?",
     r: [
-      "Non. Le premier échange de 30 minutes est gratuit et confidentiel, en visio ou dans vos locaux. Il sert à qualifier votre situation et à vérifier que nous sommes les bonnes personnes pour la traiter.",
+      "Non. Le premier échange de 30 minutes avec Muriel ou Marjorie est gratuit et confidentiel, en visio ou dans vos locaux. Il sert à qualifier votre situation et à vérifier que nous sommes les bonnes personnes pour la traiter.",
     ],
   },
 ];

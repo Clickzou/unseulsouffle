@@ -190,7 +190,7 @@ export const pilierCommercial: PagePilier = {
         {
           type: "p",
           texte:
-            "Votre interlocuteur est un seul consultant, du premier entretien à la fin de l'intervention : Nicolas Vimini, partenaire du cabinet. Directeur commercial externalisé, il compte vingt ans d'expérience en développement commercial. Il intervient pour clarifier la stratégie commerciale, structurer l'organisation et piloter l'activité avec des indicateurs adaptés. Sa présentation est sur la page [notre équipe](/notre-equipe/#nicolas-vimini).",
+            "Votre interlocuteur est un seul consultant, du lancement de la mission à la fin de l'intervention : Nicolas Vimini, partenaire du cabinet. Directeur commercial externalisé, il compte vingt ans d'expérience en développement commercial. Il intervient pour clarifier la stratégie commerciale, structurer l'organisation et piloter l'activité avec des indicateurs adaptés. Sa présentation est sur la page [notre équipe](/notre-equipe/#nicolas-vimini).",
         },
         {
           type: "p",
@@ -231,7 +231,7 @@ export const pilierCommercial: PagePilier = {
     {
       q: "Combien coûte un conseil en stratégie commerciale ?",
       r: [
-        "Le coût dépend du périmètre : un audit commercial seul, ou un accompagnement de plusieurs mois jusqu'au pilotage. Il est fixé après l'entretien découverte, qui est gratuit, et écrit dans la proposition avant tout engagement.",
+        "Le coût dépend du périmètre : un audit commercial seul, ou un accompagnement de plusieurs mois jusqu'au pilotage. Il est fixé après le premier échange de 30 minutes avec Muriel ou Marjorie, qui est gratuit, et écrit dans la proposition avant tout engagement.",
       ],
     },
     {

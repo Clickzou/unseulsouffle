@@ -129,7 +129,7 @@ export const reperes: { label: string; valeur: string }[] = [
   { label: "Secteurs", valeur: "Industrie et services" },
   { label: "Zone", valeur: "Toulouse, Haute-Garonne, Occitanie" },
   { label: "Durée d'un parcours", valeur: "3 à 12 mois selon la profondeur" },
-  { label: "Premier échange", valeur: "Gratuit et confidentiel, en visio ou dans vos locaux" },
+  { label: "Premier échange", valeur: "30 minutes avec Muriel ou Marjorie, gratuit et confidentiel, en visio ou dans vos locaux" },
 ];
 
 /* ─────────── Blocages ─────────── */
@@ -526,7 +526,7 @@ export const faq: QuestionFAQ[] = [
   {
     q: "Comment se passe le premier échange ?",
     r: [
-      "Un entretien de découverte gratuit et confidentiel avec Marjorie et Muriel, en visio ou dans vos locaux. Nous y identifions vos enjeux prioritaires et vous repartez avec une lecture de votre situation — que vous travailliez ensuite avec nous ou non.",
+      "Un échange de 30 minutes avec Muriel ou Marjorie, gratuit et confidentiel, en visio ou dans vos locaux. Nous y identifions vos enjeux prioritaires et vous repartez avec une lecture de votre situation — que vous travailliez ensuite avec nous ou non.",
     ],
   },
   {

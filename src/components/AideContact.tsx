@@ -112,7 +112,7 @@ export function AideContact() {
         </div>
 
         <p className="mt-2 text-[14px] leading-relaxed text-body">
-          Le premier échange avec Marjorie et Muriel est gratuit et confidentiel. Vous en repartez
+          Le premier échange de 30 minutes avec Muriel ou Marjorie est gratuit et confidentiel. Vous en repartez
           avec une lecture de votre situation, que vous travailliez ensuite avec nous ou non.
         </p>
 

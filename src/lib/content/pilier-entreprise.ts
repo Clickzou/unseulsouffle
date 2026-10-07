@@ -38,7 +38,7 @@ export const pilierEntreprise: PagePilier = {
       "Durée : 6 à 12 mois d'accompagnement, selon les chantiers ouverts",
       "Point de départ : diagnostic 360°, immersion terrain et entretiens",
       "Zone : Toulouse, Haute-Garonne, Occitanie",
-      "Premier échange : 30 minutes, gratuit et sans engagement",
+      "Premier échange : 30 minutes avec Muriel ou Marjorie, gratuit et sans engagement",
     ],
   },
 
@@ -231,7 +231,7 @@ export const pilierEntreprise: PagePilier = {
         {
           type: "liste",
           items: [
-            "**Prise de contact, 30 minutes.** Un échange gratuit et sans engagement, pour vérifier que le blocage est bien organisationnel.",
+            "**Premier échange, 30 minutes.** Avec Muriel ou Marjorie, gratuit et sans engagement, pour vérifier que le blocage est bien organisationnel.",
             "**Diagnostic flash de votre situation.** Une première lecture, avant tout engagement.",
             "**Proposition sur-mesure.** Périmètre, chantiers, durée et tarif par écrit. Rien ne démarre sans votre accord.",
             "**Étape 03 Cartographier.** Diagnostic 360° : immersion terrain, entretiens des parties prenantes, restitution stratégique complète.",

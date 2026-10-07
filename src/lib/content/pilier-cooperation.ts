@@ -330,7 +330,7 @@ export const pilierCooperation: PagePilier = {
         {
           type: "p",
           texte:
-            "Votre interlocutrice reste la même du premier entretien à la fin de l'intervention. Le périmètre est arrêté avec vous et écrit dans la proposition. Si le sujet dépasse l'organisation — des marges mal connues, une stratégie commerciale à revoir, une production qui ne suit pas —, elle peut faire appel à l'une des cinq autres expertises du cabinet, sur ce point précis et avec votre accord. Quand c'est l'organisation de toute l'entreprise qui doit être repensée, voir notre [conseil en organisation](/transformation-entreprise/).",
+            "Votre interlocutrice reste la même du lancement de la mission à la fin de l'intervention. Le périmètre est arrêté avec vous et écrit dans la proposition. Si le sujet dépasse l'organisation — des marges mal connues, une stratégie commerciale à revoir, une production qui ne suit pas —, elle peut faire appel à l'une des cinq autres expertises du cabinet, sur ce point précis et avec votre accord. Quand c'est l'organisation de toute l'entreprise qui doit être repensée, voir notre [conseil en organisation](/transformation-entreprise/).",
         },
       ],
     },

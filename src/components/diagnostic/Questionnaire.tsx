@@ -144,7 +144,7 @@ export function Questionnaire() {
                   className="inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium text-white transition-opacity hover:opacity-90"
                   style={{ backgroundColor: tP.texte }}
                 >
-                  En parler 30 minutes, gratuitement →
+                  Premier échange gratuit de 30 min →
                 </Link>
                 <Link
                   href={p.recommandation.href}

@@ -11,7 +11,7 @@ import { SITE_URL } from "@/lib/content/home";
 import { ROBOTS } from "@/lib/seo/indexation";
 
 /**
- * Page de conversion nº 2 — l'entretien découverte.
+ * Page de conversion nº 2 — le premier échange.
  *
  * Deux obligations traitées ici, toutes deux au devis validé du 17/09/2026 :
  *  - la mention RGPD sous le formulaire (absente du site legacy) ;
@@ -24,10 +24,10 @@ import { ROBOTS } from "@/lib/seo/indexation";
  */
 export const metadata: Metadata = {
   // 54 / 60
-  title: "Contact — entretien gratuit de 30 minutes",
+  title: "Contact — premier échange gratuit de 30 minutes",
   // 146 / 150
   description:
-    "Parlez à Marjorie Anglade et Muriel Saffroy. Premier échange de 30 minutes, gratuit et confidentiel, pour qualifier votre situation. Occitanie.",
+    "Premier échange de 30 minutes avec Muriel Saffroy ou Marjorie Anglade, gratuit et confidentiel, pour qualifier votre situation. Occitanie.",
   alternates: { canonical: "/contact/" },
   robots: ROBOTS,
 };
@@ -82,7 +82,7 @@ export default async function ContactPage({
           label="Premier échange"
           accent="organisation"
           h1="Parler à Marjorie et Muriel"
-          lede="Un premier échange de 30 minutes, gratuit et confidentiel. Il sert à qualifier votre situation et à vérifier que nous sommes les bonnes personnes — y compris quand la réponse est non."
+          lede="Un premier échange de 30 minutes avec Muriel ou Marjorie, gratuit et confidentiel. Il sert à qualifier votre situation et à vérifier que nous sommes les bonnes personnes — y compris quand la réponse est non."
         />
 
         <Reveal>
@@ -96,7 +96,7 @@ export default async function ContactPage({
                 {/* Mention RGPD — absente du site legacy, exigée au devis validé. */}
                 <p className="mt-7 max-w-prose border-t border-rule-2 pt-5 text-[13.5px] leading-relaxed text-muted">
                   Les informations recueillies dans ce formulaire sont utilisées uniquement pour
-                  répondre à votre demande et, le cas échéant, préparer un entretien. Elles ne sont
+                  répondre à votre demande et, le cas échéant, préparer le premier échange. Elles ne sont
                   ni revendues ni transmises à des tiers. Conformément au Règlement général sur la
                   protection des données, vous disposez d&apos;un droit d&apos;accès, de
                   rectification, d&apos;effacement et d&apos;opposition sur vos données : écrivez à{" "}

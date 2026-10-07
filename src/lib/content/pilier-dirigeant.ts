@@ -37,7 +37,7 @@ export const pilierDirigeant: PagePilier = {
       "En option : autodiagnostic de qualité de vie au travail",
       "Étapes couvertes : 01 Aligner et 02 Coopérer",
       "Zone : Toulouse, Haute-Garonne, Occitanie — en présentiel ou en visio",
-      "Premier échange : 30 minutes, gratuit et sans engagement",
+      "Premier échange : 30 minutes avec Muriel ou Marjorie, gratuit et sans engagement",
     ],
   },
 
@@ -266,7 +266,7 @@ export const pilierDirigeant: PagePilier = {
         {
           type: "liste",
           items: [
-            "**Prise de contact, 30 minutes.** Un échange gratuit et sans engagement, pour qualifier la situation et vérifier que le nœud est bien chez vous.",
+            "**Premier échange, 30 minutes.** Avec Muriel ou Marjorie, gratuit et sans engagement, pour qualifier la situation et vérifier que le nœud est bien chez vous.",
             "**Diagnostic flash de votre situation.** Un point de départ daté, que nous reprenons plus tard pour mesurer ce qui a bougé.",
             "**Proposition sur-mesure.** Périmètre, format et tarif par écrit. Rien ne démarre sans votre accord.",
             "**Étape 01 Aligner.** Coaching individuel, construit par trimestre, avec un nombre de séances défini selon vos besoins.",

@@ -109,7 +109,7 @@ export function FormulaireContact({ messageInitial }: { messageInitial?: string 
           disabled={etat === "envoi"}
           className="group inline-flex items-center gap-2 rounded-bouton border border-teal bg-teal px-5 py-3 text-[14.5px] font-medium text-ground transition-colors hover:border-teal-dark hover:bg-teal-dark disabled:opacity-60"
         >
-          {etat === "envoi" ? "Envoi en cours…" : "Demander un entretien"}
+          {etat === "envoi" ? "Envoi en cours…" : "Demander un premier échange"}
           {etat !== "envoi" && <span className="transition-transform group-hover:translate-x-[3px]">→</span>}
         </button>
       </div>

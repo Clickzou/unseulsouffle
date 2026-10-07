@@ -259,7 +259,7 @@ const REGLE = [
   {
     titre: "Un référent pour votre sujet",
     texte:
-      "Celui ou celle dont le métier correspond à votre blocage principal devient votre interlocuteur, du premier échange à la fin de l'accompagnement.",
+      "Celui ou celle dont le métier correspond à votre blocage principal devient votre interlocuteur, du lancement de la mission à la fin de l'accompagnement.",
   },
   {
     titre: "La complémentarité au service de votre sujet",

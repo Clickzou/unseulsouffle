@@ -294,7 +294,7 @@ export const pilierStrategieIndustrielle: PagePilier = {
         {
           type: "p",
           texte:
-            "Votre interlocuteur reste le même du premier entretien à la fin de l'intervention. **Le périmètre est arrêté avec vous et écrit dans la proposition.** Si la réflexion met au jour un sujet qui dépasse la stratégie industrielle, Patrick vous le dit et peut faire appel à l'une des cinq autres expertises du cabinet, sur ce point précis. Le périmètre ne s'élargit pas sans votre accord.",
+            "Votre interlocuteur reste le même du lancement de la mission à la fin de l'intervention. **Le périmètre est arrêté avec vous et écrit dans la proposition.** Si la réflexion met au jour un sujet qui dépasse la stratégie industrielle, Patrick vous le dit et peut faire appel à l'une des cinq autres expertises du cabinet, sur ce point précis. Le périmètre ne s'élargit pas sans votre accord.",
         },
         { type: "encadre", titre: "Tarif", texte: TARIF },
       ],

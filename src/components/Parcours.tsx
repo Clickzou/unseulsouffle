@@ -57,7 +57,7 @@ export function Parcours() {
         <Link href="/diagnostic/" className="font-medium text-teal underline underline-offset-[3px]">
           Faire le diagnostic d&apos;entreprise en 5 minutes
         </Link>{" "}
-        — ou en parler directement lors de l&apos;entretien découverte, gratuit et confidentiel.
+        — ou en parler directement lors d&apos;un premier échange de 30 minutes avec Muriel ou Marjorie, gratuit et confidentiel.
       </p>
 
       <p className="mx-auto mt-4 max-w-[72ch] text-center text-[15px] text-muted">

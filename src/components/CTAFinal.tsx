@@ -12,8 +12,8 @@ export function CTAFinal() {
           </h2>
           <p className="max-w-prose text-lg leading-relaxed text-[#aeb6c3]">
             Le diagnostic prend 5 minutes et vous donne un résultat immédiat sur les cinq piliers. Il
-            ne vous engage à rien et sert de base à l&apos;entretien découverte, gratuit et
-            confidentiel.
+            ne vous engage à rien et sert de base au premier échange de 30 minutes avec Muriel ou Marjorie,
+            gratuit et confidentiel.
           </p>
         </div>
 

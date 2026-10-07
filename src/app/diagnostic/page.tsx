@@ -48,7 +48,7 @@ const ETAPES = [
     n: "03",
     titre: "Vous décidez de la suite",
     texte:
-      "Si le résultat appelle une conversation, nous vous proposons un entretien de 30 minutes, gratuit et confidentiel. Sinon, vous en restez là.",
+      "Si le résultat appelle une conversation, nous vous proposons un premier échange de 30 minutes avec Muriel ou Marjorie, gratuit et confidentiel. Sinon, vous en restez là.",
   },
 ];
 
@@ -261,7 +261,7 @@ export default function DiagnosticPage() {
               </h2>
               <p className="max-w-prose text-lg leading-relaxed text-[#aeb6c3]">
                 Le résultat est à vous. Nous ne vous appelons pas parce que vous avez rempli un
-                questionnaire : si vous souhaitez en parler, vous demandez l&apos;entretien.
+                questionnaire : si vous souhaitez en parler, vous demandez le premier échange.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/diagnostic/questionnaire/" arrow>

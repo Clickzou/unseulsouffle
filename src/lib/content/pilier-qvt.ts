@@ -389,7 +389,7 @@ export const pilierQvt: PagePilier = {
             "Après plus de 25 années en entreprise, Olivia Artur accompagne aujourd'hui dirigeants, managers et collaborateurs pour préserver leur équilibre, développer leur capacité d'adaptation et construire des environnements de travail plus sains et plus durables.",
             "Son approche associe QVT, sophrologie, intelligence relationnelle et prévention des risques psychosociaux, avec une attention particulière portée à la réalité concrète du travail.",
             "Sa conviction : prendre soin de l'humain n'est pas une dépense supplémentaire. C'est un investissement stratégique qui favorise l'engagement, la coopération et la performance durable.",
-            "Elle reste votre interlocutrice du premier échange à la fin de l'intervention. Si la situation l'exige, elle s'appuie sur les cinq autres expertises du cabinet, sur le point précis qui le demande.",
+            "Elle reste votre interlocutrice du lancement de la mission à la fin de l'intervention. Si la situation l'exige, elle s'appuie sur les cinq autres expertises du cabinet, sur le point précis qui le demande.",
           ],
         },
       ],
