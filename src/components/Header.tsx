@@ -21,13 +21,27 @@ import { MenuMobile } from "@/components/MenuMobile";
  * Le menu mobile et tablette est dans MenuMobile : panneau plein écran, seul
  * morceau client de l'en-tête.
  */
-const LIENS = [
+/**
+ * « Actualités » ouvre un sous-menu (demande de la cliente du 07/10/2026). Sans
+ * JavaScript : il s'ouvre au survol et au clavier (focus-within). Le libellé
+ * mène lui-même aux articles, pour un clic direct sur écran tactile.
+ */
+type Lien = { href: string; label: string; sousMenu?: { href: string; label: string }[] };
+
+const LIENS: Lien[] = [
   { href: "/un-seul-souffle/", label: "Le cabinet" },
   { href: "/transformation-dirigeant/", label: "Parcours dirigeant" },
   { href: "/transformation-entreprise/", label: "Parcours entreprise" },
   { href: "/notre-equipe/", label: "Équipe" },
   { href: "/tarifs/", label: "Tarifs" },
-  { href: "/infos-utiles/", label: "Nos articles" },
+  {
+    href: "/infos-utiles/",
+    label: "Actualités",
+    sousMenu: [
+      { href: "/infos-utiles/", label: "Nos articles" },
+      { href: "/podcasts/", label: "Nos podcasts" },
+    ],
+  },
   { href: "/contact/", label: "Contact" },
 ];
 
@@ -69,15 +83,39 @@ export function Header({ overPhoto = false }: { overPhoto?: boolean }) {
 
             <ul className="hidden gap-7 text-sm lg:flex">
               {LIENS.map((lien) => (
-                <li key={lien.href}>
+                <li key={lien.label} className={lien.sousMenu ? "group relative" : undefined}>
                   <Link
                     href={lien.href}
-                    className={`transition-colors hover:text-teal ${
+                    aria-haspopup={lien.sousMenu ? "true" : undefined}
+                    className={`inline-flex items-center gap-1 transition-colors hover:text-teal ${
                       surPhoto ? "text-[#d3d8e0] hover:!text-[#7fd3ca]" : "text-body"
                     }`}
                   >
                     {lien.label}
+                    {lien.sousMenu && (
+                      <svg aria-hidden="true" viewBox="0 0 10 6" className="h-[6px] w-[10px] transition-transform group-hover:rotate-180 group-focus-within:rotate-180">
+                        <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.4" />
+                      </svg>
+                    )}
                   </Link>
+                  {lien.sousMenu && (
+                    // `pt-3` : pont invisible entre le libellé et le panneau, pour que
+                    // le survol ne se perde pas en descendant la souris.
+                    <div className="invisible absolute left-1/2 top-full z-30 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                      <ul className="min-w-[190px] rounded-carte border border-rule bg-surface p-1.5 shadow-[0_18px_40px_-20px_rgba(20,32,54,0.45)]">
+                        {lien.sousMenu.map((sous) => (
+                          <li key={sous.href}>
+                            <Link
+                              href={sous.href}
+                              className="block rounded-bouton px-4 py-2.5 text-[14px] text-ink transition-colors hover:bg-mist hover:text-teal"
+                            >
+                              {sous.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

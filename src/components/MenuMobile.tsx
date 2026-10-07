@@ -44,8 +44,14 @@ const GROUPES = [
       { href: "/un-seul-souffle/", label: "Notre approche" },
       { href: "/notre-equipe/", label: "Notre équipe" },
       { href: "/tarifs/", label: "Tarifs" },
-      { href: "/infos-utiles/", label: "Nos articles" },
       { href: "/contact/", label: "Contact" },
+    ],
+  },
+  {
+    titre: "Actualités",
+    liens: [
+      { href: "/infos-utiles/", label: "Nos articles" },
+      { href: "/podcasts/", label: "Nos podcasts" },
     ],
   },
 ];

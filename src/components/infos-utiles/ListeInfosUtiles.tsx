@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/Footer";
 import { CTAFinal } from "@/components/CTAFinal";
 import { Reveal } from "@/components/ui/Reveal";
+import { OngletsActualites } from "@/components/actualites/OngletsActualites";
 import { ACCENTS, SITE_URL, equipe } from "@/lib/content/home";
 import type { Article } from "@/lib/content/article";
 import { articlesDeLaPage, dateAtteinte, nombrePagesArticles } from "@/lib/content/articles";
@@ -288,7 +289,7 @@ export function ListeInfosUtiles({ numero }: { numero: number }) {
         <EnTetePage
           fil={numero <= 1 ? "Nos articles" : `Page ${numero}`}
           parent={numero <= 1 ? undefined : { href: "/infos-utiles/", label: "Nos articles" }}
-          label={numero <= 1 ? "Nos articles" : `Nos articles · page ${numero} sur ${total}`}
+          label={numero <= 1 ? "Actualités · Nos articles" : `Nos articles · page ${numero} sur ${total}`}
           accent="commercial"
           aside={<SymboleAnime />}
           anime
@@ -319,6 +320,8 @@ export function ListeInfosUtiles({ numero }: { numero: number }) {
 
         {!vide && (
           <Section large={200}>
+            <OngletsActualites actif="articles" className="mb-10" />
+
             {une && (
               <Reveal>
                 <ALaUne article={une} />

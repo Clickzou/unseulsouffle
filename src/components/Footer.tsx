@@ -20,6 +20,7 @@ const COLONNES = [
       { href: "/notre-equipe/", label: "Notre équipe" },
       { href: "/tarifs/", label: "Tarifs" },
       { href: "/infos-utiles/", label: "Nos articles" },
+      { href: "/podcasts/", label: "Nos podcasts" },
       { href: "/contact/", label: "Contact" },
     ],
   },

@@ -28,6 +28,7 @@ const PAGES: { path: string; priority: number }[] = [
   { path: "/muriel-saffroy/", priority: 0.6 },
   { path: "/marjorie-anglade/", priority: 0.6 },
   { path: "/contact/", priority: 0.6 },
+  { path: "/podcasts/", priority: 0.6 },
 ];
 
 /** Publication programmée des articles : régénération toutes les heures. */
