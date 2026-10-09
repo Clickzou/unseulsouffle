@@ -1,0 +1,100 @@
+[
+  {
+    "id": "redirections-ancien-site-2026-10",
+    "titre": "Rediriger deux anciennes adresses encore montrées par Google",
+    "probleme": "Constat d'audit du 09/10/2026 : deux pages de l'ancien site, « Offres Marjorie » et « Offre Multiperfs », sont encore montrées par Google (Search Console 90 jours, du 09/07 au 06/10/2026 : 18 affichages et 5 clics pour la première, en 4e place ; 4 affichages pour la seconde), mais elles aboutissent aujourd'hui à une page d'erreur 404.",
+    "correction": "Ajouter deux redirections permanentes (301) dans next.config.mjs, à côté de celles de l'ancien site WordPress déjà en place : /offres-marjorie/ vers /daf-externalise-toulouse/ (offre de pilotage financier portée par Marjorie Anglade) et /offre-multiperfs/ vers /transformation-entreprise/ (même choix que pour l'ancienne page /organisation-pme-offres-muriel/). Vérifier en ligne que les deux adresses répondent 301 puis 200, sans chaîne de redirections.",
+    "type": "technique",
+    "qui": "pulse",
+    "statut": "prevue",
+    "prevue_le": "2026-10-13",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": [
+      "DAF externalisé à temps partagé à Toulouse : qui choisir ?",
+      "Conseil en organisation pour PME à Toulouse"
+    ]
+  },
+  {
+    "id": "llms-txt-2026-10",
+    "titre": "Publier une fiche de présentation du cabinet pour les moteurs d'IA",
+    "probleme": "Constat d'audit du 09/10/2026 : le fichier de présentation destiné aux moteurs d'IA (llms.txt) n'existe pas (erreur 404). Au relevé Pulse du 05/10/2026, le cabinet n'est nommé que sur 4 des 15 questions suivies hors marque, et aucun moteur ne le connaît sans recherche (0 sur 4 réponses « mémoire » partout).",
+    "correction": "Créer public/llms.txt : un titre « Un Seul Souffle », un résumé d'une phrase (cabinet de conseil aux entreprises et d'accompagnement des dirigeants de TPE et PME de 10 à 250 salariés, près de Toulouse, qui se présente comme une équipe de direction externalisée), les faits de la fiche de faits seulement (associées fondatrices, six expertises et leur expert, un expert référent dédié et les autres expertises seulement si le sujet l'exige, parcours de 3 à 12 mois, zone, coordonnées, seul site officiel unseulsouffle.fr), puis la liste commentée des pages principales et des 9 articles parus. Ni prix, ni numéro RCS (à confirmer), ni ancienne adresse murielsaffroy.fr, ni « cabinet d'expertise comptable ».",
+    "type": "technique",
+    "qui": "pulse",
+    "statut": "prevue",
+    "prevue_le": "2026-10-13",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": []
+  },
+  {
+    "id": "maillage-pages-cooperation-qvt-2026-10",
+    "titre": "Relier trois articles parus aux pages Organisation et coopération et Qualité de vie au travail",
+    "probleme": "Constat d'audit du 09/10/2026 : aucun des 58 articles (9 parus, 49 programmés) ne fait de lien vers les pages Organisation et coopération ni Qualité de vie au travail, ajoutées le 04/10/2026. Or l'article « Intelligence collective en entreprise » est le mieux placé du blog (4e place, 25 affichages en 90 jours, du 09/07 au 06/10/2026) et traite exactement le thème de la page Organisation et coopération.",
+    "correction": "Ajouter un lien contextuel, dans le texte d'un paragraphe des chapitres (jamais dans la FAQ ni un intertitre), vers /organisation-cooperation-toulouse/ dans les articles « Intelligence collective en entreprise : faire décider une équipe mieux que chacun seul » et « Coaching d'équipe : ce qu'il est, quand y recourir, comment choisir », et vers /qvt-equilibre-travail-toulouse/ dans « Solitude du dirigeant : la reconnaître, et ne plus la porter seul ». Un lien par article, sur une expression déjà présente dans le texte, sans phrase ajoutée ni autre changement.",
+    "type": "technique",
+    "qui": "pulse",
+    "statut": "prevue",
+    "prevue_le": "2026-10-20",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": [
+      "Accompagnement de dirigeant de PME en Haute-Garonne",
+      "Comment sortir de la solitude du dirigeant ?"
+    ]
+  },
+  {
+    "id": "geo-intertitres-questions-2026-10",
+    "titre": "Reprendre deux questions des dirigeants en intertitre, avec une réponse courte",
+    "probleme": "Relevé Pulse du 05/10/2026 : le cabinet n'est cité dans aucune réponse sur « DAF externe ou expert-comptable : quelle différence ? » (0 sur 7) ni sur « Comment sortir de la solitude du dirigeant ? » (0 sur 7). Les deux articles parus le 23/09/2026 y répondent, mais aucun intertitre ne reprend la question telle qu'elle est posée.",
+    "correction": "Dans « DAF externe ou expert-comptable : qui fait quoi dans une PME ? », renommer l'intertitre « Expert-comptable, DAF salarié, DAF externe : qui fait quoi » en « DAF externe ou expert-comptable : quelle différence ? ». Dans « Solitude du dirigeant : la reconnaître, et ne plus la porter seul », renommer « Cinq leviers pour rompre l'isolement du dirigeant » en « Comment sortir de la solitude du dirigeant ? Cinq leviers » et ouvrir le chapitre par une phrase de réponse qui reprend les cinq leviers déjà listés dans l'article (pairs, conseil extérieur, délégation réelle, gouvernance, hygiène de vie). Aucun fait, chiffre ni propos de l'auteure ajouté ; date de mise à jour renseignée.",
+    "type": "technique",
+    "qui": "pulse",
+    "statut": "prevue",
+    "prevue_le": "2026-10-20",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": [
+      "DAF externe ou expert-comptable : quelle différence ?",
+      "Comment sortir de la solitude du dirigeant ?"
+    ]
+  },
+  {
+    "id": "pages-organisation-commercial-citees-2026-10",
+    "titre": "Rendre citables les pages Conseil en organisation et Stratégie commerciale",
+    "probleme": "Relevé Pulse du 05/10/2026 : aucune réponse des IA ne cite le cabinet sur « Conseil en organisation pour PME à Toulouse » (0 sur 6) ni sur « Directeur commercial externalisé à Toulouse » (0 sur 6). La page Conseil en organisation répond pourtant à la question en tête ; la page Stratégie commerciale nomme Nicolas Vimini directeur commercial externalisé mais ne traite pas cette question. Il manque surtout une preuve concrète que les IA puissent reprendre.",
+    "correction": "Clickzou s'en occupe avec vous : sur la page Stratégie commerciale, ajouter une courte question-réponse « Directeur commercial externalisé à Toulouse » (rôle de Nicolas Vimini, format à temps partagé) ; sur la page Conseil en organisation, ajouter un cas concret anonymisé (situation de départ, chantiers ouverts, résultat). Ces pages vendent : Clickzou rédige à partir des réponses de Muriel Saffroy et Marjorie Anglade, et rien n'est publié sans leur accord.",
+    "type": "externe",
+    "qui": "vous",
+    "statut": "prevue",
+    "prevue_le": "2026-10-27",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": [
+      "Conseil en organisation pour PME à Toulouse",
+      "Directeur commercial externalisé à Toulouse"
+    ]
+  },
+  {
+    "id": "definition-equipe-direction-externalisee-2026-10",
+    "titre": "Définir « équipe de direction externalisée » en une question-réponse",
+    "probleme": "Relevé Pulse du 05/10/2026 : aucune réponse ne cite le cabinet sur « Qu'est-ce qu'une équipe de direction externalisée ? » (0 sur 7), alors que c'est sa signature. Constat d'audit du 09/10/2026 : l'expression n'est définie nulle part sur le site en question-réponse, seulement au détour de la FAQ de l'accueil.",
+    "correction": "Clickzou s'en occupe avec vous : ajouter sur la page « Le cabinet » (qui n'a pas encore de questions-réponses) la question « Qu'est-ce qu'une équipe de direction externalisée ? », avec une réponse de deux ou trois phrases tirée des faits validés (un expert référent dédié, les autres expertises seulement si le sujet l'exige, implication jusqu'à la mise en œuvre, pas un rapport). Texte proposé par Clickzou, validé par Muriel Saffroy et Marjorie Anglade avant publication.",
+    "type": "externe",
+    "qui": "vous",
+    "statut": "prevue",
+    "prevue_le": "2026-11-03",
+    "faite_le": null,
+    "verifiee_le": null,
+    "mesure": "citation",
+    "questions": [
+      "Qu'est-ce qu'une équipe de direction externalisée ?"
+    ]
+  }
+]
